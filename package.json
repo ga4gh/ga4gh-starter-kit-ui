@@ -1,0 +1,29 @@
+{
+  "name": "ga4gh-starter-kit-ui",
+  "version": "1.0.0",
+  "description": "User interface for GA4GH starter kit microservices",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ga4gh/ga4gh-starter-kit-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ga4gh/ga4gh-starter-kit-ui/issues"
+  },
+  "homepage": "https://github.com/ga4gh/ga4gh-starter-kit-ui#readme",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  }
+}
