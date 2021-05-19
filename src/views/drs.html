@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="/semantic/dist/semantic.min.js"></script>
+</head>
+<body>
+  <div class="ui container">
+    <h1 class="ui block header">DRS Starter Kit</h1>
+    <h3 class="ui header">GET info about a DRS object</h3>
+    <div class="ui grid">
+      <div class="eight wide column">
+        <form action="" method="POST">
+          <div class="ui sub header">Enter the DRS object id</div>
+          <div class="ui input">
+            <input id="object id" type="text" placeholder="object_id">
+          </div>
+          <div class="ui sub header">Expand (optional)</div>
+          <div>
+            <select class="ui selection dropdown">
+              <div class="default text" placeholder="expand">expand</div>
+              <div class="menu">
+                <option value="False">False</option>
+                <option value="True">True</option>
+              </div>
+            </select>
+          </div>
+          <br>
+          <div>
+            <button class="ui button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="eight wide column">
+        <div class="ui segment">
+          <p>id:</p>
+          <p>name:</p>
+          <div>
+            <button class="ui button">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <h3 class="ui header">GET DRS object access ID</h3>
+    <div class="ui grid">
+      <div class="eight wide column">
+        <form action="/drs" method="POST">
+          <div class="ui sub header">Enter the DRS access id</div>
+          <div class="ui input">
+            <input id="access id" type="text" placeholder="access_id">
+          </div>
+          <div class="ui sub header">Enter the DRS object id</div>
+          <div class="ui input">
+            <input id="object id" type="text" placeholder="object_id">
+          </div>
+          <br>
+          <div>
+            <button class="ui button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="eight wide column">
+        <div class="ui segment">
+          <p>access url:</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
