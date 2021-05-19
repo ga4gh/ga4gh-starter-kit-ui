@@ -16,10 +16,7 @@ function getDrsObject(){
     .then(function(res){
         console.log(res.data);
         console.log(res.status);
-        //console.log(res.statusText);
         console.log(res.headers);
-        //console.log(res.config);
-        //console.log(res.request);
     })
     .catch(function (error) {
         console.log(error);

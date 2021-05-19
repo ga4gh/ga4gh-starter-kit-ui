@@ -1,5 +1,4 @@
-#ignore bin and node_modules directories
-bin/
+#ignore node_modules directory
 node_modules/
 
 #ignore all .DS_Store files
