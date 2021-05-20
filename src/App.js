@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import { Header } from 'semantic-ui-react';
+import '@fontsource/roboto';
 
 function App() {
   return (
     <div className="App">
-      <Header as='h1'>Welcome to the GA4GH Starter Kit</Header>
-      <Header as='h2'>This app is built with Semantic UI React</Header>
+      <meta
+        name="viewport"
+        content="minimum-scale=1, initial-scale=1, width=device-width"
+      />
+      <h1>Welcome to the GA4GH Starter Kit</h1>
+      <h2>This app is built with Semantic UI React</h2>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
