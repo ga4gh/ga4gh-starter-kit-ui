@@ -1,37 +1,43 @@
 {
   "name": "ga4gh-starter-kit-ui",
-  "version": "1.0.0",
-  "description": "User interface for GA4GH starter kit microservices",
-  "main": "app.js",
-  "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ga4gh/ga4gh-starter-kit-ui.git"
-  },
+  "version": "0.1.0",
+  "description": "Modular UI for the GA4GH Starter Kit",
+  "main": "index.js",
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ga4gh/ga4gh-starter-kit-ui/issues"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "homepage": "https://github.com/ga4gh/ga4gh-starter-kit-ui#readme",
   "dependencies": {
-    "axios": "^0.21.1",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "form-data": "^4.0.0",
-    "graceful-fs": "4.2.6",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1",
-    "node-yaml-config": "0.0.6",
-    "semantic-ui": "^2.4.2"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3"
   },
-  "devDependencies": {
-    "gulp": "^3.9.1"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
