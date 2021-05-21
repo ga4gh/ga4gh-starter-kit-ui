@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import { Container } from '@material-ui/core';
+import DrsStarterKit from './DrsStarterKit';
 
 class App extends React.Component {
   render(){
@@ -23,7 +24,20 @@ class App extends React.Component {
           <Typography variant="h1" gutterBottom>Welcome to the GA4GH Starter Kit</Typography>
           <Typography variant="h3" gutterBottom>Get Started</Typography>
           <Typography variant="body1" gutterBottom>Click the buttons below to start using one of the GA4GH Starter Kits</Typography>
-          <Button variant="contained" color="primary" size="large" onClick={() => { }}>DRS Starter Kit</Button>
+          <Router>
+            <div>
+              <nav>
+                <Button variant="outlined" color="primary" size="large">
+                  <Link to='/drs'>DRS Starter Kit</Link>
+                </Button>
+              </nav>
+              <Switch>
+                <Route path='/drs'>
+                  <DrsStarterKit />
+                </Route>
+              </Switch>
+            </div>
+          </Router>
         </Container>
       </div>
     );
