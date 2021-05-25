@@ -16,14 +16,14 @@ class App extends React.Component {
       <div>
         <Router>
           <Switch>
-            <Route path='/drs/:objectId'>
-              <DrsShow />
+            <Route exact path='/'>
+              <Home />
             </Route>
-            <Route path='/drs'>
+            <Route exact path='/drs'>
               <DrsIndex />
             </Route>
-            <Route path='/'>
-              <Home />
+            <Route exact path='/drs/:objectId'>
+              <DrsShow />
             </Route>
           </Switch>
         </Router>
