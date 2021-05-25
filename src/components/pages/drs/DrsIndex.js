@@ -2,14 +2,13 @@ import '@fontsource/roboto';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   useRouteMatch
 } from "react-router-dom";
-import DrsObject from './DrsObject'
+import DrsShow from './DrsShow'
 
-function DrsStarterKit() {
+const DrsIndex = () => {
   let match = useRouteMatch();
   return(
     <div align="center">
@@ -20,11 +19,11 @@ function DrsStarterKit() {
       <Typography variant="h2">Welcome to DRS Starter Kit</Typography>
       <Switch>
         <Route path={`${match.path}/:objectId`}>
-          <DrsObject />
+          <DrsShow />
         </Route>
       </Switch>
     </div>
   );
 }
 
-  export default DrsStarterKit;
+  export default DrsIndex;

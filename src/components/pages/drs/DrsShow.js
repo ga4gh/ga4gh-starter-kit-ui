@@ -2,13 +2,10 @@ import '@fontsource/roboto';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     useParams
   } from "react-router-dom";
 
-function DrsObject(props) {
+const DrsShow = () => {
   let { objectId } = useParams();
   return(
       <div align="center">
@@ -21,4 +18,4 @@ function DrsObject(props) {
   );
 }
 
-export default DrsObject;
+export default DrsShow;
