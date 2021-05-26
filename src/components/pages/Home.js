@@ -1,11 +1,13 @@
 import '@fontsource/roboto';
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import {
   Link
 } from "react-router-dom";
-import Button from '@material-ui/core/Button';
-import { Container } from '@material-ui/core';
+import { 
+  Container, 
+  Button, 
+  Typography
+ } from '@material-ui/core';
 
 const Home = () => {
     return(
@@ -20,8 +22,10 @@ const Home = () => {
           <Typography variant="body1" gutterBottom>Click the buttons below to start using one of the GA4GH Starter Kits</Typography>
             <div>
               <nav>
-                <Button variant="outlined" color="primary" size="large">
-                  <Link to='/drs'>DRS Starter Kit</Link>
+                <Button variant="contained" color="default" size="large">
+                  <Link to='/drs'>
+                    <Typography variant="button">DRS Starter Kit</Typography>
+                  </Link>
                 </Button>
               </nav>
             </div>

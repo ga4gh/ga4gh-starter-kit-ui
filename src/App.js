@@ -7,8 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from './components/pages/Home'
-import DrsIndex from './components/pages/drs/DrsIndex';
-import DrsShow from './components/pages/drs/DrsShow';
+import Drs from './components/drs/Drs';
 
 class App extends React.Component {
   render(){
@@ -19,11 +18,8 @@ class App extends React.Component {
             <Route exact path='/'>
               <Home />
             </Route>
-            <Route exact path='/drs'>
-              <DrsIndex />
-            </Route>
-            <Route exact path='/drs/:objectId'>
-              <DrsShow />
+            <Route path='/drs'>
+              <Drs />
             </Route>
           </Switch>
         </Router>
