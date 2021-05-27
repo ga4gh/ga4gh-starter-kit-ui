@@ -1,4 +1,5 @@
 import '@fontsource/roboto';
+import axios from 'axios';
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -13,36 +14,29 @@ class Drs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      drsObjectsList: [
-        {
-          "id" : "testDrsId",
-          "name" : "testDrsName"
-        }
-      ], 
+      drsObjectsList: [],
       error: null
     };
   }
 
-  /* componentDidMount() {
-    //'http://localhost:8080/ga4gh/drs/v1/objects/b8cd0667-2c33-4c9f-967b-161b905932c9'
+  componentDidMount() {
     let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
     let requestUrl=(baseUrl+'objects');
-    console.log(requestUrl);
-    axios.get(requestUrl)
-    .then(
-      (response) => {
-      console.log(response);
-      this.setState({
-        drsObjectsList: response
-      });
-      },
-      (error) => {
+    //console.log(requestUrl);
+    let getDrsObjectsList = async () => {
+      try {
+        const response = await axios.get(requestUrl);
+        console.log(response);
         this.setState({
-        error: error
-      });
+          drsObjectsList: response
+        });
       }
-    )
-  } */
+      catch(error){
+        console.log(error)
+      }
+    }
+    getDrsObjectsList();
+  }
 
   render(){
     return (
