@@ -8,13 +8,12 @@ import {
 } from "react-router-dom";
 import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
-//const axios = require('axios').default;
 
 class Drs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      drsObjectsList: [],
+      drsObjectsList: null,
       error: null
     };
   }
@@ -22,20 +21,21 @@ class Drs extends React.Component {
   componentDidMount() {
     let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
     let requestUrl=(baseUrl+'objects');
-    //console.log(requestUrl);
     let getDrsObjectsList = async () => {
       try {
         const response = await axios.get(requestUrl);
         console.log(response);
         this.setState({
-          drsObjectsList: response
+          drsObjectsList: response.data
         });
       }
       catch(error){
         console.log(error)
       }
     }
-    getDrsObjectsList();
+    if(!this.state.drsObjectsList){
+      getDrsObjectsList();
+    }
   }
 
   render(){

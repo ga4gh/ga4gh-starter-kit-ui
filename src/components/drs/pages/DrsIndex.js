@@ -17,7 +17,13 @@ import {
 
 const DrsIndexRows = (props) => {
   const drsObjectsList = props.drsObjectsList;
-  const rows = drsObjectsList.map((drsObject) =>
+  if (!props.drsObjectsList){
+    return(
+      <TableBody></TableBody>
+    )
+  }
+  else{
+    const rows = drsObjectsList.map((drsObject) =>
     <TableRow key={drsObject.name}>
       <TableCell align="left">
         <Typography>{drsObject.id}</Typography>
@@ -37,6 +43,7 @@ const DrsIndexRows = (props) => {
   return (
     <TableBody>{rows}</TableBody>
   );
+  }
 }
 
 const DrsIndex = (props) => {
