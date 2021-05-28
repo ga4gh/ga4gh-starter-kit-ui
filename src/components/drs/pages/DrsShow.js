@@ -9,11 +9,58 @@ import {
   TableHead, 
   TableBody, 
   TableRow, 
-  TableCell
+  TableCell, 
+  List, 
+  ListItem, 
+  ListItemText
 } from '@material-ui/core';
 import {
     useParams
   } from "react-router-dom";
+import {
+  Link
+} from "react-router-dom";
+
+const ChildProperties = (props) => {
+  const childPropertyKey = props.childPropertiesArray[0];
+  const childPropertyValueArray = props.childPropertiesArray[1];
+
+  if(childPropertyKey === 'drs_object_children' || childPropertyKey === 'drs_object_parents'){
+    //console.log(childPropertyKey);
+    const drsObject = childPropertyValueArray.map((drs) => 
+    {
+      return(
+        <ListItem key={drs.id}>
+          <ListItemText secondary={`Name: ${drs.name}`}>
+            <Link to={`/drs/${drs.id}`}>
+              <Typography>ID: {drs.id}</Typography>
+            </Link>
+          </ListItemText>
+        </ListItem>
+      )
+    })
+    return(
+      <List>{drsObject}</List>
+    )
+  }
+  else {
+    let childProperties = Object.entries(childPropertyValueArray);
+    //console.log(childProperties);
+    const objectProperties = childProperties.map((object)=>
+      {
+        console.log(object);
+        return(
+          <ListItem key={object[0]}>
+            <ListItemText primary='object properties'></ListItemText>
+          </ListItem>
+        );
+      }
+    );
+    return(
+      <List>{objectProperties}</List>
+    );
+  }
+}
 
 const DrsDetailsRows = (props) => {
   const drsObjectDetails = props.drsObjectDetails;
@@ -31,6 +78,9 @@ const DrsDetailsRows = (props) => {
           <TableRow key={property[0]}>
             <TableCell>
               <Typography>{property[0]}</Typography>
+            </TableCell>
+            <TableCell>
+              <ChildProperties childPropertiesArray={property} />
             </TableCell>
           </TableRow>
           );
@@ -62,7 +112,6 @@ const DrsShow = () => {
   useEffect(() => {
     let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
     let requestUrl=(baseUrl+'objects/'+objectId);
-    console.log(requestUrl);
     let getDrsObjectDetails = async () => {
       try {
         const response = await axios.get(requestUrl);

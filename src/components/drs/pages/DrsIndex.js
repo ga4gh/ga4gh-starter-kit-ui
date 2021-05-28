@@ -17,7 +17,7 @@ import {
 
 const DrsIndexRows = (props) => {
   const drsObjectsList = props.drsObjectsList;
-  if (!props.drsObjectsList){
+  if (!drsObjectsList){
     return(
       <TableBody></TableBody>
     )
