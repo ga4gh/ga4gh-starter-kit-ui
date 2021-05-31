@@ -6,14 +6,14 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from './components/pages/Home'
+import Home from './components/pages/Home';
 import Drs from './components/drs/Drs';
 
 class App extends React.Component {
   render(){
     return (
       <div>
-        <Router>
+        <Router forceRefresh={true}>
           <Switch>
             <Route exact path='/'>
               <Home />

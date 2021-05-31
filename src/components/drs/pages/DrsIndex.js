@@ -22,7 +22,7 @@ const DrsIndexRows = (props) => {
       <TableBody></TableBody>
     )
   }
-  else{
+  else {
     const rows = drsObjectsList.map((drsObject) =>
     <TableRow key={drsObject.name}>
       <TableCell align="left">

@@ -1,5 +1,8 @@
 import '@fontsource/roboto';
-import React, {useState, useEffect} from 'react';
+import React, {
+  useState, 
+  useEffect
+} from 'react';
 import axios from 'axios';
 import { 
   Typography, 
@@ -15,10 +18,8 @@ import {
   ListItemText
 } from '@material-ui/core';
 import {
-    useParams
-  } from "react-router-dom";
-import {
-  Link
+    useParams, 
+    Link
 } from "react-router-dom";
 
 const ChildProperties = (props) => {
@@ -26,7 +27,6 @@ const ChildProperties = (props) => {
   const childPropertyValueArray = props.childPropertiesArray[1];
 
   if(childPropertyKey === 'drs_object_children' || childPropertyKey === 'drs_object_parents'){
-    //console.log(childPropertyKey);
     const drsObject = childPropertyValueArray.map((drs) => 
     {
       return(
@@ -43,21 +43,38 @@ const ChildProperties = (props) => {
       <List>{drsObject}</List>
     )
   }
+  else if (typeof childPropertyValueArray[0] === 'string') {
+    const arrayStrings = childPropertyValueArray.map((string) => 
+    {
+      return (
+        <ListItem key={string}>
+          <ListItemText primary={string}></ListItemText>
+        </ListItem>
+      );
+    });
+    return (
+      <List>{arrayStrings}</List>
+    );
+  }
   else {
-    let childProperties = Object.entries(childPropertyValueArray);
-    //console.log(childProperties);
-    const objectProperties = childProperties.map((object)=>
+    const arrayObjects = childPropertyValueArray.map((object)=>
       {
-        console.log(object);
-        return(
-          <ListItem key={object[0]}>
-            <ListItemText primary='object properties'></ListItemText>
-          </ListItem>
+        let objectProperties = Object.entries(object);
+        const properties = objectProperties.map((property) => 
+        {
+          return(
+            <ListItem key={property[0]}>
+              <ListItemText primary={`${property[0]}: ${property[1]}`}></ListItemText>
+            </ListItem>
+          );
+        });
+        return (
+          <List>{properties}</List>
         );
       }
     );
     return(
-      <List>{objectProperties}</List>
+      <List>{arrayObjects}</List>
     );
   }
 }
@@ -128,12 +145,12 @@ const DrsShow = () => {
   });
 
   return(
-      <div align="center">
-      <meta
-        name="viewport"
-        content="minimum-scale=1, initial-scale=1, width=device-width"
+    <div align="center">
+    <meta
+      name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width"
     />
-      <Typography variant="h3">DRS Object Details</Typography>
+      <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
       <Container maxWidth="lg">
         <TableContainer>
           <Table>
@@ -151,7 +168,7 @@ const DrsShow = () => {
           </Table>
         </TableContainer>
       </Container>
-  </div>
+    </div>
   );
 }
 

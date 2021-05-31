@@ -2,7 +2,6 @@ import '@fontsource/roboto';
 import axios from 'axios';
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -41,16 +40,14 @@ class Drs extends React.Component {
   render(){
     return (
       <div>
-        <Router>
-          <Switch>
-              <Route exact path='/drs'>
-              <DrsIndex drsObjectsList={this.state.drsObjectsList}/>
-              </Route>
-            <Route exact path='/drs/:objectId'>
-              <DrsShow />
-            </Route>
-          </Switch>
-        </Router>
+        <Switch>
+          <Route exact path='/drs'>
+            <DrsIndex drsObjectsList={this.state.drsObjectsList}/>
+          </Route>
+          <Route path='/drs/:objectId'>
+            <DrsShow />
+          </Route>
+        </Switch>
       </div>
     );
   }
