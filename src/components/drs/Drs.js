@@ -31,21 +31,15 @@ class Drs extends React.Component {
         method: 'GET',
         cancelToken: drsCancelToken.token
       })
-      return response; 
-    }
-    if(!this.state.drsObjectsList) {
-      getDrsObjectsList()
       .then(
         (response) => {
           this.setState ({
             drsObjectsList: response.data
           })
-          console.log(response.data);
         },
         (error) => {
           if (axios.isCancel(error)) {
             console.log('Drs request has been cancelled');
-            console.log(error.message);
           }
           else {
             this.setState({
@@ -54,6 +48,9 @@ class Drs extends React.Component {
           )}
         }
       )
+    }
+    if(!this.state.drsObjectsList) {
+      getDrsObjectsList();
     }
   }
 
@@ -70,7 +67,8 @@ class Drs extends React.Component {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
-            <Typography gutterBottom>Error: {this.state.error.response.data.message}</Typography>
+            <Typography variant="h4" gutterBottom>Error</Typography>
+            <Typography gutterBottom>{this.state.error.response.data.message}</Typography>
           </div>
         );
       }
@@ -81,7 +79,8 @@ class Drs extends React.Component {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
-            <Typography gutterBottom>Error: {this.state.error.request}</Typography>
+            <Typography variant="h4" gutterBottom>Error</Typography>
+            <Typography gutterBottom>{this.state.error.request}</Typography>
           </div>
         );
       }
@@ -92,7 +91,8 @@ class Drs extends React.Component {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
-            <Typography gutterBottom>Error: {this.state.error.message}</Typography>
+            <Typography variant="h4" gutterBottom>Error</Typography>
+            <Typography gutterBottom>{this.state.error.message}</Typography>
           </div>
         );
       }
@@ -101,11 +101,11 @@ class Drs extends React.Component {
       return (
         <div>
           <Switch>
-            <Route path='/drs/:objectId'>
-              <DrsShow />
-            </Route>
             <Route exact path='/drs'>
               <DrsIndex drsObjectsList={this.state.drsObjectsList}/>
+            </Route>
+            <Route path='/drs/:objectId'>
+              <DrsShow />
             </Route>
           </Switch>
         </div>

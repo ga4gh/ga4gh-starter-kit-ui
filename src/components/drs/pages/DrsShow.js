@@ -137,22 +137,16 @@ const DrsShow = () => {
       .then (
         (response) => {
           setDrsObjectDetails(response.data);
-          console.log(response.data);
         },
         (error) => {
-          console.log(error);
           if (axios.isCancel(error)) {
             console.log('DrsShow request has been cancelled');
-            console.log(error.message);
-            setError(null);
           }
           else {
             setError(error);
-            console.log(errorState);
           }
         }
       )
-      //return response;
     } 
 
     if(!drsObjectDetails){
@@ -165,7 +159,6 @@ const DrsShow = () => {
   }, [drsObjectDetails]);
 
   if(errorState){
-    //console.log(errorState);
     if(errorState.response) {
       return (
         <div align="center">
