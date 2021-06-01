@@ -43,36 +43,31 @@ const ChildProperties = (props) => {
       <List>{drsObject}</List>
     )
   }
-  else if (typeof childPropertyValueArray[0] === 'string') {
-    const arrayStrings = childPropertyValueArray.map((string) => 
-    {
-      return (
-        <ListItem key={string}>
-          <ListItemText primary={string}></ListItemText>
-        </ListItem>
-      );
-    });
-    return (
-      <List>{arrayStrings}</List>
-    );
-  }
   else {
-    const arrayObjects = childPropertyValueArray.map((object)=>
-      {
+    const arrayObjects = childPropertyValueArray.map((object) => 
+    {
+      if (typeof object === 'string') {
+        return (
+          <ListItem key={object}>
+            <ListItemText primary={object}></ListItemText>
+          </ListItem>
+        );
+      }
+      else {
         let objectProperties = Object.entries(object);
         const properties = objectProperties.map((property) => 
         {
           return(
-            <ListItem key={property[0]}>
+            <ListItem key={property[1]}>
               <ListItemText primary={`${property[0]}: ${property[1]}`}></ListItemText>
             </ListItem>
           );
         });
         return (
-          <List>{properties}</List>
+          <List key={objectProperties}>{properties}</List>
         );
       }
-    );
+    });
     return(
       <List>{arrayObjects}</List>
     );
@@ -83,7 +78,7 @@ const DrsDetailsRows = (props) => {
   const drsObjectDetails = props.drsObjectDetails;
   if (!drsObjectDetails){
     return(
-      <TableBody></TableBody>
+      <TableBody />
     )
   }
   else {
@@ -125,51 +120,119 @@ const DrsDetailsRows = (props) => {
 const DrsShow = () => {
   let { objectId } = useParams();
   const [drsObjectDetails, setDrsObjectDetails] = useState(null);
+  const [errorState, setError] = useState(null);
 
   useEffect(() => {
     let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
     let requestUrl=(baseUrl+'objects/'+objectId);
+    const cancelToken = axios.CancelToken;
+    const drsShowCancelToken = cancelToken.source();
+
     let getDrsObjectDetails = async () => {
-      try {
-        const response = await axios.get(requestUrl);
-        console.log(response);
-        setDrsObjectDetails(response.data);
-      }
-      catch(error){
-        console.log(error)
-      }
-    }
+      const response = await axios({
+        url: requestUrl,
+        method: 'GET',
+        cancelToken: drsShowCancelToken.token
+      })
+      .then (
+        (response) => {
+          setDrsObjectDetails(response.data);
+          console.log(response.data);
+        },
+        (error) => {
+          console.log(error);
+          if (axios.isCancel(error)) {
+            console.log('DrsShow request has been cancelled');
+            console.log(error.message);
+            setError(null);
+          }
+          else {
+            setError(error);
+            console.log(errorState);
+          }
+        }
+      )
+      //return response;
+    } 
+
     if(!drsObjectDetails){
       getDrsObjectDetails();
     }
-  });
 
-  return(
-    <div align="center">
-    <meta
-      name="viewport"
-      content="minimum-scale=1, initial-scale=1, width=device-width"
-    />
-      <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
-      <Container maxWidth="lg">
-        <TableContainer>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell align="left">
-                  <Typography variant="h5">Property</Typography>
-                </TableCell>
-                <TableCell align="left">
-                  <Typography variant="h5">Value</Typography>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <DrsDetailsRows drsObjectDetails={drsObjectDetails}/>
-          </Table>
-        </TableContainer>
-      </Container>
-    </div>
-  );
+    return () => {
+      drsShowCancelToken.cancel('Cleanup DrsShow');
+    };
+  }, [drsObjectDetails]);
+
+  if(errorState){
+    //console.log(errorState);
+    if(errorState.response) {
+      return (
+        <div align="center">
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+          <Typography variant="h4" gutterBottom>Error</Typography>
+          <Typography gutterBottom>{errorState.response.data.message}</Typography>
+          <Typography gutterBottom>{errorState.response.data.error}</Typography>
+        </div>
+      );
+    }
+    else if(errorState.request) {
+      return (
+        <div align="center">
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+          <Typography variant="h4" gutterBottom>Error</Typography>
+          <Typography gutterBottom>{errorState.request}</Typography>
+        </div>
+      );
+    }
+    else {
+      return (
+        <div align="center">
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+          <Typography variant="h4" gutterBottom>Error</Typography>
+          <Typography gutterBottom>{errorState.message}</Typography>
+        </div>
+      );
+    }
+  }
+
+  else {
+    return(
+      <div align="center">
+      <meta
+        name="viewport"
+        content="minimum-scale=1, initial-scale=1, width=device-width"
+      />
+        <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
+        <Container maxWidth="lg">
+          <TableContainer>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell align="left">
+                    <Typography variant="h5">Property</Typography>
+                  </TableCell>
+                  <TableCell align="left">
+                    <Typography variant="h5">Value</Typography>
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+              <DrsDetailsRows drsObjectDetails={drsObjectDetails}/>
+            </Table>
+          </TableContainer>
+        </Container>
+      </div>
+    );
+  }
 }
 
 export default DrsShow;
