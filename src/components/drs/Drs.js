@@ -8,6 +8,7 @@ import {
 import { Typography } from '@material-ui/core';
 import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
+import CreateDrsForm from './forms/CreateDrsForm';
 
 const cancelToken = axios.CancelToken;
 const drsCancelToken = cancelToken.source();
@@ -116,6 +117,9 @@ class Drs extends React.Component {
           <Switch>
             <Route exact path='/drs'>
               <DrsIndex drsObjectsList={this.state.drsObjectsList} handleError={this.handleError}/>
+            </Route>
+            <Route exact path='/drs/create'>
+              <CreateDrsForm />
             </Route>
             <Route path='/drs/:objectId'>
               <DrsShow activeDrsObject={this.state.activeDrsObject} updateActiveDrsObject={this.updateActiveDrsObject} handleError={this.handleError}/>

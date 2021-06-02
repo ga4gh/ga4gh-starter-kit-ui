@@ -32,11 +32,11 @@ const DrsIndexRows = (props) => {
         <Typography>{drsObject.name}</Typography>
       </TableCell>
       <TableCell align="right">
-        <Button variant="contained">
-          <Link to={`/drs/${drsObject.id}`}>
+        <Link to={`/drs/${drsObject.id}`}>
+          <Button variant="contained" color='default'>
             <Typography variant="button">View Details</Typography>
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </TableCell>
     </TableRow>
     );
@@ -54,6 +54,13 @@ const DrsIndex = (props) => {
           content="minimum-scale=1, initial-scale=1, width=device-width"
       />
       <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
+      <Container align='right' maxWidth="lg">
+        <Link to='/drs/create'>
+          <Button variant='contained'>
+          <Typography variant='button'>Create New DRS Object</Typography>
+          </Button>
+        </Link>
+      </Container>
       <Container maxWidth="lg">
         <TableContainer>
           <Table>

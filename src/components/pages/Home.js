@@ -22,11 +22,11 @@ const Home = () => {
           <Typography variant="body1" gutterBottom>Click the buttons below to start using one of the GA4GH Starter Kits</Typography>
             <div>
               <nav>
-                <Button variant="contained" color="default" size="large">
-                  <Link to='/drs'>
+                <Link to='/drs'>
+                  <Button variant="contained" color="default" size="large">
                     <Typography variant="button">DRS Starter Kit</Typography>
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </nav>
             </div>
         </Container>
