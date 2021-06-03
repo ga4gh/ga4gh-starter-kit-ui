@@ -17,7 +17,23 @@ class Drs extends React.Component {
     super(props);
     this.state = {
       drsObjectsList: null,
-      error: null
+      error: null, 
+      activeDrsObject: null
+      /* {
+        access_methods: null,
+        aliases: null, 
+        checksums: null,
+        contents: null,
+        created_time: null,
+        description: null,
+        id: null,
+        mime_type: null,
+        name: null,
+        self_uri: null,
+        size: null,
+        updated_time: null,
+        version: null
+      } */
     };
   }
 
@@ -105,7 +121,7 @@ class Drs extends React.Component {
               <DrsIndex drsObjectsList={this.state.drsObjectsList}/>
             </Route>
             <Route path='/drs/:objectId'>
-              <DrsShow />
+              <DrsShow activeDrsObject={this.state.activeDrsObject}/>
             </Route>
           </Switch>
         </div>

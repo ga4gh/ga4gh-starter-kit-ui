@@ -6,23 +6,14 @@ import React, {
 import axios from 'axios';
 import { 
   Typography, 
-  Container, 
-  Table,
-  TableContainer, 
-  TableHead, 
-  TableBody, 
-  TableRow, 
-  TableCell, 
-  List, 
-  ListItem, 
-  ListItemText
+  Container
 } from '@material-ui/core';
 import {
-    useParams, 
-    Link
+    useParams
 } from "react-router-dom";
+import DrsObject from '../DrsObjectForm';
 
-const ChildProperties = (props) => {
+/* const ChildProperties = (props) => {
   const childPropertyKey = props.childPropertiesArray[0];
   const childPropertyValueArray = props.childPropertiesArray[1];
 
@@ -115,10 +106,12 @@ const DrsDetailsRows = (props) => {
       <TableBody>{details}</TableBody>
     );
   }
-}
+} */
 
-const DrsShow = () => {
+const DrsShow = (props) => {
+  const activeDrsObject = props.activeDrsObject;
   let { objectId } = useParams();
+  //setState(activeDrsObject.id = objectId);
   const [drsObjectDetails, setDrsObjectDetails] = useState(null);
   const [errorState, setError] = useState(null);
 
@@ -199,32 +192,47 @@ const DrsShow = () => {
   }
 
   else {
-    return(
-      <div align="center">
+    console.log(drsObjectDetails);
+    if(!drsObjectDetails) {
+      return (
+        <div align="center">
       <meta
         name="viewport"
         content="minimum-scale=1, initial-scale=1, width=device-width"
       />
-        <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
-        <Container maxWidth="lg">
-          <TableContainer>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell align="left">
-                    <Typography variant="h5">Property</Typography>
-                  </TableCell>
-                  <TableCell align="left">
-                    <Typography variant="h5">Value</Typography>
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <DrsDetailsRows drsObjectDetails={drsObjectDetails}/>
-            </Table>
-          </TableContainer>
-        </Container>
+      <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
       </div>
-    );
+      );
+    }
+    else {
+      return(
+        <div align="center">
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+          <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
+          <Container maxWidth="lg">
+            <DrsObject drsObjectDetails={drsObjectDetails} readOnly={true}/>
+            {/* <TableContainer>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell align="left">
+                      <Typography variant="h5">Property</Typography>
+                    </TableCell>
+                    <TableCell align="left">
+                      <Typography variant="h5">Value</Typography>
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <DrsDetailsRows drsObjectDetails={drsObjectDetails}/>
+              </Table>
+            </TableContainer> */}
+          </Container>
+        </div>
+      );
+    }
   }
 }
 
