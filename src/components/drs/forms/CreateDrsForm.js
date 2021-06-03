@@ -2,12 +2,16 @@ import '@fontsource/roboto';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { 
+    Box,
     Typography, 
     TextField,
     Container, 
     Button, 
-    Input
+    Input, 
+    Grid, 
+    IconButton
 } from '@material-ui/core';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 const CreateDrsObject = (props) => {
     const newDrsObject=props.drsObject;
@@ -43,11 +47,19 @@ const CreateDrsObject = (props) => {
     })
 }
 
+const MultipleFields= (props) => {
+    const value = props.value;
+    return (
+        <Grid item xs={11}>
+            <TextField variant='outlined' id={value} fullWidth label={value} margin='normal'></TextField>
+        </Grid>
+    );
+}
+
 const CreateDrsForm = () => {
     const[id, setId] = useState('');
     const[description, setDescription] = useState('');
     const[name, setName] = useState('');
-    //const[newDrsObject, setNewDrsObject] = useState({});
 
     const HandleIdChange = (event) => {
         setId(event.target.value);
@@ -59,9 +71,17 @@ const CreateDrsForm = () => {
         setName(event.target.value);
     }
 
+    /* const AddField = () => {
+        //console.log(event.target);
+        return(
+            <MultipleItems />
+        );
+    } */
+
     const CreateNewDrsObject = (event) => {
-        //setNewDrsObject();
+        event.preventDefault();
         //return function-based component which makes api call using hooks
+        {/* <CreateDrsObject id={id} description={description} name={name} /> */}
     }
 
     return (
@@ -70,27 +90,40 @@ const CreateDrsForm = () => {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <Container maxWidth='lg'>
-            <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
-            <form onSubmit={CreateNewDrsObject}>
-                <TextField variant='outlined' id='id' required fullWidth label='id' margin='normal' value={id} onChange={HandleIdChange}></TextField>
-                <TextField variant='outlined' id='description' required fullWidth label='description' margin='normal' value={description} onChange={HandleDescriptionChange}></TextField>
-                <TextField variant='outlined' id='name' required fullWidth label='name' margin='normal' value={name} onChange={HandleNameChange}></TextField>
-                <TextField variant='outlined' id='created_time' fullWidth label='created_time' margin='normal'></TextField>
-                <TextField variant='outlined' id='updated_time' fullWidth label='updated_time'margin='normal'></TextField>
-                <TextField variant='outlined' id='mime_type' fullWidth label='mime_type' margin='normal'></TextField>
-                <TextField variant='outlined' id='size' fullWidth label='size' margin='normal'></TextField>
-                <TextField variant='outlined' id='version'  fullWidth label='version' margin='normal'></TextField>
-                <TextField variant='outlined' id='aliases' fullWidth label='aliases' margin='normal'></TextField>
-                <TextField variant='outlined' id='checksums' fullWidth label='checksums' margin='normal'></TextField>
-                <TextField variant='outlined' id='drs_object_children' fullWidth label='drs_object_children' margin='normal'></TextField>
-                <TextField variant='outlined' id='drs_object_parents' fullWidth label='drs_object_parents' margin='normal'></TextField>
-                <TextField variant='outlined' id='access_methods' fullWidth label='access_methods' margin='normal'></TextField>
-                <Button variant='contained' color='default'>
-                    <Input type='submit' value='Create DRS Object'></Input>
-                </Button>
-            </form>
-        </Container>
+        <Box>
+            <Container maxWidth='lg'>
+                <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
+                <form onSubmit={CreateNewDrsObject}>
+                        <TextField variant='outlined' id='id' required fullWidth label='id' margin='normal' value={id} onChange={HandleIdChange}></TextField>
+                        <TextField variant='outlined' id='description' required fullWidth label='description' margin='normal' value={description} onChange={HandleDescriptionChange}></TextField>
+                    <Grid container justify='space-evenly' spacing={4}>
+                        <Grid item xs={3}>
+                            <TextField variant='outlined' id='name' required fullWidth label='name' margin='normal' value={name} onChange={HandleNameChange}></TextField>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <TextField variant='outlined' id='mime_type' fullWidth label='mime_type' margin='normal'></TextField>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <TextField variant='outlined' id='size' fullWidth label='size' margin='normal'></TextField>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <TextField variant='outlined' id='version' fullWidth label='version' margin='normal'></TextField>
+                        </Grid>
+                    </Grid>
+                    <Grid container alignItems='center' justify='flex-start' spacing={4}>
+                        <MultipleFields value='alias' />
+                        <Grid item>
+                            <IconButton color='primary'>
+                                <AddCircleIcon />
+                            </IconButton>
+                        </Grid>
+                    </Grid>
+                    <Button variant='contained' color='default'>
+                        <Input type='submit' value='Create DRS Object'></Input>
+                    </Button>
+                </form>
+            </Container>
+        </Box>
     </div>
     );
 }

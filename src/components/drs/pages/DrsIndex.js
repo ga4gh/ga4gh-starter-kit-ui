@@ -9,7 +9,8 @@ import {
   TableBody, 
   TableRow, 
   TableCell, 
-  Button
+  Button, 
+  Grid
 } from '@material-ui/core';
 import {
   Link
@@ -53,13 +54,19 @@ const DrsIndex = (props) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
       />
-      <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
-      <Container align='right' maxWidth="lg">
-        <Link to='/drs/create'>
-          <Button variant='contained'>
-          <Typography variant='button'>Create New DRS Object</Typography>
-          </Button>
-        </Link>
+      <Container maxWidth="lg" >
+        <Grid container justify='space-around' alignItems='center'>
+          <Grid item>
+            <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
+          </Grid>
+          <Grid item>
+            <Link to='/drs/create'>
+              <Button variant='contained'>
+              <Typography variant='button'>Create New<br/>DRS Object</Typography>
+              </Button>
+            </Link>
+          </Grid>
+        </Grid>
       </Container>
       <Container maxWidth="lg">
         <TableContainer>
