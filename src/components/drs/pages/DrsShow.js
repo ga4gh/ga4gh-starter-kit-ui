@@ -1,6 +1,5 @@
 import '@fontsource/roboto';
-import React, {
-  useState, 
+import React, { 
   useEffect
 } from 'react';
 import axios from 'axios';
@@ -13,10 +12,11 @@ import {
 } from "react-router-dom";
 import DrsObjectForm from '../DrsObjectForm';
 
-const DrsShow = () => {
+const DrsShow = (props) => {
+  let drsObjectDetails = props.activeDrsObject;
+  let updateActiveDrsObject = props.updateActiveDrsObject;
+  let handleError = props.handleError;
   let { objectId } = useParams();
-  const [drsObjectDetails, setDrsObjectDetails] = useState(null);
-  const [errorState, setError] = useState(null);
 
   useEffect(() => {
     let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
@@ -32,14 +32,14 @@ const DrsShow = () => {
       })
       .then (
         (response) => {
-          setDrsObjectDetails(response.data);
+          updateActiveDrsObject(response.data);
         },
         (error) => {
           if (axios.isCancel(error)) {
             console.log('DrsShow request has been cancelled');
           }
           else {
-            setError(error);
+            handleError(error);
           }
         }
       )
@@ -54,72 +54,30 @@ const DrsShow = () => {
     };
   }, [drsObjectDetails]);
 
-  if(errorState){
-    if(errorState.response) {
-      return (
-        <div align="center">
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-          <Typography variant="h4" gutterBottom>Error</Typography>
-          <Typography gutterBottom>{errorState.response.data.message}</Typography>
-          <Typography gutterBottom>{errorState.response.data.error}</Typography>
-        </div>
-      );
-    }
-    else if(errorState.request) {
-      return (
-        <div align="center">
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-          <Typography variant="h4" gutterBottom>Error</Typography>
-          <Typography gutterBottom>{errorState.request}</Typography>
-        </div>
-      );
-    }
-    else {
-      return (
-        <div align="center">
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-          <Typography variant="h4" gutterBottom>Error</Typography>
-          <Typography gutterBottom>{errorState.message}</Typography>
-        </div>
-      );
-    }
+  if(!drsObjectDetails) {
+    return (
+      <div align="center">
+    <meta
+      name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width"
+    />
+    <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
+    </div>
+    );
   }
-
   else {
-    if(!drsObjectDetails) {
-      return (
-        <div align="center">
+    return(
+      <div align="center">
       <meta
         name="viewport"
         content="minimum-scale=1, initial-scale=1, width=device-width"
       />
-      <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
+        <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
+        <Container maxWidth="lg">
+          <DrsObjectForm drsObjectDetails={drsObjectDetails} readOnly={true}/>
+        </Container>
       </div>
-      );
-    }
-    else {
-      return(
-        <div align="center">
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-          <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
-          <Container maxWidth="lg">
-            <DrsObjectForm drsObjectDetails={drsObjectDetails} readOnly={true}/>
-          </Container>
-        </div>
-      );
-    }
+    );
   }
 }
 

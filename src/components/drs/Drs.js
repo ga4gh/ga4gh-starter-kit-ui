@@ -15,7 +15,10 @@ const drsCancelToken = cancelToken.source();
 class Drs extends React.Component {
   constructor(props) {
     super(props);
+    this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
+    this.handleError = this.handleError.bind(this);
     this.state = {
+      activeDrsObject: null,
       drsObjectsList: null,
       error: null
     };
@@ -42,10 +45,8 @@ class Drs extends React.Component {
             console.log('Drs request has been cancelled');
           }
           else {
-            this.setState({
-            error: error
+            this.handleError(error);
           }
-          )}
         }
       )
     }
@@ -56,6 +57,18 @@ class Drs extends React.Component {
 
   componentWillUnmount() {
     drsCancelToken.cancel('Cleanup Drs');
+  }
+
+  updateActiveDrsObject(newActiveDrsObject) {
+    this.setState({
+      activeDrsObject: newActiveDrsObject
+    });
+  }
+
+  handleError(error) {
+    this.setState({
+      error: error
+    });
   }
 
   render(){
@@ -102,10 +115,10 @@ class Drs extends React.Component {
         <div>
           <Switch>
             <Route exact path='/drs'>
-              <DrsIndex drsObjectsList={this.state.drsObjectsList}/>
+              <DrsIndex drsObjectsList={this.state.drsObjectsList} handleError={this.handleError}/>
             </Route>
             <Route path='/drs/:objectId'>
-              <DrsShow />
+              <DrsShow activeDrsObject={this.state.activeDrsObject} updateActiveDrsObject={this.updateActiveDrsObject} handleError={this.handleError}/>
             </Route>
           </Switch>
         </div>
