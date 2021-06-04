@@ -17,23 +17,7 @@ class Drs extends React.Component {
     super(props);
     this.state = {
       drsObjectsList: null,
-      error: null, 
-      activeDrsObject: null
-      /* {
-        access_methods: null,
-        aliases: null, 
-        checksums: null,
-        contents: null,
-        created_time: null,
-        description: null,
-        id: null,
-        mime_type: null,
-        name: null,
-        self_uri: null,
-        size: null,
-        updated_time: null,
-        version: null
-      } */
+      error: null
     };
   }
 
@@ -42,7 +26,7 @@ class Drs extends React.Component {
     let requestUrl=(baseUrl+'objects');
 
     let getDrsObjectsList = async () => {
-      const response = await axios({
+      await axios({
         url: requestUrl, 
         method: 'GET',
         cancelToken: drsCancelToken.token
@@ -113,7 +97,7 @@ class Drs extends React.Component {
         );
       }
     }
-    else{
+    else {
       return (
         <div>
           <Switch>
@@ -121,7 +105,7 @@ class Drs extends React.Component {
               <DrsIndex drsObjectsList={this.state.drsObjectsList}/>
             </Route>
             <Route path='/drs/:objectId'>
-              <DrsShow activeDrsObject={this.state.activeDrsObject}/>
+              <DrsShow />
             </Route>
           </Switch>
         </div>
