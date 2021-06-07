@@ -18,6 +18,7 @@ class Drs extends React.Component {
     super(props);
     this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
     this.handleError = this.handleError.bind(this);
+    this.resetActiveDrsObject = this.resetActiveDrsObject.bind(this);
     this.state = {
       activeDrsObject: null,
       drsObjectsList: null,
@@ -70,6 +71,25 @@ class Drs extends React.Component {
     this.setState({
       error: error
     });
+  resetActiveDrsObject() {
+    this.setState({
+      activeDrsObject: {
+        id: '',
+        description: '',
+        created_time: '',
+        mime_type: '',
+        name: '',
+        size: '',
+        updated_time: '',
+        version: '',
+        aliases: [],
+        checksums: [],
+        drs_object_children: [],
+        drs_object_parents: [],
+        file_access_objects: [],
+        aws_s3_access_objects: []
+      }
+    })
   }
 
   render(){
@@ -119,7 +139,7 @@ class Drs extends React.Component {
               <DrsIndex drsObjectsList={this.state.drsObjectsList} handleError={this.handleError}/>
             </Route>
             <Route exact path='/drs/create'>
-              <CreateDrsForm />
+              <CreateDrsForm resetActiveDrsObject = {this.resetActiveDrsObject}/>
             </Route>
             <Route path='/drs/:objectId'>
               <DrsShow activeDrsObject={this.state.activeDrsObject} updateActiveDrsObject={this.updateActiveDrsObject} handleError={this.handleError}/>
