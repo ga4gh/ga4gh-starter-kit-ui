@@ -47,36 +47,18 @@ const CreateDrsObject = (props) => {
     })
 }
 
-const MultipleFields= (props) => {
-    const value = props.value;
-    return (
-        <Grid item xs={11}>
-            <TextField variant='outlined' id={value} fullWidth label={value} margin='normal'></TextField>
-        </Grid>
-    );
-}
+const CreateDrsForm = (props) => {
 
-const CreateDrsForm = () => {
-    const[id, setId] = useState('');
-    const[description, setDescription] = useState('');
-    const[name, setName] = useState('');
+    let newDrsObject = props.newDrsObject;
+    console.log(newDrsObject.id);
 
-    const HandleIdChange = (event) => {
-        setId(event.target.value);
-    }
-    const HandleDescriptionChange = (event) => {
-        setDescription(event.target.value);
-    }
-    const HandleNameChange = (event) => {
-        setName(event.target.value);
-    }
 
-    /* const AddField = () => {
-        //console.log(event.target);
-        return(
-            <MultipleItems />
-        );
-    } */
+    const HandleChange = (event) => {
+        //props.updateActiveDrsObject(event.target.value);
+        console.log(event.target.label);
+        console.log(event.target.value);
+        console.log(newDrsObject.id);
+    }
 
     const CreateNewDrsObject = (event) => {
         event.preventDefault();
@@ -94,30 +76,29 @@ const CreateDrsForm = () => {
             <Container maxWidth='lg'>
                 <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
                 <form onSubmit={CreateNewDrsObject}>
-                        <TextField variant='outlined' id='id' required fullWidth label='id' margin='normal' value={id} onChange={HandleIdChange}></TextField>
-                        <TextField variant='outlined' id='description' required fullWidth label='description' margin='normal' value={description} onChange={HandleDescriptionChange}></TextField>
+                    <TextField variant='outlined' id='id' required fullWidth label='id' margin='normal' value={newDrsObject.id} onChange={HandleChange}></TextField>
+                    <TextField variant='outlined' id='description' required fullWidth label='description' margin='normal' value={newDrsObject.description}></TextField>
                     <Grid container justify='space-evenly' spacing={4}>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='name' required fullWidth label='name' margin='normal' value={name} onChange={HandleNameChange}></TextField>
+                            <TextField variant='outlined' id='name' required fullWidth label='name' margin='normal' value={newDrsObject.name}></TextField>
                         </Grid>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='mime_type' fullWidth label='mime_type' margin='normal'></TextField>
+                            <TextField variant='outlined' id='mime_type' fullWidth label='mime_type' margin='normal' value={newDrsObject.mime_type}></TextField>
                         </Grid>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='size' fullWidth label='size' margin='normal'></TextField>
+                            <TextField variant='outlined' id='size' fullWidth label='size' margin='normal' value={newDrsObject.size}></TextField>
                         </Grid>
                         <Grid item xs={3}>
                             <TextField variant='outlined' id='version' fullWidth label='version' margin='normal'></TextField>
                         </Grid>
                     </Grid>
-                    <Grid container alignItems='center' justify='flex-start' spacing={4}>
-                        <MultipleFields value='alias' />
+                    {/* <Grid container alignItems='center' justify='flex-start' spacing={4}>
                         <Grid item>
                             <IconButton color='primary'>
                                 <AddCircleIcon />
                             </IconButton>
                         </Grid>
-                    </Grid>
+                    </Grid> */}
                     <Button variant='contained' color='default'>
                         <Input type='submit' value='Create DRS Object'></Input>
                     </Button>

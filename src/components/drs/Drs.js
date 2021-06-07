@@ -16,11 +16,34 @@ const drsCancelToken = cancelToken.source();
 class Drs extends React.Component {
   constructor(props) {
     super(props);
+<<<<<<< HEAD
     this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
     this.handleError = this.handleError.bind(this);
     this.resetActiveDrsObject = this.resetActiveDrsObject.bind(this);
     this.state = {
       activeDrsObject: null,
+=======
+    //this.resetActiveDrsObject = this.resetActiveDrsObject.bind(this);
+    this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
+    this.state = {
+      activeDrsObject: null,
+      newDrsObject: {
+        id: '',
+        description: '',
+        created_time: '',
+        mime_type: '',
+        name: '',
+        size: '',
+        updated_time: '',
+        version: '',
+        aliases: [],
+        checksums: [],
+        drs_object_children: [],
+        drs_object_parents: [],
+        file_access_objects: [],
+        aws_s3_access_objects: []
+      },
+>>>>>>> Initialize newDrsObject
       drsObjectsList: null,
       error: null
     };
@@ -61,6 +84,7 @@ class Drs extends React.Component {
     drsCancelToken.cancel('Cleanup Drs');
   }
 
+<<<<<<< HEAD
   updateActiveDrsObject(newActiveDrsObject) {
     this.setState({
       activeDrsObject: newActiveDrsObject
@@ -88,9 +112,18 @@ class Drs extends React.Component {
         drs_object_parents: [],
         file_access_objects: [],
         aws_s3_access_objects: []
+=======
+  /* updateActiveDrsObject(newValue) {
+    //parameter = updatedParameter;
+    console.log(newValue);
+    this.setState({ 
+      newDrsObject: {
+        id: newValue
+>>>>>>> Initialize newDrsObject
       }
     })
-  }
+    console.log(this.state.newDrsObject);
+  } */
 
   render(){
     if(this.state.error) {
@@ -139,7 +172,10 @@ class Drs extends React.Component {
               <DrsIndex drsObjectsList={this.state.drsObjectsList} handleError={this.handleError}/>
             </Route>
             <Route exact path='/drs/create'>
-              <CreateDrsForm resetActiveDrsObject = {this.resetActiveDrsObject}/>
+              <CreateDrsForm 
+                newDrsObject = {this.state.newDrsObject}
+                updateActiveDrsObject = {this.updateActiveDrsObject}
+              />
             </Route>
             <Route path='/drs/:objectId'>
               <DrsShow activeDrsObject={this.state.activeDrsObject} updateActiveDrsObject={this.updateActiveDrsObject} handleError={this.handleError}/>
