@@ -49,15 +49,20 @@ const CreateDrsObject = (props) => {
 
 const CreateDrsForm = (props) => {
 
-    let newDrsObject = props.newDrsObject;
-    console.log(newDrsObject.id);
+    let activeDrsObject = props.activeDrsObject;
+    console.log(activeDrsObject);
 
+    /* useEffect(() => {
+        if(!activeDrsObject) {
+            console.log(activeDrsObject);
+            props.resetDrsObject();
+            console.log(activeDrsObject);
+        }
+    }) */
 
-    const HandleChange = (event) => {
-        //props.updateActiveDrsObject(event.target.value);
-        console.log(event.target.label);
-        console.log(event.target.value);
-        console.log(newDrsObject.id);
+    const HandleIdChange = (event) => {
+        props.updateId(event.target.value);
+        console.log(activeDrsObject);
     }
 
     const CreateNewDrsObject = (event) => {
@@ -76,17 +81,17 @@ const CreateDrsForm = (props) => {
             <Container maxWidth='lg'>
                 <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
                 <form onSubmit={CreateNewDrsObject}>
-                    <TextField variant='outlined' id='id' required fullWidth label='id' margin='normal' value={newDrsObject.id} onChange={HandleChange}></TextField>
-                    <TextField variant='outlined' id='description' required fullWidth label='description' margin='normal' value={newDrsObject.description}></TextField>
+                    <TextField variant='outlined' id='id' required fullWidth label='id' margin='normal' value={activeDrsObject.id} onChange={HandleIdChange}></TextField>
+                    <TextField variant='outlined' id='description' required fullWidth label='description' margin='normal' value={activeDrsObject.description}></TextField>
                     <Grid container justify='space-evenly' spacing={4}>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='name' required fullWidth label='name' margin='normal' value={newDrsObject.name}></TextField>
+                            <TextField variant='outlined' id='name' required fullWidth label='name' margin='normal' value={activeDrsObject.name}></TextField>
                         </Grid>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='mime_type' fullWidth label='mime_type' margin='normal' value={newDrsObject.mime_type}></TextField>
+                            <TextField variant='outlined' id='mime_type' fullWidth label='mime_type' margin='normal' value={activeDrsObject.mime_type}></TextField>
                         </Grid>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='size' fullWidth label='size' margin='normal' value={newDrsObject.size}></TextField>
+                            <TextField variant='outlined' id='size' fullWidth label='size' margin='normal' value={activeDrsObject.size}></TextField>
                         </Grid>
                         <Grid item xs={3}>
                             <TextField variant='outlined' id='version' fullWidth label='version' margin='normal'></TextField>
@@ -98,10 +103,10 @@ const CreateDrsForm = (props) => {
                                 <AddCircleIcon />
                             </IconButton>
                         </Grid>
-                    </Grid> */}
+                    </Grid> 
                     <Button variant='contained' color='default'>
                         <Input type='submit' value='Create DRS Object'></Input>
-                    </Button>
+                    </Button> */}
                 </form>
             </Container>
         </Box>
