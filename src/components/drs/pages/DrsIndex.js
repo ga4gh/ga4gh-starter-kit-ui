@@ -60,7 +60,7 @@ const DrsIndex = (props) => {
             <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
           </Grid>
           <Grid item>
-            <Link to='/drs/create'>
+            <Link to='/drs/new'>
               <Button variant='contained'>
               <Typography variant='button'>Create New<br/>DRS Object</Typography>
               </Button>

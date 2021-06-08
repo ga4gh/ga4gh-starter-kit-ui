@@ -9,7 +9,10 @@ import {
     FormGroup, 
     Button, 
     Divider, 
-    Box
+    Box, 
+    RadioGroup, 
+    Radio, 
+    FormControlLabel
 } from '@material-ui/core';
 import {
     Link
@@ -24,17 +27,40 @@ const SpaceDivider = () => {
     );
 }
 
+const BundleBlobRadio = (props) => {
+    let readOnlyValue = props.readOnly;
+    if(props.formType === 'NewDrs') {
+        return(
+            <FormGroup>
+                <Typography align='left' variant='h6'>Is this DRS Object a bundle or a blob?</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>Bundles contain references to Child Drs Objects, while Blobs act as single DRS Objects and do not have any children.</Typography>
+                <RadioGroup name='DrsObjectType' value={props.drsObjectType} onChange={props.HandleDrsObjectTypeChange}>
+                        <FormControlLabel control={<Radio color='primary'/>} label='Bundle' value='bundle' disabled={readOnlyValue}></FormControlLabel>
+                        <FormControlLabel control={<Radio color='primary'/>} label='Blob' value='blob' disabled={readOnlyValue}></FormControlLabel>
+                </RadioGroup>
+                <SpaceDivider />
+            </FormGroup>
+        );
+    }
+    else {
+        return null;
+    }
+}
+
 const MimeType = (props) => {
     let mimeType = props.mimeType;
     let readOnlyValue = props.readOnly;
-    if(!mimeType) {
+    if(!mimeType && mimeType!== '') {
+        return null;
+    }
+    else if(props.formType === 'NewDrs' && props.drsObjectType !== 'blob') {
         return null;
     }
     else {
         return (
             <FormControl fullWidth>
                 <TextField 
-                id='mime_type' label='MIME Type' margin='normal' name='mime_type' type='text' value={mimeType} InputProps={{readOnly: readOnlyValue}}
+                id='mime_type' label='MIME Type' margin='normal' name='mime_type' type='text' value={mimeType} onChange={props.HandleMimeTypeChange} InputProps={{readOnly: readOnlyValue}}
                 helperText='The media type of the DRS Object'/>
             </FormControl>
         );
@@ -45,7 +71,10 @@ const MimeType = (props) => {
 const Size = (props) => {
     let size = props.size;
     let readOnlyValue = props.readOnly;
-    if(!size) {
+    if(!size && size !== '') {
+        return null;
+    }
+    else if(props.formType === 'NewDrs' && props.drsObjectType !== 'blob') {
         return null;
     }
     else {
@@ -98,6 +127,9 @@ const Checksums = (props) => {
     if(!checksums) {
         return null;
     }
+    else if(props.formType === 'NewDrs' && props.drsObjectType !== 'blob') {
+        return null;
+    }
     else {
         const checksumsDisplay = checksums.map((checksum) => {
             return (
@@ -139,6 +171,9 @@ const DrsObjectChildren = (props) => {
     let drsChildren = props.drs_object_children;
     let readOnlyValue = props.readOnly;
     if(!drsChildren) {
+        return null;
+    }
+    else if(props.formType === 'NewDrs' && props.drsObjectType !== 'bundle') {
         return null;
     }
     else {
@@ -237,6 +272,9 @@ const AccessPoints = (props) => {
     let awsAccessObjects = props.drsObject.aws_s3_access_objects;
     let readOnlyValue = props.readOnly;
     if(!fileAccessObjects && !awsAccessObjects) {
+        return null;
+    }
+    else if(props.formType === 'NewDrs' && props.drsObjectType !== 'blob') {
         return null;
     }
     else {
@@ -340,24 +378,53 @@ const AwsS3AccessObjects = (props) => {
 const DrsObject = (props) => {
     let drsObjectDetails = props.drsObjectDetails;
     let readOnlyValue = props.readOnly;
+    let formType = props.formType;
+
+    const HandleIdChange = (event) => {
+        props.updateId(event.target.value);
+    }
+
+    const HandleNameChange = (event) => {
+        props.updateName(event.target.value);
+    }
+
+    const HandleDescriptionChange = (event) => {
+        props.updateDescription(event.target.value);
+    }
+
+    const HandleVersionChange = (event) => {
+        props.updateVersion(event.target.value);
+    }
+
+    const HandleDrsObjectTypeChange = (event) => {
+        console.log(event.target.value);
+        props.updateDrsObjectType(event.target.value);
+    }
+
+    const HandleMimeTypeChange = (event) => {
+        props.updateMimeType(event.target.value);
+    }
+
     return (
         <div align="center">
       <meta
         name="viewport"
         content="minimum-scale=1, initial-scale=1, width=device-width"
       />
+      <Box pb={4}>
       <Container maxWidth='lg'>
           <form>
+            <BundleBlobRadio formType={formType} drsObjectType={drsObjectDetails.drs_object_type} readOnly={readOnlyValue} HandleDrsObjectTypeChange={HandleDrsObjectTypeChange}/>
             <FormControl fullWidth>
-                <TextField id='id' label='Id' margin='normal' name='id' type='text' value={drsObjectDetails.id} InputProps={{readOnly: readOnlyValue}} 
+                <TextField id='id' label='Id' margin='normal' name='id' type='text' value={drsObjectDetails.id} onChange={HandleIdChange} InputProps={{readOnly: readOnlyValue}} 
                 helperText='Unique identifier for this DRS Object (UUID recommended), cannot be modified later.'/>
             </FormControl>
             <FormControl fullWidth>
-                <TextField id='name' label='Name' margin='normal' name='name' type='text' value={drsObjectDetails.name} InputProps={{readOnly: readOnlyValue}}
+                <TextField id='name' label='Name' margin='normal' name='name' type='text' value={drsObjectDetails.name} onChange={HandleNameChange} InputProps={{readOnly: readOnlyValue}}
                 helperText='Short, descriptive name for this DRS Object'/>
             </FormControl>
             <FormControl fullWidth>
-                <TextField id='description' label='Description' margin='normal' name='description' type='text' value={drsObjectDetails.description} InputProps={{readOnly: readOnlyValue}}
+                <TextField id='description' label='Description' margin='normal' name='description' type='text' value={drsObjectDetails.description} onChange={HandleDescriptionChange} InputProps={{readOnly: readOnlyValue}}
                 helperText='Longer description of this DRS Object'/>
             </FormControl>
             <Grid container justify='space-evenly' spacing={4}>
@@ -375,26 +442,28 @@ const DrsObject = (props) => {
                 </Grid>
                 <Grid item xs={4}>
                     <FormControl fullWidth>
-                        <TextField id='version' label='Version' margin='normal' name='version' type='text' value={drsObjectDetails.version} InputProps={{readOnly: readOnlyValue}}
+                        <TextField id='version' label='Version' margin='normal' name='version' type='text' value={drsObjectDetails.version} onChange={HandleVersionChange} InputProps={{readOnly: readOnlyValue}}
                         helperText='Current version of the DRS Object, it should be updated each time the DRS Object is modified.'/>
                     </FormControl>
                 </Grid>
             </Grid>
+            
             <Grid container justify='flex-start' spacing={4}>
                 <Grid item xs={4}>
-                    <MimeType mimeType={drsObjectDetails.mime_type} readOnly={readOnlyValue}/>
+                    <MimeType mimeType={drsObjectDetails.mime_type} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} HandleMimeTypeChange={HandleMimeTypeChange}/>
                 </Grid>
                 <Grid item xs={4}>
-                    <Size size={drsObjectDetails.size} readOnly={readOnlyValue}/>
+                    <Size size={drsObjectDetails.size} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type}/>
                 </Grid>
             </Grid>
             <Aliases aliases={drsObjectDetails.aliases} readOnly={readOnlyValue}/>
-            <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue}/>
-            <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} readOnly={readOnlyValue}/>
+            <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type}/>
+            <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type}/>
             <DrsObjectParents drs_object_parents={drsObjectDetails.drs_object_parents} readOnly={readOnlyValue}/>
-            <AccessPoints drsObject={drsObjectDetails} readOnly={readOnlyValue}/>
+            <AccessPoints drsObject={drsObjectDetails} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type}/>
           </form>
       </Container>
+      </Box>
       </div>
     );
 }

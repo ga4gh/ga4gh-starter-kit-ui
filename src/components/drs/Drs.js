@@ -8,7 +8,7 @@ import {
 import { Typography } from '@material-ui/core';
 import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
-import CreateDrsForm from './forms/CreateDrsForm';
+import CreateDrsForm from './pages/NewDrs';
 
 const cancelToken = axios.CancelToken;
 const drsCancelToken = cancelToken.source();
@@ -18,19 +18,15 @@ class Drs extends React.Component {
     super(props);
     this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
     this.handleError = this.handleError.bind(this);
-    this.resetActiveDrsObject = this.resetActiveDrsObject.bind(this);
-    //this.resetActiveDrsObject = this.resetActiveDrsObject.bind(this);
-    this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
-    //this.resetDrsObject = this.resetDrsObject.bind(this);
     this.updateId = this.updateId.bind(this);
     this.updateName = this.updateName.bind(this);
     this.updateDescription = this.updateDescription.bind(this);
     // this.updateCreatedTime = this.updateCreatedTime.bind(this);
     // this.updateUpdatedTime = this.updateUpdatedTime.bind(this);
     this.updateVersion = this.updateVersion.bind(this);
+    this.updateDrsObjectType = this.updateDrsObjectType.bind(this);
     this.updateMimeType = this.updateMimeType.bind(this); 
     this.state = {
-      activeDrsObject: null,
       newDrsObject: {
         id: '',
         description: '',
@@ -45,8 +41,10 @@ class Drs extends React.Component {
         drs_object_children: [],
         drs_object_parents: [],
         file_access_objects: [],
-        aws_s3_access_objects: []
+        aws_s3_access_objects: [],
+        drs_object_type: ''
       },
+      activeDrsObject: null,
       drsObjectsList: null,
       error: null
     };
@@ -99,27 +97,6 @@ class Drs extends React.Component {
     });
   }
 
-  resetActiveDrsObject() {
-    this.setState({
-      activeDrsObject: {
-        id: '',
-        description: '',
-        created_time: '',
-        mime_type: '',
-        name: '',
-        size: '',
-        updated_time: '',
-        version: '',
-        aliases: [],
-        checksums: [],
-        drs_object_children: [],
-        drs_object_parents: [],
-        file_access_objects: [],
-        aws_s3_access_objects: []
-      }
-    })
-  }
-
   updateId(newValue) {
     this.setState({ 
       activeDrsObject: {
@@ -136,7 +113,8 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.activeDrsObject.drs_object_type
       }
     })
     //console.log(this.state.activeDrsObject);
@@ -158,7 +136,8 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.activeDrsObject.drs_object_type
       }
     })
     console.log(this.state.activeDrsObject);
@@ -180,7 +159,8 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.activeDrsObject.drs_object_type
       }
     })
     console.log(this.state.activeDrsObject);
@@ -202,7 +182,8 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.activeDrsObject.drs_object_type
       }
     })
     console.log(this.state.activeDrsObject);
@@ -224,7 +205,8 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.activeDrsObject.drs_object_type
       }
     })
     console.log(this.state.activeDrsObject);
@@ -246,10 +228,71 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.activeDrsObject.drs_object_type
       }
     })
     console.log(this.state.activeDrsObject);
+  }
+
+  updateDrsObjectType(newValue) {
+    if(newValue === 'blob'){
+      this.setState({
+        activeDrsObject: {
+          id: this.state.activeDrsObject.id,
+          description: this.state.activeDrsObject.description,
+          created_time: this.state.activeDrsObject.created_time,
+          mime_type: '',
+          name: this.state.activeDrsObject.name,
+          size: '',
+          updated_time: this.state.activeDrsObject.updated_time,
+          version: this.state.activeDrsObject.version,
+          aliases: this.state.activeDrsObject.aliases,
+          checksums: [],
+          drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+          file_access_objects: [],
+          aws_s3_access_objects: [], 
+          drs_object_type: newValue
+        }
+      })
+    }
+    else if(newValue === 'bundle'){
+      this.setState({
+        activeDrsObject: {
+          id: this.state.activeDrsObject.id,
+          description: this.state.activeDrsObject.description,
+          created_time: this.state.activeDrsObject.created_time,
+          name: this.state.activeDrsObject.name,
+          updated_time: this.state.activeDrsObject.updated_time,
+          version: this.state.activeDrsObject.version,
+          aliases: this.state.activeDrsObject.aliases,
+          drs_object_children: [],
+          drs_object_parents: this.state.activeDrsObject.drs_object_parents, 
+          drs_object_type: newValue
+        }
+      })
+    }
+    else{
+      this.setState({
+        activeDrsObject: {
+          id: this.state.activeDrsObject.id,
+          description: this.state.activeDrsObject.description,
+          created_time: this.state.activeDrsObject.created_time,
+          mime_type: this.state.activeDrsObject.mime_type,
+          name: this.state.activeDrsObject.name,
+          size: this.state.activeDrsObject.size,
+          updated_time: this.state.activeDrsObject.updated_time,
+          version: this.state.activeDrsObject.version,
+          aliases: this.state.activeDrsObject.aliases,
+          checksums: this.state.activeDrsObject.checksums,
+          drs_object_children: this.state.activeDrsObject.drs_object_children,
+          drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+          file_access_objects: this.state.activeDrsObject.file_access_objects,
+          aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+          drs_object_type: newValue
+        }
+      })  
+    }
   }
 
   updateMimeType(newValue) {
@@ -268,7 +311,8 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.activeDrsObject.drs_object_type
       }
     })
     console.log(this.state.activeDrsObject);
@@ -291,7 +335,8 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.drs_object_type
       }
     })
     console.log(this.state.activeDrsObject);
@@ -315,7 +360,8 @@ class Drs extends React.Component {
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
         file_access_objects: this.state.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects, 
+        drs_object_type: this.state.drs_object_type
       }
     })
     console.log(this.state.activeDrsObject);
@@ -365,25 +411,32 @@ class Drs extends React.Component {
         <div>
           <Switch>
             <Route exact path='/drs'>
-              <DrsIndex drsObjectsList={this.state.drsObjectsList} handleError={this.handleError}/>
+              <DrsIndex 
+                drsObjectsList={this.state.drsObjectsList} 
+                handleError={this.handleError}
+              />
             </Route>
-            <Route exact path='/drs/create'>
+            <Route exact path='/drs/new'>
               <CreateDrsForm 
-                newDrsObject = {this.state.newDrsObject}
-                updateActiveDrsObject = {this.updateActiveDrsObject}
-                activeDrsObject = {this.state.activeDrsObject}
-                updateId = {this.updateId}
-                updateName = {this.updateName}
-                updateDescription = {this.updateDescription}
-                // updateCreatedTime = {this.updateCreatedTime}
-                // updateUpdatedTime = {this.updateUpdatedTime}
-                updateVersion = {this.updateVersion}
-                updateMimeType = {this.updateMimeType}
-                // resetDrsObject = {this.resetDrsObject}
+                newDrsObject={this.state.newDrsObject}
+                activeDrsObject={this.state.activeDrsObject}
+                updateActiveDrsObject={this.updateActiveDrsObject}
+                updateId={this.updateId}
+                updateName={this.updateName}
+                updateDescription={this.updateDescription}
+                // updateCreatedTime={this.updateCreatedTime}
+                // updateUpdatedTime={this.updateUpdatedTime}
+                updateVersion={this.updateVersion}
+                updateDrsObjectType={this.updateDrsObjectType}
+                updateMimeType={this.updateMimeType}
               />
             </Route>
             <Route path='/drs/:objectId'>
-              <DrsShow activeDrsObject={this.state.activeDrsObject} updateActiveDrsObject={this.updateActiveDrsObject} handleError={this.handleError}/>
+              <DrsShow 
+                activeDrsObject={this.state.activeDrsObject} 
+                updateActiveDrsObject={this.updateActiveDrsObject} 
+                handleError={this.handleError}
+              />
             </Route>
           </Switch>
         </div>
@@ -391,6 +444,5 @@ class Drs extends React.Component {
     }
   }
 }
-
   
   export default Drs;
