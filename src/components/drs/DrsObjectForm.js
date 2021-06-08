@@ -34,8 +34,8 @@ const MimeType = (props) => {
         return (
             <FormControl fullWidth>
                 <TextField 
-                id='mime_type' label='mime_type' margin='normal' name='mime_type' type='text' value={mimeType} InputProps={{readOnly: readOnlyValue}}
-                helperText='The mime-type of the DRS Object represented as a string.'/>
+                id='mime_type' label='MIME Type' margin='normal' name='mime_type' type='text' value={mimeType} InputProps={{readOnly: readOnlyValue}}
+                helperText='The media type of the DRS Object'/>
             </FormControl>
         );
         
@@ -51,7 +51,7 @@ const Size = (props) => {
     else {
         return (
             <FormControl fullWidth>
-                <TextField id='size' label='size' margin='normal' name='size' type='number' value={size} InputProps={{readOnly: readOnlyValue}}
+                <TextField id='size' label='Size' margin='normal' name='size' type='number' value={size} InputProps={{readOnly: readOnlyValue}}
                 helperText='The size (in bytes) of the DRS Object represented as an integer.'/>
             </FormControl>
         );
@@ -78,7 +78,10 @@ const Aliases = (props) => {
             <FormGroup>
                 <SpaceDivider />
                 <Typography align='left' variant='h6'>Aliases</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>A list of strings that can be used to identify the DRS Object. The list of aliases is set when creating the DRS Object and can be modified by editing it.</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    A list of aliases that can be used to identify the DRS Object
+                    by additional names
+                </Typography>
                 <FormGroup row>
                    <Grid container spacing={4}>
                        {aliasesDisplay}
@@ -102,12 +105,12 @@ const Checksums = (props) => {
                     <Grid container spacing={4}>
                         <Grid item xs={4}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' id={checksum.type} label='type' name='type' type='text' value={checksum.type} InputProps={{readOnly: readOnlyValue}} helperText='Hashing algorithm used to generate the checksum.'/>
+                                <TextField variant='outlined' id={checksum.type} label='Type' name='type' type='text' value={checksum.type} InputProps={{readOnly: readOnlyValue}} helperText='Hashing algorithm used to generate the checksum.'/>
                             </FormControl>
                         </Grid>
                         <Grid item xs={8}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' id={checksum.checksum} label='checksum' name='checksum' type='checksum' value={checksum.checksum} InputProps={{readOnly: readOnlyValue}} helperText='Checksum digest value.'/>
+                                <TextField variant='outlined' id={checksum.checksum} label='Checksum' name='checksum' type='checksum' value={checksum.checksum} InputProps={{readOnly: readOnlyValue}} helperText='Checksum digest value.'/>
                             </FormControl>    
                         </Grid>    
                     </Grid>
@@ -118,7 +121,13 @@ const Checksums = (props) => {
             <FormGroup>
                 <SpaceDivider />
                 <Typography align='left' variant='h6'>Checksums</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>Each DRS Object must have at least one checksum. For blob-type DRS Objects, checksums are calculated based on the bytes in the DRS Object. For bundle-type objects, checksums are calculated based on each of its DRS Object Children. The type and value of each checksum associated with the current DRS Object are shown below.</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    Each single-blob DRS Object must report one or more checksums,
+                    recording the digest algorithm and value of the DRS Object
+                    bytes.
+                    The following list displays the recorded digest algorithms
+                    and corresponding values for this DRS Object.
+                </Typography>
                 <br />
                 {checksumsDisplay} 
             </FormGroup>
@@ -137,14 +146,14 @@ const DrsObjectChildren = (props) => {
             return (
                 <FormGroup key={drsChild.id} row>
                     <Grid container alignItems='center' spacing={4}>
-                        <Grid item xs={5}>
-                            <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsChild.name} label='name' margin='normal' name={drsChild.name} type='text' value={drsChild.name} InputProps={{readOnly: readOnlyValue}}/>                            
-                            </FormControl>
-                        </Grid>
                         <Grid item xs={5}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsChild.id} label='id' margin='normal' name={drsChild.id} type='text' value={drsChild.id} InputProps={{readOnly: readOnlyValue}}/>                        
+                                <TextField variant='outlined' fullWidth id={drsChild.id} label='Id' margin='normal' name={drsChild.id} type='text' value={drsChild.id} InputProps={{readOnly: readOnlyValue}}/>                        
+                            </FormControl>
+                        </Grid>
+                        <Grid item xs={5}>
+                            <FormControl fullWidth>
+                                <TextField variant='outlined' fullWidth id={drsChild.name} label='Name' margin='normal' name={drsChild.name} type='text' value={drsChild.name} InputProps={{readOnly: readOnlyValue}}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={2}>
@@ -159,9 +168,19 @@ const DrsObjectChildren = (props) => {
         return (
             <FormGroup>
                 <SpaceDivider />
-                <Typography align='left' variant='h6'>DRS Object Children</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>DRS Object Children are bundle-type or blob-type DRS Objects associated with the current DRS Object. The name and DRS ID of each DRS Object Child associated with the current DRS Object are shown below. More details about each DRS Object Child can be accessed by clicking the corresponding "View Details" button.</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>The current DRS Object is a DRS Object Parent to each of its DRS Object Children. All bundles must have at least one DRS Object Child, while blobs represent a single DRS Object and do not have any DRS Object Children. DRS Object Children are set when creating or modifying a bundle-type DRS Object by identifying the DRS Object Child using its DRS ID.</Typography>
+                <Typography align='left' variant='h6'>Bundle Children</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    This DRS Object is currently acting as a DRS Bundle. Bundles
+                    contain references to multiple Child objects (single-blob DRS
+                    Objects and/or DRS Bundles), enabling multiple DRS Objects to
+                    be logically grouped in a nested structure. Only DRS Bundles
+                    may have children, single-blob DRS Objects do not have
+                    children.
+                </Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    The following listing displays all children for the current
+                    DRS Bundle.
+                </Typography>
                 {drsChildrenDisplay}
             </FormGroup>
         );
@@ -179,14 +198,14 @@ const DrsObjectParents = (props) => {
             return (
                 <FormGroup key={drsParent.id} row>
                     <Grid container alignItems='center' spacing={4}>
-                        <Grid item xs={5}>
-                            <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsParent.name} label='name' margin='normal' name={drsParent.name} type='text' value={drsParent.name} InputProps={{readOnly: readOnlyValue}}/>                            
-                            </FormControl>
-                        </Grid>
                         <Grid item xs={5}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsParent.id} label='id' margin='normal' name={drsParent.id} type='text' value={drsParent.id} InputProps={{readOnly: readOnlyValue}}/>                            
+                                <TextField variant='outlined' fullWidth id={drsParent.id} label='Id' margin='normal' name={drsParent.id} type='text' value={drsParent.id} InputProps={{readOnly: readOnlyValue}}/>                            
+                            </FormControl>
+                        </Grid>
+                        <Grid item xs={5}>
+                            <FormControl fullWidth>
+                                <TextField variant='outlined' fullWidth id={drsParent.name} label='Name' margin='normal' name={drsParent.name} type='text' value={drsParent.name} InputProps={{readOnly: readOnlyValue}}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={2}>
@@ -201,9 +220,12 @@ const DrsObjectParents = (props) => {
         return (
             <FormGroup>
                 <SpaceDivider />
-                <Typography align='left' variant='h6'>DRS Object Parents</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>DRS Object Parents are bundle-type DRS Objects associated with the current DRS Object. The name and DRS ID of each DRS Object Parent associated with the current DRS Object are shown below. More details about each DRS Object Parent can be accessed by clicking the corresponding "View Details" button.</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>All DRS Object Parents are bundle-type DRS Objects, meaning that they must have at least one DRS Object Child. The current DRS Object is a DRS Object Child to each of its DRS Object Parents. DRS Object Parents are set when creating or modifying a DRS Object by identifying the DRS Object Parent using its DRS ID.</Typography>
+                <Typography align='left' variant='h6'>Parent Bundles</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    The following listing displays all "Parent" DRS Bundles,
+                    that is, all bundles that contain the current DRS Object as
+                    one of its Children.
+                </Typography>
                 {drsParentsDisplay}
             </FormGroup>
         );
@@ -222,7 +244,13 @@ const AccessPoints = (props) => {
             <FormGroup>
                 <SpaceDivider />
                 <Typography align='left' variant='h6'>Access Points</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>Access Points provide information about how the DRS Object data can be accessed.</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    A DRS Object may contain multiple access points for fetching 
+                    the raw bytes. Multiple access points give the client options 
+                    in choosing the best data source for their use case (e.g.
+                    based on geographic proximity to the data). All access points
+                    associated with a single DRS Object must have the same bytes
+                </Typography>
                 <FileAccessObjects file_access_objects={fileAccessObjects} readOnly={readOnlyValue}/>
                 <AwsS3AccessObjects aws_s3_access_objects={awsAccessObjects} readOnly={readOnlyValue}/>
             </FormGroup>
@@ -240,16 +268,27 @@ const FileAccessObjects = (props) => {
         const fileAccessDisplay = fileAccessObjects.map((fileAccessObject) => {
             return (
                 <FormControl fullWidth key='file_access_object'>
-                    <TextField variant='outlined' id='path' label='path' margin='normal' name='path' type='text' value={fileAccessObject.path} InputProps={{readOnly: readOnlyValue}} helperText='A string that can be used to retrieve the DRS Object data.'/>
+                    <TextField
+                        variant='outlined' id='path' label='Path' margin='normal'
+                        name='path' type='text'
+                        value={fileAccessObject.path}
+                        InputProps={{readOnly: readOnlyValue}}
+                        helperText='The filesystem path to the local file storing 
+                            DRS Object bytes'/>
                 </FormControl>
             );
         })
         return (
-          <FormGroup>
-              <br /> 
-              <Typography align='left' variant='body1'>File Access Objects</Typography>
-              <Typography variant='body2' align='left' color='textSecondary'>A list of access methods to retrieve DRS Object data.</Typography>
-              {fileAccessDisplay}
+            <FormGroup>
+                <br /> 
+                <Typography align='left' variant='body1'>Local File Access Points</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    Local file access points represent local files available on
+                    the same filesystem where the DRS service is running. This
+                    can also include files co-located on Network Attached Storage
+                    (NAS), such as on a high-performance compute cluster (HPC).                    
+                </Typography>
+                {fileAccessDisplay}
             </FormGroup>
         );
     }
@@ -268,17 +307,17 @@ const AwsS3AccessObjects = (props) => {
                     <Grid container alignItems='center' spacing={4}>
                         <Grid item xs={3}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='region' label='region' margin='normal' name='region' type='text' value={awsAccessObject.region} InputProps={{readOnly: readOnlyValue}} helperText='Region where AWS S3 service is located.'/>                            
+                                <TextField variant='outlined' fullWidth id='region' label='Region' margin='normal' name='region' type='text' value={awsAccessObject.region} InputProps={{readOnly: readOnlyValue}} helperText='Region where AWS S3 service is located.'/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={3}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='bucket' label='bucket' margin='normal' name='bucket' type='text' value={awsAccessObject.bucket} InputProps={{readOnly: readOnlyValue}} helperText='AWS S3 bucket containing the DRS Object.'/>                            
+                                <TextField variant='outlined' fullWidth id='bucket' label='Bucket' margin='normal' name='bucket' type='text' value={awsAccessObject.bucket} InputProps={{readOnly: readOnlyValue}} helperText='AWS S3 bucket containing the DRS Object.'/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={6}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='key' label='key' margin='normal' name='key' type='text' value={awsAccessObject.key} InputProps={{readOnly: readOnlyValue}} helperText='Identifier used to access the DRS Object.'/>                            
+                                <TextField variant='outlined' fullWidth id='key' label='Key' margin='normal' name='key' type='text' value={awsAccessObject.key} InputProps={{readOnly: readOnlyValue}} helperText='Path within the bucket to the S3 object storing DRS Object bytes.'/>                            
                             </FormControl>
                         </Grid>
                     </Grid>
@@ -288,8 +327,10 @@ const AwsS3AccessObjects = (props) => {
         return (
             <FormGroup>
             <br /> 
-            <Typography align='left' variant='body1'>AWS S3 Access Objects</Typography>
-            <Typography variant='body2' align='left' color='textSecondary'>Information needed to access the DRS Object stored in AWS S3.</Typography>
+            <Typography align='left' variant='body1'>AWS S3 Access Points</Typography>
+            <Typography variant='body2' align='left' color='textSecondary'>
+                Represents objects stored in AWS S3 containing DRS Object bytes.
+            </Typography>
                 {awsAccessDisplay}
             </FormGroup>
         );
@@ -308,34 +349,34 @@ const DrsObject = (props) => {
       <Container maxWidth='lg'>
           <form>
             <FormControl fullWidth>
-                <TextField id='id' label='id' margin='normal' name='id' type='text' value={drsObjectDetails.id} InputProps={{readOnly: readOnlyValue}} 
-                helperText='A unique identifier for each DRS Object in the form of a string. This property is set when the DRS Object is created and cannot be modified afterwards.'/>
+                <TextField id='id' label='Id' margin='normal' name='id' type='text' value={drsObjectDetails.id} InputProps={{readOnly: readOnlyValue}} 
+                helperText='Unique identifier for this DRS Object (UUID recommended), cannot be modified later.'/>
             </FormControl>
             <FormControl fullWidth>
-                <TextField id='name' label='name' margin='normal' name='name' type='text' value={drsObjectDetails.name} InputProps={{readOnly: readOnlyValue}}
-                helperText='A name to represent and identify the DRS Object. This property is set when the DRS Object is created and can be modified by editing the DRS Object.'/>
+                <TextField id='name' label='Name' margin='normal' name='name' type='text' value={drsObjectDetails.name} InputProps={{readOnly: readOnlyValue}}
+                helperText='Short, descriptive name for this DRS Object'/>
             </FormControl>
             <FormControl fullWidth>
-                <TextField id='description' label='description' margin='normal' name='description' type='text' value={drsObjectDetails.description} InputProps={{readOnly: readOnlyValue}}
-                helperText='A description of the DRS Object. This property is set when the DRS Object is created and can be modified by editing the DRS Object.'/>
+                <TextField id='description' label='Description' margin='normal' name='description' type='text' value={drsObjectDetails.description} InputProps={{readOnly: readOnlyValue}}
+                helperText='Longer description of this DRS Object'/>
             </FormControl>
             <Grid container justify='space-evenly' spacing={4}>
                 <Grid item xs={4}>
                     <FormControl fullWidth>
-                        <TextField id='created_time' label='created_time' margin='normal' name='created_time' type='text' value={drsObjectDetails.created_time} InputProps={{readOnly: readOnlyValue}}
-                        helperText='The time the DRS Object was created, represented in string (date-time) format. The default value is set to the time that the DRS Object was created using DRS Starter Kit, however it can also be set manually.'/>
+                        <TextField id='created_time' label='Created Time' margin='normal' name='created_time' type='text' value={drsObjectDetails.created_time} InputProps={{readOnly: readOnlyValue}}
+                        helperText='Timestamp of DRS Object creation in ISO 8601 format'/>
                     </FormControl>
                 </Grid>
                 <Grid item xs={4}>
                     <FormControl fullWidth>
-                        <TextField id='updated_time' label='updated_time' margin='normal' name='updated_time' type='text' value={drsObjectDetails.updated_time} InputProps={{readOnly: readOnlyValue}}
-                        helperText='The time the DRS Object was most recently updated, represented in string (date-time) format. The default value is set to the time that the DRS Object was most recently edited using DRS Starter Kit, however is can also be set manually.'/>
+                        <TextField id='updated_time' label='Updated Time' margin='normal' name='updated_time' type='text' value={drsObjectDetails.updated_time} InputProps={{readOnly: readOnlyValue}}
+                        helperText='Timestamp of when the DRS Object was most recently updated in ISO 8601 format'/>
                     </FormControl>
                 </Grid>
                 <Grid item xs={4}>
                     <FormControl fullWidth>
-                        <TextField id='version' label='version' margin='normal' name='version' type='text' value={drsObjectDetails.version} InputProps={{readOnly: readOnlyValue}}
-                        helperText='The current version of the DRS Object represented by a string. This should be updated when the DRS Object is modified.'/>
+                        <TextField id='version' label='Version' margin='normal' name='version' type='text' value={drsObjectDetails.version} InputProps={{readOnly: readOnlyValue}}
+                        helperText='Current version of the DRS Object, it should be updated each time the DRS Object is modified.'/>
                     </FormControl>
                 </Grid>
             </Grid>
