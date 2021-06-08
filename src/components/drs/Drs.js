@@ -21,6 +21,14 @@ class Drs extends React.Component {
     this.resetActiveDrsObject = this.resetActiveDrsObject.bind(this);
     //this.resetActiveDrsObject = this.resetActiveDrsObject.bind(this);
     this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
+    //this.resetDrsObject = this.resetDrsObject.bind(this);
+    this.updateId = this.updateId.bind(this);
+    this.updateName = this.updateName.bind(this);
+    this.updateDescription = this.updateDescription.bind(this);
+    // this.updateCreatedTime = this.updateCreatedTime.bind(this);
+    // this.updateUpdatedTime = this.updateUpdatedTime.bind(this);
+    this.updateVersion = this.updateVersion.bind(this);
+    this.updateMimeType = this.updateMimeType.bind(this); 
     this.state = {
       activeDrsObject: null,
       newDrsObject: {
@@ -110,8 +118,208 @@ class Drs extends React.Component {
         aws_s3_access_objects: []
       }
     })
-    console.log(this.state.newDrsObject);
   }
+
+  updateId(newValue) {
+    this.setState({ 
+      activeDrsObject: {
+        id: newValue,
+        description: this.state.activeDrsObject.description,
+        created_time: this.state.activeDrsObject.created_time,
+        mime_type: this.state.activeDrsObject.mime_type,
+        name: this.state.activeDrsObject.name,
+        size: this.state.activeDrsObject.size,
+        updated_time: this.state.activeDrsObject.updated_time,
+        version: this.state.activeDrsObject.version,
+        aliases: this.state.activeDrsObject.aliases,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    //console.log(this.state.activeDrsObject);
+  }
+
+  updateName(newValue) {
+    this.setState({ 
+      activeDrsObject: {
+        id: this.state.activeDrsObject.id,
+        description: this.state.activeDrsObject.description,
+        created_time: this.state.activeDrsObject.created_time,
+        mime_type: this.state.activeDrsObject.mime_type,
+        name: newValue,
+        size: this.state.activeDrsObject.size,
+        updated_time: this.state.activeDrsObject.updated_time,
+        version: this.state.activeDrsObject.version,
+        aliases: this.state.activeDrsObject.aliases,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    console.log(this.state.activeDrsObject);
+  }
+
+  updateDescription(newValue) {
+    this.setState({ 
+      activeDrsObject: {
+        id: this.state.activeDrsObject.id,
+        description: newValue,
+        created_time: this.state.activeDrsObject.created_time,
+        mime_type: this.state.activeDrsObject.mime_type,
+        name: this.state.activeDrsObject.name,
+        size: this.state.activeDrsObject.size,
+        updated_time: this.state.activeDrsObject.updated_time,
+        version: this.state.activeDrsObject.version,
+        aliases: this.state.activeDrsObject.aliases,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    console.log(this.state.activeDrsObject);
+  }
+
+  /* updateCreatedTime(newValue) {
+    this.setState({ 
+      activeDrsObject: {
+        id: this.state.activeDrsObject.id,
+        description: this.state.activeDrsObject.description,
+        created_time: newValue,
+        mime_type: this.state.activeDrsObject.mime_type,
+        name: this.state.activeDrsObject.name,
+        size: this.state.activeDrsObject.size,
+        updated_time: this.state.activeDrsObject.updated_time,
+        version: this.state.activeDrsObject.version,
+        aliases: this.state.activeDrsObject.aliases,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    console.log(this.state.activeDrsObject);
+  }
+
+  updateUpdatedTime(newValue) {
+    this.setState({ 
+      activeDrsObject: {
+        id: this.state.activeDrsObject.id,
+        description: this.state.activeDrsObject.description,
+        created_time: this.state.activeDrsObject.created_time,
+        mime_type: this.state.activeDrsObject.mime_type,
+        name: this.state.activeDrsObject.name,
+        size: this.state.activeDrsObject.size,
+        updated_time: newValue,
+        version: this.state.activeDrsObject.version,
+        aliases: this.state.activeDrsObject.aliases,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    console.log(this.state.activeDrsObject);
+  } */
+
+  updateVersion(newValue) {
+    this.setState({ 
+      activeDrsObject: {
+        id: this.state.activeDrsObject.id,
+        description: this.state.activeDrsObject.description,
+        created_time: this.state.activeDrsObject.created_time,
+        mime_type: this.state.activeDrsObject.mime_type,
+        name: this.state.activeDrsObject.name,
+        size: this.state.activeDrsObject.size,
+        updated_time: this.state.activeDrsObject.updated_time,
+        version: newValue,
+        aliases: this.state.activeDrsObject.aliases,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    console.log(this.state.activeDrsObject);
+  }
+
+  updateMimeType(newValue) {
+    this.setState({ 
+      activeDrsObject: {
+        id: this.state.activeDrsObject.id,
+        description: this.state.activeDrsObject.description,
+        created_time: this.state.activeDrsObject.created_time,
+        mime_type: newValue,
+        name: this.state.activeDrsObject.name,
+        size: this.state.activeDrsObject.size,
+        updated_time: this.state.activeDrsObject.updated_time,
+        version: this.state.activeDrsObject.version,
+        aliases: this.state.activeDrsObject.aliases,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    console.log(this.state.activeDrsObject);
+  }
+
+  /* addAlias(newValue) {
+    let newAliasesList = this.state.activeDrsObject.aliases.push(newValue);
+    this.setState({ 
+      activeDrsObject: {
+        id: this.state.activeDrsObject.id,
+        description: this.state.activeDrsObject.description,
+        created_time: this.state.activeDrsObject.created_time,
+        mime_type: newValue,
+        name: this.state.activeDrsObject.name,
+        size: this.state.activeDrsObject.size,
+        updated_time: this.state.activeDrsObject.updated_time,
+        version: this.state.activeDrsObject.version,
+        aliases: newAliasesList,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    console.log(this.state.activeDrsObject);
+  } */
+
+  //need to identify alias being updated
+  /* updateAlias(index, newValue) {
+    this.activeDrsObject.aliases[index] = newValue;
+    this.setState({ 
+      activeDrsObject: {
+        id: this.state.activeDrsObject.id,
+        description: this.state.activeDrsObject.description,
+        created_time: this.state.activeDrsObject.created_time,
+        mime_type: newValue,
+        name: this.state.activeDrsObject.name,
+        size: this.state.activeDrsObject.size,
+        updated_time: this.state.activeDrsObject.updated_time,
+        version: this.state.activeDrsObject.version,
+        aliases: newAliasesList,
+        checksums: this.state.activeDrsObject.checksums,
+        drs_object_children: this.state.activeDrsObject.drs_object_children,
+        drs_object_parents: this.state.activeDrsObject.drs_object_parents,
+        file_access_objects: this.state.activeDrsObject.file_access_objects,
+        aws_s3_access_objects: this.state.activeDrsObject.aws_s3_access_objects
+      }
+    })
+    console.log(this.state.activeDrsObject);
+  } */
 
   render(){
     if(this.state.error) {
@@ -163,6 +371,15 @@ class Drs extends React.Component {
               <CreateDrsForm 
                 newDrsObject = {this.state.newDrsObject}
                 updateActiveDrsObject = {this.updateActiveDrsObject}
+                activeDrsObject = {this.state.activeDrsObject}
+                updateId = {this.updateId}
+                updateName = {this.updateName}
+                updateDescription = {this.updateDescription}
+                // updateCreatedTime = {this.updateCreatedTime}
+                // updateUpdatedTime = {this.updateUpdatedTime}
+                updateVersion = {this.updateVersion}
+                updateMimeType = {this.updateMimeType}
+                // resetDrsObject = {this.resetDrsObject}
               />
             </Route>
             <Route path='/drs/:objectId'>

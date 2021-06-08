@@ -62,7 +62,31 @@ const CreateDrsForm = (props) => {
 
     const HandleIdChange = (event) => {
         props.updateId(event.target.value);
-        console.log(activeDrsObject);
+        //console.log(activeDrsObject);
+    }
+
+    const HandleNameChange = (event) => {
+        props.updateName(event.target.value);
+    }
+
+    const HandleDescriptionChange = (event) => {
+        props.updateDescription(event.target.value);
+    }
+
+    const HandleCreatedTimeChange = (event) => {
+        props.updateCreatedTime(event.target.value);
+    }
+
+    const HandleUpdatedTimeChange = (event) => {
+        props.updateUpdatedTime(event.target.value);
+    }
+
+    const HandleVersionChange = (event) => {
+        props.updateVersion(event.target.value);
+    }
+
+    const HandleMimeTypeChange = (event) => {
+        props.updateMimeType(event.target.value);
     }
 
     const CreateNewDrsObject = (event) => {
@@ -82,19 +106,19 @@ const CreateDrsForm = (props) => {
                 <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
                 <form onSubmit={CreateNewDrsObject}>
                     <TextField variant='outlined' id='id' required fullWidth label='id' margin='normal' value={activeDrsObject.id} onChange={HandleIdChange}></TextField>
-                    <TextField variant='outlined' id='description' required fullWidth label='description' margin='normal' value={activeDrsObject.description}></TextField>
+                    <TextField variant='outlined' id='description' required fullWidth label='description' margin='normal' value={activeDrsObject.description} onChange={HandleDescriptionChange}></TextField>
                     <Grid container justify='space-evenly' spacing={4}>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='name' required fullWidth label='name' margin='normal' value={activeDrsObject.name}></TextField>
+                            <TextField variant='outlined' id='name' required fullWidth label='name' margin='normal' value={activeDrsObject.name} onChange={HandleNameChange}></TextField>
                         </Grid>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='mime_type' fullWidth label='mime_type' margin='normal' value={activeDrsObject.mime_type}></TextField>
+                            <TextField variant='outlined' id='mime_type' fullWidth label='mime_type' margin='normal' value={activeDrsObject.mime_type} onChange={HandleMimeTypeChange}></TextField>
                         </Grid>
                         <Grid item xs={3}>
                             <TextField variant='outlined' id='size' fullWidth label='size' margin='normal' value={activeDrsObject.size}></TextField>
                         </Grid>
                         <Grid item xs={3}>
-                            <TextField variant='outlined' id='version' fullWidth label='version' margin='normal'></TextField>
+                            <TextField variant='outlined' id='version' fullWidth label='version' margin='normal' value={activeDrsObject.version} onChange={HandleVersionChange}></TextField>
                         </Grid>
                     </Grid>
                     {/* <Grid container alignItems='center' justify='flex-start' spacing={4}>
