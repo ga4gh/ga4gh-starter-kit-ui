@@ -6,24 +6,20 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from './components/pages/Home'
-import DrsIndex from './components/pages/drs/DrsIndex';
-import DrsShow from './components/pages/drs/DrsShow';
+import Home from './components/pages/Home';
+import Drs from './components/drs/Drs';
 
 class App extends React.Component {
   render(){
     return (
       <div>
-        <Router>
+        <Router forceRefresh={true}>
           <Switch>
             <Route exact path='/'>
               <Home />
             </Route>
-            <Route exact path='/drs'>
-              <DrsIndex />
-            </Route>
-            <Route exact path='/drs/:objectId'>
-              <DrsShow />
+            <Route path='/drs'>
+              <Drs />
             </Route>
           </Switch>
         </Router>
