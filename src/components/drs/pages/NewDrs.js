@@ -5,7 +5,6 @@ import {
     Typography, 
     Container
 } from '@material-ui/core';
-import AddCircleIcon from '@material-ui/icons/AddCircle';
 import DrsObjectForm from '../DrsObjectForm';
 
 /* const CreateDrsObject = (props) => {
@@ -54,14 +53,6 @@ const CreateDrsForm = (props) => {
     })
     console.log(activeDrsObject);
 
-    /* const HandleCreatedTimeChange = (event) => {
-        //props.updateCreatedTime(event.target.value);
-    }
-
-    const HandleUpdatedTimeChange = (event) => {
-        //props.updateUpdatedTime(event.target.value);
-    } */
-
     /* const CreateNewDrsObject = (event) => {
         event.preventDefault();
         //return function-based component which makes api call using hooks
@@ -97,9 +88,13 @@ const CreateDrsForm = (props) => {
                     updateId={props.updateId}
                     updateName={props.updateName}
                     updateDescription={props.updateDescription}
+                    updateCreatedTime={props.updateCreatedTime}
+                    updateUpdatedTime={props.updateUpdatedTime}
                     updateVersion={props.updateVersion}
                     updateDrsObjectType={props.updateDrsObjectType}
                     updateMimeType={props.updateMimeType}
+                    addAlias={props.addAlias}
+                    updateAlias={props.updateAlias}
                 />
             </Container>
         </div>

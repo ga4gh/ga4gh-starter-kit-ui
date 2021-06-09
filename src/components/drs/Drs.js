@@ -8,7 +8,7 @@ import {
 import { Typography } from '@material-ui/core';
 import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
-import CreateDrsForm from './pages/NewDrs';
+import NewDrs from './pages/NewDrs';
 
 const cancelToken = axios.CancelToken;
 const drsCancelToken = cancelToken.source();
@@ -21,11 +21,13 @@ class Drs extends React.Component {
     this.updateId = this.updateId.bind(this);
     this.updateName = this.updateName.bind(this);
     this.updateDescription = this.updateDescription.bind(this);
-    // this.updateCreatedTime = this.updateCreatedTime.bind(this);
-    // this.updateUpdatedTime = this.updateUpdatedTime.bind(this);
+    this.updateCreatedTime = this.updateCreatedTime.bind(this);
+    this.updateUpdatedTime = this.updateUpdatedTime.bind(this);
     this.updateVersion = this.updateVersion.bind(this);
     this.updateDrsObjectType = this.updateDrsObjectType.bind(this);
     this.updateMimeType = this.updateMimeType.bind(this); 
+    this.addAlias = this.addAlias.bind(this);
+    this.updateAlias = this.updateAlias.bind(this);
     this.state = {
       newDrsObject: {
         id: '',
@@ -117,7 +119,7 @@ class Drs extends React.Component {
         drs_object_type: this.state.activeDrsObject.drs_object_type
       }
     })
-    //console.log(this.state.activeDrsObject);
+    console.log(this.state.activeDrsObject);
   }
 
   updateName(newValue) {
@@ -166,7 +168,7 @@ class Drs extends React.Component {
     console.log(this.state.activeDrsObject);
   }
 
-  /* updateCreatedTime(newValue) {
+  updateCreatedTime(newValue) {
     this.setState({ 
       activeDrsObject: {
         id: this.state.activeDrsObject.id,
@@ -210,7 +212,7 @@ class Drs extends React.Component {
       }
     })
     console.log(this.state.activeDrsObject);
-  } */
+  }
 
   updateVersion(newValue) {
     this.setState({ 
@@ -318,19 +320,19 @@ class Drs extends React.Component {
     console.log(this.state.activeDrsObject);
   }
 
-  /* addAlias(newValue) {
-    let newAliasesList = this.state.activeDrsObject.aliases.push(newValue);
+  addAlias(newValue) {
+    this.state.activeDrsObject.aliases.push(newValue)
     this.setState({ 
       activeDrsObject: {
         id: this.state.activeDrsObject.id,
         description: this.state.activeDrsObject.description,
         created_time: this.state.activeDrsObject.created_time,
-        mime_type: newValue,
+        mime_type: this.state.activeDrsObject.mime_type,
         name: this.state.activeDrsObject.name,
         size: this.state.activeDrsObject.size,
         updated_time: this.state.activeDrsObject.updated_time,
         version: this.state.activeDrsObject.version,
-        aliases: newAliasesList,
+        aliases: this.state.activeDrsObject.aliases,
         checksums: this.state.activeDrsObject.checksums,
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
@@ -340,22 +342,23 @@ class Drs extends React.Component {
       }
     })
     console.log(this.state.activeDrsObject);
-  } */
+  }
 
   //need to identify alias being updated
-  /* updateAlias(index, newValue) {
-    this.activeDrsObject.aliases[index] = newValue;
+  updateAlias(index, newValue) {
+    console.log(this.state.activeDrsObject[index]);
+    this.state.activeDrsObject.aliases[index] = newValue;
     this.setState({ 
       activeDrsObject: {
         id: this.state.activeDrsObject.id,
         description: this.state.activeDrsObject.description,
         created_time: this.state.activeDrsObject.created_time,
-        mime_type: newValue,
+        mime_type: this.state.activeDrsObject.mime_type,
         name: this.state.activeDrsObject.name,
         size: this.state.activeDrsObject.size,
         updated_time: this.state.activeDrsObject.updated_time,
         version: this.state.activeDrsObject.version,
-        aliases: newAliasesList,
+        aliases: this.state.activeDrsObject.aliases,
         checksums: this.state.activeDrsObject.checksums,
         drs_object_children: this.state.activeDrsObject.drs_object_children,
         drs_object_parents: this.state.activeDrsObject.drs_object_parents,
@@ -365,7 +368,7 @@ class Drs extends React.Component {
       }
     })
     console.log(this.state.activeDrsObject);
-  } */
+  }
 
   render(){
     if(this.state.error) {
@@ -417,18 +420,20 @@ class Drs extends React.Component {
               />
             </Route>
             <Route exact path='/drs/new'>
-              <CreateDrsForm 
+              <NewDrs
                 newDrsObject={this.state.newDrsObject}
                 activeDrsObject={this.state.activeDrsObject}
                 updateActiveDrsObject={this.updateActiveDrsObject}
                 updateId={this.updateId}
                 updateName={this.updateName}
                 updateDescription={this.updateDescription}
-                // updateCreatedTime={this.updateCreatedTime}
-                // updateUpdatedTime={this.updateUpdatedTime}
+                updateCreatedTime={this.updateCreatedTime}
+                updateUpdatedTime={this.updateUpdatedTime}
                 updateVersion={this.updateVersion}
                 updateDrsObjectType={this.updateDrsObjectType}
                 updateMimeType={this.updateMimeType}
+                addAlias={this.addAlias}
+                updateAlias={this.updateAlias}
               />
             </Route>
             <Route path='/drs/:objectId'>
