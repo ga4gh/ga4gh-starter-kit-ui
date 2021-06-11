@@ -33,11 +33,9 @@ const DrsIndexRows = (props) => {
         <Typography>{drsObject.name}</Typography>
       </TableCell>
       <TableCell align="right">
-        <Link to={`/drs/${drsObject.id}`}>
-          <Button variant="contained" color='default'>
-            <Typography variant="button">View Details</Typography>
-          </Button>
-        </Link>
+        <Button variant="contained" color='default' component={Link} to={`/drs/${drsObject.id}`}>
+          <Typography variant="button">View Details</Typography>
+        </Button>
       </TableCell>
     </TableRow>
     );
@@ -55,16 +53,15 @@ const DrsIndex = (props) => {
           content="minimum-scale=1, initial-scale=1, width=device-width"
       />
       <Container maxWidth="lg" >
-        <Grid container justify='space-around' alignItems='center'>
-          <Grid item>
+        <Grid container justify='space-between' alignItems='center'>
+          <Grid item xs={2}/>
+          <Grid item xs={8}>
             <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
           </Grid>
-          <Grid item>
-            <Link to='/drs/new'>
-              <Button variant='contained'>
-              <Typography variant='button'>Create New<br/>DRS Object</Typography>
-              </Button>
-            </Link>
+          <Grid item xs={2} align='right'>
+            <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'>
+            <Typography variant='button'>New DRS Object</Typography>
+            </Button>
           </Grid>
         </Grid>
       </Container>

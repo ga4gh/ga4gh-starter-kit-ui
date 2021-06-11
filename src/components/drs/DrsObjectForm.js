@@ -13,7 +13,8 @@ import {
     RadioGroup, 
     Radio, 
     FormControlLabel, 
-    IconButton
+    IconButton, 
+    MenuItem
 } from '@material-ui/core';
 import {
     Link
@@ -156,7 +157,11 @@ const Checksums = (props) => {
                     <Grid container spacing={4}>
                         <Grid item xs={4}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' id={checksum.type} label='Type' name='type' type='text' value={checksum.type} InputProps={{readOnly: readOnlyValue}} helperText='Hashing algorithm used to generate the checksum.'/>
+                                <TextField select variant='outlined' id={checksum.type} label='Type' name='type' type='text' value={checksum.type} InputProps={{readOnly: readOnlyValue}} helperText='Hashing algorithm used to generate the checksum.' onChange={props.UpdateChecksumType}>
+                                    <MenuItem value='md5'>md5</MenuItem>
+                                    <MenuItem value='sha1'>sha1</MenuItem>
+                                    <MenuItem value='sha256'>sha256</MenuItem>
+                                </TextField>
                             </FormControl>
                         </Grid>
                         <Grid item xs={8}>
@@ -216,9 +221,7 @@ const DrsObjectChildren = (props) => {
                             </FormControl>
                         </Grid>
                         <Grid item xs={2}>
-                            <Link to={`/drs/${drsChild.id}`}>
-                                <Button variant='contained'>View Details</Button>
-                            </Link>
+                            <Button variant='contained' component={Link} to={`/drs/${drsChild.id}`} color='primary'>View Details</Button>
                         </Grid>
                     </Grid>
                 </FormGroup>
@@ -274,9 +277,7 @@ const DrsObjectParents = (props) => {
                             </FormControl>
                         </Grid>
                         <Grid item xs={2}>
-                            <Link to={`/drs/${drsParent.id}`}>
-                                <Button variant='contained'>View Details</Button>
-                            </Link>
+                            <Button variant='contained' component={Link} to={`/drs/${drsParent.id}`} color='primary'>View Details</Button>
                         </Grid>
                     </Grid>
                 </FormGroup>
@@ -479,7 +480,9 @@ const DrsObject = (props) => {
                 <Aliases aliases={drsObjectDetails.aliases} readOnly={readOnlyValue} formType={formType} 
                     HandleAddAlias={() => props.drsObjectFunctions.addListItem('aliases', props.drsObjectFunctions.newAlias)} HandleAliasChange={(index, newValue) => props.drsObjectFunctions.updateAlias(index, newValue)}/>
                 <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} 
-                    AddChecksum={() => props.drsObjectFunctions.addListItem('checksums', props.drsObjectFunctions.newChecksum)} UpdateChecksumValue={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'checksum', newValue)}/>
+                    AddChecksum={() => props.drsObjectFunctions.addListItem('checksums', props.drsObjectFunctions.newChecksum)} 
+                    UpdateChecksumValue={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'checksum', newValue)}
+                    UpdateChecksumType={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'type', newValue)}/>
                 <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} 
                     AddChild={() => props.drsObjectFunctions.addListItem('drs_object_children', props.drsObjectFunctions.newDrsObjectChild)} UpdateChildId={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('drs_object_children', index, 'id', newValue)}/>
                 <DrsObjectParents drs_object_parents={drsObjectDetails.drs_object_parents} readOnly={readOnlyValue} formType={formType} 
