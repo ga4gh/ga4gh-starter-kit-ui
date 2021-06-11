@@ -110,7 +110,7 @@ const Aliases = (props) => {
     else {
         const aliasesDisplay = aliases.map((alias, index) => {
             return (
-                <Grid item key={index}>
+                <Grid item key={`alias ${index}`}>
                     <FormControl>
                         <TextField variant='outlined' id={alias} margin='normal' name='alias' label='Alias' type='text' value={alias} 
                         InputProps={{readOnly: readOnlyValue}} onChange={event => props.HandleAliasChange(index, event.target.value)}/>
@@ -122,22 +122,18 @@ const Aliases = (props) => {
         return (
             <FormGroup>
                 <SpaceDivider />
-                <Grid container justify='space-between'>
-                    <Grid item>
-                        <Typography align='left' variant='h6'>Aliases</Typography>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            A list of aliases that can be used to identify the DRS Object
-                            by additional names
-                        </Typography>
-                        <br />
-                    </Grid>
-                    <Grid item>
-                        <AddPropertyButton formType={formType} handleClick={props.HandleAddAlias}/>
-                    </Grid>
-                </Grid>
+                <Typography align='left' variant='h6'>Aliases</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    A list of aliases that can be used to identify the DRS Object
+                    by additional names
+                </Typography>
+                <br />
                 <FormGroup row>
                    <Grid container spacing={4} alignItems='center'>
                        {aliasesDisplay}
+                       <Grid item>
+                            <AddPropertyButton formType={formType} handleClick={props.HandleAddAlias}/>
+                       </Grid>
                    </Grid>
                 </FormGroup>
             </FormGroup>
@@ -156,7 +152,7 @@ const Checksums = (props) => {
     else {
         const checksumsDisplay = checksums.map((checksum, index) => {
             return (
-                <FormGroup key={index} row>
+                <FormGroup key={`checksum ${index}`} row>
                     <Grid container spacing={4}>
                         <Grid item xs={4}>
                             <FormControl fullWidth>
@@ -176,23 +172,21 @@ const Checksums = (props) => {
         return(
             <FormGroup>
                 <SpaceDivider />
-                <Grid container justify='space-between'>
-                    <Grid item xs={11}>
-                        <Typography align='left' variant='h6'>Checksums</Typography>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            Each single-blob DRS Object must report one or more checksums,
-                            recording the digest algorithm and value of the DRS Object
-                            bytes.
-                            The following list displays the recorded digest algorithms
-                            and corresponding values for this DRS Object.
-                        </Typography>
-                        <br />
-                    </Grid>
+                <Typography align='left' variant='h6'>Checksums</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    Each single-blob DRS Object must report one or more checksums,
+                    recording the digest algorithm and value of the DRS Object
+                    bytes.
+                    The following list displays the recorded digest algorithms
+                    and corresponding values for this DRS Object.
+                </Typography>
+                <br />
+                {checksumsDisplay} 
+                <Grid container>
                     <Grid item>
                         <AddPropertyButton formType={formType} handleClick={props.AddChecksum}/>
                     </Grid>
                 </Grid>
-                {checksumsDisplay} 
             </FormGroup>
         );
     }
@@ -207,18 +201,18 @@ const DrsObjectChildren = (props) => {
         return null;
     }
     else {
-        const drsChildrenDisplay = drsChildren.map((drsChild) => {
+        const drsChildrenDisplay = drsChildren.map((drsChild, index) => {
             return (
-                <FormGroup key={drsChild.id} row>
+                <FormGroup key={`drs child object ${index}`} row>
                     <Grid container alignItems='center' spacing={4}>
                         <Grid item xs={5}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsChild.id} label='Id' margin='normal' name={drsChild.id} type='text' value={drsChild.id} InputProps={{readOnly: readOnlyValue}}/>                        
+                                <TextField variant='outlined' fullWidth id={drsChild.id} label='Id' margin='normal' name={drsChild.id} type='text' value={drsChild.id} InputProps={{readOnly: readOnlyValue}} onChange={(event) => props.UpdateChildId(index, event.target.value)}/>                        
                             </FormControl>
                         </Grid>
                         <Grid item xs={5}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsChild.name} label='Name' margin='normal' name={drsChild.name} type='text' value={drsChild.name} InputProps={{readOnly: readOnlyValue}}/>                            
+                                <TextField variant='outlined' fullWidth id={drsChild.name} label='Name' margin='normal' name={drsChild.name} type='text' value={drsChild.name} InputProps={{readOnly: true}}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={2}>
@@ -233,28 +227,25 @@ const DrsObjectChildren = (props) => {
         return (
             <FormGroup>
                 <SpaceDivider />
-                <Grid container justify='space-between'>
-                    <Grid item xs={11}>
-                        <Typography align='left' variant='h6'>Bundle Children</Typography>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            This DRS Object is currently acting as a DRS Bundle. Bundles
-                            contain references to multiple Child objects (single-blob DRS
-                            Objects and/or DRS Bundles), enabling multiple DRS Objects to
-                            be logically grouped in a nested structure. Only DRS Bundles
-                            may have children, single-blob DRS Objects do not have
-                            children.
-                        </Typography>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            The following listing displays all children for the current
-                            DRS Bundle.
-                        </Typography>
-                    </Grid>
+                <Typography align='left' variant='h6'>Bundle Children</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    This DRS Object is currently acting as a DRS Bundle. Bundles
+                    contain references to multiple Child objects (single-blob DRS
+                    Objects and/or DRS Bundles), enabling multiple DRS Objects to
+                    be logically grouped in a nested structure. Only DRS Bundles
+                    may have children, single-blob DRS Objects do not have
+                    children.
+                </Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    The following listing displays all children for the current
+                    DRS Bundle.
+                </Typography>
+                {drsChildrenDisplay}
+                <Grid container>
                     <Grid item>
-                        <AddPropertyButton formType={formType} handleClick={props.AddChild}/>      
+                        <AddPropertyButton formType={formType} handleClick={props.AddChild}/>
                     </Grid>
                 </Grid>
-                
-                {drsChildrenDisplay}
             </FormGroup>
         );
     }
@@ -268,18 +259,18 @@ const DrsObjectParents = (props) => {
         return null;
     }
     else {
-        const drsParentsDisplay = drsParents.map((drsParent) => {
+        const drsParentsDisplay = drsParents.map((drsParent, index) => {
             return (
-                <FormGroup key={drsParent.id} row>
+                <FormGroup key={`drs parent object ${index}`} row>
                     <Grid container alignItems='center' spacing={4}>
                         <Grid item xs={5}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsParent.id} label='Id' margin='normal' name={drsParent.id} type='text' value={drsParent.id} InputProps={{readOnly: readOnlyValue}}/>                            
+                                <TextField variant='outlined' fullWidth id={drsParent.id} label='Id' margin='normal' name={drsParent.id} type='text' value={drsParent.id} InputProps={{readOnly: readOnlyValue}} onChange={(event) => props.UpdateParentId(index, event.target.value)}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={5}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsParent.name} label='Name' margin='normal' name={drsParent.name} type='text' value={drsParent.name} InputProps={{readOnly: readOnlyValue}}/>                            
+                                <TextField variant='outlined' fullWidth id={drsParent.name} label='Name' margin='normal' name={drsParent.name} type='text' value={drsParent.name} InputProps={{readOnly: true}}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={2}>
@@ -294,20 +285,18 @@ const DrsObjectParents = (props) => {
         return (
             <FormGroup>
                 <SpaceDivider />
-                <Grid container justify='space-between'>
-                    <Grid item xs={11}>
-                        <Typography align='left' variant='h6'>Parent Bundles</Typography>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            The following listing displays all "Parent" DRS Bundles,
-                            that is, all bundles that contain the current DRS Object as
-                            one of its Children.
-                        </Typography>
-                    </Grid>
+                <Typography align='left' variant='h6'>Parent Bundles</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    The following listing displays all "Parent" DRS Bundles,
+                    that is, all bundles that contain the current DRS Object as
+                    one of its Children.
+                </Typography>
+                {drsParentsDisplay}
+                <Grid container>
                     <Grid item>
                         <AddPropertyButton formType={formType} handleClick={props.AddParent}/>
                     </Grid>
                 </Grid>
-                {drsParentsDisplay}
             </FormGroup>
         );
     }
@@ -334,8 +323,9 @@ const AccessPoints = (props) => {
                     based on geographic proximity to the data). All access points
                     associated with a single DRS Object must have the same bytes
                 </Typography>
-                <FileAccessObjects file_access_objects={fileAccessObjects} readOnly={readOnlyValue} formType={formType} AddFileAccessObject={props.AddFileAccessObject}/>
-                <AwsS3AccessObjects aws_s3_access_objects={awsAccessObjects} readOnly={readOnlyValue} formType={formType} AddAwsAccessObject={props.AddAwsAccessObject}/>
+                <FileAccessObjects file_access_objects={fileAccessObjects} readOnly={readOnlyValue} formType={formType} AddFileAccessObject={props.AddFileAccessObject} UpdateFileAccessObject={props.UpdateFileAccessObject}/>
+                <AwsS3AccessObjects aws_s3_access_objects={awsAccessObjects} readOnly={readOnlyValue} formType={formType} AddAwsAccessObject={props.AddAwsAccessObject}
+                    UpdateRegion={props.UpdateRegion} UpdateBucket={props.UpdateBucket} UpdateKey={props.UpdateKey}/>
             </FormGroup>
         );
     }
@@ -348,37 +338,36 @@ const FileAccessObjects = (props) => {
         return null;
     }
     else {
-        const fileAccessDisplay = fileAccessObjects.map((fileAccessObject) => {
+        const fileAccessDisplay = fileAccessObjects.map((fileAccessObject, index) => {
             return (
-                <FormControl fullWidth key='file_access_object'>
+                <FormControl fullWidth key={`file access object ${index}`}>
                     <TextField
                         variant='outlined' id='path' label='Path' margin='normal'
                         name='path' type='text'
                         value={fileAccessObject.path}
                         InputProps={{readOnly: readOnlyValue}}
                         helperText='The filesystem path to the local file storing 
-                            DRS Object bytes'/>
+                            DRS Object bytes'
+                        onChange={(event) => props.UpdateFileAccessObject(index, event.target.value)}/>
                 </FormControl>
             );
         })
         return (
             <FormGroup>
-                <Grid container justify='space-between'>
-                    <Grid item xs={11}>
-                        <br /> 
-                        <Typography align='left' variant='body1'>Local File Access Points</Typography>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            Local file access points represent local files available on
-                            the same filesystem where the DRS service is running. This
-                            can also include files co-located on Network Attached Storage
-                            (NAS), such as on a high-performance compute cluster (HPC).                    
-                        </Typography>
-                    </Grid>
+                <br /> 
+                <Typography align='left' variant='body1'>Local File Access Points</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    Local file access points represent local files available on
+                    the same filesystem where the DRS service is running. This
+                    can also include files co-located on Network Attached Storage
+                    (NAS), such as on a high-performance compute cluster (HPC).                    
+                </Typography>
+                {fileAccessDisplay}
+                <Grid container>
                     <Grid item>
                         <AddPropertyButton formType={props.formType} handleClick={props.AddFileAccessObject}/>
                     </Grid>
                 </Grid>
-                {fileAccessDisplay}
             </FormGroup>
         );
     }
@@ -391,23 +380,23 @@ const AwsS3AccessObjects = (props) => {
         return null;
     }
     else {
-        const awsAccessDisplay = awsAccessObjects.map((awsAccessObject) => {
+        const awsAccessDisplay = awsAccessObjects.map((awsAccessObject, index) => {
             return (
-                <FormGroup key='aws_access_object' row>
+                <FormGroup key={`aws access object ${index}`} row>
                     <Grid container alignItems='center' spacing={4}>
                         <Grid item xs={3}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='region' label='Region' margin='normal' name='region' type='text' value={awsAccessObject.region} InputProps={{readOnly: readOnlyValue}} helperText='Region where AWS S3 service is located.'/>                            
+                                <TextField variant='outlined' fullWidth id='region' label='Region' margin='normal' name='region' type='text' value={awsAccessObject.region} InputProps={{readOnly: readOnlyValue}} helperText='Region where AWS S3 service is located.' onChange={(event) => props.UpdateRegion(index, event.target.value)}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={3}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='bucket' label='Bucket' margin='normal' name='bucket' type='text' value={awsAccessObject.bucket} InputProps={{readOnly: readOnlyValue}} helperText='AWS S3 bucket containing the DRS Object.'/>                            
+                                <TextField variant='outlined' fullWidth id='bucket' label='Bucket' margin='normal' name='bucket' type='text' value={awsAccessObject.bucket} InputProps={{readOnly: readOnlyValue}} helperText='AWS S3 bucket containing the DRS Object.' onChange={(event) => props.UpdateBucket(index, event.target.value)}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={6}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='key' label='Key' margin='normal' name='key' type='text' value={awsAccessObject.key} InputProps={{readOnly: readOnlyValue}} helperText='Path within the bucket to the S3 object storing DRS Object bytes.'/>                            
+                                <TextField variant='outlined' fullWidth id='key' label='Key' margin='normal' name='key' type='text' value={awsAccessObject.key} InputProps={{readOnly: readOnlyValue}} helperText='Path within the bucket to the S3 object storing DRS Object bytes.' onChange={(event) => props.UpdateKey(index, event.target.value)}/>                            
                             </FormControl>
                         </Grid>
                     </Grid>
@@ -416,19 +405,17 @@ const AwsS3AccessObjects = (props) => {
         })
         return (
             <FormGroup>
-                <Grid container justify='space-between'>
-                    <Grid item xs={11}>
-                        <br /> 
-                        <Typography align='left' variant='body1'>AWS S3 Access Points</Typography>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            Represents objects stored in AWS S3 containing DRS Object bytes.
-                        </Typography>
-                    </Grid>
+                <br /> 
+                <Typography align='left' variant='body1'>AWS S3 Access Points</Typography>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    Represents objects stored in AWS S3 containing DRS Object bytes.
+                </Typography>
+                {awsAccessDisplay}
+                <Grid container>
                     <Grid item>
                         <AddPropertyButton formType={props.formType} handleClick={props.AddAwsAccessObject}/>
                     </Grid>
                 </Grid>
-                {awsAccessDisplay}
             </FormGroup>
         );
     }
@@ -489,11 +476,18 @@ const DrsObject = (props) => {
                         <Size size={drsObjectDetails.size} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type}/>
                     </Grid>
                 </Grid>
-                <Aliases aliases={drsObjectDetails.aliases} readOnly={readOnlyValue} formType={formType} HandleAddAlias={() => props.drsObjectFunctions.addListItem('aliases')} HandleAliasChange={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aliases', index, 'alias', newValue)}/>
-                <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} AddChecksum={() => props.drsObjectFunctions.addListItem('checksums')} UpdateChecksumValue={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'checksum', newValue)}/>
-                <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} AddChild={() => props.drsObjectFunctions.addListItem('drs_object_children')}/>
-                <DrsObjectParents drs_object_parents={drsObjectDetails.drs_object_parents} readOnly={readOnlyValue} formType={formType} AddParent={() => props.drsObjectFunctions.addListItem('drs_object_parents')}/>
-                <AccessPoints drsObject={drsObjectDetails} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} AddFileAccessObject={() => props.drsObjectFunctions.addListItem('file_access_objects')} AddAwsAccessObject={() => props.drsObjectFunctions.addListItem('aws_s3_access_objects')}/>
+                <Aliases aliases={drsObjectDetails.aliases} readOnly={readOnlyValue} formType={formType} 
+                    HandleAddAlias={() => props.drsObjectFunctions.addListItem('aliases', props.drsObjectFunctions.newAlias)} HandleAliasChange={(index, newValue) => props.drsObjectFunctions.updateAlias(index, newValue)}/>
+                <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} 
+                    AddChecksum={() => props.drsObjectFunctions.addListItem('checksums', props.drsObjectFunctions.newChecksum)} UpdateChecksumValue={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'checksum', newValue)}/>
+                <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} 
+                    AddChild={() => props.drsObjectFunctions.addListItem('drs_object_children', props.drsObjectFunctions.newDrsObjectChild)} UpdateChildId={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('drs_object_children', index, 'id', newValue)}/>
+                <DrsObjectParents drs_object_parents={drsObjectDetails.drs_object_parents} readOnly={readOnlyValue} formType={formType} 
+                    AddParent={() => props.drsObjectFunctions.addListItem('drs_object_parents', props.drsObjectFunctions.newDrsObjectParent)} UpdateParentId={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('drs_object_parents', index, 'id', newValue)}/>
+                <AccessPoints drsObject={drsObjectDetails} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} 
+                    AddFileAccessObject={() => props.drsObjectFunctions.addListItem('file_access_objects', props.drsObjectFunctions.newFileAccessObject)} UpdateFileAccessObject={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('file_access_objects', index, 'path', newValue)} 
+                    AddAwsAccessObject={() => props.drsObjectFunctions.addListItem('aws_s3_access_objects', props.drsObjectFunctions.newAwsS3AccessObject)} UpdateRegion={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'region', newValue)}
+                    UpdateBucket={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'bucket', newValue)} UpdateKey={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'key', newValue)}/>
             </form>
         </Container>
         </Box>

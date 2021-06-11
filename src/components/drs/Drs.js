@@ -42,8 +42,30 @@ class Drs extends React.Component {
     };
     this.drsObjectFunctions = {
       updateScalarProperty: (property, newValue) => this.updateScalarProperty(property, newValue), 
-      addListItem: (property) => this.addListItem(property),
-      updateObjectProperty: (objectList, index, property, newValue) => this.updateObjectProperty(objectList, index, property, newValue)
+      addListItem: (property, newObject) => this.addListItem(property, newObject),
+      updateObjectProperty: (objectList, index, property, newValue) => this.updateObjectProperty(objectList, index, property, newValue), 
+      updateAlias: (index, newValue) => this.updateAlias(index, newValue),
+      newAlias: '',
+      newChecksum: {
+        checksum: '',
+        type: ''
+      },
+      newDrsObjectChild: {
+        id: '', 
+        name: ''
+      },
+      newDrsObjectParent: {
+        id: '', 
+        name: ''
+      },
+      newFileAccessObject: {
+        path: ''
+      },
+      newAwsS3AccessObject: {
+        region: '',
+        bucket: '',
+        key: ''
+      }
     }
   }
 
@@ -102,40 +124,8 @@ class Drs extends React.Component {
     })
   }
 
-  addListItem(property) {
+  addListItem(property, newObject) {
     let activeDrsObject = {...this.state.activeDrsObject};
-    let newObject;
-    if(property === 'aliases') {
-      newObject = '';
-    }
-    else if(property === 'checksums') { 
-      newObject = {
-        checksum: '',
-        type: ''
-      }
-    }
-    else if(property === 'drs_object_children'){
-      newObject = {
-        id: ''
-      }
-    }
-    else if(property === 'drs_object_parents'){
-      newObject = {
-        id: ''
-      }
-    }
-    else if(property === 'file_access_objects'){
-      newObject = {
-        path: ''
-      }
-    }
-    else if(property === 'aws_s3_access_objects'){
-      newObject = {
-        region: '',
-        bucket: '',
-        key: ''
-      }
-    }
     activeDrsObject[property].push(newObject);
     this.setState({
       activeDrsObject: activeDrsObject
@@ -143,16 +133,21 @@ class Drs extends React.Component {
     console.log(this.state.activeDrsObject);
   }
 
+  updateAlias(index, newValue) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    let aliases = activeDrsObject['aliases'];
+    aliases[index] = newValue;
+    this.setState({
+      activeDrsObject: activeDrsObject
+    })
+  }
+
   updateObjectProperty(objects, index, property, newValue) {
     let activeDrsObject = {...this.state.activeDrsObject};
     let objectList = activeDrsObject[objects];
-    let object = objectList[index];
-    if(property === 'alias') {
-      objectList[index] = newValue;
-    }
-    else {
-      object[property] = newValue;
-    }
+    let object = {...objectList[index]};
+    object[property] = newValue;
+    objectList[index] = object;
     this.setState({
       activeDrsObject: activeDrsObject
     })
