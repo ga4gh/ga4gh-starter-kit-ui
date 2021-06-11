@@ -18,16 +18,6 @@ class Drs extends React.Component {
     super(props);
     this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
     this.handleError = this.handleError.bind(this);
-    this.updateId = this.updateId.bind(this);
-    this.updateName = this.updateName.bind(this);
-    this.updateDescription = this.updateDescription.bind(this);
-    this.updateCreatedTime = this.updateCreatedTime.bind(this);
-    this.updateUpdatedTime = this.updateUpdatedTime.bind(this);
-    this.updateVersion = this.updateVersion.bind(this);
-    this.updateDrsObjectType = this.updateDrsObjectType.bind(this);
-    this.updateMimeType = this.updateMimeType.bind(this); 
-    this.addAlias = this.addAlias.bind(this);
-    this.updateAlias = this.updateAlias.bind(this);
     this.state = {
       newDrsObject: {
         id: '',
@@ -50,6 +40,11 @@ class Drs extends React.Component {
       drsObjectsList: null,
       error: null
     };
+    this.drsObjectFunctions = {
+      updateScalarProperty: (property, newValue) => this.updateScalarProperty(property, newValue), 
+      addListItem: (property) => this.addListItem(property),
+      updateObjectProperty: (objectList, index, property, newValue) => this.updateObjectProperty(objectList, index, property, newValue)
+    }
   }
 
   componentDidMount() {
@@ -99,94 +94,68 @@ class Drs extends React.Component {
     });
   }
 
-  updateId(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.id = newValue;
+  updateScalarProperty(property, newValue) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    activeDrsObject[property] = newValue;
+    this.setState({
+      activeDrsObject: activeDrsObject
+    })
+  }
+
+  addListItem(property) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    let newObject;
+    if(property === 'aliases') {
+      newObject = '';
+    }
+    else if(property === 'checksums') { 
+      newObject = {
+        checksum: '',
+        type: ''
+      }
+    }
+    else if(property === 'drs_object_children'){
+      newObject = {
+        id: ''
+      }
+    }
+    else if(property === 'drs_object_parents'){
+      newObject = {
+        id: ''
+      }
+    }
+    else if(property === 'file_access_objects'){
+      newObject = {
+        path: ''
+      }
+    }
+    else if(property === 'aws_s3_access_objects'){
+      newObject = {
+        region: '',
+        bucket: '',
+        key: ''
+      }
+    }
+    activeDrsObject[property].push(newObject);
     this.setState({
       activeDrsObject: activeDrsObject
     })
     console.log(this.state.activeDrsObject);
   }
 
-  updateName(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.name = newValue;
+  updateObjectProperty(objects, index, property, newValue) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    let objectList = activeDrsObject[objects];
+    let object = objectList[index];
+    if(property === 'alias') {
+      objectList[index] = newValue;
+    }
+    else {
+      object[property] = newValue;
+    }
     this.setState({
       activeDrsObject: activeDrsObject
     })
-    console.log(this.state.activeDrsObject);
-  }
-
-  updateDescription(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.description = newValue;
-    this.setState({
-      activeDrsObject: activeDrsObject
-    })
-    console.log(this.state.activeDrsObject);
-  }
-
-  updateCreatedTime(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.created_time = newValue;
-    this.setState({
-      activeDrsObject: activeDrsObject
-    })
-    console.log(this.state.activeDrsObject);
-  }
-
-  updateUpdatedTime(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.updated_time = newValue;
-    this.setState({
-      activeDrsObject: activeDrsObject
-    })
-    console.log(this.state.activeDrsObject);
-  }
-
-  updateVersion(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.version = newValue;
-    this.setState({
-      activeDrsObject: activeDrsObject
-    })
-    console.log(this.state.activeDrsObject);
-  }
-
-  updateDrsObjectType(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.drs_object_type = newValue;
-    this.setState({
-      activeDrsObject: activeDrsObject
-    })
-  }
-
-  updateMimeType(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.mime_type = newValue;
-    this.setState({
-      activeDrsObject: activeDrsObject
-    })
-    console.log(this.state.activeDrsObject);
-  }
-
-  addAlias(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.aliases.push(newValue);
-    this.setState({
-      activeDrsObject: activeDrsObject
-    })
-    console.log(this.state.activeDrsObject);
-  }
-
-  //need to identify alias being updated
-  updateAlias(newValue) {
-    let activeDrsObject = (this.state.activeDrsObject);
-    activeDrsObject.aliases[0] = newValue;
-    this.setState({
-      activeDrsObject: activeDrsObject
-    })
-    console.log(this.state.activeDrsObject);
   }
 
   render(){
@@ -243,16 +212,7 @@ class Drs extends React.Component {
                 newDrsObject={this.state.newDrsObject}
                 activeDrsObject={this.state.activeDrsObject}
                 updateActiveDrsObject={this.updateActiveDrsObject}
-                updateId={this.updateId}
-                updateName={this.updateName}
-                updateDescription={this.updateDescription}
-                updateCreatedTime={this.updateCreatedTime}
-                updateUpdatedTime={this.updateUpdatedTime}
-                updateVersion={this.updateVersion}
-                updateDrsObjectType={this.updateDrsObjectType}
-                updateMimeType={this.updateMimeType}
-                addAlias={this.addAlias}
-                updateAlias={this.updateAlias}
+                drsObjectFunctions={this.drsObjectFunctions}
               />
             </Route>
             <Route path='/drs/:objectId'>

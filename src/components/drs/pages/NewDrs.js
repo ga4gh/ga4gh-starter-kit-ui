@@ -84,17 +84,8 @@ const CreateDrsForm = (props) => {
                 <DrsObjectForm 
                     drsObjectDetails={activeDrsObject} 
                     readOnly={false} 
-                    formType='NewDrs' 
-                    updateId={props.updateId}
-                    updateName={props.updateName}
-                    updateDescription={props.updateDescription}
-                    updateCreatedTime={props.updateCreatedTime}
-                    updateUpdatedTime={props.updateUpdatedTime}
-                    updateVersion={props.updateVersion}
-                    updateDrsObjectType={props.updateDrsObjectType}
-                    updateMimeType={props.updateMimeType}
-                    addAlias={props.addAlias}
-                    updateAlias={props.updateAlias}
+                    formType='NewDrs'
+                    drsObjectFunctions={props.drsObjectFunctions}
                 />
             </Container>
         </div>
