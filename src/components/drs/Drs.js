@@ -44,7 +44,9 @@ class Drs extends React.Component {
       updateScalarProperty: (property, newValue) => this.updateScalarProperty(property, newValue), 
       addListItem: (property, newObject) => this.addListItem(property, newObject),
       updateObjectProperty: (objectList, index, property, newValue) => this.updateObjectProperty(objectList, index, property, newValue), 
+      removeListItem: (objects, index) => this.removeListItem(objects, index),
       updateAlias: (index, newValue) => this.updateAlias(index, newValue),
+      removeAlias: (index) => this.removeAlias(index),
       newAlias: '',
       newChecksum: {
         checksum: '',
@@ -130,7 +132,26 @@ class Drs extends React.Component {
     this.setState({
       activeDrsObject: activeDrsObject
     })
-    console.log(this.state.activeDrsObject);
+  }
+
+  updateObjectProperty(objects, index, property, newValue) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    let objectList = activeDrsObject[objects];
+    let object = {...objectList[index]};
+    object[property] = newValue;
+    objectList[index] = object;
+    this.setState({
+      activeDrsObject: activeDrsObject
+    })
+  }
+
+  removeListItem(objects, index) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    let objectList = activeDrsObject[objects];
+    objectList.splice(index, 1);
+    this.setState({
+      activeDrsObject: activeDrsObject
+    })
   }
 
   updateAlias(index, newValue) {
@@ -142,12 +163,10 @@ class Drs extends React.Component {
     })
   }
 
-  updateObjectProperty(objects, index, property, newValue) {
+  removeAlias(index) {
     let activeDrsObject = {...this.state.activeDrsObject};
-    let objectList = activeDrsObject[objects];
-    let object = {...objectList[index]};
-    object[property] = newValue;
-    objectList[index] = object;
+    let aliases = activeDrsObject['aliases'];
+    aliases.splice(index, 1);
     this.setState({
       activeDrsObject: activeDrsObject
     })

@@ -14,12 +14,14 @@ import {
     Radio, 
     FormControlLabel, 
     IconButton, 
-    MenuItem
+    MenuItem, 
+    Tooltip
 } from '@material-ui/core';
 import {
     Link
 } from "react-router-dom";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
 
 const SpaceDivider = () => {
     return (
@@ -43,14 +45,33 @@ const AddPropertyButton = (props) => {
     }
 }
 
+const RemovePropertyButton = (props) => {
+    let formType = props.formType;
+    if(formType === 'NewDrs') {
+        return (
+            <Tooltip title={`Remove this ${props.objectName}`}>
+                <IconButton color='secondary' onClick={() => props.handleClick(props.index)}>
+                    <RemoveCircleIcon/>
+                </IconButton>    
+            </Tooltip>
+            
+        );
+    }
+    else { 
+        return null;
+    }
+}
+
 const BundleBlobRadio = (props) => {
     let readOnlyValue = props.readOnly;
     if(props.formType === 'NewDrs') {
         return(
             <FormGroup>
                 <Typography align='left' variant='h6'>Is this DRS Object a bundle or a blob?</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>Bundles contain references to Child Drs Objects, while Blobs act as single DRS Objects and do not have any children.</Typography>
-                <RadioGroup name='drs_object_type' value={props.drsObjectType} onChange={props.HandleDrsObjectTypeChange}>
+                <Typography variant='body2' align='left' color='textSecondary'>
+                    Bundles contain references to Child Drs Objects, while Blobs act as single DRS Objects and do not have any children.
+                </Typography>
+                <RadioGroup name='drs_object_type' value={props.drsObjectType} onChange={props.UpdateDrsObjectType}>
                         <FormControlLabel control={<Radio color='primary'/>} label='Blob' value='blob' disabled={readOnlyValue}></FormControlLabel>
                         <FormControlLabel control={<Radio color='primary'/>} label='Bundle' value='bundle' disabled={readOnlyValue}></FormControlLabel>
                 </RadioGroup>
@@ -73,9 +94,8 @@ const MimeType = (props) => {
     else {
         return (
             <FormControl fullWidth>
-                <TextField 
-                id='mime_type' label='MIME Type' margin='normal' name='mime_type' type='text' value={mimeType} onChange={props.HandleMimeTypeChange} InputProps={{readOnly: readOnlyValue}}
-                helperText='The media type of the DRS Object'/>
+                <TextField id='mime_type' label='MIME Type' margin='normal' name='mime_type' type='text' value={mimeType} 
+                onChange={props.UpdateMimeType} InputProps={{readOnly: readOnlyValue}} helperText='The media type of the DRS Object'/>
             </FormControl>
         );
         
@@ -94,7 +114,8 @@ const Size = (props) => {
         return (
             <FormControl fullWidth>
                 <TextField id='size' label='Size' margin='normal' name='size' type='number' value={size} InputProps={{readOnly: readOnlyValue}}
-                helperText='The size (in bytes) of the DRS Object represented as an integer.'/>
+                helperText='The size (in bytes) of the DRS Object represented as an integer.'
+                onChange={props.UpdateSize}/>
             </FormControl>
         );
     }
@@ -113,9 +134,12 @@ const Aliases = (props) => {
             return (
                 <Grid item key={`alias ${index}`}>
                     <FormControl>
-                        <TextField variant='outlined' id={alias} margin='normal' name='alias' label='Alias' type='text' value={alias} 
-                        InputProps={{readOnly: readOnlyValue}} onChange={event => props.HandleAliasChange(index, event.target.value)}/>
+                        <TextField variant='outlined' id={alias} margin='normal' 
+                        name='alias' label='Alias' type='text' value={alias} 
+                        InputProps={{readOnly: readOnlyValue}} 
+                        onChange={event => props.UpdateAlias(index, event.target.value)}/>
                     </FormControl>
+                    <RemovePropertyButton formType={formType} handleClick={props.RemoveAlias} index={index} objectName='alias'/>
                 </Grid>
             );  
         })
@@ -133,7 +157,7 @@ const Aliases = (props) => {
                    <Grid container spacing={4} alignItems='center'>
                        {aliasesDisplay}
                        <Grid item>
-                            <AddPropertyButton formType={formType} handleClick={props.HandleAddAlias}/>
+                            <AddPropertyButton formType={formType} handleClick={props.AddAlias}/>
                        </Grid>
                    </Grid>
                 </FormGroup>
@@ -155,9 +179,13 @@ const Checksums = (props) => {
             return (
                 <FormGroup key={`checksum ${index}`} row>
                     <Grid container spacing={4}>
-                        <Grid item xs={4}>
+                        <Grid item xs={3}>
                             <FormControl fullWidth>
-                                <TextField select variant='outlined' id={checksum.type} label='Type' name='type' type='text' value={checksum.type} InputProps={{readOnly: readOnlyValue}} helperText='Hashing algorithm used to generate the checksum.' onChange={props.UpdateChecksumType}>
+                                <TextField select variant='outlined' id={checksum.type} 
+                                label='Type' name='type' type='text' 
+                                value={checksum.type} InputProps={{readOnly: readOnlyValue}} 
+                                helperText='Hashing algorithm used to generate the checksum.' 
+                                onChange={(event) => props.UpdateChecksumType(index, event.target.value)}>
                                     <MenuItem value='md5'>md5</MenuItem>
                                     <MenuItem value='sha1'>sha1</MenuItem>
                                     <MenuItem value='sha256'>sha256</MenuItem>
@@ -166,10 +194,15 @@ const Checksums = (props) => {
                         </Grid>
                         <Grid item xs={8}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' id={checksum.checksum} label='Checksum' name='checksum' type='checksum' value={checksum.checksum} 
-                                InputProps={{readOnly: readOnlyValue}} helperText='Checksum digest value.' onChange={(event) => props.UpdateChecksumValue(index, event.target.value)}/>
+                                <TextField variant='outlined' id={checksum.checksum} 
+                                label='Checksum' name='checksum' type='checksum' value={checksum.checksum} 
+                                InputProps={{readOnly: readOnlyValue}} helperText='Checksum digest value.' 
+                                onChange={(event) => props.UpdateChecksumValue(index, event.target.value)}/>
                             </FormControl>    
-                        </Grid>    
+                        </Grid>   
+                        <Grid item xs={1}>
+                            <RemovePropertyButton formType={formType} handleClick={props.RemoveChecksum} index={index} objectName='checksum'/>
+                        </Grid> 
                     </Grid>
                 </FormGroup>
             );
@@ -212,17 +245,25 @@ const DrsObjectChildren = (props) => {
                     <Grid container alignItems='center' spacing={4}>
                         <Grid item xs={5}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsChild.id} label='Id' margin='normal' name={drsChild.id} type='text' value={drsChild.id} InputProps={{readOnly: readOnlyValue}} onChange={(event) => props.UpdateChildId(index, event.target.value)}/>                        
+                                <TextField variant='outlined' fullWidth id={drsChild.id} 
+                                label='Id' margin='normal' name={drsChild.id} type='text' 
+                                value={drsChild.id} InputProps={{readOnly: readOnlyValue}} 
+                                onChange={(event) => props.UpdateChildId(index, event.target.value)}/>                        
                             </FormControl>
                         </Grid>
                         <Grid item xs={5}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsChild.name} label='Name' margin='normal' name={drsChild.name} type='text' value={drsChild.name} InputProps={{readOnly: true}}/>                            
+                                <TextField variant='outlined' fullWidth id={drsChild.name} 
+                                label='Name' margin='normal' name={drsChild.name} type='text' 
+                                value={drsChild.name} InputProps={{readOnly: true}}/>                            
                             </FormControl>
                         </Grid>
-                        <Grid item xs={2}>
-                            <Button variant='contained' component={Link} to={`/drs/${drsChild.id}`} color='primary'>View Details</Button>
+                        <Grid item xs={1}>
+                            <Button variant='contained' component={Link} to={`/drs/${drsChild.id}`} color='primary'>View</Button>
                         </Grid>
+                        <Grid item xs={1}>
+                            <RemovePropertyButton formType={formType} handleClick={props.RemoveChild} index={index} objectName='bundle child'/>
+                        </Grid> 
                     </Grid>
                 </FormGroup>
             );
@@ -268,16 +309,24 @@ const DrsObjectParents = (props) => {
                     <Grid container alignItems='center' spacing={4}>
                         <Grid item xs={5}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsParent.id} label='Id' margin='normal' name={drsParent.id} type='text' value={drsParent.id} InputProps={{readOnly: readOnlyValue}} onChange={(event) => props.UpdateParentId(index, event.target.value)}/>                            
+                                <TextField variant='outlined' fullWidth id={drsParent.id} 
+                                label='Id' margin='normal' name={drsParent.id} type='text' 
+                                value={drsParent.id} InputProps={{readOnly: readOnlyValue}} 
+                                onChange={(event) => props.UpdateParentId(index, event.target.value)}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={5}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id={drsParent.name} label='Name' margin='normal' name={drsParent.name} type='text' value={drsParent.name} InputProps={{readOnly: true}}/>                            
+                                <TextField variant='outlined' fullWidth id={drsParent.name} 
+                                label='Name' margin='normal' name={drsParent.name} type='text' 
+                                value={drsParent.name} InputProps={{readOnly: true}}/>                            
                             </FormControl>
                         </Grid>
-                        <Grid item xs={2}>
-                            <Button variant='contained' component={Link} to={`/drs/${drsParent.id}`} color='primary'>View Details</Button>
+                        <Grid item xs={1}>
+                            <Button variant='contained' component={Link} to={`/drs/${drsParent.id}`} color='primary'>View</Button>
+                        </Grid>
+                        <Grid item xs={1}>
+                            <RemovePropertyButton formType={formType} handleClick={props.RemoveParent} index={index} objectName='parent bundle'/>
                         </Grid>
                     </Grid>
                 </FormGroup>
@@ -324,9 +373,13 @@ const AccessPoints = (props) => {
                     based on geographic proximity to the data). All access points
                     associated with a single DRS Object must have the same bytes
                 </Typography>
-                <FileAccessObjects file_access_objects={fileAccessObjects} readOnly={readOnlyValue} formType={formType} AddFileAccessObject={props.AddFileAccessObject} UpdateFileAccessObject={props.UpdateFileAccessObject}/>
-                <AwsS3AccessObjects aws_s3_access_objects={awsAccessObjects} readOnly={readOnlyValue} formType={formType} AddAwsAccessObject={props.AddAwsAccessObject}
-                    UpdateRegion={props.UpdateRegion} UpdateBucket={props.UpdateBucket} UpdateKey={props.UpdateKey}/>
+                <FileAccessObjects file_access_objects={fileAccessObjects} readOnly={readOnlyValue} formType={formType} 
+                AddFileAccessObject={props.AddFileAccessObject} UpdateFileAccessObject={props.UpdateFileAccessObject}
+                RemoveFileAccessObject={props.RemoveFileAccessObject}/>
+                <AwsS3AccessObjects aws_s3_access_objects={awsAccessObjects} readOnly={readOnlyValue} formType={formType} 
+                AddAwsAccessObject={props.AddAwsAccessObject} UpdateRegion={props.UpdateRegion} 
+                UpdateBucket={props.UpdateBucket} UpdateKey={props.UpdateKey}
+                RemoveAwsS3AccessObject={props.RemoveAwsS3AccessObject}/>
             </FormGroup>
         );
     }
@@ -341,16 +394,24 @@ const FileAccessObjects = (props) => {
     else {
         const fileAccessDisplay = fileAccessObjects.map((fileAccessObject, index) => {
             return (
-                <FormControl fullWidth key={`file access object ${index}`}>
-                    <TextField
-                        variant='outlined' id='path' label='Path' margin='normal'
-                        name='path' type='text'
-                        value={fileAccessObject.path}
-                        InputProps={{readOnly: readOnlyValue}}
-                        helperText='The filesystem path to the local file storing 
-                            DRS Object bytes'
-                        onChange={(event) => props.UpdateFileAccessObject(index, event.target.value)}/>
-                </FormControl>
+                <Grid container alignItems='center' spacing={4}>
+                    <Grid item xs={11}>
+                        <FormControl fullWidth key={`file access object ${index}`}>
+                            <TextField
+                                variant='outlined' id='path' label='Path' margin='normal'
+                                name='path' type='text'
+                                value={fileAccessObject.path}
+                                InputProps={{readOnly: readOnlyValue}}
+                                helperText='The filesystem path to the local file storing 
+                                    DRS Object bytes'
+                                onChange={(event) => props.UpdateFileAccessObject(index, event.target.value)}/>
+                        </FormControl>
+                    </Grid>
+                    <Grid item xs={1}>
+                        <RemovePropertyButton formType={props.formType} handleClick={props.RemoveFileAccessObject} index={index} objectName='local file access point'/>
+                    </Grid>
+                </Grid>
+                
             );
         })
         return (
@@ -387,18 +448,33 @@ const AwsS3AccessObjects = (props) => {
                     <Grid container alignItems='center' spacing={4}>
                         <Grid item xs={3}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='region' label='Region' margin='normal' name='region' type='text' value={awsAccessObject.region} InputProps={{readOnly: readOnlyValue}} helperText='Region where AWS S3 service is located.' onChange={(event) => props.UpdateRegion(index, event.target.value)}/>                            
+                                <TextField variant='outlined' fullWidth id='region' 
+                                label='Region' margin='normal' name='region' type='text' 
+                                value={awsAccessObject.region} InputProps={{readOnly: readOnlyValue}} 
+                                helperText='Region where AWS S3 service is located.' 
+                                onChange={(event) => props.UpdateRegion(index, event.target.value)}/>                            
                             </FormControl>
                         </Grid>
                         <Grid item xs={3}> 
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='bucket' label='Bucket' margin='normal' name='bucket' type='text' value={awsAccessObject.bucket} InputProps={{readOnly: readOnlyValue}} helperText='AWS S3 bucket containing the DRS Object.' onChange={(event) => props.UpdateBucket(index, event.target.value)}/>                            
+                                <TextField variant='outlined' fullWidth id='bucket' 
+                                label='Bucket' margin='normal' name='bucket' type='text' 
+                                value={awsAccessObject.bucket} InputProps={{readOnly: readOnlyValue}} 
+                                helperText='AWS S3 bucket containing the DRS Object.' 
+                                onChange={(event) => props.UpdateBucket(index, event.target.value)}/>                            
                             </FormControl>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={5}>
                             <FormControl fullWidth>
-                                <TextField variant='outlined' fullWidth id='key' label='Key' margin='normal' name='key' type='text' value={awsAccessObject.key} InputProps={{readOnly: readOnlyValue}} helperText='Path within the bucket to the S3 object storing DRS Object bytes.' onChange={(event) => props.UpdateKey(index, event.target.value)}/>                            
+                                <TextField variant='outlined' fullWidth id='key' 
+                                label='Key' margin='normal' name='key' type='text' 
+                                value={awsAccessObject.key} InputProps={{readOnly: readOnlyValue}} 
+                                helperText='Path within the bucket to the S3 object storing DRS Object bytes.' 
+                                onChange={(event) => props.UpdateKey(index, event.target.value)}/>                            
                             </FormControl>
+                        </Grid>
+                        <Grid item xs={1}>
+                            <RemovePropertyButton formType={props.formType} handleClick={props.RemoveAwsS3AccessObject} index={index} objectName='AWS S3 access point'/>
                         </Grid>
                     </Grid>
                 </FormGroup>
@@ -428,7 +504,7 @@ const DrsObject = (props) => {
     let formType = props.formType;
 
     return (
-      <div align="center">
+      <div>
         <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -437,60 +513,92 @@ const DrsObject = (props) => {
         <Container maxWidth='lg'>
             <form>
                 <FormControl fullWidth>
-                    <TextField id='id' label='Id' margin='normal' name='id' type='text' value={drsObjectDetails.id} onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} InputProps={{readOnly: readOnlyValue}} 
+                    <TextField id='id' label='Id' margin='normal' name='id' type='text' 
+                    value={drsObjectDetails.id} InputProps={{readOnly: readOnlyValue}} 
+                    onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
                     helperText='Unique identifier for this DRS Object (UUID recommended), cannot be modified later.'/>
                 </FormControl>
                 <FormControl fullWidth>
-                    <TextField id='name' label='Name' margin='normal' name='name' type='text' value={drsObjectDetails.name} onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} InputProps={{readOnly: readOnlyValue}}
+                    <TextField id='name' label='Name' margin='normal' name='name' type='text' 
+                    value={drsObjectDetails.name} InputProps={{readOnly: readOnlyValue}} 
+                    onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
                     helperText='Short, descriptive name for this DRS Object'/>
                 </FormControl>
                 <FormControl fullWidth>
-                    <TextField id='description' label='Description' margin='normal' name='description' type='text' value={drsObjectDetails.description} onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} InputProps={{readOnly: readOnlyValue}}
+                    <TextField id='description' label='Description' margin='normal' name='description' type='text' 
+                    value={drsObjectDetails.description} InputProps={{readOnly: readOnlyValue}} 
+                    onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
                     helperText='Longer description of this DRS Object'/>
                 </FormControl>
                 <Grid container justify='space-evenly' spacing={4}>
                     <Grid item xs={4}>
                         <FormControl fullWidth>
-                            <TextField id='created_time' label='Created Time' margin='normal' name='created_time' type='text' value={drsObjectDetails.created_time} InputProps={{readOnly: readOnlyValue}} onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
+                            <TextField id='created_time' label='Created Time' margin='normal' name='created_time' type='text' 
+                            value={drsObjectDetails.created_time} InputProps={{readOnly: readOnlyValue}} 
+                            onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
                             helperText='Timestamp of DRS Object creation in ISO 8601 format'/>
                         </FormControl>
                     </Grid>
                     <Grid item xs={4}>
                         <FormControl fullWidth>
-                            <TextField id='updated_time' label='Updated Time' margin='normal' name='updated_time' type='text' value={drsObjectDetails.updated_time} InputProps={{readOnly: readOnlyValue}} onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
+                            <TextField id='updated_time' label='Updated Time' margin='normal' name='updated_time' type='text' 
+                            value={drsObjectDetails.updated_time} InputProps={{readOnly: readOnlyValue}} 
+                            onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
                             helperText='Timestamp of when the DRS Object was most recently updated in ISO 8601 format'/>
                         </FormControl>
                     </Grid>
                     <Grid item xs={4}>
                         <FormControl fullWidth>
-                            <TextField id='version' label='Version' margin='normal' name='version' type='text' value={drsObjectDetails.version} onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} InputProps={{readOnly: readOnlyValue}}
+                            <TextField id='version' label='Version' margin='normal' name='version' type='text' 
+                            value={drsObjectDetails.version} InputProps={{readOnly: readOnlyValue}} 
+                            onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} 
                             helperText='Current version of the DRS Object, it should be updated each time the DRS Object is modified.'/>
                         </FormControl>
                     </Grid>
                 </Grid>
-                <BundleBlobRadio formType={formType} drsObjectType={drsObjectDetails.drs_object_type} readOnly={readOnlyValue} HandleDrsObjectTypeChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}/>
+                <BundleBlobRadio formType={formType} drsObjectType={drsObjectDetails.drs_object_type} readOnly={readOnlyValue} 
+                UpdateDrsObjectType={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}/>
                 <Grid container justify='flex-start' spacing={4}>
                     <Grid item xs={4}>
-                        <MimeType mimeType={drsObjectDetails.mime_type} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} HandleMimeTypeChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}/>
+                        <MimeType mimeType={drsObjectDetails.mime_type} readOnly={readOnlyValue} formType={formType} 
+                        drsObjectType={drsObjectDetails.drs_object_type} 
+                        UpdateMimeType={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}/>
                     </Grid>
                     <Grid item xs={4}>
-                        <Size size={drsObjectDetails.size} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type}/>
+                        <Size size={drsObjectDetails.size} readOnly={readOnlyValue} formType={formType} 
+                        drsObjectType={drsObjectDetails.drs_object_type}
+                        UpdateSize={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}/>
                     </Grid>
                 </Grid>
                 <Aliases aliases={drsObjectDetails.aliases} readOnly={readOnlyValue} formType={formType} 
-                    HandleAddAlias={() => props.drsObjectFunctions.addListItem('aliases', props.drsObjectFunctions.newAlias)} HandleAliasChange={(index, newValue) => props.drsObjectFunctions.updateAlias(index, newValue)}/>
-                <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} 
+                    AddAlias={() => props.drsObjectFunctions.addListItem('aliases', props.drsObjectFunctions.newAlias)} 
+                    UpdateAlias={(index, newValue) => props.drsObjectFunctions.updateAlias(index, newValue)}
+                    RemoveAlias={(index) => props.drsObjectFunctions.removeAlias(index)}/>
+                <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue} formType={formType} 
+                    drsObjectType={drsObjectDetails.drs_object_type} 
                     AddChecksum={() => props.drsObjectFunctions.addListItem('checksums', props.drsObjectFunctions.newChecksum)} 
                     UpdateChecksumValue={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'checksum', newValue)}
-                    UpdateChecksumType={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'type', newValue)}/>
-                <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} 
-                    AddChild={() => props.drsObjectFunctions.addListItem('drs_object_children', props.drsObjectFunctions.newDrsObjectChild)} UpdateChildId={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('drs_object_children', index, 'id', newValue)}/>
+                    UpdateChecksumType={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'type', newValue)}
+                    RemoveChecksum={(index) => props.drsObjectFunctions.removeListItem('checksums', index)}/>
+                <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} readOnly={readOnlyValue} formType={formType} 
+                    drsObjectType={drsObjectDetails.drs_object_type} 
+                    AddChild={() => props.drsObjectFunctions.addListItem('drs_object_children', props.drsObjectFunctions.newDrsObjectChild)} 
+                    UpdateChildId={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('drs_object_children', index, 'id', newValue)}
+                    RemoveChild={(index) => props.drsObjectFunctions.removeListItem('drs_object_children', index)}/>
                 <DrsObjectParents drs_object_parents={drsObjectDetails.drs_object_parents} readOnly={readOnlyValue} formType={formType} 
-                    AddParent={() => props.drsObjectFunctions.addListItem('drs_object_parents', props.drsObjectFunctions.newDrsObjectParent)} UpdateParentId={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('drs_object_parents', index, 'id', newValue)}/>
-                <AccessPoints drsObject={drsObjectDetails} readOnly={readOnlyValue} formType={formType} drsObjectType={drsObjectDetails.drs_object_type} 
-                    AddFileAccessObject={() => props.drsObjectFunctions.addListItem('file_access_objects', props.drsObjectFunctions.newFileAccessObject)} UpdateFileAccessObject={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('file_access_objects', index, 'path', newValue)} 
-                    AddAwsAccessObject={() => props.drsObjectFunctions.addListItem('aws_s3_access_objects', props.drsObjectFunctions.newAwsS3AccessObject)} UpdateRegion={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'region', newValue)}
-                    UpdateBucket={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'bucket', newValue)} UpdateKey={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'key', newValue)}/>
+                    AddParent={() => props.drsObjectFunctions.addListItem('drs_object_parents', props.drsObjectFunctions.newDrsObjectParent)} 
+                    UpdateParentId={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('drs_object_parents', index, 'id', newValue)}
+                    RemoveParent={(index) => props.drsObjectFunctions.removeListItem('drs_object_parents', index)}/>
+                <AccessPoints drsObject={drsObjectDetails} readOnly={readOnlyValue} formType={formType} 
+                    drsObjectType={drsObjectDetails.drs_object_type} 
+                    AddFileAccessObject={() => props.drsObjectFunctions.addListItem('file_access_objects', props.drsObjectFunctions.newFileAccessObject)} 
+                    UpdateFileAccessObject={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('file_access_objects', index, 'path', newValue)}
+                    RemoveFileAccessObject={(index) => props.drsObjectFunctions.removeListItem('file_access_objects', index)} 
+                    AddAwsAccessObject={() => props.drsObjectFunctions.addListItem('aws_s3_access_objects', props.drsObjectFunctions.newAwsS3AccessObject)} 
+                    UpdateRegion={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'region', newValue)}
+                    UpdateBucket={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'bucket', newValue)} 
+                    UpdateKey={(index, newValue) => props.drsObjectFunctions.updateObjectProperty('aws_s3_access_objects', index, 'key', newValue)}
+                    RemoveAwsS3AccessObject={(index) => props.drsObjectFunctions.removeListItem('aws_s3_access_objects', index)}/>
             </form>
         </Container>
         </Box>
