@@ -22,11 +22,11 @@ class Drs extends React.Component {
       newDrsObject: {
         id: '',
         description: '',
-        created_time: '2021-01-01T00:00:00',
+        created_time: new Date(),
         mime_type: '',
         name: '',
         size: '',
-        updated_time: '2021-01-01T00:00:00',
+        updated_time: new Date(),
         version: '',
         aliases: [],
         checksums: [],

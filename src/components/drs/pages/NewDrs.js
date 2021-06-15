@@ -41,7 +41,7 @@ import DrsObjectForm from '../DrsObjectForm';
     })
 } */
 
-const CreateDrsForm = (props) => {
+const NewDrs = (props) => {
 
     let newDrsObject = props.newDrsObject;
     let activeDrsObject = props.activeDrsObject;
@@ -94,4 +94,4 @@ const CreateDrsForm = (props) => {
     
 }
 
-export default CreateDrsForm;
+export default NewDrs;
