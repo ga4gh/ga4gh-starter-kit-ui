@@ -25,7 +25,7 @@ import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
 import { 
     DateTimePicker,
     MuiPickersUtilsProvider 
- } from '@material-ui/pickers';
+} from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -242,7 +242,14 @@ const Checksums = (props) => {
     let readOnlyValue = props.readOnly;
     let formType = props.formType;
     let drsObjectType = props.drsObjectType;
-
+    /* let checksumTypesList = Object.entries(props.checksumTypes);
+    let checksumTypeOptions = [];
+    checksumTypesList.map((checksum) => {
+        if(checksum[1].enabled === true) {
+            checksumTypeOptions.push(checksum[0]);
+        }
+    }) */
+       
     if((formType === 'DrsShow' && !checksums)||(formType === 'NewDrs' && drsObjectType !== 'blob')) {
         return null;
     }
@@ -257,10 +264,17 @@ const Checksums = (props) => {
                                 label='Type' name='type' type='text' align='left'
                                 value={checksum.type} InputProps={{readOnly: readOnlyValue}} 
                                 helperText='Hashing algorithm used to generate the checksum.' 
-                                onChange={(event) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'type', event.target.value)}>
-                                    <MenuItem id='md5' value='md5'>md5</MenuItem>
-                                    <MenuItem id='sha1' value='sha1'>sha1</MenuItem>
-                                    <MenuItem id='sha256' value='sha256'>sha256</MenuItem>
+                                onChange={(event) => props.drsObjectFunctions.updateChecksumType(index, event.target.value)}>
+                                    {/* {
+                                        checksumTypeOptions.map((type, index) => {
+                                            return(
+                                                <MenuItem key={type+index} id={type} value={type}>{type}</MenuItem>
+                                            )   
+                                        })
+                                    } */}
+                                    <MenuItem id='md5' value='md5' disabled={!props.checksumTypes.md5.enabled}>md5</MenuItem>
+                                    <MenuItem id='sha1' value='sha1' disabled={!props.checksumTypes.sha1.enabled}>sha1</MenuItem>
+                                    <MenuItem id='sha256' value='sha256' disabled={!props.checksumTypes.sha256.enabled}>sha256</MenuItem>
                                 </TextField>
                             </FormControl>
                         </Grid>
@@ -274,7 +288,7 @@ const Checksums = (props) => {
                         </Grid>   
                         <Grid item xs={1}>
                             <RemovePropertyButton formType={formType} index={index} objectName='checksum'
-                            handleClick={(index) => props.drsObjectFunctions.removeListItem('checksums', index)}/>
+                            handleClick={(index) => props.drsObjectFunctions.removeChecksumItem(index)}/>
                         </Grid> 
                     </Grid>
                 </FormGroup>
@@ -587,6 +601,20 @@ const AwsS3AccessObjects = (props) => {
     }
 }
 
+const SubmitButton = (props) => {
+    if(props.formType === 'NewDrs') {
+        return (
+            <FormControl fullWidth>
+                <SpaceDivider/>
+                <Button variant='contained' color='primary'>Submit</Button>
+            </FormControl>
+        );
+    }
+    else {
+        return null;
+    }
+}
+
 const DrsObjectForm = (props) => {
     let drsObjectDetails = props.drsObjectDetails;
     let readOnlyValue = props.readOnly;
@@ -634,8 +662,7 @@ const DrsObjectForm = (props) => {
                         </FormControl>
                     </Grid>
                 </Grid>
-                <BundleBlobRadio formType={formType} drsObjectType={drsObjectDetails.drs_object_type} readOnly={readOnlyValue} drsObjectFunctions={props.drsObjectFunctions}
-                /* UpdateDrsObjectType={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} *//>
+                <BundleBlobRadio formType={formType} drsObjectType={drsObjectDetails.drs_object_type} readOnly={readOnlyValue} drsObjectFunctions={props.drsObjectFunctions}/>
                 <Grid container justify='flex-start' spacing={4}>
                     <Grid item xs={4}>
                         <MimeType mimeType={drsObjectDetails.mime_type} readOnly={readOnlyValue} formType={formType} 
@@ -649,7 +676,7 @@ const DrsObjectForm = (props) => {
                     </Grid>
                 </Grid>
                 <Aliases aliases={drsObjectDetails.aliases} readOnly={readOnlyValue} formType={formType} drsObjectFunctions={props.drsObjectFunctions}/>
-                <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue} formType={formType} 
+                <Checksums checksums={drsObjectDetails.checksums} readOnly={readOnlyValue} formType={formType} checksumTypes={props.checksumTypes}
                     drsObjectType={drsObjectDetails.drs_object_type} drsObjectFunctions={props.drsObjectFunctions}/>
                 <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} readOnly={readOnlyValue} formType={formType} 
                     drsObjectType={drsObjectDetails.drs_object_type} drsObjectFunctions={props.drsObjectFunctions}/>
@@ -657,6 +684,7 @@ const DrsObjectForm = (props) => {
                     drsObjectFunctions={props.drsObjectFunctions}/>
                 <AccessPoints drsObject={drsObjectDetails} readOnly={readOnlyValue} formType={formType} 
                     drsObjectType={drsObjectDetails.drs_object_type} drsObjectFunctions={props.drsObjectFunctions}/>
+                <SubmitButton formType={formType}/>
             </form>
         </Container>
         </Box>

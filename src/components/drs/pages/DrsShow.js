@@ -74,7 +74,7 @@ const DrsShow = (props) => {
       />
         <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
         <Container maxWidth="lg">
-          <DrsObjectForm drsObjectDetails={drsObjectDetails} readOnly={true} formType='DrsShow'/>
+          <DrsObjectForm drsObjectDetails={drsObjectDetails} readOnly={true} formType='DrsShow' checksumTypes={props.checksumTypes}/>
         </Container>
       </div>
     );

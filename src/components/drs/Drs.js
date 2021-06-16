@@ -38,7 +38,18 @@ class Drs extends React.Component {
       },
       activeDrsObject: null,
       drsObjectsList: null,
-      error: null
+      error: null, 
+      checksumTypes: {
+        md5: {
+          enabled: true
+        },
+        sha1: {
+          enabled: true
+        },
+        sha256: {
+          enabled: true
+        },
+      }
     };
     this.drsObjectFunctions = {
       updateScalarProperty: (property, newValue) => this.updateScalarProperty(property, newValue), 
@@ -47,6 +58,8 @@ class Drs extends React.Component {
       removeListItem: (objects, index) => this.removeListItem(objects, index),
       updateAlias: (index, newValue) => this.updateAlias(index, newValue),
       removeAlias: (index) => this.removeAlias(index),
+      updateChecksumType: (index, newValue) => this.updateChecksumType(index, newValue),
+      removeChecksumItem: (index) => this.removeChecksumItem(index),
       newAlias: '',
       newChecksum: {
         checksum: '',
@@ -172,6 +185,42 @@ class Drs extends React.Component {
     })
   }
 
+  updateChecksumType(index, newValue) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    let objectList = activeDrsObject['checksums'];
+    let object = {...objectList[index]};
+    let previousType = object['type'];
+    console.log(previousType);
+    object['type'] = newValue;
+    objectList[index] = object;
+    let checksumTypes = {...this.state.checksumTypes};
+    if(previousType) {
+      checksumTypes[previousType].enabled = !checksumTypes[previousType].enabled;
+    }
+    checksumTypes[newValue].enabled = !checksumTypes[newValue].enabled;
+    this.setState({
+      activeDrsObject: activeDrsObject,
+      checksumTypes: checksumTypes
+    })
+  }
+
+  removeChecksumItem(index) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    let objectList = activeDrsObject['checksums'];
+    let checksumToRemove = objectList[index];
+    let typeToUpdate = checksumToRemove.type;
+    console.log(typeToUpdate);
+    objectList.splice(index, 1);
+    let checksumTypes = {...this.state.checksumTypes};
+    if(typeToUpdate) {
+      checksumTypes[typeToUpdate].enabled = true;
+    }
+    this.setState({
+      activeDrsObject: activeDrsObject,
+      checksumTypes: checksumTypes
+    })
+  }
+
   render(){
     if(this.state.error) {
       if(this.state.error.response) {
@@ -226,6 +275,7 @@ class Drs extends React.Component {
                 newDrsObject={this.state.newDrsObject}
                 activeDrsObject={this.state.activeDrsObject}
                 updateActiveDrsObject={this.updateActiveDrsObject}
+                checksumTypes={this.state.checksumTypes}
                 drsObjectFunctions={this.drsObjectFunctions}
               />
             </Route>
@@ -234,6 +284,7 @@ class Drs extends React.Component {
                 activeDrsObject={this.state.activeDrsObject} 
                 updateActiveDrsObject={this.updateActiveDrsObject} 
                 handleError={this.handleError}
+                checksumTypes={this.state.checksumTypes}
               />
             </Route>
           </Switch>

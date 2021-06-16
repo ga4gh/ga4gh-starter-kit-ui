@@ -86,6 +86,7 @@ const NewDrs = (props) => {
                     readOnly={false} 
                     formType='NewDrs'
                     drsObjectFunctions={props.drsObjectFunctions}
+                    checksumTypes={props.checksumTypes}
                 />
             </Container>
         </div>
