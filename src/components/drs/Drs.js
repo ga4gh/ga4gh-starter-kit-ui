@@ -19,6 +19,31 @@ class Drs extends React.Component {
     this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
     this.handleError = this.handleError.bind(this);
     this.state = {
+      activeDrsObject: null,
+      drsObjectsList: null,
+      error: null, 
+      checksumTypes: {
+        md5: {
+          disabled: false
+        },
+        sha1: {
+          disabled: false
+        },
+        sha256: {
+          disabled: false
+        },
+      }
+    };
+    this.drsObjectFunctions = {
+      updateDrsObjectType: (value) => this.updateDrsObjectType(value),
+      updateScalarProperty: (property, newValue) => this.updateScalarProperty(property, newValue), 
+      addListItem: (property, newObject) => this.addListItem(property, newObject),
+      updateObjectProperty: (objectList, index, property, newValue) => this.updateObjectProperty(objectList, index, property, newValue), 
+      removeListItem: (objects, index) => this.removeListItem(objects, index),
+      updateAlias: (index, newValue) => this.updateAlias(index, newValue),
+      removeAlias: (index) => this.removeAlias(index),
+      updateChecksumType: (index, newValue) => this.updateChecksumType(index, newValue),
+      removeChecksumItem: (index) => this.removeChecksumItem(index),
       newDrsObject: {
         id: '',
         description: '',
@@ -34,32 +59,9 @@ class Drs extends React.Component {
         drs_object_parents: [],
         file_access_objects: [],
         aws_s3_access_objects: [],
-        drs_object_type: 'blob'
+        isBlob: true,
+        isBundle: false
       },
-      activeDrsObject: null,
-      drsObjectsList: null,
-      error: null, 
-      checksumTypes: {
-        md5: {
-          enabled: true
-        },
-        sha1: {
-          enabled: true
-        },
-        sha256: {
-          enabled: true
-        },
-      }
-    };
-    this.drsObjectFunctions = {
-      updateScalarProperty: (property, newValue) => this.updateScalarProperty(property, newValue), 
-      addListItem: (property, newObject) => this.addListItem(property, newObject),
-      updateObjectProperty: (objectList, index, property, newValue) => this.updateObjectProperty(objectList, index, property, newValue), 
-      removeListItem: (objects, index) => this.removeListItem(objects, index),
-      updateAlias: (index, newValue) => this.updateAlias(index, newValue),
-      removeAlias: (index) => this.removeAlias(index),
-      updateChecksumType: (index, newValue) => this.updateChecksumType(index, newValue),
-      removeChecksumItem: (index) => this.removeChecksumItem(index),
       newAlias: '',
       newChecksum: {
         checksum: '',
@@ -123,12 +125,28 @@ class Drs extends React.Component {
     this.setState({
       activeDrsObject: newActiveDrsObject
     });
+    console.log(this.state.activeDrsObject);
   }
 
   handleError(error) {
     this.setState({
       error: error
     });
+  }
+
+  updateDrsObjectType(value) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    if(value === 'blob') {
+      activeDrsObject.isBlob = true;
+      activeDrsObject.isBundle = false;
+    }
+    else {
+      activeDrsObject.isBundle = true;
+      activeDrsObject.isBlob = false;
+    }
+    this.setState({
+      activeDrsObject: activeDrsObject
+    })
   }
 
   updateScalarProperty(property, newValue) {
@@ -190,14 +208,13 @@ class Drs extends React.Component {
     let objectList = activeDrsObject['checksums'];
     let object = {...objectList[index]};
     let previousType = object['type'];
-    console.log(previousType);
     object['type'] = newValue;
     objectList[index] = object;
     let checksumTypes = {...this.state.checksumTypes};
     if(previousType) {
-      checksumTypes[previousType].enabled = !checksumTypes[previousType].enabled;
+      checksumTypes[previousType].disabled = !checksumTypes[previousType].disabled;
     }
-    checksumTypes[newValue].enabled = !checksumTypes[newValue].enabled;
+    checksumTypes[newValue].disabled = !checksumTypes[newValue].disabled;
     this.setState({
       activeDrsObject: activeDrsObject,
       checksumTypes: checksumTypes
@@ -213,7 +230,7 @@ class Drs extends React.Component {
     objectList.splice(index, 1);
     let checksumTypes = {...this.state.checksumTypes};
     if(typeToUpdate) {
-      checksumTypes[typeToUpdate].enabled = true;
+      checksumTypes[typeToUpdate].disabled = false;
     }
     this.setState({
       activeDrsObject: activeDrsObject,
@@ -272,7 +289,6 @@ class Drs extends React.Component {
             </Route>
             <Route exact path='/drs/new'>
               <NewDrs
-                newDrsObject={this.state.newDrsObject}
                 activeDrsObject={this.state.activeDrsObject}
                 updateActiveDrsObject={this.updateActiveDrsObject}
                 checksumTypes={this.state.checksumTypes}

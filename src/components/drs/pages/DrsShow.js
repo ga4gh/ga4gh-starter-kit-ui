@@ -32,7 +32,16 @@ const DrsShow = (props) => {
       })
       .then (
         (response) => {
-          updateActiveDrsObject(response.data);
+          let activeDrsObject = response.data;
+          if(response.data.drs_object_children) {
+            activeDrsObject.isBundle = true;
+            activeDrsObject.isBlob = false;
+          }
+          else {
+            activeDrsObject.isBlob = true;
+            activeDrsObject.isBundle = false;
+          }
+          updateActiveDrsObject(activeDrsObject);
         },
         (error) => {
           if (axios.isCancel(error)) {
@@ -74,7 +83,11 @@ const DrsShow = (props) => {
       />
         <Typography variant="h3" gutterBottom>DRS Object Details</Typography>
         <Container maxWidth="lg">
-          <DrsObjectForm drsObjectDetails={drsObjectDetails} readOnly={true} formType='DrsShow' checksumTypes={props.checksumTypes}/>
+          <DrsObjectForm 
+            drsObjectDetails={drsObjectDetails} 
+            readOnlyId={true}
+            readOnlyForm={true}
+            checksumTypes={props.checksumTypes}/>
         </Container>
       </div>
     );

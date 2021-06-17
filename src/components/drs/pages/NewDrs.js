@@ -43,7 +43,7 @@ import DrsObjectForm from '../DrsObjectForm';
 
 const NewDrs = (props) => {
 
-    let newDrsObject = props.newDrsObject;
+    let newDrsObject = props.drsObjectFunctions.newDrsObject;
     let activeDrsObject = props.activeDrsObject;
     
     useEffect(() => {
@@ -83,8 +83,8 @@ const NewDrs = (props) => {
                 <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
                 <DrsObjectForm 
                     drsObjectDetails={activeDrsObject} 
-                    readOnly={false} 
-                    formType='NewDrs'
+                    readOnlyId={false}
+                    readOnlyForm={false}
                     drsObjectFunctions={props.drsObjectFunctions}
                     checksumTypes={props.checksumTypes}
                 />
