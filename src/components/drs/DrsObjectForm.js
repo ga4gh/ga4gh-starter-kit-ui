@@ -1,5 +1,5 @@
 import '@fontsource/roboto';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { 
     Typography, 
     Container, 
@@ -22,12 +22,14 @@ import {
 } from "react-router-dom";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import { 
     DateTimePicker,
     MuiPickersUtilsProvider 
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { v4 as uuidv4 } from 'uuid';
+import useDrsObjectDetails from './pages/UseDrsObjectDetails';
 
 const SpaceDivider = () => {
     return (
@@ -53,7 +55,7 @@ const AddPropertyButton = (props) => {
 const RemovePropertyButton = (props) => {
     if(!props.readOnlyForm) {
         return (
-            <Grid item xs={1} justify='right'>
+            <Grid item xs={1}>
                 <Tooltip title={`Remove this ${props.objectName}.`}>
                     <IconButton color='secondary' onClick={() => props.handleClick(props.index)}>
                         <RemoveCircleIcon/>
@@ -190,7 +192,7 @@ const Aliases = (props) => {
                             InputProps={{readOnly: props.readOnlyForm}} 
                             onChange={event => props.drsObjectFunctions.updateAlias(index, event.target.value)}/>
                         </FormControl>
-                        <Box zIndex={1} position='relative' right='10%' top={-9}>
+                        <Box zIndex={1} position='relative' right='10%' top={-10}>
                             <RemovePropertyButton readOnlyForm={props.readOnlyForm} handleClick={(index) => props.drsObjectFunctions.removeAlias(index)}
                             index={index} objectName='alias'/>    
                         </Box>    
@@ -288,6 +290,49 @@ const Checksums = (props) => {
     }
 }
 
+const EnterIdButton = (props) => {
+    const [objectId, setId] = useState('');
+    let id = props.drsObject.id;
+    let disabled = false;
+
+    let drsObjectDetails = {...props.drsObjectDetails};
+    let relatedObjectsList = drsObjectDetails[props.property];
+    let relatedObject = {...relatedObjectsList[props.index]};
+
+    const handleResponse = (response) => {
+        console.log(relatedObject);
+        relatedObject.name = response.name;
+        relatedObject.desription = response.description;
+        relatedObject.created_time = response.created_time;
+        relatedObject.updated_time = response.updated_time;
+        relatedObject.mime_type = response.mime_type;
+        relatedObject.size = response.size;
+        relatedObject.version = response.version;
+        relatedObjectsList[props.index] = relatedObject;
+        console.log(drsObjectDetails);
+        props.updateActiveDrsObject(drsObjectDetails);
+    }
+
+    useDrsObjectDetails(relatedObject, handleResponse, props.handleError, objectId);
+
+    if(id === ''){
+        disabled = true;
+    }
+    if(!props.readOnlyForm) {
+        return(
+            <Box zIndex={1} position='relative' right={20} top={0}>
+                <IconButton color='primary' disabled={disabled} 
+                onClick={event => setId(id)}>
+                    <Tooltip title='Submit this ID.'>
+                        <CheckCircleIcon/>
+                    </Tooltip>
+                </IconButton>
+            </Box>
+        );
+    }
+    else return null;
+}
+
 const DrsObjectChildButton = (props) => {
     if(!props.readOnlyForm) {
         return(
@@ -326,6 +371,9 @@ const DrsObjectChildren = (props) => {
                                 onChange={(event) => props.drsObjectFunctions.updateObjectProperty('drs_object_children', index, 'id', event.target.value)}/>                        
                             </FormControl>
                         </Grid>
+                        <EnterIdButton readOnlyForm={props.readOnlyForm} drsObject={drsChild} drsObjectDetails={props.drsObjectDetails} 
+                        drsObjectFunctions={props.drsObjectFunctions} updateActiveDrsObject={props.updateActiveDrsObject}
+                        index={index} property='drs_object_children' handleError={props.handleError}/>
                         <Grid item xs>
                             <FormControl fullWidth>
                                 <TextField variant='outlined' fullWidth id={`DrsChildName${index}`} 
@@ -404,6 +452,9 @@ const DrsObjectParents = (props) => {
                                 onChange={(event) => props.drsObjectFunctions.updateObjectProperty('drs_object_parents', index, 'id', event.target.value)}/>                            
                             </FormControl>
                         </Grid>
+                        <EnterIdButton readOnlyForm={props.readOnlyForm} drsObject={drsParent} drsObjectDetails={props.drsObjectDetails} 
+                        drsObjectFunctions={props.drsObjectFunctions} updateActiveDrsObject={props.updateActiveDrsObject}
+                        index={index} property='drs_object_parents' handleError={props.handleError}/>
                         <Grid item xs>
                             <FormControl fullWidth>
                                 <TextField variant='outlined' fullWidth id={`DrsParentName${index}`} 
@@ -650,9 +701,12 @@ const DrsObjectForm = (props) => {
                 <Aliases aliases={drsObjectDetails.aliases} drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}/>
                 <Checksums checksums={drsObjectDetails.checksums} checksumTypes={props.checksumTypes} isBlob={isBlob}
                     drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}/>
-                <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} isBundle={isBundle}
-                    drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}/>
-                 <DrsObjectParents drs_object_parents={drsObjectDetails.drs_object_parents} drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}/>
+                <DrsObjectChildren drs_object_children={drsObjectDetails.drs_object_children} isBundle={isBundle} 
+                    drsObjectDetails={drsObjectDetails} updateActiveDrsObject={props.updateActiveDrsObject}
+                    drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm} handleError={props.handleError}/>
+                 <DrsObjectParents drs_object_parents={drsObjectDetails.drs_object_parents} 
+                    drsObjectDetails={drsObjectDetails} updateActiveDrsObject={props.updateActiveDrsObject}
+                    drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm} handleError={props.handleError}/>
                 <AccessPoints drsObject={drsObjectDetails} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions} isBlob={isBlob}/>
                 <SubmitButton readOnlyForm={readOnlyForm}/>
             </form>

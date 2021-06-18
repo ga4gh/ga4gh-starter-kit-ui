@@ -1,8 +1,5 @@
 import '@fontsource/roboto';
-import React, { 
-  useEffect
-} from 'react';
-import axios from 'axios';
+import React from 'react';
 import { 
   Typography, 
   Container
@@ -11,6 +8,7 @@ import {
     useParams
 } from "react-router-dom";
 import DrsObjectForm from '../DrsObjectForm';
+import useDrsObjectDetails from './UseDrsObjectDetails';
 
 const DrsShow = (props) => {
   let drsObjectDetails = props.activeDrsObject;
@@ -18,50 +16,7 @@ const DrsShow = (props) => {
   let handleError = props.handleError;
   let { objectId } = useParams();
 
-  useEffect(() => {
-    let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
-    let requestUrl=(baseUrl+'objects/'+objectId);
-    const cancelToken = axios.CancelToken;
-    const drsShowCancelToken = cancelToken.source();
-
-    let getDrsObjectDetails = async () => {
-      await axios({
-        url: requestUrl,
-        method: 'GET',
-        cancelToken: drsShowCancelToken.token
-      })
-      .then (
-        (response) => {
-          let activeDrsObject = response.data;
-          if(response.data.drs_object_children) {
-            activeDrsObject.isBundle = true;
-            activeDrsObject.isBlob = false;
-          }
-          else {
-            activeDrsObject.isBlob = true;
-            activeDrsObject.isBundle = false;
-          }
-          updateActiveDrsObject(activeDrsObject);
-        },
-        (error) => {
-          if (axios.isCancel(error)) {
-            console.log('DrsShow request has been cancelled');
-          }
-          else {
-            handleError(error);
-          }
-        }
-      )
-    } 
-
-    if(!drsObjectDetails){
-      getDrsObjectDetails();
-    }
-
-    return () => {
-      drsShowCancelToken.cancel('Cleanup DrsShow');
-    };
-  }, [drsObjectDetails]);
+  useDrsObjectDetails(drsObjectDetails, updateActiveDrsObject, handleError, objectId);
 
   if(!drsObjectDetails) {
     return (

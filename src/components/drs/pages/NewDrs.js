@@ -1,6 +1,5 @@
 import '@fontsource/roboto';
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { 
     Typography, 
     Container
@@ -87,6 +86,8 @@ const NewDrs = (props) => {
                     readOnlyForm={false}
                     drsObjectFunctions={props.drsObjectFunctions}
                     checksumTypes={props.checksumTypes}
+                    handleError={props.handleError}
+                    updateActiveDrsObject={props.updateActiveDrsObject}
                 />
             </Container>
         </div>

@@ -122,6 +122,15 @@ class Drs extends React.Component {
   }
 
   updateActiveDrsObject(newActiveDrsObject) {
+    console.log(newActiveDrsObject);
+    if(newActiveDrsObject.drs_object_children && Object.keys(newActiveDrsObject.drs_object_children).length > 0) {
+      newActiveDrsObject.isBundle = true;
+      newActiveDrsObject.isBlob = false;
+    }
+    else {
+      newActiveDrsObject.isBlob = true;
+      newActiveDrsObject.isBundle = false;
+    }
     this.setState({
       activeDrsObject: newActiveDrsObject
     });
@@ -293,6 +302,7 @@ class Drs extends React.Component {
                 updateActiveDrsObject={this.updateActiveDrsObject}
                 checksumTypes={this.state.checksumTypes}
                 drsObjectFunctions={this.drsObjectFunctions}
+                handleError={this.handleError}
               />
             </Route>
             <Route path='/drs/:objectId'>
@@ -310,4 +320,4 @@ class Drs extends React.Component {
   }
 }
   
-  export default Drs;
+export default Drs;
