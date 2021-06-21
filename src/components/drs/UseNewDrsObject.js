@@ -4,17 +4,18 @@ import React, {
 } from 'react';
 import axios from 'axios';
 
-const useDrsObjectDetails = (drsObjectDetails, handleResponse, handleError, objectId) => {
+const useNewDrsObject = (handleResponse, handleError, newDrsObjectData) => {
     useEffect(() => {
         let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
-        let requestUrl=(baseUrl+'objects/'+objectId);
+        let requestUrl=(baseUrl+'objects/');
         const cancelToken = axios.CancelToken;
         const drsShowCancelToken = cancelToken.source();
     
         let getDrsObjectDetails = async () => {
           await axios({
             url: requestUrl,
-            method: 'GET',
+            method: 'POST',
+            data: newDrsObjectData,
             cancelToken: drsShowCancelToken.token
           })
           .then (
@@ -32,15 +33,15 @@ const useDrsObjectDetails = (drsObjectDetails, handleResponse, handleError, obje
           )
         } 
     
-        if((!drsObjectDetails) || (!drsObjectDetails.name && objectId !== '')){
-            console.log('make api request: ' + objectId);
+        if((newDrsObjectData)){
+            console.log('make api request: ');
             getDrsObjectDetails();
         }
     
         return () => {
           drsShowCancelToken.cancel('Cleanup DrsShow');
         };
-    }, [objectId]);
+    }, [newDrsObjectData]);
 }
 
-export default useDrsObjectDetails;
+export default useNewDrsObject;

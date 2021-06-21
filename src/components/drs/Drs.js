@@ -67,11 +67,7 @@ class Drs extends React.Component {
         checksum: '',
         type: ''
       },
-      newDrsObjectChild: {
-        id: '', 
-        name: ''
-      },
-      newDrsObjectParent: {
+      newRelatedDrsObject: {
         id: '', 
         name: ''
       },
