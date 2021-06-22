@@ -24,7 +24,7 @@ const useNewDrsObject = (handleResponse, handleError, newDrsObjectData) => {
             },
             (error) => {
               if (axios.isCancel(error)) {
-                console.log('DrsShow request has been cancelled');
+                console.log('NewDrs request has been cancelled');
               }
               else {
                 handleError(error);
@@ -34,8 +34,8 @@ const useNewDrsObject = (handleResponse, handleError, newDrsObjectData) => {
         } 
     
         if((newDrsObjectData)){
-            console.log('make api request: ');
-            getDrsObjectDetails();
+          console.log('make api request');
+          getDrsObjectDetails();
         }
     
         return () => {

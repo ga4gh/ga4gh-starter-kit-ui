@@ -8,7 +8,7 @@ import {
     useParams
 } from "react-router-dom";
 import DrsObjectForm from '../DrsObjectForm';
-import useDrsObjectDetails from './UseDrsObjectDetails';
+import useDrsObjectDetails from '../UseDrsObjectDetails';
 
 const DrsShow = (props) => {
   let drsObjectDetails = props.activeDrsObject;

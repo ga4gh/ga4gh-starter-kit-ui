@@ -32,7 +32,7 @@ const useDrsObjectDetails = (drsObjectDetails, handleResponse, handleError, obje
           )
         } 
     
-        if((!drsObjectDetails) || (!drsObjectDetails.name && objectId !== '')){
+        if(objectId){
             console.log('make api request: ' + objectId);
             getDrsObjectDetails();
         }

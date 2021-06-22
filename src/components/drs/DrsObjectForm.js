@@ -31,7 +31,7 @@ import {
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { v4 as uuidv4 } from 'uuid';
-import useDrsObjectDetails from './pages/UseDrsObjectDetails';
+import useDrsObjectDetails from './UseDrsObjectDetails';
 import useNewDrsObject from './UseNewDrsObject';
 
 const SpaceDivider = () => {
@@ -87,8 +87,8 @@ const BundleBlobRadio = (props) => {
                     Bundles contain references to Child Drs Objects, while Blobs act as single DRS Objects and do not have any children.
                 </Typography>
                 <RadioGroup name='drs_object_type' value={value} onChange={e => props.drsObjectFunctions.updateDrsObjectType(e.target.value)}>
-                        <FormControlLabel control={<Radio color='primary'/>} label='Blob' value='blob' disabled={props.readOnlyForm}></FormControlLabel>
-                        <FormControlLabel control={<Radio color='primary'/>} label='Bundle' value='bundle' disabled={props.readOnlyForm}></FormControlLabel>
+                    <FormControlLabel control={<Radio color='primary'/>} label='Blob' value='blob' disabled={props.readOnlyForm}></FormControlLabel>
+                    <FormControlLabel control={<Radio color='primary'/>} label='Bundle' value='bundle' disabled={props.readOnlyForm}></FormControlLabel>
                 </RadioGroup>
             </FormGroup>
         );
@@ -131,7 +131,10 @@ const DateTimeField = (props) => {
             <FormControl fullWidth>
                 <DateTimePicker id={props.parameterName} label={props.label} margin='normal' name={props.parameterName} value={props.value} 
                 format='yyyy-MM-dd HH:mm:ss' readOnly={props.readOnlyForm} showTodayButton ampm={false} helperText={props.description}
-                onChange={date => props.drsObjectFunctions.updateScalarProperty(props.parameterName, date.toISOString())} />
+                onChange={date => {
+                    date.setSeconds(0, 0);
+                    props.drsObjectFunctions.updateScalarProperty(props.parameterName, date.toISOString());
+                }} />
             </FormControl>
         </MuiPickersUtilsProvider>
     );
@@ -278,30 +281,35 @@ const Checksums = (props) => {
 
 const VerifyIdButton = (props) => {
     const [objectId, setId] = useState('');
-    const [isValid, setIsValid] = useState(true);
     let id = props.relatedDrsObject.id;
     let disabled = false;
-
-    //console.log(isValid);
 
     let drsObjectDetails = {...props.activeDrsObject};
     let relatedObjectsList = drsObjectDetails[props.property];
     let relatedObject = {...relatedObjectsList[props.index]};
 
-    //error handling needs to set isValid to false if id is not valid
     const handleResponse = (response) => {
-        //setIsValid(true);
+        console.log(response.name);
         relatedObject.name = response.name;
+        relatedObject.isValid = true;
         relatedObjectsList[props.index] = relatedObject;
         props.updateActiveDrsObject(drsObjectDetails);
     }
 
-    useDrsObjectDetails(relatedObject, handleResponse, props.handleError, objectId);
+    const handleError = (error) => {
+        relatedObject.name = '';
+        relatedObject.isValid = false;
+        relatedObjectsList[props.index] = relatedObject;
+        props.updateActiveDrsObject(drsObjectDetails);
+    }
+
+    useDrsObjectDetails(relatedObject, handleResponse, handleError, objectId);
 
     if(id === '') {
         disabled = true;
     }
-    if(!props.readOnlyForm && (id !== objectId || id === '')) {
+    if(!props.readOnlyForm && relatedObject.isValid === '') {
+        console.log(id);
         return(
             <Button color='primary' disabled={disabled} variant='contained' size='small' onClick={() => setId(id)}>
                 <Tooltip title='Submit this ID for verification.'>
@@ -310,7 +318,7 @@ const VerifyIdButton = (props) => {
             </Button>
         );
     }
-    else if(id === objectId && isValid === true) {
+    else if(!props.readOnlyForm && relatedObject.isValid === true) {
         return(
             <IconButton color='primary'>
                 <Tooltip title='This is a valid ID.'>
@@ -319,7 +327,7 @@ const VerifyIdButton = (props) => {
             </IconButton>
         );
     }
-    else if(id === objectId && isValid === false) {
+    else if(!props.readOnlyForm && relatedObject.isValid === false) {
         return(
             <IconButton color='secondary'>
                 <Tooltip title='This is an invalid ID. Please enter a valid ID before proceeding.'>
@@ -369,7 +377,10 @@ const RelatedDrsObject = (props) => {
                             <FormControl fullWidth>
                                 <TextField variant='outlined' fullWidth id={`ID_${relationship}${index}`} 
                                 label='Id' name={relatedDrs.id} value={relatedDrs.id} margin='normal' type='text' 
-                                onChange={(event) => props.drsObjectFunctions.updateObjectProperty(relationship, index, 'id', event.target.value)}
+                                onChange={(event) => {
+                                    props.drsObjectFunctions.updateObjectProperty(relationship, index, 'id', event.target.value);
+                                    props.drsObjectFunctions.updateObjectProperty(relationship, index, 'isValid', '');
+                                }}
                                 InputProps={
                                     {readOnly: props.readOnlyForm}, 
                                     {endAdornment: 
@@ -380,8 +391,7 @@ const RelatedDrsObject = (props) => {
                                             drsObjectFunctions={props.drsObjectFunctions} 
                                             updateActiveDrsObject={props.updateActiveDrsObject} 
                                             index={index} 
-                                            property={relationship} 
-                                            handleError={props.handleError}/>
+                                            property={relationship}/>
                                         </InputAdornment>
                                     }
                                 } >
@@ -417,7 +427,7 @@ const RelatedDrsObject = (props) => {
 const AccessPoints = (props) => {
     let fileAccessObjects = props.drsObject.file_access_objects;
     let awsS3AccessObjects = props.drsObject.aws_s3_access_objects;
-    if(props.isBlob !== true) {
+    if(props.isBlob !== true || (!fileAccessObjects && !awsS3AccessObjects)) {
         return null;
     }
     else {
@@ -430,7 +440,7 @@ const AccessPoints = (props) => {
                     the raw bytes. Multiple access points give the client options 
                     in choosing the best data source for their use case (e.g.
                     based on geographic proximity to the data). All access points
-                    associated with a single DRS Object must have the same bytes
+                    associated with a single DRS Object must have the same bytes.
                 </Typography>
                 <FileAccessObjects file_access_objects={fileAccessObjects} readOnlyForm={props.readOnlyForm}
                 drsObjectFunctions={props.drsObjectFunctions}/>
@@ -535,7 +545,7 @@ const AwsS3AccessObjects = (props) => {
                 </Typography>
                 {awsS3AccessDisplay}
                 <AddPropertyButton objectName='AWS S3 access point' readOnlyForm={props.readOnlyForm}
-                handleClick={() => props.drsObjectFunctions.addListItem('aws_s3_access_objects', props.drsObjectFunctions.newAwsS3AccessObject)} />
+                handleClick={() => props.drsObjectFunctions.addListItem('aws_s3_access_objects', props.drsObjectFunctions.newAwsS3AccessObject)}/>
             </FormGroup>
         );
     }
@@ -543,39 +553,101 @@ const AwsS3AccessObjects = (props) => {
 
 const SubmitButton = (props) => {
     const [newDrsObjectToSubmit, setNewDrsObjectToSubmit] = useState('');
+    const [error, setError] = useState(null);
+    let activeDrsObject = props.activeDrsObject;
+    const scalarProperties = ['description', 'created_time', 'name', 'updated_time', 'version']
+    const blobScalarProperties = ['mime_type', 'size']
+    const blobListProperties = ['aliases', 'checksums', 'drs_object_parents', 'file_access_objects', 'aws_s3_access_objects'];
+    const bundleListProperties = ['aliases', 'drs_object_parents', 'drs_object_children'];
 
-    let newDrsObject = {
-        id: props.activeDrsObject.id,
-        description: props.activeDrsObject.description,
-        created_time: props.activeDrsObject.created_time,
-        mime_type: props.activeDrsObject.mimeType,
-        name: props.activeDrsObject.name,
-        size: props.activeDrsObject.size,
-        updated_time: props.activeDrsObject.updated_time,
-        version: props.activeDrsObject.version,
-        aliases: props.activeDrsObject.aliases,
-        checksums: props.activeDrsObject.checksums,
-        drs_object_children: props.activeDrsObject.drs_object_children,
-        drs_object_parents: props.activeDrsObject.drs_object_parents,
-        file_access_objects: props.activeDrsObject.file_access_objects,
-        aws_s3_access_objects: props.activeDrsObject.aws_s3_access_objects
+    console.log(newDrsObjectToSubmit);
+    
+    const relatedDrsObjects = (property) => {
+        let relatedDrsObjects = [];
+        if(activeDrsObject[property]) {
+            activeDrsObject[property].map((relatedDrs) => {
+                if(relatedDrs.isValid) {
+                    let relatedDrsObject = {
+                        id: relatedDrs.id
+                    }
+                    relatedDrsObjects.push(relatedDrsObject);    
+                }
+            })
+        }
+        return relatedDrsObjects;   
     }
 
-    console.log(newDrsObject);
+    const newDrsObject = () => {
+        let newDrsObject = {
+            id: activeDrsObject.id
+        };
+
+        scalarProperties.map((property) => {
+            if(activeDrsObject[property]) {
+                newDrsObject[property] = activeDrsObject[property];
+            }
+        })
+
+        if(activeDrsObject.isBlob) {
+            blobScalarProperties.map((property) => {
+                if(activeDrsObject[property]) {
+                    newDrsObject[property] = activeDrsObject[property];
+                }
+            })
+            blobListProperties.map((property) => {
+                if(activeDrsObject[property] && Object.keys(activeDrsObject[property]).length > 0) {
+                    if(property === 'drs_object_parents') {
+                        newDrsObject[property] = relatedDrsObjects(property);
+                    }
+                    else {
+                        newDrsObject[property] = activeDrsObject[property];
+                    }
+                }
+            })
+        }
+        else { 
+            bundleListProperties.map((property) => {
+                if(activeDrsObject[property] && Object.keys(activeDrsObject[property]).length > 0) {
+                    if(property === 'aliases') {
+                        newDrsObject[property] = activeDrsObject[property];
+                    }
+                    else {
+                        newDrsObject[property] = relatedDrsObjects(property);
+                    }
+                }
+            })
+        }
+        console.log(newDrsObject); 
+        return newDrsObject;   
+    }
+
     
     const handleResponse = (response) => {
         console.log(response);
         //if successful notify user and/or navigate to DrsShow page for new object
     }
 
-    //useNewDrsObject(handleResponse, props.handleError, newDrsObjectToSubmit);
+    const handleError = (error) => {
+        console.log(error);
+        setError(error);
+    }
+
+    useNewDrsObject(handleResponse, handleError, newDrsObjectToSubmit);
 
     if(!props.readOnlyForm) {
         return (
             <FormControl fullWidth>
                 <SpaceDivider/>
-                <Button variant='contained' color='primary' onClick={() => setNewDrsObjectToSubmit(newDrsObject)}>Submit</Button>
+                <Button variant='contained' color='primary' onClick={() => setNewDrsObjectToSubmit(newDrsObject())}>Submit</Button>
             </FormControl>
+        );
+    }
+    else if(!props.readOnlyForm && error) {
+        return (
+            <div>
+                <Typography>New DRS Object was not created successfully.</Typography>
+                <Typography>Error: {error}</Typography>    
+            </div>
         );
     }
     else return null;
@@ -647,11 +719,10 @@ const DrsObjectForm = (props) => {
                 <Checksums checksums={activeDrsObject.checksums} checksumTypes={props.checksumTypes} isBlob={isBlob}
                 drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}/>
                 <RelatedDrsObject relatedDrsObjects={activeDrsObject.drs_object_children} isBundle={isBundle} relationship='drs_object_children'
-                activeDrsObject={activeDrsObject} updateActiveDrsObject={props.updateActiveDrsObject}
-                drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm} handleError={props.handleError}
-                header='Bundle Children' objectName='child bundle'
+                activeDrsObject={activeDrsObject} updateActiveDrsObject={props.updateActiveDrsObject} readOnlyForm={readOnlyForm}
+                drsObjectFunctions={props.drsObjectFunctions} header='Bundle Children' objectName='child bundle'
                 sectionDescription={
-                    <Typography>
+                    <div>
                         <Typography variant='body2' align='left' color='textSecondary'>
                             This DRS Object is currently acting as a DRS Bundle. Bundles
                             contain references to multiple Child objects (single-blob DRS
@@ -664,12 +735,11 @@ const DrsObjectForm = (props) => {
                             The following listing displays all children for the current
                             DRS Bundle.
                         </Typography>
-                    </Typography>
+                    </div>
                 }/>
                 <RelatedDrsObject relatedDrsObjects={activeDrsObject.drs_object_parents} isBundle={isBundle} relationship='drs_object_parents'
-                activeDrsObject={activeDrsObject} updateActiveDrsObject={props.updateActiveDrsObject}
-                drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm} handleError={props.handleError}
-                header='Parent Bundles' objectName='parent bundle'
+                activeDrsObject={activeDrsObject} updateActiveDrsObject={props.updateActiveDrsObject} readOnlyForm={readOnlyForm}
+                drsObjectFunctions={props.drsObjectFunctions} header='Parent Bundles' objectName='parent bundle'
                 sectionDescription={
                     <Typography variant='body2' align='left' color='textSecondary'>
                         The following listing displays all "Parent" DRS Bundles,
@@ -678,7 +748,7 @@ const DrsObjectForm = (props) => {
                     </Typography>
                 }/>
                 <AccessPoints drsObject={activeDrsObject} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions} isBlob={isBlob}/>
-                <SubmitButton activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm} handleError={props.handleError} />
+                <SubmitButton activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm}/>
             </form>
         </Container>
         </Box>

@@ -86,7 +86,6 @@ const NewDrs = (props) => {
                     readOnlyForm={false}
                     drsObjectFunctions={props.drsObjectFunctions}
                     checksumTypes={props.checksumTypes}
-                    handleError={props.handleError}
                     updateActiveDrsObject={props.updateActiveDrsObject}
                 />
             </Container>

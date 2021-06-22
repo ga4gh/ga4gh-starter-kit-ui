@@ -25,7 +25,7 @@ const DrsIndexRows = (props) => {
   }
   else {
     const rows = drsObjectsList.map((drsObject) =>
-    <TableRow key={drsObject.name}>
+    <TableRow key={drsObject.id}>
       <TableCell align="left">
         <Typography>{drsObject.id}</Typography>
       </TableCell>

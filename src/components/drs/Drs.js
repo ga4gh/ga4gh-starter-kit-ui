@@ -13,6 +13,9 @@ import NewDrs from './pages/NewDrs';
 const cancelToken = axios.CancelToken;
 const drsCancelToken = cancelToken.source();
 
+let newDate = new Date();
+newDate.setSeconds(0, 0);
+
 class Drs extends React.Component {
   constructor(props) {
     super(props);
@@ -47,11 +50,11 @@ class Drs extends React.Component {
       newDrsObject: {
         id: '',
         description: '',
-        created_time: new Date(),
+        created_time: newDate.toISOString(),
         mime_type: '',
         name: '',
         size: '',
-        updated_time: new Date(),
+        updated_time: newDate.toISOString(),
         version: '',
         aliases: [],
         checksums: [],
@@ -69,7 +72,8 @@ class Drs extends React.Component {
       },
       newRelatedDrsObject: {
         id: '', 
-        name: ''
+        name: '', 
+        isValid: ''
       },
       newFileAccessObject: {
         path: ''
@@ -298,7 +302,6 @@ class Drs extends React.Component {
                 updateActiveDrsObject={this.updateActiveDrsObject}
                 checksumTypes={this.state.checksumTypes}
                 drsObjectFunctions={this.drsObjectFunctions}
-                handleError={this.handleError}
               />
             </Route>
             <Route path='/drs/:objectId'>
