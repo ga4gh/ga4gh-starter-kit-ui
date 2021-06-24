@@ -54,12 +54,17 @@ const DrsIndex = (props) => {
       />
       <Container maxWidth="lg" >
         <Grid container justify='space-between' alignItems='center'>
-          <Grid item xs={2}/>
+          <Grid item xs={2} align='left'>
+            <Button variant='contained' component={Link} to='/' color='primary' size='large'>
+            <Typography variant='button'>Home</Typography>
+            </Button>
+          </Grid>
           <Grid item xs={8}>
             <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
           </Grid>
           <Grid item xs={2} align='right'>
-            <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'>
+            <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'
+            onClick={()=> props.updateActiveDrsObject(props.drsObjectFunctions.newDrsObject)}>
             <Typography variant='button'>New DRS Object</Typography>
             </Button>
           </Grid>

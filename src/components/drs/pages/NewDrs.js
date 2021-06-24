@@ -1,44 +1,15 @@
 import '@fontsource/roboto';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import { 
     Typography, 
-    Container
+    Container, 
+    Grid, 
+    Button
 } from '@material-ui/core';
 import DrsObjectForm from '../DrsObjectForm';
-
-/* const CreateDrsObject = (props) => {
-    const newDrsObject=props.drsObject;
-
-    useEffect(() => {
-        let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
-        let requestUrl=(baseUrl+'objects/'); //confirm that url is correct
-        const cancelToken = axios.CancelToken;
-        const createDrsCancelToken = cancelToken.source();
-
-        let createDrsObject = async () => {
-            await axios({
-                url: requestUrl, 
-                method: 'POST', 
-                data: {newDrsObject},   //need to ensure correct data format
-                cancelToken: createDrsCancelToken
-            })
-            .then(
-                (response) => {
-                    console.log(response);
-                },
-                (error) => {
-                    if (axios.isCancel(error)) {
-                        console.log('CreateDrsObject request has been cancelled');
-                      }
-                      else {
-                        console.log(error);
-                      }
-                }
-            )
-        }
-        //createDrsObject();
-    })
-} */
+import {
+    Link
+  } from "react-router-dom";
 
 const NewDrs = (props) => {
 
@@ -51,12 +22,6 @@ const NewDrs = (props) => {
         }  
     })
     console.log(activeDrsObject);
-
-    /* const CreateNewDrsObject = (event) => {
-        event.preventDefault();
-        //return function-based component which makes api call using hooks
-        // <CreateDrsObject id={id} description={description} name={name} />
-    } */
 
     if(!activeDrsObject) {
         return (
@@ -79,7 +44,17 @@ const NewDrs = (props) => {
                 content="minimum-scale=1, initial-scale=1, width=device-width"
             />
             <Container maxWidth='lg'>
-                <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
+                <Grid container justify='space-between' alignItems='center'>
+                    <Grid item xs={2} align='left'>
+                        <Button variant='contained' component={Link} to='/drs' color='primary' size='large'>
+                            <Typography variant='button'>DRS Index</Typography>
+                        </Button>
+                    </Grid>
+                    <Grid item xs={8}>
+                        <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
+                    </Grid>
+                    <Grid item xs={2} />
+                </Grid>
                 <DrsObjectForm 
                     drsObjectDetails={activeDrsObject} 
                     readOnlyId={false}
@@ -87,6 +62,7 @@ const NewDrs = (props) => {
                     drsObjectFunctions={props.drsObjectFunctions}
                     checksumTypes={props.checksumTypes}
                     updateActiveDrsObject={props.updateActiveDrsObject}
+                    getDrsObjectsList={props.getDrsObjectsList}
                 />
             </Container>
         </div>

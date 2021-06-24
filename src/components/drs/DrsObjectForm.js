@@ -125,33 +125,56 @@ const Id = (props) => {
     );  
 }
 
-const DateTimeField = (props) => {
-    return(
-        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+const SimpleTextField = (props) => {
+    if(!props.property && props.readOnlyForm) {
+        return null;
+    }
+    else {
+        return(
             <FormControl fullWidth>
-                <DateTimePicker id={props.parameterName} label={props.label} margin='normal' name={props.parameterName} value={props.value} 
-                format='yyyy-MM-dd HH:mm:ss' readOnly={props.readOnlyForm} showTodayButton ampm={false} helperText={props.description}
-                onChange={date => {
-                    date.setSeconds(0, 0);
-                    props.drsObjectFunctions.updateScalarProperty(props.parameterName, date.toISOString());
-                }} />
+                <TextField id={props.propertyName} label={props.label} margin='normal' name={props.propertyName} type='text' 
+                value={props.property} InputProps={{readOnly: props.readOnlyForm}}
+                onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
+                helperText={props.description}/>
             </FormControl>
-        </MuiPickersUtilsProvider>
-    );
+        );
+    }
+}
+
+const DateTimeField = (props) => {
+    if(!props.value && props.readOnlyForm) {
+        return null;
+    }
+    else {
+        return(
+            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <FormControl fullWidth>
+                    <DateTimePicker id={props.parameterName} label={props.label} margin='normal' name={props.parameterName} value={props.value} 
+                    format='yyyy-MM-dd HH:mm:ss' readOnly={props.readOnlyForm} showTodayButton ampm={false} helperText={props.description}
+                    onChange={date => {
+                        date.setSeconds(0, 0);
+                        props.drsObjectFunctions.updateScalarProperty(props.parameterName, date.toISOString());
+                    }} />
+                </FormControl>
+            </MuiPickersUtilsProvider>
+        );    
+    }
 }
 
 const MimeType = (props) => {
     let mimeType = props.mimeType;
-    if(props.isBlob !== true) {
+    if(props.isBlob !== true || (!mimeType && props.readOnlyForm)) {
         return null;
     }
     else {
         return (
-            <FormControl fullWidth>
-                <TextField id='mime_type' label='MIME Type' margin='normal' name='mime_type' type='text' value={mimeType}
-                InputProps={{readOnly: props.readOnlyForm}} helperText='The media type of the DRS Object' 
-                onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} />
-            </FormControl>
+            <Grid item xs={4}>
+                <FormControl fullWidth>
+                    <TextField id='mime_type' label='MIME Type' margin='normal' name='mime_type' type='text' value={mimeType}
+                    InputProps={{readOnly: props.readOnlyForm}} helperText='The media type of the DRS Object' 
+                    onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} />
+                </FormControl>    
+            </Grid>
         );
         
     }
@@ -159,16 +182,18 @@ const MimeType = (props) => {
 
 const Size = (props) => {
     let size = props.size;
-    if(props.isBlob !== true) {
+    if(props.isBlob !== true || (!size && props.readOnlyForm)) {
         return null;
     }
     else {
         return (
-            <FormControl fullWidth>
-                <TextField id='size' label='Size' margin='normal' name='size' type='number' value={size} 
-                InputProps={{readOnly: props.readOnlyForm}} helperText='The size (in bytes) of the DRS Object represented as an integer.'
-                onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}/>
-            </FormControl>
+            <Grid item xs={4}>
+                <FormControl fullWidth>
+                    <TextField id='size' label='Size' margin='normal' name='size' type='number' value={size} 
+                    InputProps={{readOnly: props.readOnlyForm}} helperText='The size (in bytes) of the DRS Object represented as an integer.'
+                    onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}/>
+                </FormControl>    
+            </Grid>
         );
     }
 }
@@ -382,8 +407,8 @@ const RelatedDrsObject = (props) => {
                                     props.drsObjectFunctions.updateObjectProperty(relationship, index, 'isValid', '');
                                 }}
                                 InputProps={
-                                    {readOnly: props.readOnlyForm}, 
-                                    {endAdornment: 
+                                    {readOnly: props.readOnlyForm,
+                                    endAdornment: 
                                         <InputAdornment position='end'>
                                             <VerifyIdButton relatedDrsObject={relatedDrs} 
                                             activeDrsObject={props.activeDrsObject} 
@@ -560,7 +585,7 @@ const SubmitButton = (props) => {
     const blobListProperties = ['aliases', 'checksums', 'drs_object_parents', 'file_access_objects', 'aws_s3_access_objects'];
     const bundleListProperties = ['aliases', 'drs_object_parents', 'drs_object_children'];
 
-    console.log(newDrsObjectToSubmit);
+    //console.log(newDrsObjectToSubmit);
     
     const relatedDrsObjects = (property) => {
         let relatedDrsObjects = [];
@@ -634,20 +659,31 @@ const SubmitButton = (props) => {
 
     useNewDrsObject(handleResponse, handleError, newDrsObjectToSubmit);
 
-    if(!props.readOnlyForm) {
+    if(!props.readOnlyForm && error) {
+        return (
+            <div>
+                <SpaceDivider /> 
+                <Typography align='center' color='secondary'>New DRS Object was not created successfully.</Typography>
+                <Typography align='center' color='secondary'>Error: {error.message}</Typography>   
+                <FormControl fullWidth>
+                    <SpaceDivider/>
+                    <Button variant='contained' color='primary' onClick={() => setNewDrsObjectToSubmit(newDrsObject())}>Submit</Button>
+                </FormControl>
+            </div>
+        );
+    }
+    else if(!props.readOnlyForm) {
         return (
             <FormControl fullWidth>
                 <SpaceDivider/>
-                <Button variant='contained' color='primary' onClick={() => setNewDrsObjectToSubmit(newDrsObject())}>Submit</Button>
+                <Button variant='contained' color='primary' /* component={Link} to={`/drs`} */
+                onClick={() => 
+                {
+                    console.log('clicked!');
+                    setNewDrsObjectToSubmit(newDrsObject());
+                    //props.getDrsObjectsList();
+                }}>Submit</Button>
             </FormControl>
-        );
-    }
-    else if(!props.readOnlyForm && error) {
-        return (
-            <div>
-                <Typography>New DRS Object was not created successfully.</Typography>
-                <Typography>Error: {error}</Typography>    
-            </div>
         );
     }
     else return null;
@@ -667,21 +703,14 @@ const DrsObjectForm = (props) => {
             content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <Box pb={4}>
-        <Container maxWidth='lg'>
             <form>
                 <Id activeDrsObject={activeDrsObject} drsObjectFunctions={props.drsObjectFunctions} readOnlyId={readOnlyId}/>
-                <FormControl fullWidth>
-                    <TextField id='name' label='Name' margin='normal' name='name' type='text' 
-                    value={activeDrsObject.name} InputProps={{readOnly: readOnlyForm}}
-                    onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
-                    helperText='Short, descriptive name for this DRS Object.'/>
-                </FormControl>
-                <FormControl fullWidth>
-                    <TextField id='description' label='Description' margin='normal' name='description' type='text' 
-                    value={activeDrsObject.description} InputProps={{readOnly: readOnlyForm}}
-                    onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)}
-                    helperText='Longer description of this DRS Object.'/>
-                </FormControl>
+                <SimpleTextField property={activeDrsObject.name} propertyName='name' label='Name' 
+                drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}
+                description='Short, descriptive name for this DRS Object.'/>
+                <SimpleTextField property={activeDrsObject.description} propertyName='description' label='Description' 
+                drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}
+                description='Longer description of this DRS Object.'/>
                 <Grid container justify='space-evenly' spacing={4}>
                     <Grid item xs={4}>
                         <FormControl fullWidth>
@@ -698,22 +727,15 @@ const DrsObjectForm = (props) => {
                         </FormControl>
                     </Grid>
                     <Grid item xs={4}>
-                        <FormControl fullWidth>
-                            <TextField id='version' label='Version' margin='normal' name='version' type='text' 
-                            value={activeDrsObject.version} InputProps={{readOnly: readOnlyForm}}
-                            onChange={e => props.drsObjectFunctions.updateScalarProperty(e.target.name, e.target.value)} 
-                            helperText='Current version of the DRS Object, it should be updated each time the DRS Object is modified.'/>
-                        </FormControl>
+                        <SimpleTextField property={activeDrsObject.version} propertyName='version' label='Version' 
+                        drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}
+                        description='Current version of the DRS Object, it should be updated each time the DRS Object is modified.'/>
                     </Grid>
                 </Grid>
                 <BundleBlobRadio readOnlyForm={readOnlyForm} isBlob={isBlob} isBundle={isBundle} drsObjectFunctions={props.drsObjectFunctions}/>
                 <Grid container justify='flex-start' spacing={4}>
-                    <Grid item xs={4}>
-                        <MimeType mimeType={activeDrsObject.mime_type} isBlob={isBlob} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <Size size={activeDrsObject.size} isBlob={isBlob} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
-                    </Grid>
+                    <MimeType mimeType={activeDrsObject.mime_type} isBlob={isBlob} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
+                    <Size size={activeDrsObject.size} isBlob={isBlob} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
                 </Grid>
                 <Aliases aliases={activeDrsObject.aliases} drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}/>
                 <Checksums checksums={activeDrsObject.checksums} checksumTypes={props.checksumTypes} isBlob={isBlob}
@@ -748,9 +770,8 @@ const DrsObjectForm = (props) => {
                     </Typography>
                 }/>
                 <AccessPoints drsObject={activeDrsObject} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions} isBlob={isBlob}/>
-                <SubmitButton activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm}/>
+                <SubmitButton activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm} getDrsObjectsList={props.getDrsObjectsList}/>
             </form>
-        </Container>
         </Box>
       </div>
     );

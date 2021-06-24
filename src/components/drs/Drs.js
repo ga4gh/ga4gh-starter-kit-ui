@@ -10,8 +10,8 @@ import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
 import NewDrs from './pages/NewDrs';
 
-const cancelToken = axios.CancelToken;
-const drsCancelToken = cancelToken.source();
+/* const cancelToken = axios.CancelToken;
+const drsCancelToken = cancelToken.source(); */
 
 let newDate = new Date();
 newDate.setSeconds(0, 0);
@@ -19,6 +19,7 @@ newDate.setSeconds(0, 0);
 class Drs extends React.Component {
   constructor(props) {
     super(props);
+    this.getDrsObjectsList = this.getDrsObjectsList.bind(this);
     this.updateActiveDrsObject = this.updateActiveDrsObject.bind(this);
     this.handleError = this.handleError.bind(this);
     this.state = {
@@ -86,43 +87,54 @@ class Drs extends React.Component {
     }
   }
 
-  componentDidMount() {
+  getDrsObjectsList = async () => {
     let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
     let requestUrl=(baseUrl+'objects');
-
-    let getDrsObjectsList = async () => {
-      await axios({
-        url: requestUrl, 
-        method: 'GET',
-        cancelToken: drsCancelToken.token
-      })
-      .then(
-        (response) => {
-          this.setState ({
-            drsObjectsList: response.data
-          })
-        },
-        (error) => {
-          if (axios.isCancel(error)) {
-            console.log('Drs request has been cancelled');
-          }
-          else {
-            this.handleError(error);
-          }
+    await axios({
+      url: requestUrl, 
+      method: 'GET'
+      //headers: {'Origin': 'http://localhost'},
+      //headers: {'Content-Type': 'application/json'},
+      //cancelToken: drsCancelToken.token
+    })
+    .then(
+      (response) => {
+        console.log('getDrsObjectsList');
+        this.setState ({
+          drsObjectsList: response.data
+        })
+      },
+      (error) => {
+        /* if (axios.isCancel(error)) {
+          console.log('Drs request has been cancelled');
         }
-      )
-    }
+        else { */
+          this.handleError(error);
+       /*  } */
+      }
+    )
+  }
+
+  componentDidMount() {
     if(!this.state.drsObjectsList) {
-      getDrsObjectsList();
+      console.log(this.state.drsObjectsList);
+      this.getDrsObjectsList();
     }
   }
 
-  componentWillUnmount() {
+  /* componentDidUpdate() {
+    //this.getDrsObjectsList();
+    if(this.state.prevDrsObjectsList !== this.state.drsObjectsList) {
+
+    }
+  } */
+
+  /* componentWillUnmount() {
     drsCancelToken.cancel('Cleanup Drs');
-  }
+  } */
 
   updateActiveDrsObject(newActiveDrsObject) {
-    console.log(newActiveDrsObject);
+    console.log('update active drs object');
     if(newActiveDrsObject.drs_object_children && Object.keys(newActiveDrsObject.drs_object_children).length > 0) {
       newActiveDrsObject.isBundle = true;
       newActiveDrsObject.isBlob = false;
@@ -294,6 +306,8 @@ class Drs extends React.Component {
               <DrsIndex 
                 drsObjectsList={this.state.drsObjectsList} 
                 handleError={this.handleError}
+                updateActiveDrsObject={this.updateActiveDrsObject}
+                drsObjectFunctions={this.drsObjectFunctions}
               />
             </Route>
             <Route exact path='/drs/new'>
@@ -302,6 +316,7 @@ class Drs extends React.Component {
                 updateActiveDrsObject={this.updateActiveDrsObject}
                 checksumTypes={this.state.checksumTypes}
                 drsObjectFunctions={this.drsObjectFunctions}
+                getDrsObjectsList={this.getDrsObjectsList}
               />
             </Route>
             <Route path='/drs/:objectId'>

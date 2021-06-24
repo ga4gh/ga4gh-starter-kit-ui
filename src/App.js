@@ -13,7 +13,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Router forceRefresh={true}>
+        <Router /* forceRefresh={true} */>
           <Switch>
             <Route exact path='/'>
               <Home />
