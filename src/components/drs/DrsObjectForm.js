@@ -31,8 +31,10 @@ import {
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 import useDrsObjectDetails from './UseDrsObjectDetails';
 import useNewDrsObject from './UseNewDrsObject';
+import useApi from './UseApi';
 
 const SpaceDivider = () => {
     return (
@@ -222,7 +224,6 @@ const Aliases = (props) => {
                 </Grid>
             );  
         })
-        
         return (
             <FormGroup>
                 <SpaceDivider />
@@ -237,7 +238,7 @@ const Aliases = (props) => {
                        {aliasesDisplay}
                        <Grid item>
                             <AddPropertyButton objectName='alias' readOnlyForm={props.readOnlyForm}
-                            handleClick={() => props.drsObjectFunctions.addListItem('aliases', props.drsObjectFunctions.newAlias)}/>
+                            handleClick={() => props.drsObjectFunctions.addListItem('aliases', props.drsObjectProperties.newAlias)}/>
                        </Grid>
                    </Grid>
                 </FormGroup>
@@ -249,13 +250,13 @@ const Aliases = (props) => {
 const Checksums = (props) => {
     let checksums = props.checksums;
     let disableAddButton = false;
-    if(checksums && Object.keys(checksums).length === 3) {
-        disableAddButton = true;
-    } 
-    if(props.isBlob !== true) {
+    if(props.isBlob !== true || (!checksums && props.readOnlyForm)) {
         return null;
     }
     else {
+        if(checksums && Object.keys(checksums).length === 3) {
+            disableAddButton = true;
+        } 
         const checksumsDisplay = checksums.map((checksum, index) => {
             return (
                 <FormGroup key={`checksum${index}`} row>
@@ -298,7 +299,7 @@ const Checksums = (props) => {
                 <br />
                 {checksumsDisplay} 
                 <AddPropertyButton objectName='checksum' readOnlyForm={props.readOnlyForm} disabled={disableAddButton}
-                handleClick={() => props.drsObjectFunctions.addListItem('checksums', props.drsObjectFunctions.newChecksum)}/>
+                handleClick={() => props.drsObjectFunctions.addListItem('checksums', props.drsObjectProperties.newChecksum)}/>
             </FormGroup>
         );
     }
@@ -308,6 +309,16 @@ const VerifyIdButton = (props) => {
     const [objectId, setId] = useState('');
     let id = props.relatedDrsObject.id;
     let disabled = false;
+
+    const cancelToken = axios.CancelToken;
+    const drsCancelToken = cancelToken.source();
+    let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
+    let requestUrl=(baseUrl+'objects/'+objectId);
+    let requestConfig = {
+        url: requestUrl,
+        method: 'GET',
+        cancelToken: drsCancelToken.token
+    };
 
     let drsObjectDetails = {...props.activeDrsObject};
     let relatedObjectsList = drsObjectDetails[props.property];
@@ -328,7 +339,9 @@ const VerifyIdButton = (props) => {
         props.updateActiveDrsObject(drsObjectDetails);
     }
 
-    useDrsObjectDetails(relatedObject, handleResponse, handleError, objectId);
+    //useDrsObjectDetails(relatedObject, handleResponse, handleError, objectId);
+    
+    useApi(requestConfig, handleResponse, handleError, objectId, drsCancelToken);
 
     if(id === '') {
         disabled = true;
@@ -443,7 +456,7 @@ const RelatedDrsObject = (props) => {
                 {props.sectionDescription}
                 {relatedDrsFields}
                 <AddPropertyButton objectName={props.objectName} readOnlyForm={props.readOnlyForm} 
-                handleClick={() => props.drsObjectFunctions.addListItem(relationship, props.drsObjectFunctions.newRelatedDrsObject)}/>
+                handleClick={() => props.drsObjectFunctions.addListItem(relationship, props.drsObjectProperties.newRelatedDrsObject)}/>
             </FormGroup>
         );
     }
@@ -468,9 +481,9 @@ const AccessPoints = (props) => {
                     associated with a single DRS Object must have the same bytes.
                 </Typography>
                 <FileAccessObjects file_access_objects={fileAccessObjects} readOnlyForm={props.readOnlyForm}
-                drsObjectFunctions={props.drsObjectFunctions}/>
+                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}/>
                 <AwsS3AccessObjects aws_s3_access_objects={awsS3AccessObjects} readOnlyForm={props.readOnlyForm}
-                drsObjectFunctions={props.drsObjectFunctions}/>
+                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}/>
             </FormGroup>
         );
     }
@@ -512,7 +525,7 @@ const FileAccessObjects = (props) => {
                 </Typography>
                 {fileAccessDisplay}
                 <AddPropertyButton objectName='local file access point' readOnlyForm={props.readOnlyForm} 
-                handleClick={() => props.drsObjectFunctions.addListItem('file_access_objects', props.drsObjectFunctions.newFileAccessObject)}/>
+                handleClick={() => props.drsObjectFunctions.addListItem('file_access_objects', props.drsObjectProperties.newFileAccessObject)}/>
             </FormGroup>
         );
     }
@@ -570,7 +583,7 @@ const AwsS3AccessObjects = (props) => {
                 </Typography>
                 {awsS3AccessDisplay}
                 <AddPropertyButton objectName='AWS S3 access point' readOnlyForm={props.readOnlyForm}
-                handleClick={() => props.drsObjectFunctions.addListItem('aws_s3_access_objects', props.drsObjectFunctions.newAwsS3AccessObject)}/>
+                handleClick={() => props.drsObjectFunctions.addListItem('aws_s3_access_objects', props.drsObjectProperties.newAwsS3AccessObject)}/>
             </FormGroup>
         );
     }
@@ -580,12 +593,18 @@ const SubmitButton = (props) => {
     const [newDrsObjectToSubmit, setNewDrsObjectToSubmit] = useState('');
     const [error, setError] = useState(null);
     let activeDrsObject = props.activeDrsObject;
-    const scalarProperties = ['description', 'created_time', 'name', 'updated_time', 'version']
+    const scalarProperties = ['description', /* 'created_time', */ 'name', /* 'updated_time', */ 'version']
     const blobScalarProperties = ['mime_type', 'size']
     const blobListProperties = ['aliases', 'checksums', 'drs_object_parents', 'file_access_objects', 'aws_s3_access_objects'];
     const bundleListProperties = ['aliases', 'drs_object_parents', 'drs_object_children'];
 
-    //console.log(newDrsObjectToSubmit);
+    /* let requestConfig = {
+        url: requestUrl,
+        method: 'GET',
+        cancelToken: drsShowCancelToken.token
+    }; */
+
+    console.log(newDrsObjectToSubmit);
     
     const relatedDrsObjects = (property) => {
         let relatedDrsObjects = [];
@@ -659,7 +678,9 @@ const SubmitButton = (props) => {
 
     useNewDrsObject(handleResponse, handleError, newDrsObjectToSubmit);
 
-    if(!props.readOnlyForm && error) {
+    //useApi(requestConfig, handleResponse, handleError, objectId);
+
+    if(error) {
         return (
             <div>
                 <SpaceDivider /> 
@@ -667,21 +688,25 @@ const SubmitButton = (props) => {
                 <Typography align='center' color='secondary'>Error: {error.message}</Typography>   
                 <FormControl fullWidth>
                     <SpaceDivider/>
-                    <Button variant='contained' color='primary' onClick={() => setNewDrsObjectToSubmit(newDrsObject())}>Submit</Button>
+                    <Button variant='contained' color='primary'
+                    onClick={() => 
+                    {
+                        setNewDrsObjectToSubmit(newDrsObject());
+                        //props.drsObjectFunctions.setUpdateDrsObjectsList(true);
+                    }}>Submit</Button>
                 </FormControl>
             </div>
         );
     }
-    else if(!props.readOnlyForm) {
+    if(!props.readOnlyForm) {
         return (
             <FormControl fullWidth>
                 <SpaceDivider/>
-                <Button variant='contained' color='primary' /* component={Link} to={`/drs`} */
+                <Button variant='contained' color='primary'
                 onClick={() => 
                 {
-                    console.log('clicked!');
                     setNewDrsObjectToSubmit(newDrsObject());
-                    //props.getDrsObjectsList();
+                    //props.drsObjectFunctions.setUpdateDrsObjectsList(true);
                 }}>Submit</Button>
             </FormControl>
         );
@@ -737,12 +762,13 @@ const DrsObjectForm = (props) => {
                     <MimeType mimeType={activeDrsObject.mime_type} isBlob={isBlob} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
                     <Size size={activeDrsObject.size} isBlob={isBlob} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
                 </Grid>
-                <Aliases aliases={activeDrsObject.aliases} drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}/>
-                <Checksums checksums={activeDrsObject.checksums} checksumTypes={props.checksumTypes} isBlob={isBlob}
-                drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}/>
+                <Aliases aliases={activeDrsObject.aliases} readOnlyForm={readOnlyForm}
+                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}/>
+                <Checksums checksums={activeDrsObject.checksums} checksumTypes={props.checksumTypes} isBlob={isBlob} readOnlyForm={readOnlyForm}
+                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}/>
                 <RelatedDrsObject relatedDrsObjects={activeDrsObject.drs_object_children} isBundle={isBundle} relationship='drs_object_children'
                 activeDrsObject={activeDrsObject} updateActiveDrsObject={props.updateActiveDrsObject} readOnlyForm={readOnlyForm}
-                drsObjectFunctions={props.drsObjectFunctions} header='Bundle Children' objectName='child bundle'
+                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties} header='Bundle Children' objectName='child bundle'
                 sectionDescription={
                     <div>
                         <Typography variant='body2' align='left' color='textSecondary'>
@@ -761,7 +787,7 @@ const DrsObjectForm = (props) => {
                 }/>
                 <RelatedDrsObject relatedDrsObjects={activeDrsObject.drs_object_parents} isBundle={isBundle} relationship='drs_object_parents'
                 activeDrsObject={activeDrsObject} updateActiveDrsObject={props.updateActiveDrsObject} readOnlyForm={readOnlyForm}
-                drsObjectFunctions={props.drsObjectFunctions} header='Parent Bundles' objectName='parent bundle'
+                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties} header='Parent Bundles' objectName='parent bundle'
                 sectionDescription={
                     <Typography variant='body2' align='left' color='textSecondary'>
                         The following listing displays all "Parent" DRS Bundles,
@@ -769,8 +795,9 @@ const DrsObjectForm = (props) => {
                         one of its Children.
                     </Typography>
                 }/>
-                <AccessPoints drsObject={activeDrsObject} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions} isBlob={isBlob}/>
-                <SubmitButton activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm} getDrsObjectsList={props.getDrsObjectsList}/>
+                <AccessPoints drsObject={activeDrsObject} readOnlyForm={readOnlyForm} isBlob={isBlob} 
+                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}/>
+                <SubmitButton activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
             </form>
         </Box>
       </div>

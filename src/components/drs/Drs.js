@@ -10,9 +10,6 @@ import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
 import NewDrs from './pages/NewDrs';
 
-/* const cancelToken = axios.CancelToken;
-const drsCancelToken = cancelToken.source(); */
-
 let newDate = new Date();
 newDate.setSeconds(0, 0);
 
@@ -25,6 +22,7 @@ class Drs extends React.Component {
     this.state = {
       activeDrsObject: null,
       drsObjectsList: null,
+      updateDrsObjectsList: false,
       error: null, 
       checksumTypes: {
         md5: {
@@ -48,6 +46,9 @@ class Drs extends React.Component {
       removeAlias: (index) => this.removeAlias(index),
       updateChecksumType: (index, newValue) => this.updateChecksumType(index, newValue),
       removeChecksumItem: (index) => this.removeChecksumItem(index),
+      setUpdateDrsObjectsList: (updateDrsObjectsList) => this.setUpdateDrsObjectsList(updateDrsObjectsList)
+    };
+    this.drsObjectProperties = {
       newDrsObject: {
         id: '',
         description: '',
@@ -93,8 +94,6 @@ class Drs extends React.Component {
     await axios({
       url: requestUrl, 
       method: 'GET'
-      //headers: {'Origin': 'http://localhost'},
-      //headers: {'Content-Type': 'application/json'},
       //cancelToken: drsCancelToken.token
     })
     .then(
@@ -122,16 +121,26 @@ class Drs extends React.Component {
     }
   }
 
-  /* componentDidUpdate() {
-    //this.getDrsObjectsList();
-    if(this.state.prevDrsObjectsList !== this.state.drsObjectsList) {
-
+  componentDidUpdate() {
+    if(this.state.updateDrsObjectsList) {
+      console.log(this.state.updateDrsObjectsList);
+      this.getDrsObjectsList();
+      this.setState({
+        updateDrsObjectsList: false
+      })
+      console.log(this.state.updateDrsObjectsList);
     }
-  } */
+  }
 
   /* componentWillUnmount() {
     drsCancelToken.cancel('Cleanup Drs');
   } */
+
+  setUpdateDrsObjectsList(updateDrsObjectsList) {
+    this.setState({
+      updateDrsObjectsList: updateDrsObjectsList
+    })
+  }
 
   updateActiveDrsObject(newActiveDrsObject) {
     console.log('update active drs object');
@@ -308,6 +317,7 @@ class Drs extends React.Component {
                 handleError={this.handleError}
                 updateActiveDrsObject={this.updateActiveDrsObject}
                 drsObjectFunctions={this.drsObjectFunctions}
+                drsObjectProperties={this.drsObjectProperties}
               />
             </Route>
             <Route exact path='/drs/new'>
@@ -316,6 +326,7 @@ class Drs extends React.Component {
                 updateActiveDrsObject={this.updateActiveDrsObject}
                 checksumTypes={this.state.checksumTypes}
                 drsObjectFunctions={this.drsObjectFunctions}
+                drsObjectProperties={this.drsObjectProperties}
                 getDrsObjectsList={this.getDrsObjectsList}
               />
             </Route>

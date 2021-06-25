@@ -13,8 +13,10 @@ import {
 
 const NewDrs = (props) => {
 
-    let newDrsObject = props.drsObjectFunctions.newDrsObject;
+    let newDrsObject = props.drsObjectProperties.newDrsObject;
+    console.log(newDrsObject);
     let activeDrsObject = props.activeDrsObject;
+    console.log(activeDrsObject);
     
     useEffect(() => {
         if(activeDrsObject === null) {
@@ -60,9 +62,9 @@ const NewDrs = (props) => {
                     readOnlyId={false}
                     readOnlyForm={false}
                     drsObjectFunctions={props.drsObjectFunctions}
+                    drsObjectProperties={props.drsObjectProperties}
                     checksumTypes={props.checksumTypes}
                     updateActiveDrsObject={props.updateActiveDrsObject}
-                    getDrsObjectsList={props.getDrsObjectsList}
                 />
             </Container>
         </div>

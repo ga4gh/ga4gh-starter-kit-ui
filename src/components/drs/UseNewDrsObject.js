@@ -15,13 +15,11 @@ const useNewDrsObject = (handleResponse, handleError, newDrsObjectData) => {
           await axios({
             url: requestUrl,
             method: 'POST',
-            //headers: {'Content-Type': 'application/json'},
             data: newDrsObjectData,
             cancelToken: drsShowCancelToken.token
           })
           .then (
             (response) => {
-              console.log(response.headers);
               handleResponse(response.data);
             },
             (error) => {
@@ -37,7 +35,7 @@ const useNewDrsObject = (handleResponse, handleError, newDrsObjectData) => {
     
         if((newDrsObjectData)){
           console.log('make api request');
-          //newDrsObject();
+          newDrsObject();
         }
     
         return () => {

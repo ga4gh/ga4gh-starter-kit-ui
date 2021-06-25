@@ -14,16 +14,30 @@ import useDrsObjectDetails from '../UseDrsObjectDetails';
 import {
   Link
 } from "react-router-dom";
+import axios from 'axios';
+import useApi from '../UseApi';
 
 const DrsShow = (props) => {
   let drsObjectDetails = props.activeDrsObject;
   let updateActiveDrsObject = props.updateActiveDrsObject;
   let handleError = props.handleError;
   let { objectId } = useParams();
+  let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
+  let requestUrl=(baseUrl+'objects/'+objectId);
+  const cancelToken = axios.CancelToken;
+  const drsCancelToken = cancelToken.source();
 
-  useDrsObjectDetails(drsObjectDetails, updateActiveDrsObject, handleError, objectId);
+  let requestConfig = {
+    url: requestUrl,
+    method: 'GET',
+    cancelToken: drsCancelToken.token
+  };
+  
+  //useDrsObjectDetails(drsObjectDetails, updateActiveDrsObject, handleError, objectId);
 
-  drsObjectDetails = props.activeDrsObject;
+  useApi(requestConfig, updateActiveDrsObject, handleError, objectId, drsCancelToken);
+
+  //drsObjectDetails = props.activeDrsObject;
 
   if(!drsObjectDetails) {
     return (
