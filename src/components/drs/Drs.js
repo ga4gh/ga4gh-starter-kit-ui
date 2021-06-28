@@ -6,12 +6,19 @@ import {
   Route
 } from "react-router-dom";
 import { Typography } from '@material-ui/core';
+import { format } from 'date-fns';
 import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
 import NewDrs from './pages/NewDrs';
 
 let newDate = new Date();
 newDate.setSeconds(0, 0);
+let year = newDate.getUTCFullYear();
+let month = newDate.getUTCMonth();
+let date = newDate.getUTCDate();
+let hours = newDate.getUTCHours();
+let minutes = newDate.getUTCMinutes();
+let seconds = newDate.getUTCSeconds();
 
 class Drs extends React.Component {
   constructor(props) {
@@ -52,11 +59,11 @@ class Drs extends React.Component {
       newDrsObject: {
         id: '',
         description: '',
-        created_time: newDate.toISOString(),
+        created_time: format(new Date(year, month, date, hours, minutes, seconds), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
         mime_type: '',
         name: '',
         size: '',
-        updated_time: newDate.toISOString(),
+        updated_time: format(new Date(year, month, date, hours, minutes, seconds), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
         version: '',
         aliases: [],
         checksums: [],

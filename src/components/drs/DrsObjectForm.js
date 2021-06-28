@@ -2,7 +2,6 @@ import '@fontsource/roboto';
 import React, {useState} from 'react';
 import { 
     Typography, 
-    Container, 
     FormControl,
     TextField, 
     Grid, 
@@ -30,6 +29,7 @@ import {
     MuiPickersUtilsProvider 
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
+import { format } from 'date-fns';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import useDrsObjectDetails from './UseDrsObjectDetails';
@@ -152,10 +152,11 @@ const DateTimeField = (props) => {
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <FormControl fullWidth>
                     <DateTimePicker id={props.parameterName} label={props.label} margin='normal' name={props.parameterName} value={props.value} 
-                    format='yyyy-MM-dd HH:mm:ss' readOnly={props.readOnlyForm} showTodayButton ampm={false} helperText={props.description}
+                    format='yyyy-MM-dd HH:mm:ss OOOO' readOnly={props.readOnlyForm} showTodayButton ampm={false} helperText={props.description}
                     onChange={date => {
                         date.setSeconds(0, 0);
-                        props.drsObjectFunctions.updateScalarProperty(props.parameterName, date.toISOString());
+                        let utcDate = format(new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()), "yyyy-MM-dd'T'HH:mm:ss'Z'");
+                        props.drsObjectFunctions.updateScalarProperty(props.parameterName, utcDate);
                     }} />
                 </FormControl>
             </MuiPickersUtilsProvider>
@@ -593,7 +594,7 @@ const SubmitButton = (props) => {
     const [newDrsObjectToSubmit, setNewDrsObjectToSubmit] = useState('');
     const [error, setError] = useState(null);
     let activeDrsObject = props.activeDrsObject;
-    const scalarProperties = ['description', /* 'created_time', */ 'name', /* 'updated_time', */ 'version']
+    const scalarProperties = ['description', 'created_time', 'name', 'updated_time', 'version']
     const blobScalarProperties = ['mime_type', 'size']
     const blobListProperties = ['aliases', 'checksums', 'drs_object_parents', 'file_access_objects', 'aws_s3_access_objects'];
     const bundleListProperties = ['aliases', 'drs_object_parents', 'drs_object_children'];
