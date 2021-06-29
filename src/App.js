@@ -13,13 +13,12 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Router /* forceRefresh={true} */>
+        <Router>
           <Switch>
             <Route exact path='/'>
               <Home />
             </Route>
-            <Route path='/drs'>
-              <Drs />
+            <Route path='/drs' component={Drs}>
             </Route>
           </Switch>
         </Router>

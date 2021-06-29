@@ -9,21 +9,20 @@ import {
 import DrsObjectForm from '../DrsObjectForm';
 import {
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
 
 const NewDrs = (props) => {
-
-    let newDrsObject = props.drsObjectProperties.newDrsObject;
-    console.log(newDrsObject);
+    //let newDrsObject = props.drsObjectProperties.newDrsObject;
     let activeDrsObject = props.activeDrsObject;
-    console.log(activeDrsObject);
     
     useEffect(() => {
         if(activeDrsObject === null) {
-            props.updateActiveDrsObject(newDrsObject);
+            console.log('use effect new drs');
+            props.updateActiveDrsObject(props.drsObjectProperties.newDrsObject);
         }  
     })
     console.log(activeDrsObject);
+    console.log(props.drsObjectProperties.newDrsObject);
 
     if(!activeDrsObject) {
         return (

@@ -29,7 +29,6 @@ class Drs extends React.Component {
     this.state = {
       activeDrsObject: null,
       drsObjectsList: null,
-      updateDrsObjectsList: false,
       error: null, 
       checksumTypes: {
         md5: {
@@ -41,19 +40,23 @@ class Drs extends React.Component {
         sha256: {
           disabled: false
         },
-      }
+      }, 
+      path: this.props.location.pathname, 
+      prevPath: null
     };
     this.drsObjectFunctions = {
+      setActiveDrsObject: (newActiveDrsObject) => this.setActiveDrsObject(newActiveDrsObject),
       updateDrsObjectType: (value) => this.updateDrsObjectType(value),
       updateScalarProperty: (property, newValue) => this.updateScalarProperty(property, newValue), 
       addListItem: (property, newObject) => this.addListItem(property, newObject),
       updateObjectProperty: (objectList, index, property, newValue) => this.updateObjectProperty(objectList, index, property, newValue), 
       removeListItem: (objects, index) => this.removeListItem(objects, index),
+      updateId: (newValue) => this.updateId(newValue),
       updateAlias: (index, newValue) => this.updateAlias(index, newValue),
       removeAlias: (index) => this.removeAlias(index),
       updateChecksumType: (index, newValue) => this.updateChecksumType(index, newValue),
       removeChecksumItem: (index) => this.removeChecksumItem(index),
-      setUpdateDrsObjectsList: (updateDrsObjectsList) => this.setUpdateDrsObjectsList(updateDrsObjectsList)
+      updateValidRelatedDrsObjects: (property) => this.updateValidRelatedDrsObjects(property)
     };
     this.drsObjectProperties = {
       newDrsObject: {
@@ -71,6 +74,8 @@ class Drs extends React.Component {
         drs_object_parents: [],
         file_access_objects: [],
         aws_s3_access_objects: [],
+        validId: false,
+        validRelatedDrsObjects: true,
         isBlob: true,
         isBundle: false
       },
@@ -101,7 +106,6 @@ class Drs extends React.Component {
     await axios({
       url: requestUrl, 
       method: 'GET'
-      //cancelToken: drsCancelToken.token
     })
     .then(
       (response) => {
@@ -111,46 +115,38 @@ class Drs extends React.Component {
         })
       },
       (error) => {
-        /* if (axios.isCancel(error)) {
-          console.log('Drs request has been cancelled');
-        }
-        else { */
-          this.handleError(error);
-       /*  } */
+        this.handleError(error);
       }
     )
   }
 
   componentDidMount() {
     if(!this.state.drsObjectsList) {
-      console.log(this.state.drsObjectsList);
       this.getDrsObjectsList();
     }
   }
 
   componentDidUpdate() {
-    if(this.state.updateDrsObjectsList) {
-      console.log(this.state.updateDrsObjectsList);
-      this.getDrsObjectsList();
+    if(this.state.path !== this.props.location.pathname) {
       this.setState({
-        updateDrsObjectsList: false
+        prevPath: this.state.path,
+        path: this.props.location.pathname
       })
-      console.log(this.state.updateDrsObjectsList);
+      if(this.props.location.pathname === '/drs' && this.state.path !== this.state.prevPath) {
+        console.log('update index');
+        this.getDrsObjectsList();
+      }
+      if(this.props.location.pathname === '/drs/new' && this.state.path !== this.state.prevPath) {
+        console.log('update new drs page');
+        this.setState({
+          activeDrsObject: this.drsObjectProperties.newDrsObject
+        })
+      }
     }
-  }
 
-  /* componentWillUnmount() {
-    drsCancelToken.cancel('Cleanup Drs');
-  } */
-
-  setUpdateDrsObjectsList(updateDrsObjectsList) {
-    this.setState({
-      updateDrsObjectsList: updateDrsObjectsList
-    })
   }
 
   updateActiveDrsObject(newActiveDrsObject) {
-    console.log('update active drs object');
     if(newActiveDrsObject.drs_object_children && Object.keys(newActiveDrsObject.drs_object_children).length > 0) {
       newActiveDrsObject.isBundle = true;
       newActiveDrsObject.isBlob = false;
@@ -162,7 +158,14 @@ class Drs extends React.Component {
     this.setState({
       activeDrsObject: newActiveDrsObject
     });
+  }
+
+  setActiveDrsObject(newActiveDrsObject) {
+    this.setState({
+      activeDrsObject: newActiveDrsObject
+    });
     console.log(this.state.activeDrsObject);
+    console.log(this.drsObjectProperties.newDrsObject);
   }
 
   handleError(error) {
@@ -222,6 +225,20 @@ class Drs extends React.Component {
     })
   }
 
+  updateId(newValue) {
+    let activeDrsObject = {...this.state.activeDrsObject};
+    activeDrsObject['id'] = newValue;
+    if(newValue) {
+      activeDrsObject.validId = true;
+    }
+    else {
+      activeDrsObject.validId = false;
+    }
+    this.setState({
+      activeDrsObject: activeDrsObject
+    })
+  }
+
   updateAlias(index, newValue) {
     let activeDrsObject = {...this.state.activeDrsObject};
     let aliases = activeDrsObject['aliases'];
@@ -273,6 +290,26 @@ class Drs extends React.Component {
       activeDrsObject: activeDrsObject,
       checksumTypes: checksumTypes
     })
+  }
+
+  updateValidRelatedDrsObjects(property) {
+    console.log('update valid related drs object');
+    console.log(property);
+    let activeDrsObject = {...this.state.activeDrsObject};
+    activeDrsObject.validRelatedDrsObjects = true;
+    if(activeDrsObject[property]) {
+      activeDrsObject[property].map((relatedDrs) => {
+        if(relatedDrs.isValid === false) {
+          console.log('set false');
+          console.log(relatedDrs);
+          activeDrsObject.validRelatedDrsObjects = false;
+        }
+      })  
+    }
+    this.setState({
+      activeDrsObject: activeDrsObject
+    }) 
+    console.log(this.state.activeDrsObject.validRelatedDrsObjects);
   }
 
   render(){
@@ -343,6 +380,7 @@ class Drs extends React.Component {
                 updateActiveDrsObject={this.updateActiveDrsObject} 
                 handleError={this.handleError}
                 checksumTypes={this.state.checksumTypes}
+                drsObjectFunctions={this.drsObjectFunctions}
               />
             </Route>
           </Switch>

@@ -64,7 +64,7 @@ const DrsIndex = (props) => {
           </Grid>
           <Grid item xs={2} align='right'>
             <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'
-            onClick={()=> props.updateActiveDrsObject(props.drsObjectProperties.newDrsObject)}>
+            /* onClick={()=> props.drsObjectFunctions.setActiveDrsObject({...props.drsObjectProperties.newDrsObject})} */>
             <Typography variant='button'>New DRS Object</Typography>
             </Button>
           </Grid>

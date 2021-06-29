@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import axios from 'axios';
 
-const getDrsObjectDetails = async (requestConfig, handleResponse, handleError) => {
+const makeRequest = async (requestConfig, handleResponse, handleError) => {
     await axios(requestConfig)
     .then (
       (response) => {
@@ -12,7 +12,7 @@ const getDrsObjectDetails = async (requestConfig, handleResponse, handleError) =
       },
       (error) => {
         if (axios.isCancel(error)) {
-          console.log('DrsShow request has been cancelled');
+          console.log('API request has been cancelled');
         }
         else {
           handleError(error);
@@ -21,17 +21,16 @@ const getDrsObjectDetails = async (requestConfig, handleResponse, handleError) =
     )
   } 
 
-const useApi = (requestConfig, handleResponse, handleError, requestParameter, cancelToken) => {
+const UseDrsStarterKit = (requestConfig, handleResponse, handleError, requestParameter, cancelToken) => {
     useEffect(() => {    
         if(requestParameter){
             console.log('make api request');
-            getDrsObjectDetails(requestConfig, handleResponse, handleError);
+            makeRequest(requestConfig, handleResponse, handleError);
         }
-    
         return () => {
-          cancelToken.cancel('Cleanup DrsShow');
+          cancelToken.cancel('Cleanup API Request');
         };
     }, [requestParameter]);
 }
 
-export default useApi;
+export default UseDrsStarterKit;

@@ -18,7 +18,9 @@ import {
     InputAdornment
 } from '@material-ui/core';
 import {
-    Link
+    Link, 
+    Redirect, 
+    Route
 } from "react-router-dom";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import RemoveCircleIcon from '@material-ui/icons/RemoveCircle';
@@ -32,9 +34,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { format } from 'date-fns';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
-import useDrsObjectDetails from './UseDrsObjectDetails';
-import useNewDrsObject from './UseNewDrsObject';
-import useApi from './UseApi';
+import UseDrsStarterKit from './UseDrsStarterKit';
 
 const SpaceDivider = () => {
     return (
@@ -102,7 +102,8 @@ const GenerateIdButton = (props) => {
     if(!props.readOnlyId) {
         return(
             <Grid item xs={2} align='right'>
-                <Button variant='contained' color='primary' onClick={() => props.drsObjectFunctions.updateScalarProperty('id', uuidv4())}>
+                <Button variant='contained' color='primary' 
+                onClick={() =>  props.drsObjectFunctions.updateId(uuidv4())}>
                     <Typography variant='button'>Generate ID</Typography>
                 </Button>
             </Grid>     
@@ -118,7 +119,7 @@ const Id = (props) => {
                 <FormControl fullWidth>
                     <TextField id='id' label='Id' margin='normal' name='id' type='text'
                     value={props.activeDrsObject.id} InputProps={{readOnly: props.readOnlyId}} 
-                    onChange={(event) => props.drsObjectFunctions.updateScalarProperty('id', event.target.value)}
+                    onChange={(event) => props.drsObjectFunctions.updateId(event.target.value)}
                     helperText='Unique identifier for this DRS Object (UUID recommended), cannot be modified later.'/>
                 </FormControl>
             </Grid>
@@ -231,7 +232,7 @@ const Aliases = (props) => {
                 <Typography align='left' variant='h6'>Aliases</Typography>
                 <Typography variant='body2' align='left' color='textSecondary'>
                     A list of aliases that can be used to identify the DRS Object
-                    by additional names
+                    by additional names.
                 </Typography>
                 <br />
                 <FormGroup row>
@@ -326,29 +327,32 @@ const VerifyIdButton = (props) => {
     let relatedObject = {...relatedObjectsList[props.index]};
 
     const handleResponse = (response) => {
-        console.log(response.name);
         relatedObject.name = response.name;
-        relatedObject.isValid = true;
+        if(props.property === 'drs_object_parents' && !response.drs_object_children) {
+            relatedObject.isValid = false;
+        }
+        else {
+            relatedObject.isValid = true;
+        }
         relatedObjectsList[props.index] = relatedObject;
-        props.updateActiveDrsObject(drsObjectDetails);
+        props.drsObjectFunctions.setActiveDrsObject(drsObjectDetails);
+        props.drsObjectFunctions.updateValidRelatedDrsObjects(props.property);
     }
 
     const handleError = (error) => {
         relatedObject.name = '';
         relatedObject.isValid = false;
         relatedObjectsList[props.index] = relatedObject;
-        props.updateActiveDrsObject(drsObjectDetails);
+        props.drsObjectFunctions.setActiveDrsObject(drsObjectDetails);
+        props.drsObjectFunctions.updateValidRelatedDrsObjects(props.property);
     }
-
-    //useDrsObjectDetails(relatedObject, handleResponse, handleError, objectId);
     
-    useApi(requestConfig, handleResponse, handleError, objectId, drsCancelToken);
+    UseDrsStarterKit(requestConfig, handleResponse, handleError, objectId, drsCancelToken);
 
     if(id === '') {
         disabled = true;
     }
     if(!props.readOnlyForm && relatedObject.isValid === '') {
-        console.log(id);
         return(
             <Button color='primary' disabled={disabled} variant='contained' size='small' onClick={() => setId(id)}>
                 <Tooltip title='Submit this ID for verification.'>
@@ -382,7 +386,10 @@ const RelatedDrsObjectButton = (props) => {
     if(!props.readOnlyForm) {
         return(
             <RemovePropertyButton objectName={props.objectName} index={props.index} readOnlyForm={props.readOnlyForm}
-            handleClick={(index) => props.drsObjectFunctions.removeListItem(props.relationship, index)}/>
+            handleClick={(index) => {
+                props.drsObjectFunctions.removeListItem(props.relationship, index);
+                props.drsObjectFunctions.updateValidRelatedDrsObjects(props.relationship);
+            }}/>
         );
     }
     else {
@@ -590,6 +597,40 @@ const AwsS3AccessObjects = (props) => {
     }
 }
 
+const ErrorMessage = (props) => {
+    if(!props.error) {
+        return null;
+    }
+    else {
+        return(
+        <Box pb={4}>
+            <Typography align='center' color='secondary'>DRS Object was not created successfully.</Typography>
+            <Typography align='center' color='secondary'>{props.error.message}</Typography>
+        </Box>
+        );
+    }
+}
+
+const InvalidDrsObjectMessage = (props) => {
+    if(props.validId && props.validRelatedDrs) {
+        return null;
+    }
+    else {
+        return( 
+            <Box pb={4}>
+                <Typography align='center' color='secondary' variant='h6'>DRS Object is invalid.</Typography>
+                <Typography align='center' color='secondary'>
+                    Please ensure that the DRS Object has a unique ID 
+                    and that all Parent Bundles and Bundle Children are 
+                    valid. Note that blob-type DRS Objects that do not 
+                    have Bundle Children cannot be set as Parent Bundles 
+                    for this DRS Object.
+                </Typography>
+            </Box>
+        );
+    }
+}
+
 const SubmitButton = (props) => {
     const [newDrsObjectToSubmit, setNewDrsObjectToSubmit] = useState('');
     const [error, setError] = useState(null);
@@ -599,13 +640,17 @@ const SubmitButton = (props) => {
     const blobListProperties = ['aliases', 'checksums', 'drs_object_parents', 'file_access_objects', 'aws_s3_access_objects'];
     const bundleListProperties = ['aliases', 'drs_object_parents', 'drs_object_children'];
 
-    /* let requestConfig = {
-        url: requestUrl,
-        method: 'GET',
-        cancelToken: drsShowCancelToken.token
-    }; */
+    let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
+    let requestUrl=(baseUrl+'objects');
+    const cancelToken = axios.CancelToken;
+    const newDrsCancelToken = cancelToken.source();
 
-    console.log(newDrsObjectToSubmit);
+    let requestConfig = {
+        url: requestUrl,
+        method: 'POST',
+        data: newDrsObjectToSubmit,
+        cancelToken: newDrsCancelToken.token
+    };
     
     const relatedDrsObjects = (property) => {
         let relatedDrsObjects = [];
@@ -622,7 +667,7 @@ const SubmitButton = (props) => {
         return relatedDrsObjects;   
     }
 
-    const newDrsObject = () => {
+    const getNewDrsObject = () => {
         let newDrsObject = {
             id: activeDrsObject.id
         };
@@ -666,48 +711,44 @@ const SubmitButton = (props) => {
         return newDrsObject;   
     }
 
-    
     const handleResponse = (response) => {
         console.log(response);
         //if successful notify user and/or navigate to DrsShow page for new object
+       /*  return (
+            <Redirect to='/drs'/>  
+        ); */
     }
 
     const handleError = (error) => {
         console.log(error);
         setError(error);
+        console.log('set error');
     }
 
-    useNewDrsObject(handleResponse, handleError, newDrsObjectToSubmit);
-
-    //useApi(requestConfig, handleResponse, handleError, objectId);
-
-    if(error) {
-        return (
-            <div>
-                <SpaceDivider /> 
-                <Typography align='center' color='secondary'>New DRS Object was not created successfully.</Typography>
-                <Typography align='center' color='secondary'>Error: {error.message}</Typography>   
-                <FormControl fullWidth>
-                    <SpaceDivider/>
-                    <Button variant='contained' color='primary'
-                    onClick={() => 
-                    {
-                        setNewDrsObjectToSubmit(newDrsObject());
-                        //props.drsObjectFunctions.setUpdateDrsObjectsList(true);
-                    }}>Submit</Button>
-                </FormControl>
-            </div>
-        );
+    let submitButtonDisabled = false;
+    if(!activeDrsObject.validId || !activeDrsObject.validRelatedDrsObjects) {
+        submitButtonDisabled = true;
+    } 
+    else {
+        submitButtonDisabled = false;
     }
+
+    UseDrsStarterKit(requestConfig, handleResponse, handleError, newDrsObjectToSubmit.id, newDrsCancelToken);
+
     if(!props.readOnlyForm) {
         return (
             <FormControl fullWidth>
                 <SpaceDivider/>
-                <Button variant='contained' color='primary'
+                <ErrorMessage error={error} />
+                <InvalidDrsObjectMessage validId={activeDrsObject.validId} validRelatedDrs={activeDrsObject.validRelatedDrsObjects}/>
+                <Button variant='contained' color='primary' disabled={submitButtonDisabled}
                 onClick={() => 
                 {
-                    setNewDrsObjectToSubmit(newDrsObject());
-                    //props.drsObjectFunctions.setUpdateDrsObjectsList(true);
+                    let newDrsObject = getNewDrsObject();
+                    if(!error && activeDrsObject.validId && activeDrsObject.validRelatedDrsObjects) {
+                        setNewDrsObjectToSubmit(newDrsObject);
+                    }
+                    console.log('new drs object');
                 }}>Submit</Button>
             </FormControl>
         );

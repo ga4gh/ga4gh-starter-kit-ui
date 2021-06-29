@@ -1,5 +1,5 @@
 import '@fontsource/roboto';
-import React from 'react';
+import React, {useEffect} from 'react';
 import { 
   Typography, 
   Container,
@@ -7,15 +7,13 @@ import {
   Button
 } from '@material-ui/core';
 import {
-    useParams
+    useParams,
+    useLocation, 
+    Link
 } from "react-router-dom";
 import DrsObjectForm from '../DrsObjectForm';
-import useDrsObjectDetails from '../UseDrsObjectDetails';
-import {
-  Link
-} from "react-router-dom";
 import axios from 'axios';
-import useApi from '../UseApi';
+import UseDrsStarterKit from '../UseDrsStarterKit';
 
 const DrsShow = (props) => {
   let drsObjectDetails = props.activeDrsObject;
@@ -32,12 +30,14 @@ const DrsShow = (props) => {
     method: 'GET',
     cancelToken: drsCancelToken.token
   };
-  
-  //useDrsObjectDetails(drsObjectDetails, updateActiveDrsObject, handleError, objectId);
 
-  useApi(requestConfig, updateActiveDrsObject, handleError, objectId, drsCancelToken);
+  UseDrsStarterKit(requestConfig, updateActiveDrsObject, handleError, objectId, drsCancelToken);
 
-  //drsObjectDetails = props.activeDrsObject;
+  const { pathname }  = useLocation();
+  console.log(pathname);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname])
 
   if(!drsObjectDetails) {
     return (
@@ -73,7 +73,8 @@ const DrsShow = (props) => {
             drsObjectDetails={drsObjectDetails} 
             readOnlyId={true}
             readOnlyForm={true}
-            checksumTypes={props.checksumTypes}/>
+            checksumTypes={props.checksumTypes}
+            drsObjectFunctions={props.drsObjectFunctions}/>
         </Container>
       </div>
     );
