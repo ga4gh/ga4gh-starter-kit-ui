@@ -1,5 +1,5 @@
 import '@fontsource/roboto';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
   Typography, 
   Container, 
@@ -13,7 +13,8 @@ import {
   Grid
 } from '@material-ui/core';
 import {
-  Link
+  Link, 
+  useLocation
 } from "react-router-dom";
 
 const DrsIndexRows = (props) => {
@@ -46,6 +47,11 @@ const DrsIndexRows = (props) => {
 }
 
 const DrsIndex = (props) => {
+  const { pathname }  = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname])
+
   return (
     <div align="center">
       <meta

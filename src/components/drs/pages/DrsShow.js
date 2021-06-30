@@ -34,7 +34,6 @@ const DrsShow = (props) => {
   UseDrsStarterKit(requestConfig, updateActiveDrsObject, handleError, objectId, drsCancelToken);
 
   const { pathname }  = useLocation();
-  console.log(pathname);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname])

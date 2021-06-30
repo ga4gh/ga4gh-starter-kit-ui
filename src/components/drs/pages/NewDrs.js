@@ -1,5 +1,5 @@
 import '@fontsource/roboto';
-import React, { useEffect} from 'react';
+import React from 'react';
 import { 
     Typography, 
     Container, 
@@ -12,17 +12,8 @@ import {
 } from "react-router-dom";
 
 const NewDrs = (props) => {
-    //let newDrsObject = props.drsObjectProperties.newDrsObject;
     let activeDrsObject = props.activeDrsObject;
-    
-    useEffect(() => {
-        if(activeDrsObject === null) {
-            console.log('use effect new drs');
-            props.updateActiveDrsObject(props.drsObjectProperties.newDrsObject);
-        }  
-    })
     console.log(activeDrsObject);
-    console.log(props.drsObjectProperties.newDrsObject);
 
     if(!activeDrsObject) {
         return (
@@ -64,6 +55,7 @@ const NewDrs = (props) => {
                     drsObjectProperties={props.drsObjectProperties}
                     checksumTypes={props.checksumTypes}
                     updateActiveDrsObject={props.updateActiveDrsObject}
+                    updateSubmitNewDrsRedirect={props.updateSubmitNewDrsRedirect}
                 />
             </Container>
         </div>

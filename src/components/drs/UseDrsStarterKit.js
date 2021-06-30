@@ -21,16 +21,16 @@ const makeRequest = async (requestConfig, handleResponse, handleError) => {
     )
   } 
 
-const UseDrsStarterKit = (requestConfig, handleResponse, handleError, requestParameter, cancelToken) => {
+const UseDrsStarterKit = (requestConfig, handleResponse, handleError, requestUpdateParameter, cancelToken) => {
     useEffect(() => {    
-        if(requestParameter){
+        if(requestUpdateParameter){
             console.log('make api request');
             makeRequest(requestConfig, handleResponse, handleError);
         }
         return () => {
           cancelToken.cancel('Cleanup API Request');
         };
-    }, [requestParameter]);
+    }, [requestUpdateParameter]);
 }
 
 export default UseDrsStarterKit;
