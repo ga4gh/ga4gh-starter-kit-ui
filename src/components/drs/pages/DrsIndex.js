@@ -17,12 +17,11 @@ import {
   useLocation
 } from "react-router-dom";
 
+  /* Render index table rows populated with data */
 const DrsIndexRows = (props) => {
   const drsObjectsList = props.drsObjectsList;
   if (!drsObjectsList){
-    return(
-      <TableBody></TableBody>
-    )
+    return null;
   }
   else {
     const rows = drsObjectsList.map((drsObject) =>
@@ -40,18 +39,20 @@ const DrsIndexRows = (props) => {
       </TableCell>
     </TableRow>
     );
-  return (
-    <TableBody>{rows}</TableBody>
-  );
+    return (
+      <TableBody>{rows}</TableBody>
+    );
   }
 }
 
 const DrsIndex = (props) => {
+  /* Restore scroll to top of page on navigation to a new page */
   const { pathname }  = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname])
 
+  /* Render DrsIndex page */
   return (
     <div align="center">
       <meta
@@ -62,16 +63,15 @@ const DrsIndex = (props) => {
         <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={2} align='left'>
             <Button variant='contained' component={Link} to='/' color='primary' size='large'>
-            <Typography variant='button'>Home</Typography>
+              <Typography variant='button'>Home</Typography>
             </Button>
           </Grid>
           <Grid item xs={8}>
             <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
           </Grid>
           <Grid item xs={2} align='right'>
-            <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'
-            /* onClick={()=> props.drsObjectFunctions.setActiveDrsObject({...props.drsObjectProperties.newDrsObject})} */>
-            <Typography variant='button'>New DRS Object</Typography>
+            <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'>
+              <Typography variant='button'>New DRS Object</Typography>
             </Button>
           </Grid>
         </Grid>

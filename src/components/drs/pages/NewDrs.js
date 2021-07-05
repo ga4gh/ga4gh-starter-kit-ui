@@ -11,25 +11,13 @@ import {
     Link
 } from "react-router-dom";
 
+/* Render NewDrs page */
 const NewDrs = (props) => {
+    console.log('new drs page');
     let activeDrsObject = props.activeDrsObject;
     console.log(activeDrsObject);
 
-    if(!activeDrsObject) {
-        return (
-            <div>
-                <meta
-                    name="viewport"
-                    content="minimum-scale=1, initial-scale=1, width=device-width"
-                />
-                <Container maxWidth='lg'>
-                    <Typography align='center' variant="h3" gutterBottom>Create New DRS Object</Typography>
-                </Container>
-            </div>
-        );
-    }
-    else {
-        return (
+    return (
         <div>
             <meta
                 name="viewport"
@@ -48,19 +36,16 @@ const NewDrs = (props) => {
                     <Grid item xs={2} />
                 </Grid>
                 <DrsObjectForm 
-                    drsObjectDetails={activeDrsObject} 
+                    activeDrsObject={activeDrsObject} 
                     readOnlyId={false}
                     readOnlyForm={false}
                     drsObjectFunctions={props.drsObjectFunctions}
                     drsObjectProperties={props.drsObjectProperties}
-                    checksumTypes={props.checksumTypes}
-                    updateActiveDrsObject={props.updateActiveDrsObject}
                     updateSubmitNewDrsRedirect={props.updateSubmitNewDrsRedirect}
                 />
             </Container>
         </div>
-        );    
-    }
+    );  
     
 }
 
