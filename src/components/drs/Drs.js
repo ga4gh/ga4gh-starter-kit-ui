@@ -25,7 +25,6 @@ class Drs extends React.Component {
   constructor(props) {
     super(props);
     this.getDrsObjectsList = this.getDrsObjectsList.bind(this);
-    this.resetActiveDrsObject = this.resetActiveDrsObject.bind(this);
     this.handleError = this.handleError.bind(this);
     this.updateSubmitNewDrsRedirect = this.updateSubmitNewDrsRedirect.bind(this);
     this.state = {
@@ -120,49 +119,6 @@ class Drs extends React.Component {
     )
   }
 
-  resetActiveDrsObject = () => {
-    let newDate = new Date();
-    newDate.setSeconds(0, 0);
-    let year = newDate.getUTCFullYear();
-    let month = newDate.getUTCMonth();
-    let date = newDate.getUTCDate();
-    let hours = newDate.getUTCHours();
-    let minutes = newDate.getUTCMinutes();
-    let seconds = newDate.getUTCSeconds();
-    this.setState({
-      activeDrsObject: {
-        id: '',
-        description: '',
-        created_time: format(new Date(year, month, date, hours, minutes, seconds), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
-        mime_type: '',
-        name: '',
-        size: '',
-        updated_time: format(new Date(year, month, date, hours, minutes, seconds), "yyyy-MM-dd'T'HH:mm:ss'Z'"),
-        version: '',
-        aliases: [],
-        checksums: [],
-        drs_object_children: [],
-        drs_object_parents: [],
-        file_access_objects: [],
-        aws_s3_access_objects: [],
-        is_bundle: false,
-        checksumTypes: {
-          md5: {
-            disabled: false
-          },
-          sha1: {
-            disabled: false
-          },
-          sha256: {
-            disabled: false
-          }
-        },
-        validId: false,
-        validRelatedDrsObjects: true
-      }
-    })
-  }
-
   componentDidMount() {
     if(!this.state.drsObjectsList) {
       this.getDrsObjectsList();
@@ -178,14 +134,9 @@ class Drs extends React.Component {
       /* On navigation to the Index Page, update the Drs Objects list, reset the activeDrsObject, and reset the the state of submitNewDrsRedirect. */
       if(this.props.location.pathname === '/drs' && this.state.path !== this.state.prevPath) {
         this.getDrsObjectsList();
-        this.resetActiveDrsObject();
         this.setState({
           submitNewDrsRedirect: false
         })
-      }
-      /* On navigation to the New DRS Page, reset the activeDrsObject. */
-      if(this.props.location.pathname === '/drs/new' && this.state.path !== this.state.prevPath) {
-        this.resetActiveDrsObject();
       }
     }
   }

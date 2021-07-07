@@ -275,6 +275,9 @@ const Checksums = (props) => {
         return null;
     }
     else {
+        if(!checksums) {
+            return null;
+        }
         if(checksums && Object.keys(checksums).length === 3) {
             disableAddButton = true;
         } 
@@ -445,16 +448,16 @@ const RelatedDrsObjectButton = (props) => {
 DRS Object is entered in the text field. If the ID is valid, the name field is automatically populated by clicking the "Verify" button. 
 Drs Object Children are only displayed for bundle-type DRS Objects. */
 const RelatedDrsObject = (props) => {
-    if(props.relationship === 'drs_object_children' && !props.isBundle) {
+    if(props.readOnlyForm && !props.relatedDrsObjects) {
         return null;
     }
-    else if(props.relationship === 'drs_object_children' && props.readOnlyForm && !props.relatedDrsObjects) {
-        return null;
-    }
-    else if(props.relationship === 'drs_object_parents' && !props.relatedDrsObjects){
+    else if(!props.readOnlyForm && props.relationship === 'drs_object_children' && !props.isBundle) {
         return null;
     }
     else {
+        if(!props.relatedDrsObjects) {
+            return null;
+        }
         const relatedDrsFields = props.relatedDrsObjects.map((relatedDrs, index) => {
             return (
                 <FormGroup key={props.relationship + index} row>
