@@ -8,10 +8,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@babel/core": "^7.14.6",
     "@date-io/date-fns": "^1.3.13",
     "@fontsource/roboto": "^4.3.0",
     "@material-ui/core": "^4.11.4",
@@ -29,6 +30,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "typescript": "^3.2.1",
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },

@@ -112,7 +112,7 @@ const EditDrs = (props) => {
               content="minimum-scale=1, initial-scale=1, width=device-width"
           />
           <Container maxWidth='lg'>
-              <Grid container justify='space-between' alignItems='center'>
+              <Grid container justifyContent='space-between' alignItems='center'>
                   <Grid item xs={2} align='left'>
                       <Button variant='contained' color='secondary' endIcon={<DeleteIcon/>} onClick={() => setConfirmationDialogIsOpen(true)}>
                         <Typography variant='button'>Delete</Typography>
