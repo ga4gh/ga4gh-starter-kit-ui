@@ -7,14 +7,21 @@ import {
 } from '@material-ui/core';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import Cancel from '@material-ui/icons/Cancel';
+import DrsApiCaller from '../utils/DrsApiCaller';
 
 const VerifyIdButton = props => {
 
-    const validateRelative = () => {
-
+    const handleValid = responseData => {
+        props.setRelativeValid();
+        props.setRelativeName(responseData.name);
     }
-
-    const callAndValidate = () => props.retrieveDrsObject(props.relative.id, validateRelative);
+    const callAndValidate = relative => {
+        let requestConfig = {
+            url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${relative.id}`,
+            method: 'GET'
+        }
+        DrsApiCaller(requestConfig, handleValid, props.setRelativeInvalid);
+    }
 
     return (
         <div>
@@ -23,7 +30,7 @@ const VerifyIdButton = props => {
                 disabled={props.readOnly}
                 variant='contained'
                 size='small'
-                onClick={callAndValidate}
+                onClick={() => callAndValidate(props.relative)}
             >
                 <Tooltip title='Submit this ID for verification.'>
                     <Typography variant='button'>Verify ID</Typography>

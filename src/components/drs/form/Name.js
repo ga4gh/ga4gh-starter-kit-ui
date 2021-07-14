@@ -8,7 +8,7 @@ const Name = props => {
             label="Name"
             name="name"
             value={props.name}
-            readOnly={props.readOnlyForm}
+            readOnly={props.readOnly}
             changeFunction={props.setName}
             helperText='Short, descriptive name for this DRS Object.'
         />

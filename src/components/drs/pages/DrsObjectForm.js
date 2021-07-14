@@ -46,6 +46,7 @@ import Size from '../form/Size';
 import Aliases from '../form/Aliases';
 import Checksums from '../form/Checksums';
 import DrsObjectChildren from '../form/DrsObjectChildren';
+import DrsObjectParents from '../form/DrsObjectParents';
 import {
     useParams,
     useHistory
@@ -601,7 +602,17 @@ const DrsObjectForm = (props) => {
     let activeDrsObject = props.activeDrsObject;
     let readOnlyId = props.readOnlyId;
     let readOnlyForm = props.readOnlyForm;
-    let isBundle = props.activeDrsObject.is_bundle;
+    
+    const name = {...props.name, readOnly: props.readOnlyForm};
+    const description = {...props.description, readOnly: props.readOnlyForm};
+    const createdTime = {...props.createdTime, readOnly: props.readOnlyForm};
+    const updatedTime = {...props.updatedTime, readOnly: props.readOnlyForm};
+    const version = {...props.version, readOnly: props.readOnlyForm};
+    const isBundle = {...props.isBundle, readOnly: props.readOnlyForm};
+    const aliases = {...props.aliases, readOnly: props.readOnlyForm};
+    const checksums = {...props.checksums, readOnly: props.readOnlyForm};
+    const children = {...props.children, readOnly:props.readOnlyForm};
+    const parents = {...props.parents, readOnly: props.readOnlyForm};
 
     return (
       <div>
@@ -628,52 +639,28 @@ const DrsObjectForm = (props) => {
                         setId={props.activeDrsObjectFunctions.setId}
                         readOnlyId={props.readOnlyId}
                     />
-                    <Name
-                        name={props.activeDrsObject.name}
-                        setName={props.activeDrsObjectFunctions.setName}
-                        readOnlyForm={props.readOnlyForm}
-                    />
-                    <Description
-                        description={props.activeDrsObject.description}
-                        setDescription={props.activeDrsObjectFunctions.setDescription}
-                        readOnlyForm={props.readOnlyForm}
-                    />
+                    <Name {...name} />
+                    <Description {...description} />
 
                     <Grid container justify='space-evenly' spacing={4}>
                         <Grid item xs={4}>
                             <FormControl fullWidth>
-                                <CreatedTime
-                                    createdTime={props.activeDrsObject.created_time}
-                                    setCreatedTime={props.activeDrsObjectFunctions.setCreatedTime}
-                                    readOnly={props.activeDrsObject.readOnlyForm}
-                                />
+                                <CreatedTime {...createdTime} />
                             </FormControl>
                         </Grid>
                         <Grid item xs={4}>
                             <FormControl fullWidth>
-                                <UpdatedTime
-                                    updatedTime={props.activeDrsObject.updated_time}
-                                    setUpdatedTime={props.activeDrsObjectFunctions.setUpdatedTime}
-                                    readOnly={props.activeDrsObject.readOnlyForm}
-                                />
+                                <UpdatedTime {...updatedTime} />
                             </FormControl>
                         </Grid>
                         <Grid item xs={4}>
-                            <Version
-                                version={props.activeDrsObject.version}
-                                setVersion={props.activeDrsObjectFunctions.setVersion}
-                                readOnlyForm={props.readOnlyForm}
-                            />
+                            <Version {...version} />
                         </Grid>
                     </Grid>
 
-                    <BundleBlobRadio
-                        isBundle={props.activeDrsObject.is_bundle}
-                        setIsBundle={props.activeDrsObjectFunctions.setIsBundle}
-                        readOnlyForm={props.readOnlyForm}
-                    />
+                    <BundleBlobRadio {...isBundle} />
 
-                    {props.activeDrsObject.is_bundle
+                    {isBundle.is_bundle
                         ? null
                         :
                             <Grid container justify='flex-start' spacing={4}>
@@ -694,59 +681,14 @@ const DrsObjectForm = (props) => {
                             </Grid>
                     }
                     
-                    <Aliases
-                        aliases={props.activeDrsObject.aliases}
-                        addAlias={props.activeDrsObjectFunctions.addAlias}
-                        setAlias={props.activeDrsObjectFunctions.setAlias}
-                        removeAlias={props.activeDrsObjectFunctions.removeAlias}
-                        readOnly={props.readOnlyForm}
-                    />
+                    <Aliases {...aliases} />
 
-                    {props.activeDrsObject.is_bundle
-                        ?
-                            <div>
-                                <Checksums
-                                    checksums={props.activeDrsObject.checksums}
-                                    displayChecksumTypes={props.displayChecksumTypes}
-                                    addChecksum={props.activeDrsObjectFunctions.addChecksum}
-                                    setChecksumType={props.activeDrsObjectFunctions.setChecksumType}
-                                    setChecksumChecksum={props.activeDrsObjectFunctions.setChecksumChecksum}
-                                    removeChecksum={props.activeDrsObjectFunctions.removeChecksum}
-                                    readOnly={props.readOnlyForm}
-                                />
-
-                                <DrsObjectChildren
-                                    activeDrsObject={props.activeDrsObject}
-                                    children={props.activeDrsObject.drs_object_children}
-                                    addChild={props.activeDrsObjectFunctions.addChild}
-                                    setChildId={props.activeDrsObjectFunctions.setChildId}
-                                    unsetChildValidity={props.activeDrsObjectFunctions.unsetChildValidity}
-                                    removeChild={props.activeDrsObjectFunctions.removeChild}
-                                    retrieveDrsObject={props.apiFunctions.retrieveDrsObject}
-                                    readOnly={props.readOnlyForm}
-                                    objectName='child'
-                                />
-                            </div>
-                        : null
+                    {isBundle.is_bundle
+                        ? <DrsObjectChildren {...children} />
+                        : <Checksums {...checksums} displayChecksumTypes={props.displayChecksumTypes} />
                     }
 
-                    <RelatedDrsObject
-                        relatedDrsObjects={activeDrsObject.drs_object_parents}
-                        isBundle={isBundle}
-                        relationship='drs_object_parents'
-                        activeDrsObject={activeDrsObject}
-                        readOnlyForm={readOnlyForm}
-                        header='Parent Bundles'
-                        objectName='parent bundle'
-                        drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}
-                        sectionDescription={
-                            <Typography variant='body2' align='left' color='textSecondary'>
-                                The following listing displays all "Parent" DRS Bundles,
-                                that is, all bundles that contain the current DRS Object as
-                                one of its Children.
-                            </Typography>
-                        }
-                    />
+                    <DrsObjectParents {...parents} />
                     
                     <AccessPoints
                         activeDrsObject={activeDrsObject}

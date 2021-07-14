@@ -8,7 +8,7 @@ const CreatedTime = props => {
             label="Created Time"
             name="created_time"
             helperText="Timestamp of DRS Object creation in ISO 8601 format."
-            value={props.createdTime}
+            value={props.created_time}
             setFunction={props.setCreatedTime}
             readOnly={props.readOnlyForm}
          />

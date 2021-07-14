@@ -51,11 +51,11 @@ const DrsObjectRelatives = props => {
                                                         <VerifyIdButton 
                                                             activeDrsObject={props.activeDrsObject}
                                                             relative={relative}
+                                                            setRelativeName={(name) => props.setRelativeName(index, name)}
+                                                            setRelativeValid={() => props.setRelativeValid(index)}
+                                                            setRelativeInvalid={() => props.setRelativeInvalid(index)}
                                                             retrieveDrsObject={props.retrieveDrsObject}
                                                             readOnly={props.readOnly}
-                                                            //drsObjectFunctions={props.drsObjectFunctions} 
-                                                            //index={index} 
-                                                            //property={props.relationship}
                                                         />
                                                     </InputAdornment>
                                             }

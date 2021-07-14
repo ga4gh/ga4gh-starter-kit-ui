@@ -20,7 +20,7 @@ const BundleBlobRadio = props => {
             <Typography variant='body2' align='left' color='textSecondary'>
                 Bundles contain references to Child Drs Objects, while Blobs act as single DRS Objects and do not have any children.
             </Typography>
-            <RadioGroup name='drs_object_type' value={props.isBundle} onChange={e => props.setIsBundle(e.target.value === 'true')}>
+            <RadioGroup name='drs_object_type' value={props.is_bundle} onChange={e => props.setIsBundle(e.target.value === 'true')}>
                 <FormControlLabel control={<Radio color='primary'/>} label='Blob' value={false} disabled={props.readOnlyForm}/>
                 <FormControlLabel control={<Radio color='primary'/>} label='Bundle' value={true} disabled={props.readOnlyForm}/>
             </RadioGroup>

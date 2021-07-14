@@ -15,6 +15,7 @@ import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
 import DrsObjectForm from './pages/DrsObjectForm';
 import DrsApiCaller from './utils/DrsApiCaller';
+import _ from 'lodash';
 
 const DrsMain = props => {
 
@@ -160,11 +161,19 @@ const DrsMain = props => {
     // children
     addChild: () => addObjectToList('drs_object_children', newDrsObjectProperty.relative),
     setChildId: (index, id) => updateListObjectProperty('drs_object_children', index, 'id', id),
+    setChildName: (index, name) => updateListObjectProperty('drs_object_children', index, 'name', name),
+    setChildValid: index => updateListObjectProperty('drs_object_children', index, 'isValid', true),
+    setChildInvalid: index => updateListObjectProperty('drs_object_children', index, 'isValid', false),
     unsetChildValidity: index => updateListObjectProperty('drs_object_children', index, 'isValid', undefined),
     removeChild: index => removeListItem('drs_object_children', index),
     // parents
     addParent: () => addObjectToList('drs_object_parents', newDrsObjectProperty.relative),
-
+    setParentId: (index, id) => updateListObjectProperty('drs_object_parents', index, 'id', id),
+    setParentName: (index, name) => updateListObjectProperty('drs_object_parents', index, 'name', name),
+    setParentValid: index => updateListObjectProperty('drs_object_parents', index, 'isValid', true),
+    setParentInvalid: index => updateListObjectProperty('drs_object_parents', index, 'isValid', false),
+    unsetParentValidity: index => updateListObjectProperty('drs_object_parents', index, 'isValid', undefined),
+    removeParent: index => removeListItem('drs_object_parents', index),
     // file access objects
     addFileAccessObject: () => addObjectToList('file_access_objects', newDrsObjectProperty.fileAccessObject),
     setFileAccessObjectPath: (index, path) => updateListObjectProperty('file_access_objects', index, 'path', path),
@@ -177,6 +186,27 @@ const DrsMain = props => {
 
     setIsBundle: isBundle => updateScalarProperty('is_bundle', isBundle)
   }
+
+  /* ##################################################
+   * PROP SETS FOR FORM SUBCOMPONENTS
+   * ################################################## */
+
+  const formProps = {...activeDrsObject, ...activeDrsObjectFunctions};
+
+  const groupedFormProps = {
+    name: _.pick(formProps, ['name', 'setName']),
+    description: _.pick(formProps, ['description', 'setDescription']),
+    createdTime: _.pick(formProps, ['created_time', 'setCreatedTime']),
+    updatedTime: _.pick(formProps, ['updated_time', 'setUpdatedTime']),
+    version: _.pick(formProps, ['version', 'setVersion']),
+    isBundle: _.pick(formProps, ['is_bundle', 'setIsBundle']),
+    aliases: _.pick(formProps, ['aliases', 'addAlias', 'setAlias', 'removeAlias']),
+    checksums: _.pick(formProps, ['checksums', 'addChecksum', 'setChecksumType', 'setChecksumChecksum', 'removeChecksum']),
+    children: _.pick(formProps, ['drs_object_children', 'addChild', 'setChildId', 'setChildName', 'setChildValid', 'setChildInvalid', 'unsetChildValidity', 'removeChild']),
+    parents: _.pick(formProps, ['drs_object_parents', 'addParent', 'setParentId', 'setParentName', 'setParentValid', 'setParentInvalid', 'unsetParentValidity', 'removeParent']),
+    
+  }
+
 
   /* ##################################################
    * ROUTE CHANGE LISTENER
@@ -391,8 +421,10 @@ const DrsMain = props => {
         <Route exact path='/drs/new'>
           <DrsObjectForm
             title={"Create New DrsObject"}
+            {...groupedFormProps}
             activeDrsObject={activeDrsObject}
             activeDrsObjectFunctions={activeDrsObjectFunctions}
+            formProps={groupedFormProps}
             displayChecksumTypes={displayChecksumTypes}
             apiFunctions={apiFunctions}
             readOnlyId={false}
@@ -402,8 +434,10 @@ const DrsMain = props => {
         <Route exact path='/drs/:objectId'>
           <DrsObjectForm
             title={"View DrsObject"}
+            {...groupedFormProps}
             activeDrsObject={activeDrsObject}
             activeDrsObjectFunctions={activeDrsObjectFunctions}
+            formProps={groupedFormProps}
             apiFunctions={apiFunctions}
             displayChecksumTypes={displayChecksumTypes}
             readOnlyId={true}

@@ -8,7 +8,7 @@ const UpdatedTime = props => {
             label="Updated Time"
             name="updated_time"
             helperText="Timestamp of when the DRS Object was most recently updated in ISO 8601 format."
-            value={props.updatedTime}
+            value={props.updated_time}
             setFunction={props.setUpdatedTime}
             readOnly={props.readOnlyForm}
          />

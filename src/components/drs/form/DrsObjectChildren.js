@@ -26,13 +26,14 @@ const DrsObjectChildren = props => {
             }
             relationship="children"
             objectName="child"
-            activeDrsObject={props.activeDrsObject}
-            relatives={props.children}
+            relatives={props.drs_object_children}
             addRelative={props.addChild}
             setRelativeId={props.setChildId}
+            setRelativeName={props.setChildName}
+            setRelativeValid={props.setChildValid}
+            setRelativeInvalid={props.setChildInvalid}
             unsetRelativeValidity={props.unsetChildValidity}
             removeRelative={props.removeChild}
-            retrieveDrsObject={props.retrieveDrsObject}
             readOnly={props.readOnly}
         />
     )

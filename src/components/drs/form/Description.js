@@ -8,7 +8,7 @@ const Description = props => {
             label="Description"
             name="description"
             value={props.description}
-            readOnly={props.readOnlyForm}
+            readOnly={props.readOnly}
             changeFunction={props.setDescription}
             helperText='Longer description of this DRS Object.'
         />
