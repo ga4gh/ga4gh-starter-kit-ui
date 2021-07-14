@@ -1,6 +1,7 @@
 import '@fontsource/roboto';
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
+    Container,
     Typography, 
     FormControl,
     TextField, 
@@ -32,7 +33,24 @@ import DateFnsUtils from '@date-io/date-fns';
 import { format } from 'date-fns';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
-import UseDrsStarterKit from './UseDrsStarterKit';
+import DrsApiCaller from '../utils/DrsApiCaller';
+import Id from '../form/Id';
+import Name from '../form/Name';
+import Description from '../form/Description';
+import CreatedTime from '../form/CreatedTime';
+import UpdatedTime from '../form/UpdatedTime';
+import Version from '../form/Version';
+import BundleBlobRadio from '../form/BundleBlobRadio';
+import MimeType from '../form/MimeType';
+import Size from '../form/Size';
+import Aliases from '../form/Aliases';
+import Checksums from '../form/Checksums';
+import DrsObjectChildren from '../form/DrsObjectChildren';
+import {
+    useParams,
+    useHistory
+  } from "react-router-dom";
+import { HistoryTwoTone } from '@material-ui/icons';
 
 const SpaceDivider = () => {
     return (
@@ -79,256 +97,6 @@ const RemovePropertyButton = (props) => {
     else return null;
 }
 
-/* BundleBlobRadio is displayed on editable forms, allowing the user to select between a blob- or bundle-type object. Some data entry fields
- are displayed or hidden, depending on the DRS Object type that is selected. The default DRS Object type for new DRS Objects is "blob". */
-const BundleBlobRadio = (props) => {
-    let value;
-    if (props.isBundle) {
-        value = 'bundle';
-    }
-    else {
-        value = 'blob';
-    }
-    if(!props.readOnlyForm) {
-        return(
-            <FormGroup>
-                <Typography align='left' variant='h6'>Is this DRS Object a bundle or a blob?</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>
-                    Bundles contain references to Child Drs Objects, while Blobs act as single DRS Objects and do not have any children.
-                </Typography>
-                <RadioGroup name='drs_object_type' value={value} onChange={(event) => props.drsObjectFunctions.updateDrsObjectType(event.target.value)}>
-                    <FormControlLabel control={<Radio color='primary'/>} label='Blob' value='blob' disabled={props.readOnlyForm}/>
-                    <FormControlLabel control={<Radio color='primary'/>} label='Bundle' value='bundle' disabled={props.readOnlyForm}/>
-                </RadioGroup>
-            </FormGroup>
-        );
-    }
-    else return null;
-}
-
-/* GenerateIdButton is displayed when the ID field is editable. Clicking this button sets the DRS Object ID to a random UUID. */
-const GenerateIdButton = (props) => {
-    if(!props.readOnlyId) {
-        return(
-            <Grid item xs={2} align='right'>
-                <Button variant='contained' color='primary' 
-                onClick={() =>  props.drsObjectFunctions.updateId(uuidv4())}>
-                    <Typography variant='button'>Generate ID</Typography>
-                </Button>
-            </Grid>     
-        );
-    }
-    else return null;
-}
-
-const Id = (props) => {
-    return(
-        <Grid container spacing={4} alignItems='center' justify='space-between'>
-            <Grid item xs>
-                <FormControl fullWidth>
-                    <TextField id='id' label='Id' margin='normal' name='id' type='text'
-                    value={props.activeDrsObject.id} InputProps={{readOnly: props.readOnlyId}} 
-                    onChange={(event) => props.drsObjectFunctions.updateId(event.target.value)}
-                    helperText='Unique identifier for this DRS Object (UUID recommended), cannot be modified later.'/>
-                </FormControl>
-            </Grid>
-            <GenerateIdButton readOnlyId={props.readOnlyId} drsObjectFunctions={props.drsObjectFunctions}/>
-        </Grid>     
-    );  
-}
-
-const SimpleTextField = (props) => {
-    if(!props.property && props.readOnlyForm) {
-        return null;
-    }
-    else {
-        return(
-            <FormControl fullWidth>
-                <TextField id={props.propertyName} label={props.label} margin='normal' name={props.propertyName} type='text' 
-                value={props.property} InputProps={{readOnly: props.readOnlyForm}}
-                onChange={(event) => props.drsObjectFunctions.updateScalarProperty(event.target.name, event.target.value)}
-                helperText={props.description}/>
-            </FormControl>
-        );
-    }
-}
-
-/* DateTimeField component displays a text field that opens a date-time picker when selected. The date and time are entered and displayed in 
-the local time using the 24 hour clock, however, the activeDrsObject is updated with the date and time converted to UTC time. 
-Seconds cannot be selected, and therefore they are always automatically set to zero. 
-The date and time are displayed in the format 'yyyy-MM-dd HH:mm:ss OOOO' which includes the timezone (offset from GMT). 
-The date-time picker includes a "Today" button which sets the value to the current minute when clicked. */
-const DateTimeField = (props) => {
-    if(!props.value && props.readOnlyForm) {
-        return null;
-    }
-    else {
-        return(
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <FormControl fullWidth>
-                    <DateTimePicker id={props.propertyName} label={props.label} margin='normal' name={props.propertyName} value={props.value} 
-                    format='yyyy-MM-dd HH:mm:ss OOOO' readOnly={props.readOnlyForm} showTodayButton ampm={false} helperText={props.description}
-                    onChange={date => {
-                        date.setSeconds(0, 0);
-                        let utcDate = format(new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()), "yyyy-MM-dd'T'HH:mm:ss'Z'");
-                        props.drsObjectFunctions.updateScalarProperty(props.propertyName, utcDate);
-                    }} />
-                </FormControl>
-            </MuiPickersUtilsProvider>
-        );    
-    }
-}
-
-/* MimeType is displayed for blob-type DRS Objects. */
-const MimeType = (props) => {
-    if(props.isBundle || (!props.mimeType && props.readOnlyForm)) {
-        return null;
-    }
-    else {
-        return (
-            <Grid item xs={4}>
-                <FormControl fullWidth>
-                    <TextField id='mime_type' label='MIME Type' margin='normal' name='mime_type' type='text' value={props.mimeType}
-                    InputProps={{readOnly: props.readOnlyForm}} helperText='The media type of the DRS Object' 
-                    onChange={(event) => props.drsObjectFunctions.updateScalarProperty(event.target.name, event.target.value)} />
-                </FormControl>    
-            </Grid>
-        );
-        
-    }
-}
-
-/* Size is displayed for blob-type DRS Objects. This field only accepts numbers and can be edited through free-text entry or using 
-the arrow buttons in the text field. */
-const Size = (props) => {
-    if(props.isBundle|| (!props.size && props.readOnlyForm)) {
-        return null;
-    }
-    else {
-        return (
-            <Grid item xs={4}>
-                <FormControl fullWidth>
-                    <TextField id='size' label='Size' margin='normal' name='size' type='number' value={props.size} 
-                    InputProps={{readOnly: props.readOnlyForm}} helperText='The size (in bytes) of the DRS Object represented as an integer.'
-                    onChange={(event) => props.drsObjectFunctions.updateScalarProperty(event.target.name, event.target.value)}/>
-                </FormControl>    
-            </Grid>
-        );
-    }
-}
-
-/* Alias instances can be added or removed using the AddPropertyButton and RemovePropertyButton components, and are updated through free-text entry. */
-const Aliases = (props) => {
-    let aliases = props.aliases;
-    if(!aliases) {
-        return null;
-    }
-    else {
-        const aliasesDisplay = aliases.map((alias, index) => {
-            return (
-                <Grid item key={`alias${index}`}>
-                    <FormGroup row>
-                        <FormControl>
-                            <TextField variant='outlined' id={`alias${index}`} margin='normal' name='alias' label='Alias' type='text' 
-                            value={alias} InputProps={{readOnly: props.readOnlyForm}} 
-                            onChange={(event) => props.drsObjectFunctions.updateAlias(index, event.target.value)}/>
-                        </FormControl>
-                        <Box zIndex={1} position='relative' right='10%' top={-10}>
-                            <RemovePropertyButton index={index} objectName='alias' readOnlyForm={props.readOnlyForm}
-                            handleClick={(index) => props.drsObjectFunctions.removeAlias(index)}/>    
-                        </Box>    
-                    </FormGroup>
-                    
-                </Grid>
-            );  
-        })
-        return (
-            <FormGroup>
-                <SpaceDivider />
-                <Typography align='left' variant='h6'>Aliases</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>
-                    A list of aliases that can be used to identify the DRS Object
-                    by additional names.
-                </Typography>
-                <br />
-                <FormGroup row>
-                   <Grid container spacing={4} alignItems='center'>
-                       {aliasesDisplay}
-                       <Grid item>
-                            <AddPropertyButton objectName='alias' readOnlyForm={props.readOnlyForm}
-                            handleClick={() => props.drsObjectFunctions.addListItem('aliases', props.drsObjectProperties.newAlias)}/>
-                       </Grid>
-                   </Grid>
-                </FormGroup>
-            </FormGroup>
-        );
-    }
-}
-
-/* Checksums are displayed for blob-type objects and can be added and removed. The Type property is selected using a dropdown, however each type can 
-only be selected once. If a type is selected, that option is disabled for each of the other checksum instances. A maximum of 3 checksum objects can be 
-added before the AddPropertyButton becomes disabled, since there are 3 type options. The Checksum value field is updated through free-text entry. */
-const Checksums = (props) => {
-    let checksums = props.checksums;
-    let disableAddButton = false;
-    if(props.isBundle|| (!checksums && props.readOnlyForm)) {
-        return null;
-    }
-    else {
-        if(!checksums) {
-            return null;
-        }
-        if(checksums && Object.keys(checksums).length === 3) {
-            disableAddButton = true;
-        } 
-        const checksumsDisplay = checksums.map((checksum, index) => {
-            return (
-                <FormGroup key={`checksum${index}`} row>
-                    <Grid container spacing={4}>
-                        <Grid item xs={3}>
-                            <FormControl fullWidth>
-                                <TextField select variant='outlined' id={`ChecksumType${index}`} label='Type' name='type' type='text' align='left' 
-                                value={checksum.type} InputProps={{readOnly: props.readOnlyForm}} helperText='Hashing algorithm used to generate the checksum.' 
-                                onChange={(event) => props.drsObjectFunctions.updateChecksumType(index, event.target.value)}>
-                                    <MenuItem id='md5' value='md5' disabled={props.checksumTypes.md5.disabled}>md5</MenuItem>
-                                    <MenuItem id='sha1' value='sha1' disabled={props.checksumTypes.sha1.disabled}>sha1</MenuItem>
-                                    <MenuItem id='sha256' value='sha256' disabled={props.checksumTypes.sha256.disabled}>sha256</MenuItem>
-                                </TextField>
-                            </FormControl>
-                        </Grid>
-                        <Grid item xs>
-                            <FormControl fullWidth>
-                                <TextField variant='outlined' id={`ChecksumValue${index}`} label='Checksum' name='checksum' type='checksum' 
-                                value={checksum.checksum} InputProps={{readOnly: props.readOnlyForm}} helperText='Checksum digest value.' 
-                                onChange={(event) => props.drsObjectFunctions.updateObjectProperty('checksums', index, 'checksum', event.target.value)}/>
-                            </FormControl>    
-                        </Grid>   
-                        <RemovePropertyButton objectName='checksum' index={index} readOnlyForm={props.readOnlyForm} 
-                        handleClick={(index) => props.drsObjectFunctions.removeChecksumItem(index)}/>
-                    </Grid>
-                </FormGroup>
-            );
-        })
-        return(
-            <FormGroup>
-                <SpaceDivider />
-                <Typography align='left' variant='h6'>Checksums</Typography>
-                <Typography variant='body2' align='left' color='textSecondary'>
-                    Each single-blob DRS Object must report one or more checksums,
-                    recording the digest algorithm and value of the DRS Object
-                    bytes.
-                    The following list displays the recorded digest algorithms
-                    and corresponding values for this DRS Object.
-                </Typography>
-                <br />
-                {checksumsDisplay} 
-                <AddPropertyButton objectName='checksum' readOnlyForm={props.readOnlyForm} disabled={disableAddButton}
-                handleClick={() => props.drsObjectFunctions.addListItem('checksums', props.drsObjectProperties.newChecksum)}/>
-            </FormGroup>
-        );
-    }
-}
-
 /* VerifyIdButton is used to verify if the ID entered for a parent or child DRS Object is valid. When the button is clicked, a GET request for
 the given ID will be made. If an error is returned, the object is set as invalid. If an object is successfully returned, it is valid, unless the 
 property to be updated is "drs_object_parents" and the DRS Object returned is an existing blob-type object. Since blob-type objects cannot have 
@@ -338,16 +106,15 @@ automatically populated.
 If the ID has been verified and is invalid, a red "X" icon will be displayed and the name field will not be populated.
 If the ID has not been verified, or has been edited since being verified, the "Verify" button is displayed.
 If the ID field is empty, the "Verify" button is displayed and disabled. */
+
 const VerifyIdButton = (props) => {
     const [objectId, setId] = useState(''); //objectId holds the value that is passed to the UseDrsStarterKit hook to make the API request
     let id = props.relatedDrsObject.id; //id holds the current state of relatedDrsObject.id which is the the value displayed and updated in the id field
     let disabled = false;
     const cancelToken = axios.CancelToken;
     const drsCancelToken = cancelToken.source();
-    let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
-    let requestUrl=(baseUrl+'objects/'+objectId);
     let requestConfig = {
-        url: requestUrl,
+        url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${objectId}`,
         method: 'GET',
         cancelToken: drsCancelToken.token
     };
@@ -384,7 +151,13 @@ const VerifyIdButton = (props) => {
     value changes), a new API GET request is made to determine if the new objectId is valid. Although the id property is updated whenever the 
     textfield is edited, objectId is only updated when the "Verify" button is clicked. Therefore, the GET request is made when the "Verify" 
     button is clicked, resulting in validation of the updated objectId. */
-    UseDrsStarterKit(requestConfig, handleResponse, handleError, objectId, drsCancelToken);
+
+    return (
+        <h2>VerifyIdButton</h2>
+    )
+
+    /*
+    DrsApiCaller(requestConfig, handleResponse, handleError, objectId, drsCancelToken);
 
     if(id === '') {
         disabled = true;
@@ -417,6 +190,7 @@ const VerifyIdButton = (props) => {
         );
     }
     else return null;
+    */
 }
 
 /* When the form is editable, each related DRS Object displays the RemovePropertyButton. When the form is read-only, each related DRS Object 
@@ -682,6 +456,20 @@ the activeDrsObject is "cleaned up" to ensure that the correct properties are su
 Object is a blob or a bundle. If the POST request is successful, the user is redirected to the DRS Index page. However, if it is 
 unsuccessful, the user is not redirected and the ErrorMessage component is displayed. */
 const SubmitButton = (props) => {
+    console.log(props.activeDrsObject)
+    return (
+        <FormControl fullWidth>
+            <SpaceDivider/>
+            <Button variant='contained' color='primary'
+            onClick={() => 
+            {
+                console.log(props.activeDrsObject);
+            }}>
+                Submit
+            </Button>
+        </FormControl>
+    );
+    /*
     const [newDrsObjectToSubmit, setNewDrsObjectToSubmit] = useState('');
     const [error, setError] = useState(null);
     let activeDrsObject = props.activeDrsObject;
@@ -783,7 +571,8 @@ const SubmitButton = (props) => {
     newDrsObjectToSubmit object within the request body. Prior to clicking the "Submit" button for the first time, newDrsObjectToSubmit is an 
     empty object, and therefore the POST request is not made. When the "Submit" button is clicked, the newDrsObjectToSubmit property is updated, 
     resulting in the POST request being made. */
-    UseDrsStarterKit(requestConfig, handleResponse, handleError, newDrsObjectToSubmit.id, newDrsCancelToken);
+    /*
+    DrsApiCaller(requestConfig, handleResponse, handleError, newDrsObjectToSubmit.id, newDrsCancelToken);
 
     if(!props.readOnlyForm) {
         return (
@@ -805,6 +594,7 @@ const SubmitButton = (props) => {
         );
     }
     else return null;
+    */
 }
 
 const DrsObjectForm = (props) => {
@@ -819,80 +609,162 @@ const DrsObjectForm = (props) => {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <Box pb={4}>
-            <form>
-                <Id activeDrsObject={activeDrsObject} drsObjectFunctions={props.drsObjectFunctions} readOnlyId={readOnlyId}/>
-                <SimpleTextField property={activeDrsObject.name} propertyName='name' label='Name' 
-                drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}
-                description='Short, descriptive name for this DRS Object.'/>
-                <SimpleTextField property={activeDrsObject.description} propertyName='description' label='Description' 
-                drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}
-                description='Longer description of this DRS Object.'/>
-                <Grid container justify='space-evenly' spacing={4}>
-                    <Grid item xs={4}>
-                        <FormControl fullWidth>
-                            <DateTimeField value={activeDrsObject.created_time} drsObjectFunctions={props.drsObjectFunctions} 
-                            readOnlyForm={readOnlyForm} propertyName='created_time' label='Created Time' 
-                            description='Timestamp of DRS Object creation in ISO 8601 format.'/>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <FormControl fullWidth>
-                            <DateTimeField value={activeDrsObject.updated_time} drsObjectFunctions={props.drsObjectFunctions} 
-                            readOnlyForm={readOnlyForm} propertyName='updated_time' label='Updated Time' 
-                            description='Timestamp of when the DRS Object was most recently updated in ISO 8601 format.'/>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <SimpleTextField property={activeDrsObject.version} propertyName='version' label='Version' 
-                        drsObjectFunctions={props.drsObjectFunctions} readOnlyForm={readOnlyForm}
-                        description='Current version of the DRS Object, it should be updated each time the DRS Object is modified.'/>
-                    </Grid>
+        <Container maxWidth='lg'>
+            <Grid container justify='space-between' alignItems='center'>
+                <Grid item xs={2} align='left'>
+                    <Button variant='contained' component={Link} to='/drs' color='primary' size='large'>
+                        <Typography variant='button'>DRS Index</Typography>
+                    </Button>
                 </Grid>
-                <BundleBlobRadio readOnlyForm={readOnlyForm} isBundle={isBundle} drsObjectFunctions={props.drsObjectFunctions}/>
-                <Grid container justify='flex-start' spacing={4}>
-                    <MimeType mimeType={activeDrsObject.mime_type} isBundle={isBundle} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
-                    <Size size={activeDrsObject.size} isBundle={isBundle} readOnlyForm={readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}/>
+                <Grid item xs={8}>
+                    <Typography align='center' variant="h3" gutterBottom>{props.title}</Typography>
                 </Grid>
-                <Aliases aliases={activeDrsObject.aliases} readOnlyForm={readOnlyForm}
-                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}/>
-                <Checksums checksums={activeDrsObject.checksums} checksumTypes={activeDrsObject.checksumTypes} isBundle={isBundle} readOnlyForm={readOnlyForm}
-                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}/>
-                <RelatedDrsObject relatedDrsObjects={activeDrsObject.drs_object_children} isBundle={isBundle} relationship='drs_object_children'
-                activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm} header='Bundle Children' objectName='child bundle'
-                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}
-                sectionDescription={
-                    <div>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            This DRS Object is currently acting as a DRS Bundle. Bundles
-                            contain references to multiple Child objects (single-blob DRS
-                            Objects and/or DRS Bundles), enabling multiple DRS Objects to
-                            be logically grouped in a nested structure. Only DRS Bundles
-                            may have children, single-blob DRS Objects do not have
-                            children.
-                        </Typography>
-                        <Typography variant='body2' align='left' color='textSecondary'>
-                            The following listing displays all children for the current
-                            DRS Bundle.
-                        </Typography>
-                    </div>
-                }/>
-                <RelatedDrsObject relatedDrsObjects={activeDrsObject.drs_object_parents} isBundle={isBundle} relationship='drs_object_parents'
-                activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm} header='Parent Bundles' objectName='parent bundle'
-                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}
-                sectionDescription={
-                    <Typography variant='body2' align='left' color='textSecondary'>
-                        The following listing displays all "Parent" DRS Bundles,
-                        that is, all bundles that contain the current DRS Object as
-                        one of its Children.
-                    </Typography>
-                }/>
-                <AccessPoints activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm} isBundle={isBundle}
-                drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}/>
-                <SubmitButton activeDrsObject={activeDrsObject} readOnlyForm={readOnlyForm} 
-                drsObjectFunctions={props.drsObjectFunctions} updateSubmitNewDrsRedirect={props.updateSubmitNewDrsRedirect}/>
-            </form>
-        </Box>
+                <Grid item xs={2} />
+            </Grid>
+            <Box pb={4}>
+                <form>
+                    <Id
+                        id={props.activeDrsObject.id}
+                        setId={props.activeDrsObjectFunctions.setId}
+                        readOnlyId={props.readOnlyId}
+                    />
+                    <Name
+                        name={props.activeDrsObject.name}
+                        setName={props.activeDrsObjectFunctions.setName}
+                        readOnlyForm={props.readOnlyForm}
+                    />
+                    <Description
+                        description={props.activeDrsObject.description}
+                        setDescription={props.activeDrsObjectFunctions.setDescription}
+                        readOnlyForm={props.readOnlyForm}
+                    />
+
+                    <Grid container justify='space-evenly' spacing={4}>
+                        <Grid item xs={4}>
+                            <FormControl fullWidth>
+                                <CreatedTime
+                                    createdTime={props.activeDrsObject.created_time}
+                                    setCreatedTime={props.activeDrsObjectFunctions.setCreatedTime}
+                                    readOnly={props.activeDrsObject.readOnlyForm}
+                                />
+                            </FormControl>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <FormControl fullWidth>
+                                <UpdatedTime
+                                    updatedTime={props.activeDrsObject.updated_time}
+                                    setUpdatedTime={props.activeDrsObjectFunctions.setUpdatedTime}
+                                    readOnly={props.activeDrsObject.readOnlyForm}
+                                />
+                            </FormControl>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Version
+                                version={props.activeDrsObject.version}
+                                setVersion={props.activeDrsObjectFunctions.setVersion}
+                                readOnlyForm={props.readOnlyForm}
+                            />
+                        </Grid>
+                    </Grid>
+
+                    <BundleBlobRadio
+                        isBundle={props.activeDrsObject.is_bundle}
+                        setIsBundle={props.activeDrsObjectFunctions.setIsBundle}
+                        readOnlyForm={props.readOnlyForm}
+                    />
+
+                    {props.activeDrsObject.is_bundle
+                        ? null
+                        :
+                            <Grid container justify='flex-start' spacing={4}>
+                                <Grid item xs={4}>
+                                    <MimeType
+                                        mimeType={props.activeDrsObject.mime_type}
+                                        setMimeType={props.activeDrsObjectFunctions.setMimeType}
+                                        readOnly={props.readOnlyForm} drsObjectFunctions={props.drsObjectFunctions}
+                                    />
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <Size
+                                        size={props.activeDrsObject.size}
+                                        setSize={props.activeDrsObjectFunctions.setSize}
+                                        readOnly={props.readOnlyForm}
+                                    />
+                                </Grid>
+                            </Grid>
+                    }
+                    
+                    <Aliases
+                        aliases={props.activeDrsObject.aliases}
+                        addAlias={props.activeDrsObjectFunctions.addAlias}
+                        setAlias={props.activeDrsObjectFunctions.setAlias}
+                        removeAlias={props.activeDrsObjectFunctions.removeAlias}
+                        readOnly={props.readOnlyForm}
+                    />
+
+                    {props.activeDrsObject.is_bundle
+                        ?
+                            <div>
+                                <Checksums
+                                    checksums={props.activeDrsObject.checksums}
+                                    displayChecksumTypes={props.displayChecksumTypes}
+                                    addChecksum={props.activeDrsObjectFunctions.addChecksum}
+                                    setChecksumType={props.activeDrsObjectFunctions.setChecksumType}
+                                    setChecksumChecksum={props.activeDrsObjectFunctions.setChecksumChecksum}
+                                    removeChecksum={props.activeDrsObjectFunctions.removeChecksum}
+                                    readOnly={props.readOnlyForm}
+                                />
+
+                                <DrsObjectChildren
+                                    activeDrsObject={props.activeDrsObject}
+                                    children={props.activeDrsObject.drs_object_children}
+                                    addChild={props.activeDrsObjectFunctions.addChild}
+                                    setChildId={props.activeDrsObjectFunctions.setChildId}
+                                    unsetChildValidity={props.activeDrsObjectFunctions.unsetChildValidity}
+                                    removeChild={props.activeDrsObjectFunctions.removeChild}
+                                    retrieveDrsObject={props.apiFunctions.retrieveDrsObject}
+                                    readOnly={props.readOnlyForm}
+                                    objectName='child'
+                                />
+                            </div>
+                        : null
+                    }
+
+                    <RelatedDrsObject
+                        relatedDrsObjects={activeDrsObject.drs_object_parents}
+                        isBundle={isBundle}
+                        relationship='drs_object_parents'
+                        activeDrsObject={activeDrsObject}
+                        readOnlyForm={readOnlyForm}
+                        header='Parent Bundles'
+                        objectName='parent bundle'
+                        drsObjectFunctions={props.drsObjectFunctions} drsObjectProperties={props.drsObjectProperties}
+                        sectionDescription={
+                            <Typography variant='body2' align='left' color='textSecondary'>
+                                The following listing displays all "Parent" DRS Bundles,
+                                that is, all bundles that contain the current DRS Object as
+                                one of its Children.
+                            </Typography>
+                        }
+                    />
+                    
+                    <AccessPoints
+                        activeDrsObject={activeDrsObject}
+                        readOnlyForm={readOnlyForm}
+                        isBundle={isBundle}
+                        drsObjectFunctions={props.drsObjectFunctions}
+                        drsObjectProperties={props.drsObjectProperties}
+                    />
+                    
+                    <SubmitButton
+                        activeDrsObject={activeDrsObject}
+                        readOnlyForm={readOnlyForm} 
+                        drsObjectFunctions={props.drsObjectFunctions}
+                        updateSubmitNewDrsRedirect={props.updateSubmitNewDrsRedirect}
+                    />
+                </form>
+            </Box>
+        </Container>
       </div>
     );
 }

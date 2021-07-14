@@ -11,9 +11,9 @@ import {
     useLocation, 
     Link
 } from "react-router-dom";
-import DrsObjectForm from '../DrsObjectForm';
+import DrsObjectForm from './DrsObjectForm';
 import axios from 'axios';
-import UseDrsStarterKit from '../UseDrsStarterKit';
+import DrsApiCaller from '../utils/DrsApiCaller';
 
 const DrsShow = (props) => {
   let activeDrsObject = props.activeDrsObject;
@@ -59,7 +59,7 @@ const DrsShow = (props) => {
     setActiveDrsObject(newActiveDrsObject)
   }
 
-  UseDrsStarterKit(requestConfig, updateNewDrsObject, handleError, objectId, drsCancelToken);
+  DrsApiCaller(requestConfig, updateNewDrsObject, handleError, objectId, drsCancelToken);
 
   /* Restore scroll to top of page on navigation to a new page */
   const { pathname }  = useLocation();

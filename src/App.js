@@ -7,7 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from './components/pages/Home';
-import Drs from './components/drs/Drs';
+import DrsMain from './components/drs/DrsMain';
 
 class App extends React.Component {
   render(){
@@ -15,11 +15,8 @@ class App extends React.Component {
       <div>
         <Router>
           <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route path='/drs' component={Drs}>
-            </Route>
+            <Route exact path='/' component={Home} />
+            <Route path='/drs' component={DrsMain} />
           </Switch>
         </Router>
       </div>
