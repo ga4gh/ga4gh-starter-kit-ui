@@ -1,20 +1,10 @@
 import React from 'react';
 import { 
-    Container,
-    Typography, 
+    Typography,
     FormControl,
-    TextField, 
-    Grid, 
-    FormGroup, 
-    Button, 
-    Divider, 
-    Box, 
-    RadioGroup, 
-    Radio, 
-    FormControlLabel, 
-    IconButton, 
-    MenuItem, 
-    Tooltip,
+    TextField,
+    Grid,
+    FormGroup,
     InputAdornment
 } from '@material-ui/core';
 import SpaceDivider from '../../common/SpaceDivider';
@@ -22,6 +12,13 @@ import RemoveItemButton from '../../common/RemoveItemButton';
 import VerifyIdButton from './VerifyIdButton';
 import AddItemButton from '../../common/AddItemButton';
 
+/*
+    Related DRS Objects include DRS Object Children and DRS Object Parents, each
+    of which can be added or removed. The ID of the related DRS Object is
+    entered in the text field. If the ID is valid, the name field is
+    automatically populated by clicking the "Verify" button. Drs Object Children
+    are only displayed for bundle-type DRS Objects.
+*/
 const DrsObjectRelatives = props => {
     return (
         <FormGroup>

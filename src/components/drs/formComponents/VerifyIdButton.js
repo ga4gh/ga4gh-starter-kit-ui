@@ -9,6 +9,21 @@ import CheckCircle from '@material-ui/icons/CheckCircle';
 import Cancel from '@material-ui/icons/Cancel';
 import DrsApiCaller from '../utils/DrsApiCaller';
 
+/*
+    Used to verify if the ID entered for a parent or child DRS Object is valid.
+    When the button is clicked, a GET request for the given ID will be made. If
+    an error is returned, the object is set as invalid. If an object is
+    successfully returned, it is valid, unless the property to be updated is
+    "drs_object_parents" and the DRS Object returned is an existing blob-type
+    object. Since blob-type objects cannot have children, they cannot be set as
+    parent objects. If the ID has been verified and is valid, it will display a
+    blue checkmark icon in place of the "Verify" button and the name field will
+    be automatically populated.
+    If the ID has been verified and is invalid, a red "X" icon will be displayed
+    and the name field will not be populated. If the ID has not been verified,
+    or has been edited since being verified, the "Verify" button is displayed.
+    If the ID field is empty, the "Verify" button is displayed and disabled.
+*/
 const VerifyIdButton = props => {
 
     const handleValid = responseData => {

@@ -148,6 +148,7 @@ const DrsMain = props => {
     setMimeType: mimeType => updateScalarProperty('mime_type', mimeType),
     setName: name => updateScalarProperty('name', name),
     setSize: size => updateScalarProperty('size', size),
+    setIsBundle: isBundle => updateScalarProperty('is_bundle', isBundle),
     setVersion: version => updateScalarProperty('version', version),
     // aliases
     addAlias: () => addObjectToList('aliases', newDrsObjectProperty.alias),
@@ -183,8 +184,7 @@ const DrsMain = props => {
     setAwsS3AccessObjectRegion: (index, region) => updateListObjectProperty('aws_s3_access_objects', index, 'region', region),
     setAwsS3AccessObjectBucket: (index, bucket) => updateListObjectProperty('aws_s3_access_objects', index, 'bucket', bucket),
     setAwsS3AccessObjectKey: (index, key) => updateListObjectProperty('aws_s3_access_objects', index, 'key', key),
-
-    setIsBundle: isBundle => updateScalarProperty('is_bundle', isBundle)
+    removeAwsS3AccessObject: index => removeListItem('aws_s3_access_objects', index),
   }
 
   /* ##################################################
@@ -204,7 +204,8 @@ const DrsMain = props => {
     checksums: _.pick(formProps, ['checksums', 'addChecksum', 'setChecksumType', 'setChecksumChecksum', 'removeChecksum']),
     children: _.pick(formProps, ['drs_object_children', 'addChild', 'setChildId', 'setChildName', 'setChildValid', 'setChildInvalid', 'unsetChildValidity', 'removeChild']),
     parents: _.pick(formProps, ['drs_object_parents', 'addParent', 'setParentId', 'setParentName', 'setParentValid', 'setParentInvalid', 'unsetParentValidity', 'removeParent']),
-    
+    fileAccessObjects: _.pick(formProps, ['file_access_objects', 'addFileAccessObject', 'setFileAccessObjectPath', 'removeFileAccessObject']),
+    awsS3AccessObjects: _.pick(formProps, ['aws_s3_access_objects', 'addAwsS3AccessObject', 'setAwsS3AccessObjectRegion', 'setAwsS3AccessObjectBucket', 'setAwsS3AccessObjectKey', 'removeAwsS3AccessObject'])
   }
 
 
