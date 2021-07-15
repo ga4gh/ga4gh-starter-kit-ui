@@ -13,14 +13,21 @@ const Id = props => {
         <Grid container spacing={4} alignItems='center' justify='space-between'>
             <Grid item xs>
                 <FormControl fullWidth>
-                    <TextField id='id' label='Id' margin='normal' name='id' type='text'
-                    value={props.id.id} InputProps={{readOnly: props.readOnlyId}} 
-                    onChange={e => props.setId(e.target.value)}
-                    helperText='Unique identifier for this DRS Object (UUID recommended), cannot be modified later.'/>
+                    <TextField
+                        id='id'
+                        label='Id'
+                        margin='normal'
+                        name='id'
+                        type='text'
+                        value={props.id}
+                        InputProps={{readOnly: props.readOnly}} 
+                        onChange={e => props.setId(e.target.value)}
+                        helperText='Unique identifier for this DRS Object (UUID recommended), cannot be modified later.'
+                    />
                 </FormControl>
             </Grid>
             {/* button to generate id  */}
-            {props.readOnlyId
+            {props.readOnly
                 ? null
                 : (
                     <Grid item xs={2} align='right'>

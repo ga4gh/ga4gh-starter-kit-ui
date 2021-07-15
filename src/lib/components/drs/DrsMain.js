@@ -9,13 +9,15 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-import { Typography } from '@material-ui/core';
+import { Snackbar } from '@material-ui/core';
+import Alert from '@material-ui/lab/Alert';
 import { format } from 'date-fns';
 import DrsIndex from './pages/DrsIndex';
 import DrsShow from './pages/DrsShow';
 import DrsObjectForm from './pages/DrsObjectForm';
 import DrsApiCaller from './utils/DrsApiCaller';
 import _ from 'lodash';
+import FormViewType from '../../../model/common/FormViewType';
 
 const DrsMain = props => {
 
@@ -37,10 +39,7 @@ const DrsMain = props => {
       drs_object_children: [],
       drs_object_parents: [],
       file_access_objects: [],
-      aws_s3_access_objects: [],
-
-      validId: false,
-      validRelatedDrsObjects: true
+      aws_s3_access_objects: []
     }
     return emptyDrsObject;
   }
@@ -60,6 +59,7 @@ const DrsMain = props => {
   const [drsObjectsList, setDrsObjectsList] = useState([]);
   const [activeDrsObject, setActiveDrsObject] = useState(emptyDrsObject());
   const [displayChecksumTypes, setDisplayChecksumTypes] = useState(emptyDisplayChecksumTypes());
+  const [successMessage, setSuccessMessage] = useState(null);
   const [error, setError] = useState(null);
   // const [path, setPath] = useState(this.props.location.pathname);
   const [prevPath, setPrevPath] = useState(null);
@@ -194,20 +194,23 @@ const DrsMain = props => {
   const formProps = {...activeDrsObject, ...activeDrsObjectFunctions};
 
   const groupedFormProps = {
+    id: _.pick(formProps, ['id', 'setId']),
     name: _.pick(formProps, ['name', 'setName']),
     description: _.pick(formProps, ['description', 'setDescription']),
     createdTime: _.pick(formProps, ['created_time', 'setCreatedTime']),
     updatedTime: _.pick(formProps, ['updated_time', 'setUpdatedTime']),
     version: _.pick(formProps, ['version', 'setVersion']),
     isBundle: _.pick(formProps, ['is_bundle', 'setIsBundle']),
+    mimeType: _.pick(formProps, ['mime_type', 'setMimeType']),
+    size: _.pick(formProps, ['size', 'setSize']),
     aliases: _.pick(formProps, ['aliases', 'addAlias', 'setAlias', 'removeAlias']),
     checksums: _.pick(formProps, ['checksums', 'addChecksum', 'setChecksumType', 'setChecksumChecksum', 'removeChecksum']),
     children: _.pick(formProps, ['drs_object_children', 'addChild', 'setChildId', 'setChildName', 'setChildValid', 'setChildInvalid', 'unsetChildValidity', 'removeChild']),
     parents: _.pick(formProps, ['drs_object_parents', 'addParent', 'setParentId', 'setParentName', 'setParentValid', 'setParentInvalid', 'unsetParentValidity', 'removeParent']),
     fileAccessObjects: _.pick(formProps, ['file_access_objects', 'addFileAccessObject', 'setFileAccessObjectPath', 'removeFileAccessObject']),
-    awsS3AccessObjects: _.pick(formProps, ['aws_s3_access_objects', 'addAwsS3AccessObject', 'setAwsS3AccessObjectRegion', 'setAwsS3AccessObjectBucket', 'setAwsS3AccessObjectKey', 'removeAwsS3AccessObject'])
+    awsS3AccessObjects: _.pick(formProps, ['aws_s3_access_objects', 'addAwsS3AccessObject', 'setAwsS3AccessObjectRegion', 'setAwsS3AccessObjectBucket', 'setAwsS3AccessObjectKey', 'removeAwsS3AccessObject']),
+    submit: {activeDrsObject: activeDrsObject, setSuccessMessage: setSuccessMessage}
   }
-
 
   /* ##################################################
    * ROUTE CHANGE LISTENER
@@ -227,7 +230,7 @@ const DrsMain = props => {
         match[1] === 'new' ? activeDrsObjectFunctions.reset() : activeDrsObjectFunctions.retrieve(match[1]);
       }
     })
-  }, [])
+  }, []);
 
   useEffect(() => {
     let updatedDisplayChecksumTypes = emptyDisplayChecksumTypes();
@@ -412,6 +415,16 @@ const DrsMain = props => {
 
   return (
     <div>
+      <Snackbar
+        anchorOrigin={{ vertical: 'top', horizontal: 'center'}}
+        open={successMessage}
+        onClose={() => setSuccessMessage(null)}
+      >
+        <Alert onClose={() => setSuccessMessage(null)} severity="success" variant="filled">
+          {successMessage ? successMessage : null }
+        </Alert>
+    </Snackbar>
+
       <Switch>
         <Route exact path='/drs'>
           <DrsIndex 
@@ -422,27 +435,15 @@ const DrsMain = props => {
         <Route exact path='/drs/new'>
           <DrsObjectForm
             title={"Create New DrsObject"}
-            {...groupedFormProps}
-            activeDrsObject={activeDrsObject}
-            activeDrsObjectFunctions={activeDrsObjectFunctions}
-            formProps={groupedFormProps}
-            displayChecksumTypes={displayChecksumTypes}
-            apiFunctions={apiFunctions}
-            readOnlyId={false}
-            readOnlyForm={false}
+            groupedFormProps={groupedFormProps}
+            formViewType={FormViewType.NEW}
           />
         </Route>
         <Route exact path='/drs/:objectId'>
           <DrsObjectForm
             title={"View DrsObject"}
-            {...groupedFormProps}
-            activeDrsObject={activeDrsObject}
-            activeDrsObjectFunctions={activeDrsObjectFunctions}
-            formProps={groupedFormProps}
-            apiFunctions={apiFunctions}
-            displayChecksumTypes={displayChecksumTypes}
-            readOnlyId={true}
-            readOnlyForm={true}
+            groupedFormProps={groupedFormProps}
+            formViewType={FormViewType.SHOW}
           />
         </Route>
       </Switch>

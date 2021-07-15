@@ -6,8 +6,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from './components/pages/Home';
-import DrsMain from './components/drs/DrsMain';
+import Home from './lib/components/pages/Home';
+import DrsMain from './lib/components/drs/DrsMain';
 
 class App extends React.Component {
   render(){

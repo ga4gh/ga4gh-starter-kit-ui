@@ -11,6 +11,7 @@ import Id from './Id';
 import MimeType from "./MimeType";
 import Name from "./Name";
 import Size from "./Size";
+import SubmitButton from "./SubmitButton";
 import UpdatedTime from "./UpdatedTime";
 import Version from "./Version";
 
@@ -28,6 +29,7 @@ export {
     MimeType,
     Name,
     Size,
+    SubmitButton,
     UpdatedTime,
     Version
 }
