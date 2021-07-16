@@ -10,7 +10,7 @@ const UpdatedTime = props => {
             helperText="Timestamp of when the DRS Object was most recently updated in ISO 8601 format."
             value={props.updated_time}
             setFunction={props.setUpdatedTime}
-            readOnly={props.readOnlyForm}
+            readOnly={props.readOnly}
          />
     )
 }

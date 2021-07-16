@@ -1,12 +1,8 @@
 import React from 'react';
 import { 
-    Typography,
     FormControl,
-    TextField,
-    Grid,
-    Button
+    TextField
 } from '@material-ui/core';
-import { v4 as uuidv4 } from 'uuid';
 
 const SimpleTextField = props => {
     return(

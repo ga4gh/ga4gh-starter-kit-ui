@@ -14,8 +14,8 @@ const MimeType = props => {
                 name='mime_type'
                 type='text'
                 helperText='The media type of the DRS Object' 
-                value={props.mimeType}
-                onChange={(e) => props.setMimeType(e.target.value)}
+                value={props.mime_type}
+                onChange={e => props.setMimeType(e.target.value)}
                 InputProps={{readOnly: props.readOnly}}
             />
         </FormControl>    

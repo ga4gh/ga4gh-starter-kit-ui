@@ -3,6 +3,9 @@ import {
     FormControl,
     Button
 } from '@material-ui/core'
+import {
+    useHistory
+} from 'react-router-dom';
 import SpaceDivider from '../../common/SpaceDivider';
 import FormViewType from '../../../../model/common/FormViewType';
 import DrsApiCaller from '../utils/DrsApiCaller';
@@ -20,7 +23,10 @@ import DrsApiCaller from '../utils/DrsApiCaller';
 */
 const SubmitButton = props => {
 
+    const history = useHistory();
+
     const submit = () => {
+
         const validateActiveDrsObject = () => {
             let [isValid, message] = [true, ''];
 
@@ -85,7 +91,11 @@ const SubmitButton = props => {
         const executeApiCall = requestConfig => {
             DrsApiCaller(
                 requestConfig,
-                responseData => props.setSuccessMessage(`Successfully created DrsObject with id: '${responseData.id}'`),
+                responseData => {
+                    props.setSuccessMessage(`Successfully created DrsObject with id: '${responseData.id}'`);
+                    props.retrieveDrsObjectsList();
+                    history.push('/drs');
+                },
                 props.setError
             );
         }
@@ -115,130 +125,3 @@ const SubmitButton = props => {
 }
 
 export default SubmitButton;
-
-// const SubmitButton = (props) => {
-    /*
-    const [error, setError] = useState(null);
-    const scalarProperties = ['description', 'created_time', 'name', 'updated_time', 'version', 'is_bundle'] 
-    const blobScalarProperties = ['mime_type', 'size']
-    const blobListProperties = ['aliases', 'checksums', 'drs_object_parents', 'file_access_objects', 'aws_s3_access_objects'];
-    const bundleListProperties = ['aliases', 'drs_object_parents', 'drs_object_children'];
-
-    let baseUrl = 'http://localhost:8080/admin/ga4gh/drs/v1/';
-    let requestUrl=(baseUrl+'objects');
-    const cancelToken = axios.CancelToken;
-    const newDrsCancelToken = cancelToken.source();
-
-    let requestConfig = {
-        url: requestUrl,
-        method: 'POST',
-        data: newDrsObjectToSubmit,
-        cancelToken: newDrsCancelToken.token
-    };
-    
-    const relatedDrsObjects = (property) => {
-        let relatedDrsObjects = [];
-        if(activeDrsObject[property]) {
-            activeDrsObject[property].map((relatedDrs) => {
-                if(relatedDrs.isValid) {
-                    let relatedDrsObject = {
-                        id: relatedDrs.id
-                    }
-                    relatedDrsObjects.push(relatedDrsObject);    
-                }
-            })
-        }
-        return relatedDrsObjects;   
-    }
-
-    const getNewDrsObject = () => {
-        let newDrsObject = {
-            id: activeDrsObject.id
-        };
-
-        scalarProperties.map((property) => {
-            if(activeDrsObject[property]) {
-                newDrsObject[property] = activeDrsObject[property];
-            }
-        })
-
-        if(!activeDrsObject.is_bundle) {
-            blobScalarProperties.map((property) => {
-                if(activeDrsObject[property]) {
-                    newDrsObject[property] = activeDrsObject[property];
-                }
-            })
-            blobListProperties.map((property) => {
-                if(activeDrsObject[property] && Object.keys(activeDrsObject[property]).length > 0) {
-                    if(property === 'drs_object_parents') {
-                        newDrsObject[property] = relatedDrsObjects(property);
-                    }
-                    else {
-                        newDrsObject[property] = activeDrsObject[property];
-                    }
-                }
-            })
-        }
-        else { 
-            bundleListProperties.map((property) => {
-                if(activeDrsObject[property] && Object.keys(activeDrsObject[property]).length > 0) {
-                    if(property === 'aliases') {
-                        newDrsObject[property] = activeDrsObject[property];
-                    }
-                    else {
-                        newDrsObject[property] = relatedDrsObjects(property);
-                    }
-                }
-            })
-        }
-        console.log(newDrsObject); 
-        return newDrsObject;   
-    }
-
-    const handleResponse = (response) => {
-        console.log(response);
-        props.updateSubmitNewDrsRedirect(true);
-    }
-
-    const handleError = (error) => {
-        console.log(error);
-        setError(error);
-    }
-
-    let submitButtonDisabled = false;
-    if(!activeDrsObject.validId || !activeDrsObject.validRelatedDrsObjects) {
-        submitButtonDisabled = true;
-    } 
-    else {
-        submitButtonDisabled = false;
-    }
-
-    /* UseDrsStarterKit hook is used to make API POST request. The hook is called when the SubmitButton component is rendered and passes the 
-    newDrsObjectToSubmit object within the request body. Prior to clicking the "Submit" button for the first time, newDrsObjectToSubmit is an 
-    empty object, and therefore the POST request is not made. When the "Submit" button is clicked, the newDrsObjectToSubmit property is updated, 
-    resulting in the POST request being made. */
-    /*
-    DrsApiCaller(requestConfig, handleResponse, handleError, newDrsObjectToSubmit.id, newDrsCancelToken);
-
-    if(!props.readOnlyForm) {
-        return (
-            <FormControl fullWidth>
-                <SpaceDivider/>
-                <ErrorMessage error={error} />
-                <InvalidDrsObjectMessage validId={activeDrsObject.validId} validRelatedDrs={activeDrsObject.validRelatedDrsObjects}/>
-                <Button variant='contained' color='primary' disabled={submitButtonDisabled}
-                onClick={() => 
-                {
-                    let newDrsObject = getNewDrsObject();
-                    if(!error && activeDrsObject.validId && activeDrsObject.validRelatedDrsObjects) {
-                        setNewDrsObjectToSubmit(newDrsObject);
-                    }
-                }}>
-                    Submit
-                </Button>
-            </FormControl>
-        );
-    }
-    else return null;
-    */
-// }

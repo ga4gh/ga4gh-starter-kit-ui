@@ -38,21 +38,48 @@ import FormViewType from '../../../../model/common/FormViewType';
 const DrsObjectForm = (props) => {
     const [error, setError] = useState(null);
 
-    const nonEditableOnEditForm = ['id', 'isBundle'];
-    const p = {};
-    Object.keys(props.groupedFormProps).forEach(key => {
-        switch (props.formViewType) {
-            case FormViewType.SHOW:
-                p[key] = {...props.groupedFormProps[key], readOnly:true};
-                break;
-            case FormViewType.NEW:
-                p[key] = {...props.groupedFormProps[key], readOnly:false};
-                break;
-            case FormViewType.EDIT:
-                // TODO HANDLE EDIT
-                break;
+    const applyReadOnly = () => {
+        let nonEditableOnEditForm = ['id', 'isBundle'];
+        let p = {};
+        Object.keys(props.groupedFormProps).forEach(key => {
+            switch (props.formViewType) {
+                case FormViewType.SHOW:
+                    p[key] = {...props.groupedFormProps[key], readOnly:true};
+                    break;
+                case FormViewType.NEW:
+                    p[key] = {...props.groupedFormProps[key], readOnly:false};
+                    break;
+                case FormViewType.EDIT:
+                    // TODO HANDLE EDIT
+                    break;
+            }
+        })
+        return p;
+    }
+
+    // visualize an editable component if on NEW or EDIT page
+    // visualize only VIEW page ONLY if the property is non-null/non-empty
+    const vis = value => {
+        if (props.formViewType === FormViewType.NEW || props.formViewType === FormViewType.EDIT) {
+            return true;
         }
-    })
+
+        switch (typeof value) {
+            case 'string':
+                return value !== '';
+                break;
+            case 'number':
+                return true;
+                break;
+            case 'object':
+                if (value instanceof Array) {
+                    return value.length > 0;
+                }
+        }
+        return false;
+    }
+
+    const p = applyReadOnly();
 
     return (
       <div>
@@ -84,66 +111,104 @@ const DrsObjectForm = (props) => {
             </Grid>
             <Box pb={4}>
                 <form>
-                    <Id {...p.id} />
-                    <Name {...p.name} />
-                    <Description {...p.description} />
-
+                    {vis(p.id.id) ? <Id {...p.id} /> : null}
+                    {vis(p.name.name) ? <Name {...p.name} /> : null}
+                    {vis(p.description.description) ? <Description {...p.description} /> : null }
                     <Grid container justify='space-evenly' spacing={4}>
-                        <Grid item xs={4}>
-                            <FormControl fullWidth>
-                                <CreatedTime {...p.createdTime} />
-                            </FormControl>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <FormControl fullWidth>
-                                <UpdatedTime {...p.updatedTime} />
-                            </FormControl>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Version {...p.version} />
-                        </Grid>
+                        {vis(p.createdTime.created_time)
+                            ?
+                                <Grid item xs={4}>
+                                    <FormControl fullWidth>
+                                        <CreatedTime {...p.createdTime} />
+                                    </FormControl>
+                                </Grid>
+                            : null
+                        }
+                        {vis(p.updatedTime.updated_time)
+                            ?
+                                <Grid item xs={4}>
+                                    <FormControl fullWidth>
+                                        <UpdatedTime {...p.updatedTime} />
+                                    </FormControl>
+                                </Grid>
+                            : null
+                        }
+                        {vis(p.version.version)
+                            ?
+                                <Grid item xs={4}>
+                                    <Version {...p.version} />
+                                </Grid>
+                            : null
+                        }
                     </Grid>
-
                     <BundleBlobRadio {...p.isBundle} />
-
                     {p.isBundle.is_bundle
                         ? null
                         :
                             <Grid container justify='flex-start' spacing={4}>
-                                <Grid item xs={4}>
-                                    <MimeType {...p.mimeType} />
-                                </Grid>
-                                <Grid item xs={4}>
-                                    <Size {...p.size} />
-                                </Grid>
+                                {vis(p.mimeType.mime_type)
+                                    ? 
+                                        <Grid item xs={4}>
+                                            <MimeType {...p.mimeType} />
+                                        </Grid>
+                                    : null
+                                }
+                                {vis(p.size.size)
+                                    ?
+                                        <Grid item xs={4}>
+                                            <Size {...p.size} />
+                                        </Grid>
+                                    : null
+                                }
                             </Grid>
                     }
                     
-                    <Aliases {...p.aliases} />
+                    {vis(p.aliases.aliases) ? <Aliases {...p.aliases} /> : null}
 
                     {p.isBundle.is_bundle
-                        ? <DrsObjectChildren {...p.children} />
-                        : <Checksums {...p.checksums} displayChecksumTypes={props.displayChecksumTypes} />
+                        ?
+                            vis(p.children.drs_object_children)
+                                ? <DrsObjectChildren {...p.children} />
+                                : null 
+                        :
+                            vis(p.checksums.checksums)
+                                ? <Checksums {...p.checksums} />
+                                : null
                     }
 
-                    <DrsObjectParents {...p.parents} />
+                    {vis(p.parents.drs_object_parents)
+                        ? <DrsObjectParents {...p.parents} />
+                        : null
+                    }
 
                     {p.isBundle.is_bundle
                         ? null
                         :
-                            <FormGroup>
-                                <SpaceDivider />
-                                <Typography align='left' variant='h6'>Access Points</Typography>
-                                <Typography variant='body2' align='left' color='textSecondary'>
-                                    A DRS Object may contain multiple access points for fetching 
-                                    the raw bytes. Multiple access points give the client options 
-                                    in choosing the best data source for their use case (e.g.
-                                    based on geographic proximity to the data). All access points
-                                    associated with a single DRS Object must have the same bytes.
-                                </Typography>
-                                <FileAccessObjects {...p.fileAccessObjects} />
-                                <AwsS3AccessObjects {...p.awsS3AccessObjects} />
-                            </FormGroup>
+                            (vis(p.fileAccessObjects.file_access_objects) || vis(p.awsS3AccessObjects.aws_s3_access_objects))
+                                ?
+                                    <FormGroup>
+                                        <SpaceDivider />
+                                        <Typography align='left' variant='h6'>Access Points</Typography>
+                                        <Typography variant='body2' align='left' color='textSecondary'>
+                                            A DRS Object may contain multiple access points for fetching 
+                                            the raw bytes. Multiple access points give the client options 
+                                            in choosing the best data source for their use case (e.g.
+                                            based on geographic proximity to the data). All access points
+                                            associated with a single DRS Object must have the same bytes.
+                                        </Typography>
+
+                                        {vis(p.fileAccessObjects.file_access_objects)
+                                            ? <FileAccessObjects {...p.fileAccessObjects} />
+                                            : null
+                                        }
+
+                                        {vis(p.awsS3AccessObjects.aws_s3_access_objects)
+                                            ? <AwsS3AccessObjects {...p.awsS3AccessObjects} />
+                                            : null
+                                        }
+                                    </FormGroup>
+                                : null
+                            
                     }
 
                     {props.formViewType === FormViewType.NEW

@@ -20,7 +20,7 @@ const Size = props => {
                 helperText='The size (in bytes) of the DRS Object represented as an integer.'
                 value={props.size}
                 onChange={e => props.setSize(e.target.value)}
-                InputProps={{readOnly: props.readOnlyForm}}
+                InputProps={{readOnly: props.readOnly}}
             />
         </FormControl>
     )

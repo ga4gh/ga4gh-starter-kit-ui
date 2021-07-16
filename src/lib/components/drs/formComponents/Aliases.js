@@ -33,7 +33,7 @@ const Aliases = props => {
                                     <FormControl>
                                         <TextField
                                             variant='outlined'
-                                            id={`alias${index}`}
+                                            id={`alias-${index}`}
                                             margin='normal'
                                             name='alias'
                                             label='Alias'
