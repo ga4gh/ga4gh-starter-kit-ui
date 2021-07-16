@@ -4,22 +4,23 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from './lib/components/pages/Home';
+import { ThemeProvider } from '@material-ui/styles';
+import Landing from './lib/components/pages/Landing';
 import DrsMain from './lib/components/drs/DrsMain';
+import Main from './lib/components/pages/Main';
 
-class App extends React.Component {
-  render(){
+const App = () => {
+  
     return (
-      <div>
-        <Router>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/drs' component={DrsMain} />
-          </Switch>
-        </Router>
-      </div>
+        <ThemeProvider>
+            <Router>
+                <Switch>
+                    <Route exact path='/' component={Landing} />
+                    <Route path='/**' component={Main} />
+                </Switch>
+            </Router>
+        </ThemeProvider>
     );
-  }
 }
 
 export default App;
