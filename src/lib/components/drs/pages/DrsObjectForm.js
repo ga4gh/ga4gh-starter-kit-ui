@@ -36,8 +36,17 @@ import SpaceDivider from '../../common/SpaceDivider';
 import FormViewType from '../../../model/common/FormViewType';
 import { scrollToTop } from '../../../functions/common';
 import DeleteDrsObjectButton from '../formComponents/DeleteDrsObjectButton';
+import { makeStyles } from '@material-ui/core/styles';
+import PageContainer from '../../common/layout/PageContainer';
 
 const DrsObjectForm = (props) => {
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            marginBottom: '50px'
+        }
+    }));
+    const classes = useStyles();
+
     const [error, setError] = useState(null);
 
     const applyReadOnly = () => {
@@ -86,12 +95,7 @@ const DrsObjectForm = (props) => {
     const p = applyReadOnly();
 
     return (
-      <div>
-        <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-        <Container maxWidth='lg'>
+        <PageContainer>
             <Snackbar
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'center'}}
                 open={error}
@@ -246,8 +250,7 @@ const DrsObjectForm = (props) => {
                     }
                 </form>
             </Box>
-        </Container>
-      </div>
+        </PageContainer>
     );
 }
 

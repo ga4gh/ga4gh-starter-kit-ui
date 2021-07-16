@@ -13,6 +13,7 @@ const StarterKitAppBar = () => {
     const useStyles = makeStyles((theme) => ({
         root: {
             flexGrow: 1,
+            marginBottom: 50
         },
         menuButton: {
             marginRight: theme.spacing(2),
@@ -24,7 +25,7 @@ const StarterKitAppBar = () => {
     const classes = useStyles();
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" className={classes.root}>
             <Toolbar>
                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                     <MenuIcon />
