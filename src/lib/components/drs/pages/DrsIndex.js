@@ -10,15 +10,18 @@ import {
   TableRow, 
   TableCell, 
   Button, 
-  Grid, 
-  IconButton
+  Grid,
+  Paper,
+  Breadcrumbs,
+  Link as MuiLink
 } from '@material-ui/core';
+import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import {
   Link, 
   useLocation
 } from "react-router-dom";
 import { scrollToTop } from '../../../functions/common';
-import EditIcon from '@material-ui/icons/Edit';
+import PageContainer from '../../common/layout/PageContainer';
 
   /* Render index table rows populated with data */
 const DrsIndexRows = (props) => {
@@ -29,21 +32,11 @@ const DrsIndexRows = (props) => {
   else {
     const rows = drsObjectsList.map((drsObject) =>
     <TableRow key={drsObject.id}>
+      <TableCell align="left">{drsObject.id}</TableCell>
+      <TableCell align="left">{drsObject.name}</TableCell>
       <TableCell align="left">
-        <Typography>{drsObject.id}</Typography>
-      </TableCell>
-      <TableCell align="left">
-        <Typography>{drsObject.name}</Typography>
-      </TableCell>
-      <TableCell align="right">
-        <Button
-          variant="contained"
-          color='default'
-          component={Link}
-          to={`/drs/${drsObject.id}`}
-          onClick={scrollToTop}
-        >
-          <Typography variant="button">View Details</Typography>
+        <Button variant="outlined" color='secondary' component={Link} to={`/drs/${drsObject.id}`}>
+          View
         </Button>
       </TableCell>
       <TableCell align="center">
@@ -68,66 +61,44 @@ const DrsIndexRows = (props) => {
 const DrsIndex = (props) => {
   /* Render DrsIndex page */
   return (
-    <div align="center">
-      <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-      />
-      <Container maxWidth="lg" >
-        <Grid container justify='space-between' alignItems='center'>
-          <Grid item xs={2} align='left'>
-            <Button 
-              variant='contained' 
-              component={Link} 
-              to='/' 
-              color='primary' 
-              size='large'
-              onClick={scrollToTop}
-            >
-              <Typography variant='button'>Home</Typography>
-            </Button>
-          </Grid>
-          <Grid item xs={8}>
-            <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
-          </Grid>
-          <Grid item xs={2} align='right'>
-            <Button 
-              variant='contained' 
-              component={Link} 
-              to='/drs/new' 
-              color='primary' 
-              size='large'
-              onClick={scrollToTop}
-            >
-              <Typography variant='button'>New DRS Object</Typography>
-            </Button>
-          </Grid>
-        </Grid>
-      </Container>
-      <Container maxWidth="lg">
-        <TableContainer>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell align="left">
-                  <Typography variant="h5">DRS Object ID</Typography>
-                </TableCell>
-                <TableCell align="left">
-                  <Typography variant="h5">Name</Typography>
-                </TableCell>
-                <TableCell align="center">
-                  <Typography variant="h5">View Details</Typography>
-                </TableCell>
-                <TableCell align="center">
-                  <Typography variant="h5">Edit</Typography>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <DrsIndexRows drsObjectsList={props.drsObjectsList}/>
-          </Table>
-        </TableContainer>
-      </Container>
-    </div>
+    <PageContainer>
+      <Breadcrumbs>
+        <Link color="inherit" to="/home">starter-kit</Link>
+        <Link>services</Link>
+        <Link>org.ga4gh.my-drs-service</Link>
+        <Link to="/drs">drs</Link>
+      </Breadcrumbs>
+
+      <div>
+        <Button
+          variant='text'
+          component={Link}
+          to='/'
+          color='primary'
+        >
+          <ArrowBackIos />
+          <Typography>back</Typography>
+        </Button>
+      </div>
+      <div>
+        <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'>
+          <Typography variant='button'>New DRS Object</Typography>
+        </Button>
+      </div>
+    
+      <TableContainer component={Paper}>
+        <Table size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell align="left">DRS Object ID</TableCell>
+              <TableCell align="left">Name</TableCell>
+              <TableCell align="left" />
+            </TableRow>
+          </TableHead>
+          <DrsIndexRows drsObjectsList={props.drsObjectsList}/>
+        </Table>
+      </TableContainer>
+    </PageContainer>
   );
 }
 

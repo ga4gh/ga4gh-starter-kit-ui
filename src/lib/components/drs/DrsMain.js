@@ -2,6 +2,11 @@ import '@fontsource/roboto';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import {
+  Container,
+  Typography,
+  Paper
+} from '@material-ui/core';
+import {
   Switch,
   Route,
   useHistory
@@ -296,7 +301,7 @@ const DrsMain = props => {
         <Alert onClose={() => setSuccessMessage(null)} severity="success" variant="filled">
           {successMessage ? successMessage : null }
         </Alert>
-    </Snackbar>
+      </Snackbar>
 
       <Switch>
         <Route exact path='/drs'>
