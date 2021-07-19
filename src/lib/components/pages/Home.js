@@ -5,32 +5,32 @@ import {
 import { 
   Container, 
   Button, 
-  Typography
+  Typography,
+  Breadcrumbs
  } from '@material-ui/core';
  import { scrollToTop } from '../../functions/common';
+import PageContainer from '../common/layout/PageContainer';
 
 const Home = () => {
     return(
-        <div align="center">
-            <meta
-                name="viewport"
-                content="minimum-scale=1, initial-scale=1, width=device-width"
-            />
-            <Container maxWidth="lg">
-                <Typography variant="h1" gutterBottom>Welcome to the GA4GH Starter Kit</Typography>
-                <Typography variant="h3" gutterBottom>Get Started</Typography>
-                <Typography variant="body1" gutterBottom>Click the buttons below to start using one of the GA4GH Starter Kits</Typography>
-                <div>
-                    <nav>
-                        <Button variant="contained" color="default" size="large">
-                            <Link to='/drs'>
-                                <Typography variant="button">DRS Starter Kit</Typography>
-                            </Link>
-                        </Button>
-                    </nav>
-                </div>
-            </Container>
-        </div>
+        <PageContainer>
+            <Breadcrumbs>
+                <Link color="inherit" to="/home">starter-kit</Link>
+            </Breadcrumbs>
+
+            <Typography variant="h1" gutterBottom>Welcome to the GA4GH Starter Kit</Typography>
+            <Typography variant="h3" gutterBottom>Get Started</Typography>
+            <Typography variant="body1" gutterBottom>Click the buttons below to start using one of the GA4GH Starter Kits</Typography>
+            <div>
+                <nav>
+                    <Button variant="contained" color="default" size="large">
+                        <Link to='/services'>
+                            <Typography variant="button">Services</Typography>
+                        </Link>
+                    </Button>
+                </nav>
+            </div>
+        </PageContainer>
     );
 }
 

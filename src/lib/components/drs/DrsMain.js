@@ -12,7 +12,8 @@ import {
 } from "react-router-dom";
 import { Snackbar } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
-import DrsIndex from './pages/DrsIndex';
+import { format } from 'date-fns';
+import DrsObjectIndex from './pages/DrsObjectIndex';
 import DrsObjectForm from './pages/DrsObjectForm';
 import DrsApiCaller from './utils/DrsApiCaller';
 import _ from 'lodash';
@@ -304,7 +305,7 @@ const DrsMain = props => {
 
       <Switch>
         <Route exact path='/drs'>
-          <DrsIndex 
+          <DrsObjectIndex 
             drsObjectsList={drsObjectsList} 
             setError={setError}
           />

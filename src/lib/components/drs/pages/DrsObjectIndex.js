@@ -58,7 +58,13 @@ const DrsIndexRows = (props) => {
   }
 }
 
-const DrsIndex = (props) => {
+const DrsObjectIndex = (props) => {
+  /* Restore scroll to top of page on navigation to a new page */
+  const { pathname }  = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname])
+
   /* Render DrsIndex page */
   return (
     <PageContainer>
@@ -102,4 +108,4 @@ const DrsIndex = (props) => {
   );
 }
 
-export default DrsIndex;
+export default DrsObjectIndex;
