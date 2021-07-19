@@ -16,6 +16,7 @@ import {
   Link, 
   useLocation
 } from "react-router-dom";
+import { scrollToTop } from '../../../functions/common';
 
   /* Render index table rows populated with data */
 const DrsIndexRows = (props) => {
@@ -33,7 +34,13 @@ const DrsIndexRows = (props) => {
         <Typography>{drsObject.name}</Typography>
       </TableCell>
       <TableCell align="right">
-        <Button variant="contained" color='default' component={Link} to={`/drs/${drsObject.id}`}>
+        <Button
+          variant="contained"
+          color='default'
+          component={Link}
+          to={`/drs/${drsObject.id}`}
+          onClick={scrollToTop}
+        >
           <Typography variant="button">View Details</Typography>
         </Button>
       </TableCell>
@@ -46,12 +53,6 @@ const DrsIndexRows = (props) => {
 }
 
 const DrsIndex = (props) => {
-  /* Restore scroll to top of page on navigation to a new page */
-  const { pathname }  = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname])
-
   /* Render DrsIndex page */
   return (
     <div align="center">
@@ -100,4 +101,4 @@ const DrsIndex = (props) => {
   );
 }
 
-  export default DrsIndex;
+export default DrsIndex;

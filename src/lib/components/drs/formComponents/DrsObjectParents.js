@@ -5,6 +5,15 @@ import {
 } from '@material-ui/core';
 
 const DrsObjectParents = props => {
+    const assertParentIsBundleThenSetValid = (responseData) => {
+        if (responseData.is_bundle === true) {
+            props.setParentValid();
+            props.setParentName(responseData.name);
+        } else {
+            props.setParentInvalid();
+        }
+    }
+
     return (
         <DrsObjectRelatives
             header='Parent Bundles'
@@ -26,6 +35,7 @@ const DrsObjectParents = props => {
             setRelativeValid={props.setParentValid}
             setRelativeInvalid={props.setParentInvalid}
             unsetRelativeValidity={props.unsetParentValidity}
+            customApiCallSuccessCallback={assertParentIsBundleThenSetValid}
             removeRelative={props.removeParent}
             readOnly={props.readOnly}
         />

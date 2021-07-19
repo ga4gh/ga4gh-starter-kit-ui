@@ -33,7 +33,7 @@ import {
     Version
 } from '../formComponents';
 import SpaceDivider from '../../common/SpaceDivider';
-import FormViewType from '../../../../model/common/FormViewType';
+import FormViewType from '../../../model/common/FormViewType';
 
 const DrsObjectForm = (props) => {
     const [error, setError] = useState(null);

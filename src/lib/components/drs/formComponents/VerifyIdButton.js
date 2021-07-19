@@ -25,17 +25,22 @@ import DrsApiCaller from '../utils/DrsApiCaller';
     If the ID field is empty, the "Verify" button is displayed and disabled.
 */
 const VerifyIdButton = props => {
-
-    const handleValid = responseData => {
+    const defaultHandleValid = responseData => {
         props.setRelativeValid();
         props.setRelativeName(responseData.name);
     }
+    const handleValid = props.customApiCallSuccessCallback ? props.customApiCallSuccessCallback : defaultHandleValid;
+
     const callAndValidate = relative => {
-        let requestConfig = {
-            url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${relative.id}`,
-            method: 'GET'
+        if (relative.id === '') {
+            props.setRelativeInvalid();
+        } else {
+            let requestConfig = {
+                url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${relative.id}`,
+                method: 'GET'
+            }
+            DrsApiCaller(requestConfig, handleValid, props.setRelativeInvalid);
         }
-        DrsApiCaller(requestConfig, handleValid, props.setRelativeInvalid);
     }
 
     return (

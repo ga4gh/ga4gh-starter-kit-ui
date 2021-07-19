@@ -5,12 +5,18 @@ import {
     TextField,
     Grid,
     FormGroup,
-    InputAdornment
+    InputAdornment,
+    Tooltip,
+    Button
 } from '@material-ui/core';
+import {
+    Link
+} from 'react-router-dom';
 import SpaceDivider from '../../common/SpaceDivider';
 import RemoveItemButton from '../../common/RemoveItemButton';
 import VerifyIdButton from './VerifyIdButton';
 import AddItemButton from '../../common/AddItemButton';
+import { scrollToTop } from '../../../functions/common';
 
 /*
     Related DRS Objects include DRS Object Children and DRS Object Parents, each
@@ -55,6 +61,7 @@ const DrsObjectRelatives = props => {
                                                                 setRelativeValid={() => props.setRelativeValid(index)}
                                                                 setRelativeInvalid={() => props.setRelativeInvalid(index)}
                                                                 retrieveDrsObject={props.retrieveDrsObject}
+                                                                customApiCallSuccessCallback={props.customApiCallSuccessCallback}
                                                                 readOnly={props.readOnly}
                                                             />
                                                         </InputAdornment>
@@ -70,6 +77,26 @@ const DrsObjectRelatives = props => {
                                     value={relative.name} InputProps={{readOnly: true}}/>                            
                                 </FormControl>
                             </Grid>
+                            {props.readOnly
+                                ?
+                                    <Grid item xs={2}>
+                                        <Tooltip
+                                            title={`View DrsObject with id '${relative.id}'`}
+                                        >
+                                            <Button
+                                                variant='contained'
+                                                component={Link}
+                                                to={`/drs/${relative.id}`}
+                                                onClick={scrollToTop}
+                                                color='primary'
+                                            >
+                                                <Typography variant='button'>View</Typography>
+                                            </Button>
+                                        </Tooltip>    
+                                    </Grid>
+                                : null
+
+                            }
 
                             <RemoveItemButton
                                 display={!props.readOnly}

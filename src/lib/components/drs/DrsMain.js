@@ -13,7 +13,7 @@ import DrsIndex from './pages/DrsIndex';
 import DrsObjectForm from './pages/DrsObjectForm';
 import DrsApiCaller from './utils/DrsApiCaller';
 import _ from 'lodash';
-import FormViewType from '../../../model/common/FormViewType';
+import FormViewType from '../../model/common/FormViewType';
 
 const DrsMain = props => {
 
@@ -166,7 +166,10 @@ const DrsMain = props => {
     setChildName: (index, name) => updateListObjectProperty('drs_object_children', index, 'name', name),
     setChildValid: index => updateListObjectProperty('drs_object_children', index, 'isValid', true),
     setChildInvalid: index => updateListObjectProperty('drs_object_children', index, 'isValid', false),
-    unsetChildValidity: index => updateListObjectProperty('drs_object_children', index, 'isValid', undefined),
+    unsetChildValidity: index => {
+      updateListObjectProperty('drs_object_children', index, 'isValid', undefined);
+      updateListObjectProperty('drs_object_children', index, 'name', '');
+    },
     removeChild: index => removeListItem('drs_object_children', index),
     // parents
     addParent: () => addObjectToList('drs_object_parents', newDrsObjectProperty.relative),
@@ -174,7 +177,10 @@ const DrsMain = props => {
     setParentName: (index, name) => updateListObjectProperty('drs_object_parents', index, 'name', name),
     setParentValid: index => updateListObjectProperty('drs_object_parents', index, 'isValid', true),
     setParentInvalid: index => updateListObjectProperty('drs_object_parents', index, 'isValid', false),
-    unsetParentValidity: index => updateListObjectProperty('drs_object_parents', index, 'isValid', undefined),
+    unsetParentValidity: index => {
+      updateListObjectProperty('drs_object_parents', index, 'isValid', undefined);
+      updateListObjectProperty('drs_object_parents', index, 'name', '');
+    },
     removeParent: index => removeListItem('drs_object_parents', index),
     // file access objects
     addFileAccessObject: () => addObjectToList('file_access_objects', newDrsObjectProperty.fileAccessObject),
@@ -221,7 +227,6 @@ const DrsMain = props => {
   // URL path
   let history = useHistory();
   useEffect(() => {
-    console.log('running effect a');
     history.listen((location, action) => {
       let re = new RegExp('/drs/(.+)');
       let match = location.pathname.match(re);
@@ -233,7 +238,6 @@ const DrsMain = props => {
 
   // initialize the drsObjectList upon first load
   useEffect(() => {
-    console.log('running effect b');
     retrieveDrsObjectsList();
   }, []);
 
