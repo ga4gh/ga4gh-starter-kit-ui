@@ -21,12 +21,6 @@ import {
     to the current minute when clicked.
 */
 const ISO8601DateTimePicker = props => {
-
-    useEffect(() => {
-        moment.tz.setDefault('Asia/Kolkata')
-
-    }, [])
-
     return (
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <FormControl fullWidth>
@@ -43,8 +37,8 @@ const ISO8601DateTimePicker = props => {
                     helperText={props.helperText}
                     onChange={date => {
                         date.setSeconds(0, 0);
-                        let utcDate = format(date, "yyyy-MM-dd'T'HH:mm:ss'Z'");
-                        props.setFunction(utcDate);
+                        let dateString = date.toISOString().substr(0, 19) + "Z";
+                        props.setFunction(dateString);
                 }} />
             </FormControl>
         </MuiPickersUtilsProvider>
