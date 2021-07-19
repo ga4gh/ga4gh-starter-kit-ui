@@ -40,22 +40,25 @@ const DrsObjectRelatives = props => {
                                             props.setRelativeId(index, e.target.value);
                                             props.unsetRelativeValidity(index);
                                         }}
-                                        InputProps={
-                                            {
-                                                readOnly: props.readOnly,
-                                                endAdornment: 
-                                                    <InputAdornment position='end'>
-                                                        <VerifyIdButton 
-                                                            activeDrsObject={props.activeDrsObject}
-                                                            relative={relative}
-                                                            setRelativeName={(name) => props.setRelativeName(index, name)}
-                                                            setRelativeValid={() => props.setRelativeValid(index)}
-                                                            setRelativeInvalid={() => props.setRelativeInvalid(index)}
-                                                            retrieveDrsObject={props.retrieveDrsObject}
-                                                            readOnly={props.readOnly}
-                                                        />
-                                                    </InputAdornment>
-                                            }
+                                        InputProps={props.readOnly
+                                            ?
+                                                {readOnly: props.readOnly}
+                                            :
+                                                {
+                                                    readOnly: props.readOnly,
+                                                    endAdornment:
+                                                        <InputAdornment position='end'>
+                                                            <VerifyIdButton
+                                                                activeDrsObject={props.activeDrsObject}
+                                                                relative={relative}
+                                                                setRelativeName={(name) => props.setRelativeName(index, name)}
+                                                                setRelativeValid={() => props.setRelativeValid(index)}
+                                                                setRelativeInvalid={() => props.setRelativeInvalid(index)}
+                                                                retrieveDrsObject={props.retrieveDrsObject}
+                                                                readOnly={props.readOnly}
+                                                            />
+                                                        </InputAdornment>
+                                                }
                                         }
                                     />
                                 </FormControl>
