@@ -46,14 +46,14 @@ const Checksums = props => {
                 The following list displays the recorded digest algorithms
                 and corresponding values for this DRS Object.
             </Typography>
-            <br />
             {props.checksums.map((checksum, index) => {
                 return (
                     <FormGroup key={`checksum${index}`} row>
-                        <Grid container spacing={4}>
-                            <Grid item xs={3}>
+                        <Grid container alignItems='center' spacing={4}>
+                            <Grid item>
                                 <FormControl fullWidth>
-                                    <TextField 
+                                    <TextField
+                                        fullWidth
                                         select
                                         variant='outlined'
                                         id={`ChecksumType${index}`}
@@ -63,6 +63,7 @@ const Checksums = props => {
                                         align='left'
                                         helperText='Hashing algorithm used to generate the checksum.' 
                                         value={checksum.type}
+                                        margin='normal'
                                         onChange={e => props.setChecksumType(index, e.target.value)}
                                         InputProps={{readOnly: props.readOnly}}
                                     >
@@ -89,13 +90,15 @@ const Checksums = props => {
                             <Grid item xs>
                                 <FormControl fullWidth>
                                     <TextField
+                                        fullWidth
                                         variant='outlined'
                                         id={`ChecksumValue${index}`}
                                         label='Checksum'
                                         name='checksum'
-                                        type='checksum'
+                                        type='text'
                                         helperText='Checksum digest value.'
                                         value={checksum.checksum}
+                                        margin='normal'
                                         onChange={e => props.setChecksumChecksum(index, e.target.value)}
                                         InputProps={{readOnly: props.readOnly}}
                                     />

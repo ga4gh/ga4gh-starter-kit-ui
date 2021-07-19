@@ -244,11 +244,27 @@ const DrsMain = props => {
   // update the allowed checksum types list every time any checksum type
   // changes
   useEffect(() => {
-    let updatedDisplayChecksumTypes = emptyDisplayChecksumTypes();
-    activeDrsObject.checksums.forEach((checksum, index) => {
-      updatedDisplayChecksumTypes[checksum.type] = index;
+    let transientActiveDrsObject = {...activeDrsObject};
+    let transientDisplayChecksumTypes = emptyDisplayChecksumTypes();
+    let checksumTypesEncountered = [];
+    let unsetChecksumTypeEncountered = false;
+    
+    transientActiveDrsObject.checksums.forEach((checksum, index) => {
+      if (checksum.type !== '') {
+        if (checksumTypesEncountered.includes(checksum.type)) {
+          unsetChecksumTypeEncountered = true;
+          checksum.type = '';
+        } else {
+          transientDisplayChecksumTypes[checksum.type] = index;
+          checksumTypesEncountered.push(checksum.type);
+        }
+      }
     })
-    setDisplayChecksumTypes(updatedDisplayChecksumTypes);
+    setDisplayChecksumTypes(transientDisplayChecksumTypes);
+
+    if (unsetChecksumTypeEncountered) {
+      setActiveDrsObject(transientActiveDrsObject);
+    }
   }, [activeDrsObject]);
 
   /* ##################################################

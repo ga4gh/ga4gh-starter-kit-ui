@@ -41,7 +41,11 @@ const DrsObjectRelatives = props => {
                                         fullWidth
                                         variant='outlined'
                                         id={`ID_${props.relationship}${index}`} 
-                                        label='Id' name={relative.id} value={relative.id} margin='normal' type='text' 
+                                        label='Id'
+                                        name={relative.id}
+                                        value={relative.id}
+                                        margin='normal'
+                                        type='text'
                                         onChange={e => {
                                             props.setRelativeId(index, e.target.value);
                                             props.unsetRelativeValidity(index);
