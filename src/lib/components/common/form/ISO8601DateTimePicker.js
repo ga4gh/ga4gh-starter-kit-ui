@@ -7,7 +7,7 @@ import {
     DateTimePicker,
     MuiPickersUtilsProvider 
 } from '@material-ui/pickers';
-import { dateToISOString } from '../../functions/common';
+import { dateToISOString } from '../../../functions/common';
 
 /*
     Displays a text field that opens a date-time picker when selected. The date

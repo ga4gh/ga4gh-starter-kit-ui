@@ -5,8 +5,10 @@ import {
 } from 'react-router-dom'
 import About from './About';
 import Home from './Home';
-import StarterKitAppBar from '../common/StarterKitAppBar';
-import StarterKitBottomNav from '../common/StarterKitBottomNav';
+import {
+    StarterKitAppBar,
+    StarterKitBottomNav
+ } from '../common/navigation';
 import DrsObjectMain from '../ga4gh/drs/drsobject/DrsObjectMain';
 import { makeStyles } from '@material-ui/core/styles';
 import Services from './Services';

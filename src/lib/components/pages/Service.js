@@ -7,8 +7,10 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import PageContainer from '../common/layout/PageContainer';
-import BreadcrumbTrail from '../common/navigation/BreadcrumbTrail';
-import BackButton from '../common/button/BackButton';
+import {
+    BackButton,
+    BreadcrumbTrail
+ } from '../common/navigation';
 import ServiceInfo from '../common/info/ServiceInfo';
 import servicesStyles from '../../styles/pages/servicesStyles';
 import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';

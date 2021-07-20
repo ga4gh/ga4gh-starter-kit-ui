@@ -13,10 +13,12 @@ import {
     Link
 } from 'react-router-dom';
 import { scrollToTop } from '../../../../../functions/common';
-import SpaceDivider from '../../../../common/SpaceDivider';
-import RemoveItemButton from '../../../../common/RemoveItemButton';
+import { SpaceDivider } from '../../../../common/layout';
+import {
+    AddItemButton,
+    RemoveItemButton
+} from '../../../../common/form';
 import VerifyIdButton from './VerifyIdButton';
-import AddItemButton from '../../../../common/AddItemButton';
 
 /*
     Related DRS Objects include DRS Object Children and DRS Object Parents, each

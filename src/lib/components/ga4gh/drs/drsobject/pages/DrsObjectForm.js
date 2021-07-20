@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-    Container,
     Typography,
     FormControl,
     Grid,
@@ -32,12 +31,14 @@ import {
     UpdatedTime,
     Version
 } from '../formComponents';
-import SpaceDivider from '../../../../common/SpaceDivider';
+import {
+    PageContainer,
+    SpaceDivider
+} from '../../../../common/layout';
 import FormViewType from '../../../../../model/common/FormViewType';
 import { scrollToTop } from '../../../functions/common';
 import DeleteDrsObjectButton from '../formComponents/DeleteDrsObjectButton';
 import { makeStyles } from '@material-ui/core/styles';
-import PageContainer from '../../../../common/layout/PageContainer';
 
 const DrsObjectForm = (props) => {
     const useStyles = makeStyles((theme) => ({
