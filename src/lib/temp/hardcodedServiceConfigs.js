@@ -3,7 +3,7 @@ const hardCodedServiceConfigs = [
         id: 'org.ga4gh.localdrs.a',
         serviceType: 'drs',
         publicUrl: 'http://localhost:4500',
-        adminUrl: 'http://localhost:4501'
+        adminUrl: 'http://localhost:8080'
     },
     {
         id: 'org.ga4gh.localdrs.b',

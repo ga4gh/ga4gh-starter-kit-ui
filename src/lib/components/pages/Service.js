@@ -2,14 +2,17 @@ import React, { useState, useEffect } from 'react';
 import {
     Typography,
     Grid,
-    Paper
+    Paper,
+    Button
 } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import PageContainer from '../common/layout/PageContainer';
 import BreadcrumbTrail from '../common/navigation/BreadcrumbTrail';
 import BackButton from '../common/button/BackButton';
+import ServiceInfo from '../common/info/ServiceInfo';
 import servicesStyles from '../../styles/pages/servicesStyles';
 import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
-import ApiCaller from '../drs/utils/ApiCaller';
+import ApiCaller from '../apis/drs/utils/ApiCaller';
 
 const Service = props => {
     const apiType = ga4ghApiTypes[props.service.serviceType];
@@ -19,9 +22,17 @@ const Service = props => {
 
     const [serviceInfo, setServiceInfo] = useState(null);
 
+    const callAndUpdateServiceInfo = () => {
+        let url = `${props.service.publicUrl}${apiType.serviceInfoEndpoint}`;
+        let requestConfig = {
+            url: url,
+            method: 'GET'
+        }
+        ApiCaller(requestConfig, setServiceInfo, console.log);
+    }
+
     useEffect(() => {
-        console.log('fetching service info');
-        console.log(`${props.service.publicUrl}${apiType.serviceInfoEndpoint}`);
+        callAndUpdateServiceInfo();
     }, [])
 
     return (
@@ -45,9 +56,12 @@ const Service = props => {
                         <Typography align='center' variant='h6'>
                             Service Info
                         </Typography>
+                        {serviceInfo
+                            ? <ServiceInfo {...serviceInfo} />
+                            : null
+                        }
 
-                    </Paper>
-                    
+                    </Paper>                    
                 </Grid>
 
                 <Grid item xs={6}>
@@ -55,6 +69,17 @@ const Service = props => {
                         <Typography align='center' variant='h6'>
                             Models
                         </Typography>
+                        {apiType.models.map(model => {
+                            return (
+                                <Button
+                                    component={Link}
+                                    to={`/services/${props.service.id}/${props.service.serviceType}/${model.path}`}
+                                    variant='outlined'
+                                    color='primary'>
+                                    {model.label}
+                                </Button>
+                            )
+                        })}
                     </Paper>
                     
                 </Grid>

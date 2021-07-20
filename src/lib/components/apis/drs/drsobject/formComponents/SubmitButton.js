@@ -6,9 +6,9 @@ import {
 import {
     useHistory
 } from 'react-router-dom';
-import SpaceDivider from '../../common/SpaceDivider';
-import FormViewType from '../../../model/common/FormViewType';
-import DrsApiCaller from '../utils/DrsApiCaller';
+import SpaceDivider from '../../../../common/SpaceDivider';
+import FormViewType from '../../../../../model/common/FormViewType';
+import DrsApiCaller from '../../utils/DrsApiCaller';
 import { scrollToTop } from '../../../functions/common';
 
 /*

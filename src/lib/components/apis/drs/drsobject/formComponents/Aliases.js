@@ -7,9 +7,9 @@ import {
     FormGroup,
     Box
 } from '@material-ui/core';
-import SpaceDivider from '../../common/SpaceDivider';
-import AddItemButton from '../../common/AddItemButton';
-import RemoveItemButton from '../../common/RemoveItemButton';
+import SpaceDivider from '../../../../common/SpaceDivider';
+import AddItemButton from '../../../../common/AddItemButton';
+import RemoveItemButton from '../../../../common/RemoveItemButton';
 
 /*
     Alias instances can be added or removed using the AddPropertyButton and

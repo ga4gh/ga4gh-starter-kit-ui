@@ -16,12 +16,12 @@ import Alert from '@material-ui/lab/Alert';
 import { format } from 'date-fns';
 import DrsObjectIndex from './pages/DrsObjectIndex';
 import DrsObjectForm from './pages/DrsObjectForm';
-import DrsApiCaller from './utils/DrsApiCaller';
+import DrsApiCaller from '../utils/DrsApiCaller';
 import _ from 'lodash';
-import FormViewType from '../../model/common/FormViewType';
-import { dateToISOString } from '../../functions/common';
+import FormViewType from '../../../../model/common/FormViewType';
+import { dateToISOString } from '../../../../functions/common';
 
-const DrsMain = props => {
+const DrsObjectMain = props => {
 
   const emptyDrsObject = () => {
     let dateString = dateToISOString(new Date());
@@ -253,6 +253,7 @@ const DrsMain = props => {
 
   // initialize the drsObjectList upon first load
   useEffect(() => {
+    console.log('retrieving...');
     retrieveDrsObjectsList();
   }, []);
   
@@ -292,6 +293,8 @@ const DrsMain = props => {
    * RENDER
    * ################################################## */
 
+  const baseURL = `/services/${props.service.id}/drs/objects`;
+
   return (
     <div>
       <Snackbar
@@ -304,37 +307,36 @@ const DrsMain = props => {
         </Alert>
       </Snackbar>
 
-      <Switch>
-        <Route exact path='/drs'>
-          <DrsObjectIndex 
-            drsObjectsList={drsObjectsList} 
-            setError={setError}
-          />
-        </Route>
-        <Route exact path='/drs/new'>
-          <DrsObjectForm
-            title={"Create New DrsObject"}
-            groupedFormProps={groupedFormProps}
-            formViewType={FormViewType.NEW}
-          />
-        </Route>
-        <Route exact path='/drs/:objectId'>
-          <DrsObjectForm
-            title={`View DrsObject: ${activeDrsObject.id}`}
-            groupedFormProps={groupedFormProps}
-            formViewType={FormViewType.SHOW}
-          />
-        </Route>
-        <Route exact path='/drs/:objectId/edit'>
+      {/* all routes for DRS Object model: index, show, new, edit */}
+      <Route exact path={baseURL}>
+        <DrsObjectIndex 
+          drsObjectsList={drsObjectsList} 
+          setError={setError}
+        />
+      </Route>
+      <Route exact path={`${baseURL}/new`}>
+        <DrsObjectForm
+          title={"Create New DrsObject"}
+          groupedFormProps={groupedFormProps}
+          formViewType={FormViewType.NEW}
+        />
+      </Route>
+      <Route exact path={`${baseURL}/:objectId`}>
+        <DrsObjectForm
+          title={`View DrsObject: ${activeDrsObject.id}`}
+          groupedFormProps={groupedFormProps}
+          formViewType={FormViewType.SHOW}
+        />
+      </Route>
+      <Route exact path={`${baseURL}/:objectId/edit`}>
           <DrsObjectForm
             title={`Edit DrsObject: ${activeDrsObject.id}`}
             groupedFormProps={groupedFormProps}
             formViewType={FormViewType.EDIT}
           />
-        </Route>
-      </Switch>
+      </Route>
     </div>
   )
 }
   
-export default DrsMain;
+export default DrsObjectMain;
