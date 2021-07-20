@@ -21,9 +21,11 @@ import {
   useLocation
 } from "react-router-dom";
 import { scrollToTop } from '../../../../../functions/common';
-import PageContainer from '../../../../common/layout/PageContainer';
-import BreadcrumbTrail from '../../../../common/navigation/BreadcrumbTrail';
-import BackButton from '../../../../common/button/BackButton';
+import { PageContainer } from '../../../../common/layout';
+import {
+  BackButton,
+  BreadcrumbTrail
+ } from '../../../../common/navigation';
 
   /* Render index table rows populated with data */
 const DrsIndexRows = (props) => {

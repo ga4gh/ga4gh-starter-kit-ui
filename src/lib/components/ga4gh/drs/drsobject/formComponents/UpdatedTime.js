@@ -1,5 +1,5 @@
 import React from 'react';
-import ISO8601DateTimePicker from '../../../../common/ISO8601DateTimePicker';
+import { ISO8601DateTimePicker } from '../../../../common/form';
 
 const UpdatedTime = props => {
     return (

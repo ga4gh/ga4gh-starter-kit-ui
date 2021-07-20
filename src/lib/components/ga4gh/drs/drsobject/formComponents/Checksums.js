@@ -7,9 +7,11 @@ import {
     FormGroup,
     MenuItem
 } from '@material-ui/core';
-import SpaceDivider from '../../../../common/SpaceDivider';
-import AddItemButton from '../../../../common/AddItemButton';
-import RemoveItemButton from '../../../../common/RemoveItemButton';
+import { SpaceDivider } from '../../../../common/layout';
+import {
+    AddItemButton,
+    RemoveItemButton
+} from '../../../../common/form';
 
 /*
     Displayed for blob-type objects and can be added and removed. The Type

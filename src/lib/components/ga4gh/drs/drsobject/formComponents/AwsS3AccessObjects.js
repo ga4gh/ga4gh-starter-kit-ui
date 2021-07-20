@@ -6,8 +6,10 @@ import {
     Typography,
     Grid
 } from '@material-ui/core';
-import AddItemButton from '../../../../common/AddItemButton';
-import RemoveItemButton from '../../../../common/RemoveItemButton';
+import {
+    AddItemButton,
+    RemoveItemButton
+ } from '../../../../common/form';
 
 const AwsS3AccessObjects = props => {
     return (

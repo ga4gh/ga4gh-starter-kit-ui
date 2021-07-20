@@ -10,9 +10,11 @@ import {
 import { 
     Link
 } from 'react-router-dom';
-import PageContainer from '../common/layout/PageContainer';
-import BackButton from '../common/button/BackButton';
-import BreadcrumbTrail from '../common/navigation/BreadcrumbTrail';
+import { PageContainer } from '../common/layout';
+import {
+    BackButton,
+    BreadcrumbTrail
+ } from '../common/navigation';
 import servicesStyles from '../../styles/pages/servicesStyles';
 import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
 import hardCodedServiceConfigs from '../../temp/hardcodedServiceConfigs';

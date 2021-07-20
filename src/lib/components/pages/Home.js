@@ -4,15 +4,11 @@ import {
   Link
 } from "react-router-dom";
 import { 
-  Container, 
   Button, 
-  Typography,
-  Breadcrumbs
+  Typography
  } from '@material-ui/core';
- import { scrollToTop } from '../../functions/common';
-import PageContainer from '../common/layout/PageContainer';
-import BackButton from '../common/button/BackButton';
-import BreadcrumbTrail from '../common/navigation/BreadcrumbTrail';
+import { PageContainer } from '../common/layout';
+import { BreadcrumbTrail }  from '../common/navigation';
 
 const Home = props => {
 

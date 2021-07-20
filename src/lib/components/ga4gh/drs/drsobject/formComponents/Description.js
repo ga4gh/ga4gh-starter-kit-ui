@@ -1,5 +1,5 @@
 import React from 'react';
-import SimpleTextField from '../../../../common/SimpleTextField';
+import { SimpleTextField } from '../../../../common/form';
 
 const Description = props => {
     return (
