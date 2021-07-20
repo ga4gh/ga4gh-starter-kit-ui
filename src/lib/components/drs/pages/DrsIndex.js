@@ -1,5 +1,5 @@
 import '@fontsource/roboto';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
   Typography, 
   Container, 
@@ -9,22 +9,24 @@ import {
   TableBody, 
   TableRow, 
   TableCell, 
-  Button
+  Button, 
+  Grid
 } from '@material-ui/core';
 import {
-  Link
+  Link, 
+  useLocation
 } from "react-router-dom";
+import { scrollToTop } from '../../../functions/common';
 
+  /* Render index table rows populated with data */
 const DrsIndexRows = (props) => {
   const drsObjectsList = props.drsObjectsList;
   if (!drsObjectsList){
-    return(
-      <TableBody></TableBody>
-    )
+    return null;
   }
   else {
     const rows = drsObjectsList.map((drsObject) =>
-    <TableRow key={drsObject.name}>
+    <TableRow key={drsObject.id}>
       <TableCell align="left">
         <Typography>{drsObject.id}</Typography>
       </TableCell>
@@ -32,28 +34,49 @@ const DrsIndexRows = (props) => {
         <Typography>{drsObject.name}</Typography>
       </TableCell>
       <TableCell align="right">
-        <Button variant="contained">
-          <Link to={`/drs/${drsObject.id}`}>
-            <Typography variant="button">View Details</Typography>
-          </Link>
+        <Button
+          variant="contained"
+          color='default'
+          component={Link}
+          to={`/drs/${drsObject.id}`}
+          onClick={scrollToTop}
+        >
+          <Typography variant="button">View Details</Typography>
         </Button>
       </TableCell>
     </TableRow>
     );
-  return (
-    <TableBody>{rows}</TableBody>
-  );
+    return (
+      <TableBody>{rows}</TableBody>
+    );
   }
 }
 
 const DrsIndex = (props) => {
+  /* Render DrsIndex page */
   return (
     <div align="center">
       <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
       />
-      <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
+      <Container maxWidth="lg" >
+        <Grid container justify='space-between' alignItems='center'>
+          <Grid item xs={2} align='left'>
+            <Button variant='contained' component={Link} to='/' color='primary' size='large'>
+              <Typography variant='button'>Home</Typography>
+            </Button>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
+          </Grid>
+          <Grid item xs={2} align='right'>
+            <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'>
+              <Typography variant='button'>New DRS Object</Typography>
+            </Button>
+          </Grid>
+        </Grid>
+      </Container>
       <Container maxWidth="lg">
         <TableContainer>
           <Table>
@@ -78,4 +101,4 @@ const DrsIndex = (props) => {
   );
 }
 
-  export default DrsIndex;
+export default DrsIndex;
