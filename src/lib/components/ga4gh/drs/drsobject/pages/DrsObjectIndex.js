@@ -20,8 +20,10 @@ import {
   Link, 
   useLocation
 } from "react-router-dom";
-import { scrollToTop } from '../../../../functions/common';
+import { scrollToTop } from '../../../../../functions/common';
 import PageContainer from '../../../../common/layout/PageContainer';
+import BreadcrumbTrail from '../../../../common/navigation/BreadcrumbTrail';
+import BackButton from '../../../../common/button/BackButton';
 
   /* Render index table rows populated with data */
 const DrsIndexRows = (props) => {
@@ -69,24 +71,9 @@ const DrsObjectIndex = (props) => {
   /* Render DrsIndex page */
   return (
     <PageContainer>
-      <Breadcrumbs>
-        <Link color="inherit" to="/home">starter-kit</Link>
-        <Link>services</Link>
-        <Link>org.ga4gh.my-drs-service</Link>
-        <Link to="/drs">drs</Link>
-      </Breadcrumbs>
+      <BreadcrumbTrail trail={props.trail} />
+      <BackButton to=".." />
 
-      <div>
-        <Button
-          variant='text'
-          component={Link}
-          to='/'
-          color='primary'
-        >
-          <ArrowBackIos />
-          <Typography>back</Typography>
-        </Button>
-      </div>
       <div>
         <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'>
           <Typography variant='button'>New DRS Object</Typography>

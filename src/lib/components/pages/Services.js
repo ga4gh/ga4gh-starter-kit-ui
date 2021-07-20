@@ -11,7 +11,6 @@ import {
     Link
 } from 'react-router-dom';
 import PageContainer from '../common/layout/PageContainer';
-import DrsMain from '../apis/drs/drsobject/DrsObjectMain';
 import BackButton from '../common/button/BackButton';
 import BreadcrumbTrail from '../common/navigation/BreadcrumbTrail';
 import servicesStyles from '../../styles/pages/servicesStyles';

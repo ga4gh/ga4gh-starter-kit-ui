@@ -2,18 +2,11 @@ import '@fontsource/roboto';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import {
-  Container,
-  Typography,
-  Paper
-} from '@material-ui/core';
-import {
-  Switch,
   Route,
   useHistory
 } from "react-router-dom";
 import { Snackbar } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
-import { format } from 'date-fns';
 import DrsObjectIndex from './pages/DrsObjectIndex';
 import DrsObjectForm from './pages/DrsObjectForm';
 import DrsApiCaller from '../utils/DrsApiCaller';
@@ -22,6 +15,9 @@ import FormViewType from '../../../../model/common/FormViewType';
 import { dateToISOString } from '../../../../functions/common';
 
 const DrsObjectMain = props => {
+
+  const baseURL = `/services/${props.service.id}/drs/objects`;
+  const trail = props.trail;
 
   const emptyDrsObject = () => {
     let dateString = dateToISOString(new Date());
@@ -293,8 +289,6 @@ const DrsObjectMain = props => {
    * RENDER
    * ################################################## */
 
-  const baseURL = `/services/${props.service.id}/drs/objects`;
-
   return (
     <div>
       <Snackbar
@@ -310,7 +304,8 @@ const DrsObjectMain = props => {
       {/* all routes for DRS Object model: index, show, new, edit */}
       <Route exact path={baseURL}>
         <DrsObjectIndex 
-          drsObjectsList={drsObjectsList} 
+          trail={trail}
+          drsObjectsList={drsObjectsList}
           setError={setError}
         />
       </Route>
