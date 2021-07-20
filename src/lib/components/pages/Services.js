@@ -11,7 +11,7 @@ import {
     Link
 } from 'react-router-dom';
 import PageContainer from '../common/layout/PageContainer';
-import DrsMain from '../drs/DrsMain';
+import DrsMain from '../apis/drs/drsobject/DrsObjectMain';
 import BackButton from '../common/button/BackButton';
 import BreadcrumbTrail from '../common/navigation/BreadcrumbTrail';
 import servicesStyles from '../../styles/pages/servicesStyles';
@@ -19,16 +19,6 @@ import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
 import hardCodedServiceConfigs from '../../temp/hardcodedServiceConfigs';
 
 const Services = props => {
-
-    const renderServiceByType = serviceConfig => {
-        switch (serviceConfig.serviceType) {
-            case 'drs':
-                return (
-                    <DrsMain serviceConfig={serviceConfig} />
-                )
-                break;
-        }
-    }
 
     const classes = servicesStyles();
 

@@ -6,8 +6,8 @@ import {
     Typography,
     Grid
 } from '@material-ui/core';
-import AddItemButton from '../../common/AddItemButton';
-import RemoveItemButton from '../../common/RemoveItemButton';
+import AddItemButton from '../../../../common/AddItemButton';
+import RemoveItemButton from '../../../../common/RemoveItemButton';
 
 const FileAccessObjects = props => {
     return (

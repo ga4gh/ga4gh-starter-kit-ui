@@ -19,8 +19,8 @@ import {
   Link, 
   useLocation
 } from "react-router-dom";
-import { scrollToTop } from '../../../functions/common';
-import PageContainer from '../../common/layout/PageContainer';
+import { scrollToTop } from '../../../../functions/common';
+import PageContainer from '../../../../common/layout/PageContainer';
 
   /* Render index table rows populated with data */
 const DrsIndexRows = (props) => {
@@ -60,6 +60,7 @@ const DrsIndexRows = (props) => {
 
 const DrsObjectIndex = (props) => {
   /* Restore scroll to top of page on navigation to a new page */
+  console.log('inside DRS Object Index!!');
   const { pathname }  = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
