@@ -38,7 +38,13 @@ const DrsIndexRows = (props) => {
       <TableCell align="left">{drsObject.id}</TableCell>
       <TableCell align="left">{drsObject.name}</TableCell>
       <TableCell align="left">
-        <Button variant="outlined" color='secondary' component={Link} to={`/drs/${drsObject.id}`} aria-label={`view-button`}>
+        <Button
+          variant="outlined"
+          color='secondary'
+          component={Link}
+          to={`./objects/${drsObject.id}`}
+          aria-label={`view-button`}
+        >
           View
         </Button>
       </TableCell>
@@ -64,7 +70,6 @@ const DrsIndexRows = (props) => {
 
 const DrsObjectIndex = (props) => {
   /* Restore scroll to top of page on navigation to a new page */
-  console.log('inside DRS Object Index!!');
   const { pathname }  = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -77,7 +82,13 @@ const DrsObjectIndex = (props) => {
       <BackButton to=".." />
 
       <div>
-        <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'>
+        <Button
+          variant='contained'
+          component={Link}
+          to='/services/org.ga4gh.localdrs.a/drs/objects/new'
+          color='primary'
+          size='large'
+        >
           <Typography variant='button'>New DRS Object</Typography>
         </Button>
       </div>

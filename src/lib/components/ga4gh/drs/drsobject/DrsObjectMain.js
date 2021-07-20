@@ -72,6 +72,8 @@ const DrsObjectMain = props => {
   }
 
   const retrieveDrsObjectAndMerge = async (id) => {
+    console.log('retrieving DrsObjectAndMerging...');
+    console.log(id);
     let requestConfig = {
       url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${id}`,
       method: 'GET',
@@ -86,6 +88,8 @@ const DrsObjectMain = props => {
             responseDrsObject[key] = blankDrsObject[key];
           }
         })
+        console.log('inside success callback');
+        console.log(responseDrsObject);
         setActiveDrsObject(responseDrsObject);
       },
       console.log
@@ -227,6 +231,7 @@ const DrsObjectMain = props => {
   const loadActiveDrsObjectBasedOnPath = location => {
     let re = new RegExp('/drs/([^/]+)/?([^/]*)');
     let match = location.pathname.match(re);
+    console.log(match);
     if (match) {
       if(match[1] === 'new') activeDrsObjectFunctions.reset();
       else if(match[2]==='edit') {
@@ -290,6 +295,7 @@ const DrsObjectMain = props => {
 
   return (
     <div>
+      {console.log('inside render return')}
       <Snackbar
         anchorOrigin={{ vertical: 'top', horizontal: 'center'}}
         open={successMessage}
@@ -302,13 +308,16 @@ const DrsObjectMain = props => {
 
       {/* all routes for DRS Object model: index, show, new, edit */}
       <Route exact path={baseURL}>
+        {console.log('loading INDEX')}
         <DrsObjectIndex 
           trail={trail}
+          baseURL={baseURL}
           drsObjectsList={drsObjectsList}
           setError={setError}
         />
       </Route>
       <Route exact path={`${baseURL}/new`}>
+        {console.log('loading NEW')}
         <DrsObjectForm
           title={"Create New DrsObject"}
           groupedFormProps={groupedFormProps}
@@ -316,6 +325,7 @@ const DrsObjectMain = props => {
         />
       </Route>
       <Route exact path={`${baseURL}/:objectId`}>
+        {console.log('loading SHOW')}
         <DrsObjectForm
           title={`View DrsObject: ${activeDrsObject.id}`}
           groupedFormProps={groupedFormProps}

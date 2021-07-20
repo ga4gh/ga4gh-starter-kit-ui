@@ -41,6 +41,7 @@ import DeleteDrsObjectButton from '../formComponents/DeleteDrsObjectButton';
 import { makeStyles } from '@material-ui/core/styles';
 
 const DrsObjectForm = (props) => {
+    console.log('rendering DrsObjectForm');
     const useStyles = makeStyles((theme) => ({
         root: {
             marginBottom: '50px'
