@@ -1,3 +1,5 @@
+import DrsObjectMain from "../../components/ga4gh/drs/drsobject/DrsObjectMain";
+
 const ga4ghApiTypes = {
     drs: {
         'name': 'Data Repository Service',
@@ -6,7 +8,8 @@ const ga4ghApiTypes = {
         'models': [
             {
                 label: 'DRS Objects',
-                path: 'objects'
+                path: 'objects',
+                componentFunction: (service, trail) => <DrsObjectMain service={service} trail={trail} />
             }
         ]
     }

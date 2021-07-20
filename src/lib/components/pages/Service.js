@@ -12,7 +12,7 @@ import BackButton from '../common/button/BackButton';
 import ServiceInfo from '../common/info/ServiceInfo';
 import servicesStyles from '../../styles/pages/servicesStyles';
 import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
-import ApiCaller from '../apis/drs/utils/ApiCaller';
+import ApiCaller from '../ga4gh/drs/utils/ApiCaller';
 
 const Service = props => {
     const apiType = ga4ghApiTypes[props.service.serviceType];
