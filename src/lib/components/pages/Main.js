@@ -10,6 +10,8 @@ import StarterKitBottomNav from '../common/StarterKitBottomNav';
 import DrsMain from '../drs/DrsMain';
 import { makeStyles } from '@material-ui/core/styles';
 import Services from './Services';
+import Service from './Service';
+import hardCodedServiceConfigs from '../../temp/hardcodedServiceConfigs';
 
 const Main = () => {
     const useStyles = makeStyles((theme) => ({
@@ -19,16 +21,46 @@ const Main = () => {
     }));
     const classes = useStyles();
 
+    const homeTrail = [{to: '/home', label: 'starter-kit'}];
+    const servicesTrail = [...homeTrail];
+    servicesTrail.push({to: '/services', label: 'services'})
+
     return (
         <div>
             <div className={classes.contentRoot}>
                 <div>
                     <StarterKitAppBar />
-                    <Route path='/home' component={Home} />
-                    <Route path='/about' component={About} />
-                    <Route path='/services'>
-                        <Services url='/services' />
+
+                    {/* render introductory pages */}
+                    <Route path='/home'>
+                        <Home trail={homeTrail} />
                     </Route>
+
+                    <Route path='/about' component={About} />
+
+                    <Route exact path='/services'>
+                        <Services trail={servicesTrail} url='/services' />
+                    </Route>
+
+                    {/*
+                        for each service in the config, render its service
+                        summary, as well as the 'Main' component for its API
+                        type
+                    */}
+
+                    {hardCodedServiceConfigs.map(service => {
+                        return (
+                            <Route exact path={`/services/${service.id}`}>
+                                <Service
+                                    service={service}
+                                    trail={servicesTrail}
+                                />
+
+                                
+                            </Route>
+
+                        )
+                    })}
                 </div>
             </div>
             <StarterKitBottomNav />

@@ -1,25 +1,24 @@
 import React from 'react';
 import { 
-    Breadcrumbs,
     Typography,
-    Button
+    Button,
+    Card,
+    CardContent,
+    CardActions,
+    Grid
 } from '@material-ui/core';
 import { 
-    Link,
-    Route
+    Link
 } from 'react-router-dom';
 import PageContainer from '../common/layout/PageContainer';
 import DrsMain from '../drs/DrsMain';
+import BackButton from '../common/button/BackButton';
+import BreadcrumbTrail from '../common/navigation/BreadcrumbTrail';
+import servicesStyles from '../../styles/pages/servicesStyles';
+import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
+import hardCodedServiceConfigs from '../../temp/hardcodedServiceConfigs';
 
 const Services = props => {
-    const hardCodedServiceConfigs = [
-        {
-            id: 'org.ga4gh.localdrs',
-            serviceType: 'drs',
-            publicUrl: 'http://localhost:4500',
-            adminUrl: 'http://localhost:4501'
-        }
-    ]
 
     const renderServiceByType = serviceConfig => {
         switch (serviceConfig.serviceType) {
@@ -31,28 +30,52 @@ const Services = props => {
         }
     }
 
+    const classes = servicesStyles();
+
     return (
         <PageContainer>
-            <Breadcrumbs>
-                <Link color="inherit" to="/home">starter-kit</Link>
-                <Link to="/services">services</Link>
-            </Breadcrumbs>
+            <BreadcrumbTrail trail={props.trail} />
+            <BackButton to='/home' />
 
-            {hardCodedServiceConfigs.map(serviceConfig => {
-                return (
-                    <div>
-                        <Button
-                            variant='contained'
-                            component={Link}
-                            to={`${props.url}/${serviceConfig.id}`}
-                        >
-                            <Typography variant='button'>
-                                {serviceConfig.id}
-                            </Typography>
-                        </Button>
-                    </div>
-                )
-            })}
+            <div>
+                <Grid container>
+                    {hardCodedServiceConfigs.map(serviceConfig => {
+                        return (
+                            <Grid item>
+                                <Card className={classes.cardRoot}>
+                                    <CardContent>
+                                        <Typography className={classes.cardTitle}>
+                                            GA4GH Starter Kit Service
+                                        </Typography>
+                                        <Typography variant="h5" component="h2">
+                                            {ga4ghApiTypes[serviceConfig.serviceType].name}
+                                            {
+                                                ga4ghApiTypes[serviceConfig.serviceType].abbreviation
+                                                ? ` (${ga4ghApiTypes[serviceConfig.serviceType].abbreviation})`
+                                                : null
+                                            }
+                                        </Typography>
+                                        <Typography variant="body2" component="p">
+                                            {`ID: ${serviceConfig.id}`}
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button
+                                            variant="outlined"
+                                            color="primary"
+                                            size="small"
+                                            component={Link}
+                                            to={`/services/${serviceConfig.id}`}
+                                        >
+                                            View
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        )
+                    })}
+                </Grid>
+            </div>
         </PageContainer>
     )
 }
