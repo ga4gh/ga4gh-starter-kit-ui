@@ -65,7 +65,7 @@ const DrsObjectRelatives = props => {
                                                                 setRelativeValid={() => props.setRelativeValid(index)}
                                                                 setRelativeInvalid={() => props.setRelativeInvalid(index)}
                                                                 retrieveDrsObject={props.retrieveDrsObject}
-                                                                customApiCallSuccessCallback={props.customApiCallSuccessCallback}
+                                                                customApiCallSuccessCallback={props.customApiCallSuccessCallback ? responseData => props.customApiCallSuccessCallback(index, responseData) : undefined}
                                                                 readOnly={props.readOnly}
                                                             />
                                                         </InputAdornment>

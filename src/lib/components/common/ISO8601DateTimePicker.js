@@ -9,6 +9,7 @@ import {
     DateTimePicker,
     MuiPickersUtilsProvider 
 } from '@material-ui/pickers';
+import { dateToISOString } from '../../functions/common';
 
 /*
     Displays a text field that opens a date-time picker when selected. The date
@@ -35,11 +36,8 @@ const ISO8601DateTimePicker = props => {
                     showTodayButton
                     ampm={false}
                     helperText={props.helperText}
-                    onChange={date => {
-                        date.setSeconds(0, 0);
-                        let dateString = date.toISOString().substr(0, 19) + "Z";
-                        props.setFunction(dateString);
-                }} />
+                    onChange={date => props.setFunction(dateToISOString(date))}
+                />
             </FormControl>
         </MuiPickersUtilsProvider>
     )

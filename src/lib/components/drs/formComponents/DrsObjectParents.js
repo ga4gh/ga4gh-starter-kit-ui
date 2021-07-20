@@ -5,12 +5,12 @@ import {
 } from '@material-ui/core';
 
 const DrsObjectParents = props => {
-    const assertParentIsBundleThenSetValid = (responseData) => {
+    const assertParentIsBundleThenSetValid = (index, responseData) => {
         if (responseData.is_bundle === true) {
-            props.setParentValid();
-            props.setParentName(responseData.name);
+            props.setParentValid(index);
+            props.setParentName(index, responseData.name);
         } else {
-            props.setParentInvalid();
+            props.setParentInvalid(index);
         }
     }
 

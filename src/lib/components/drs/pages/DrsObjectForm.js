@@ -114,7 +114,7 @@ const DrsObjectForm = (props) => {
                     {vis(p.id.id) ? <Id {...p.id} /> : null}
                     {vis(p.name.name) ? <Name {...p.name} /> : null}
                     {vis(p.description.description) ? <Description {...p.description} /> : null }
-                    <Grid container justify='space-evenly' spacing={4}>
+                    <Grid container justify='flex-start' spacing={4}>
                         {vis(p.createdTime.created_time)
                             ?
                                 <Grid item xs={4}>

@@ -14,20 +14,20 @@ import DrsObjectForm from './pages/DrsObjectForm';
 import DrsApiCaller from './utils/DrsApiCaller';
 import _ from 'lodash';
 import FormViewType from '../../model/common/FormViewType';
+import { dateToISOString } from '../../functions/common';
 
 const DrsMain = props => {
 
   const emptyDrsObject = () => {
-    let date = new Date();
-    date.setSeconds(0, 0);
+    let dateString = dateToISOString(new Date());
     let emptyDrsObject = {
       id: '',
       description: '',
-      created_time: format(date, "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+      created_time: dateString,
       mime_type: '',
       name: '',
       size: '',
-      updated_time: format(date, "yyyy-MM-dd'T'HH:mm:ss'Z'"),
+      updated_time: dateString,
       version: '',
       is_bundle: false,
       aliases: [],
@@ -223,22 +223,32 @@ const DrsMain = props => {
    * EFFECTS
    * ################################################## */
 
+  const loadActiveDrsObjectBasedOnPath = location => {
+    let re = new RegExp('/drs/(.+)');
+    let match = location.pathname.match(re);
+    if (match) {
+      match[1] === 'new' ? activeDrsObjectFunctions.reset() : activeDrsObjectFunctions.retrieve(match[1]);
+    }
+  }
+
   // add the history listener, modifies the activeDrsObject based on the current
   // URL path
   let history = useHistory();
   useEffect(() => {
     history.listen((location, action) => {
-      let re = new RegExp('/drs/(.+)');
-      let match = location.pathname.match(re);
-      if (match) {
-        match[1] === 'new' ? activeDrsObjectFunctions.reset() : activeDrsObjectFunctions.retrieve(match[1]);
-      }
+      loadActiveDrsObjectBasedOnPath(location);
     })
   }, [])
 
   // initialize the drsObjectList upon first load
   useEffect(() => {
     retrieveDrsObjectsList();
+  }, []);
+  
+  // if the first page entered is the DrsObject page, then load it to the
+  // activeDrsObject
+  useEffect(() => {
+    loadActiveDrsObjectBasedOnPath(history.location);
   }, []);
 
   // update the allowed checksum types list every time any checksum type
