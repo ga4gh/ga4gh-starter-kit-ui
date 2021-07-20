@@ -10,26 +10,24 @@ import {
  } from '@material-ui/core';
  import { scrollToTop } from '../../functions/common';
 import PageContainer from '../common/layout/PageContainer';
+import BackButton from '../common/button/BackButton';
+import BreadcrumbTrail from '../common/navigation/BreadcrumbTrail';
 
-const Home = () => {
+const Home = props => {
+
     return(
         <PageContainer>
-            <Breadcrumbs>
-                <Link color="inherit" to="/home">starter-kit</Link>
-            </Breadcrumbs>
+            <BreadcrumbTrail trail={props.trail} />
 
             <Typography variant="h1" gutterBottom>Welcome to the GA4GH Starter Kit</Typography>
-            <Typography variant="h3" gutterBottom>Get Started</Typography>
-            <Typography variant="body1" gutterBottom>Click the buttons below to start using one of the GA4GH Starter Kits</Typography>
-            <div>
-                <nav>
-                    <Button variant="contained" color="default" size="large">
-                        <Link to='/services'>
-                            <Typography variant="button">Services</Typography>
-                        </Link>
-                    </Button>
-                </nav>
-            </div>
+            <Button
+                variant="outlined"
+                color="secondary"
+            >
+                <Link to='/services'>
+                    <Typography variant="button">Get Started</Typography>
+                </Link>
+            </Button>
         </PageContainer>
     );
 }
