@@ -1,5 +1,495 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AddPropertyButtonSnapshot 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item"
+  >
+    <span
+      aria-describedby={null}
+      className=""
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      title="Add another undefined."
+    >
+      <button
+        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+        disabled={false}
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+            />
+          </svg>
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`AliasesSnapshot 1`] = `null`;
+
+exports[`AwsS3AccessObjectsSnapshot 1`] = `null`;
+
+exports[`BundleBlobRadioSnapshot 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Is this DRS Object a Bundle or a Blob?
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Bundles contain references to Child DRS Objects, while Blobs act as single DRS Objects and do not have any children.
+  </p>
+  <div
+    className="MuiFormGroup-root"
+    role="radiogroup"
+  >
+    <label
+      className="MuiFormControlLabel-root"
+    >
+      <span
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-checked-3 Mui-checked MuiIconButton-colorPrimary"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={null}
+      >
+        <span
+          className="MuiIconButton-label"
+        >
+          <input
+            checked={true}
+            className="PrivateSwitchBase-input-5"
+            name="drs_object_type"
+            onChange={[Function]}
+            type="radio"
+            value="blob"
+          />
+          <div
+            className="PrivateRadioButtonIcon-root-6 PrivateRadioButtonIcon-checked-8"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+              />
+            </svg>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-7"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+      >
+        Blob
+      </span>
+    </label>
+    <label
+      className="MuiFormControlLabel-root"
+    >
+      <span
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={null}
+      >
+        <span
+          className="MuiIconButton-label"
+        >
+          <input
+            checked={false}
+            className="PrivateSwitchBase-input-5"
+            name="drs_object_type"
+            onChange={[Function]}
+            type="radio"
+            value="bundle"
+          />
+          <div
+            className="PrivateRadioButtonIcon-root-6"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+              />
+            </svg>
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-7"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <span
+        className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+      >
+        Bundle
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`ChecksumsSnapshot 1`] = `null`;
+
+exports[`ErrorMessageSnapshot 1`] = `null`;
+
+exports[`FileAccessObjectsSnapshot 1`] = `null`;
+
+exports[`GenerateIdButtonSnapshot 1`] = `
+<div
+  align="right"
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-button"
+      >
+        Generate ID
+      </span>
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`InvalidDrsObjectMessageSnapshot 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-9"
+>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-colorSecondary MuiTypography-alignCenter"
+  >
+    This DRS Object is invalid.
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-colorSecondary MuiTypography-alignCenter"
+  >
+    Please ensure that the DRS Object has a unique ID and that all Parent Bundles and Bundle Children are valid. Note that blob-type DRS Objects cannot be set as Parent Bundles.
+  </p>
+</div>
+`;
+
+exports[`MimeTypeSnapshot 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+>
+  <div
+    className="MuiFormControl-root MuiFormControl-fullWidth"
+  >
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="mime_type"
+        id="mime_type-label"
+      >
+        MIME Type
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="mime_type-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiInput-input"
+          disabled={false}
+          id="mime_type"
+          name="mime_type"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          type="text"
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root"
+        id="mime_type-helper-text"
+      >
+        The media type of the DRS Object.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RelatedDrsObjectButtonSnapshot 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+>
+  <button
+    aria-describedby={null}
+    className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    title="Remove this undefined."
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+        />
+      </svg>
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`RelatedDrsObjectSnapshot 1`] = `null`;
+
+exports[`RemovePropertyButtonSnapshot 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+>
+  <button
+    aria-describedby={null}
+    className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    title="Remove this undefined."
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+        />
+      </svg>
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`SimpleTextFieldSnapshot 1`] = `
+<div
+  className="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SizeSnapshot 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+>
+  <div
+    className="MuiFormControl-root MuiFormControl-fullWidth"
+  >
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="size"
+        id="size-label"
+      >
+        Size
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="size-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiInput-input"
+          disabled={false}
+          id="size"
+          name="size"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          type="number"
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root"
+        id="size-helper-text"
+      >
+        The size (in bytes) of the DRS Object represented as an integer.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`SpaceDividerSnapshot 1`] = `
 <div
   className="MuiBox-root MuiBox-root-1"
