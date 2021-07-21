@@ -17,12 +17,11 @@ import DrsApiCaller from '../utils/DrsApiCaller';
     "drs_object_parents" and the DRS Object returned is an existing blob-type
     object. Since blob-type objects cannot have children, they cannot be set as
     parent objects. If the ID has been verified and is valid, it will display a
-    blue checkmark icon in place of the "Verify" button and the name field will
-    be automatically populated.
+    blue checkmark icon and the name field will be automatically populated.
     If the ID has been verified and is invalid, a red "X" icon will be displayed
-    and the name field will not be populated. If the ID has not been verified,
-    or has been edited since being verified, the "Verify" button is displayed.
-    If the ID field is empty, the "Verify" button is displayed and disabled.
+    and the name field will not be populated. If the ID field is empty when the 
+    "Verify" button is clicked, the ID will automatically be marked as invalid, 
+    without making the GET request.
 */
 const VerifyIdButton = props => {
     const defaultHandleValid = responseData => {

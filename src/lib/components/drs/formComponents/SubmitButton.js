@@ -11,15 +11,10 @@ import FormViewType from '../../../model/common/FormViewType';
 import DrsApiCaller from '../utils/DrsApiCaller';
 
 /*
-    Used to make a POST or PUT request to create or update a new DRS Object.
-    If the id field is empty or if any of the related DRS Objects are invalid,
-    the InvalidDrsObjectMessage component is displayed and the button is
-    disabled. When the SubmitButton is clicked, the activeDrsObject is
-    "cleaned up" to ensure that the correct properties are submitted to the
-    POST/PUT request based on whether the DRS Object is a blob or a bundle. If
-    the POST request is successful, the user is redirected to the DRS Index
-    page. However, if it is unsuccessful, the user is not redirected and the
-    ErrorMessage component is displayed.
+    Used to make a POST or PUT requests to create or update a new DRS Object.
+    If the request is successful, the user is redirected to the DRS Index
+    page and a success message is displayed. However, if it is unsuccessful, 
+    the user is not redirected and an error message is displayed.
 */
 const SubmitButton = props => {
 
@@ -81,7 +76,10 @@ const SubmitButton = props => {
                     }
                     break;
                 case FormViewType.EDIT:
-                    // TODO HANDLE EDIT REQUEST CONFIG
+                    requestConfig = {
+                        url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${props.activeDrsObject.id}`,
+                        method: 'PUT'
+                    }
                     break
             }
             requestConfig.data = requestBody;

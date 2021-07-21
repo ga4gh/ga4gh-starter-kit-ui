@@ -8,7 +8,8 @@ import {
 } from '@material-ui/core';
 
 /*
-    Displayed on editable forms, allowing the user to select between a blob- or
+    Displayed on all forms, but disabled on SHOW and EDIT forms. 
+    Editable on NEW form, allowing the user to select between a blob- or
     bundle-type object. Some data entry fields are displayed or hidden,
     depending on the DRS Object type that is selected. The default DRS Object
     type for new DRS Objects is "blob".

@@ -22,8 +22,7 @@ import { scrollToTop } from '../../../functions/common';
     Related DRS Objects include DRS Object Children and DRS Object Parents, each
     of which can be added or removed. The ID of the related DRS Object is
     entered in the text field. If the ID is valid, the name field is
-    automatically populated by clicking the "Verify" button. Drs Object Children
-    are only displayed for bundle-type DRS Objects.
+    automatically populated by clicking the "Verify" button.
 */
 const DrsObjectRelatives = props => {
     return (

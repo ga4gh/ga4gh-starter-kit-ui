@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import { Snackbar } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
-import { format } from 'date-fns';
 import DrsIndex from './pages/DrsIndex';
 import DrsObjectForm from './pages/DrsObjectForm';
 import DrsApiCaller from './utils/DrsApiCaller';
@@ -216,7 +215,10 @@ const DrsMain = props => {
     parents: _.pick(formProps, ['drs_object_parents', 'addParent', 'setParentId', 'setParentName', 'setParentValid', 'setParentInvalid', 'unsetParentValidity', 'removeParent']),
     fileAccessObjects: _.pick(formProps, ['file_access_objects', 'addFileAccessObject', 'setFileAccessObjectPath', 'removeFileAccessObject']),
     awsS3AccessObjects: _.pick(formProps, ['aws_s3_access_objects', 'addAwsS3AccessObject', 'setAwsS3AccessObjectRegion', 'setAwsS3AccessObjectBucket', 'setAwsS3AccessObjectKey', 'removeAwsS3AccessObject']),
-    submit: {activeDrsObject: activeDrsObject, setSuccessMessage: setSuccessMessage, ..._.pick(formProps, ['retrieveDrsObjectsList'])}
+    submit: {activeDrsObject: activeDrsObject, setSuccessMessage: setSuccessMessage, ..._.pick(formProps, ['retrieveDrsObjectsList'])}, 
+    edit: _.pick(formProps, ['id']), 
+    cancel: _.pick(formProps, ['id']),
+    delete: {setSuccessMessage: setSuccessMessage, ..._.pick(formProps, ['id', 'retrieveDrsObjectsList'])}
   }
 
   /* ##################################################
@@ -224,7 +226,7 @@ const DrsMain = props => {
    * ################################################## */
 
   const loadActiveDrsObjectBasedOnPath = location => {
-    let re = new RegExp('/drs/(.+)');
+    let re = new RegExp('/drs/(.+[^/edit])');
     let match = location.pathname.match(re);
     if (match) {
       match[1] === 'new' ? activeDrsObjectFunctions.reset() : activeDrsObjectFunctions.retrieve(match[1]);
@@ -312,6 +314,13 @@ const DrsMain = props => {
             title={`View DrsObject: ${activeDrsObject.id}`}
             groupedFormProps={groupedFormProps}
             formViewType={FormViewType.SHOW}
+          />
+        </Route>
+        <Route exact path='/drs/:objectId/edit'>
+          <DrsObjectForm
+            title={`Edit DrsObject: ${activeDrsObject.id}`}
+            groupedFormProps={groupedFormProps}
+            formViewType={FormViewType.EDIT}
           />
         </Route>
       </Switch>

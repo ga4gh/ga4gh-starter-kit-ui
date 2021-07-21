@@ -5,8 +5,9 @@ import {
 } from '@material-ui/core';
 
 /*
-    Size is displayed for blob-type DRS Objects. This field only accepts numbers and can be edited through free-text entry or using 
-    the arrow buttons in the text field.
+    Size is displayed for blob-type DRS Objects. This field only 
+    accepts numbers and can be edited through free-text entry or 
+    using the arrow buttons in the text field.
 */
 const Size = props => {
     return (
