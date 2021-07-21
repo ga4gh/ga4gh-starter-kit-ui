@@ -4,15 +4,11 @@ import {
     FormControl,
     Grid,
     FormGroup,
-    Button,
     Box,
     Snackbar
 } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import EditIcon from '@material-ui/icons/Edit';
-import {
-    Link
-} from "react-router-dom";
 import {
     Aliases,
     AwsS3AccessObjects,
@@ -36,19 +32,15 @@ import {
     SpaceDivider
 } from '../../../../common/layout';
 import FormViewType from '../../../../../model/common/FormViewType';
+import {
+    BackButton,
+    BreadcrumbTrail
+} from '../../../../common/navigation';
 import { scrollToTop } from '../../../functions/common';
 import DeleteDrsObjectButton from '../formComponents/DeleteDrsObjectButton';
 import { makeStyles } from '@material-ui/core/styles';
 
 const DrsObjectForm = (props) => {
-    console.log('rendering DrsObjectForm');
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            marginBottom: '50px'
-        }
-    }));
-    const classes = useStyles();
-
     const [error, setError] = useState(null);
 
     const applyReadOnly = () => {
@@ -72,6 +64,8 @@ const DrsObjectForm = (props) => {
         return p;
     }
 
+    const p = applyReadOnly();
+
     // visualize an editable component if on NEW or EDIT page
     // visualize only VIEW page ONLY if the property is non-null/non-empty
     const vis = value => {
@@ -94,7 +88,22 @@ const DrsObjectForm = (props) => {
         return false;
     }
 
-    const p = applyReadOnly();
+    const appendFormToTrail = (trail, id) => {
+        let newTrail = [...trail];
+        switch (props.formViewType) {
+            case FormViewType.SHOW:
+                newTrail.push({to: '#', label: id});
+                break;
+            case FormViewType.NEW:
+                newTrail.push({to: '#', label: 'new'});
+                break;
+            case FormViewType.EDIT:
+                newTrail.push({to: '/', label: 'baz'});
+        }
+        return newTrail;
+    }
+
+    const trail = appendFormToTrail(props.trail, p.id.id);
 
     return (
         <PageContainer>
@@ -107,6 +116,11 @@ const DrsObjectForm = (props) => {
                     {error ? `Error: ${error.message}` : null }
                 </Alert>
             </Snackbar>
+
+            <BreadcrumbTrail trail={trail} />
+            <BackButton to="../objects" />
+
+            <Typography align='left' variant="h5" gutterBottom>{props.title}</Typography>
 
             <Grid container justify='space-between' alignItems='center'>
                 <Grid item xs={2} align='left'>
@@ -144,6 +158,7 @@ const DrsObjectForm = (props) => {
                     }
                 </Grid>
             </Grid>
+
             <Box pb={4}>
                 <form>
                     {vis(p.id.id) ? <Id {...p.id} /> : null}

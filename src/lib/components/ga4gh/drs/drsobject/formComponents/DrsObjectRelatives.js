@@ -96,7 +96,7 @@ const DrsObjectRelatives = props => {
                                                 aria-label='view-relative'
                                                 variant='contained'
                                                 component={Link}
-                                                to={`/drs/${relative.id}`}
+                                                to={`./${relative.id}`}
                                                 onClick={scrollToTop}
                                                 color='primary'
                                             >

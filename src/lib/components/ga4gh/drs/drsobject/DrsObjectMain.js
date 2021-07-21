@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import {
   Route,
+  Switch,
   useHistory
 } from "react-router-dom";
 import { Snackbar } from '@material-ui/core';
@@ -15,8 +16,7 @@ import { dateToISOString } from '../../../../functions/common';
 
 const DrsObjectMain = props => {
 
-  const baseURL = `/services/${props.service.id}/drs/objects`;
-  const trail = props.trail;
+  let baseURL = `/services/${props.service.id}/drs/objects`;
 
   const emptyDrsObject = () => {
     let dateString = dateToISOString(new Date());
@@ -72,8 +72,6 @@ const DrsObjectMain = props => {
   }
 
   const retrieveDrsObjectAndMerge = async (id) => {
-    console.log('retrieving DrsObjectAndMerging...');
-    console.log(id);
     let requestConfig = {
       url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${id}`,
       method: 'GET',
@@ -88,8 +86,6 @@ const DrsObjectMain = props => {
             responseDrsObject[key] = blankDrsObject[key];
           }
         })
-        console.log('inside success callback');
-        console.log(responseDrsObject);
         setActiveDrsObject(responseDrsObject);
       },
       console.log
@@ -231,7 +227,6 @@ const DrsObjectMain = props => {
   const loadActiveDrsObjectBasedOnPath = location => {
     let re = new RegExp('/drs/([^/]+)/?([^/]*)');
     let match = location.pathname.match(re);
-    console.log(match);
     if (match) {
       if(match[1] === 'new') activeDrsObjectFunctions.reset();
       else if(match[2]==='edit') {
@@ -253,7 +248,6 @@ const DrsObjectMain = props => {
 
   // initialize the drsObjectList upon first load
   useEffect(() => {
-    console.log('retrieving...');
     retrieveDrsObjectsList();
   }, []);
   
@@ -295,7 +289,6 @@ const DrsObjectMain = props => {
 
   return (
     <div>
-      {console.log('inside render return')}
       <Snackbar
         anchorOrigin={{ vertical: 'top', horizontal: 'center'}}
         open={successMessage}
@@ -307,6 +300,7 @@ const DrsObjectMain = props => {
       </Snackbar>
 
       {/* all routes for DRS Object model: index, show, new, edit */}
+<<<<<<< HEAD
       <Route exact path={baseURL}>
         {console.log('loading INDEX')}
         <DrsObjectIndex 
@@ -339,6 +333,34 @@ const DrsObjectMain = props => {
             formViewType={FormViewType.EDIT}
           />
       </Route>
+=======
+      <Switch>
+        <Route exact path={baseURL}>
+          <DrsObjectIndex 
+            trail={props.trail}
+            baseURL={baseURL}
+            drsObjectsList={drsObjectsList}
+            setError={setError}
+          />
+        </Route>
+        <Route exact path={`${baseURL}/new`}>
+          <DrsObjectForm
+            trail={props.trail}
+            title={"Create New DrsObject"}
+            groupedFormProps={groupedFormProps}
+            formViewType={FormViewType.NEW}
+          />
+        </Route>
+        <Route exact path={`${baseURL}/:objectId`}>
+          <DrsObjectForm
+            trail={props.trail}
+            title={`View DrsObject: ${activeDrsObject.id}`}
+            groupedFormProps={groupedFormProps}
+            formViewType={FormViewType.SHOW}
+          />
+        </Route>
+      </Switch>
+>>>>>>> 6cf2a46... better styling and handling of service details page, full render of ServiceInfo response
     </div>
   )
 }

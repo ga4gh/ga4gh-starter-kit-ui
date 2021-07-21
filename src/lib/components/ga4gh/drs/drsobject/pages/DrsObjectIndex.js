@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
   Typography, 
-  Container, 
   Table,
   TableContainer, 
   TableHead, 
@@ -9,12 +8,9 @@ import {
   TableRow, 
   TableCell, 
   Button, 
-  Grid,
   Paper,
-  Breadcrumbs,
   Link as MuiLink
 } from '@material-ui/core';
-import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import {
   Link, 
   useLocation
@@ -24,49 +20,8 @@ import { PageContainer } from '../../../../common/layout';
 import {
   BackButton,
   BreadcrumbTrail
- } from '../../../../common/navigation';
-
-  /* Render index table rows populated with data */
-const DrsIndexRows = (props) => {
-  const drsObjectsList = props.drsObjectsList;
-  if (!drsObjectsList){
-    return null;
-  }
-  else {
-    const rows = drsObjectsList.map((drsObject) =>
-    <TableRow key={drsObject.id}>
-      <TableCell align="left">{drsObject.id}</TableCell>
-      <TableCell align="left">{drsObject.name}</TableCell>
-      <TableCell align="left">
-        <Button
-          variant="outlined"
-          color='secondary'
-          component={Link}
-          to={`./objects/${drsObject.id}`}
-          aria-label={`view-button`}
-        >
-          View
-        </Button>
-      </TableCell>
-      <TableCell align="center">
-        <IconButton 
-          aria-label={`edit-button`}
-          variant="contained" 
-          color='primary' 
-          component={Link} 
-          to={`/drs/${drsObject.id}/edit`}
-          onClick={scrollToTop}
-        >
-          <EditIcon/>
-        </IconButton>
-      </TableCell>
-    </TableRow>
-    );
-    return (
-      <TableBody>{rows}</TableBody>
-    );
-  }
-}
+} from '../../../../common/navigation';
+import drsObjectIndexStyles from '../../../../../styles/ga4gh/drs/drsobject/pages/drsObjectIndexStyles';
 
 const DrsObjectIndex = (props) => {
   /* Restore scroll to top of page on navigation to a new page */
@@ -75,17 +30,20 @@ const DrsObjectIndex = (props) => {
     window.scrollTo(0, 0);
   }, [pathname])
 
+  const classes = drsObjectIndexStyles();
+
   /* Render DrsIndex page */
   return (
     <PageContainer>
-      <BreadcrumbTrail trail={props.trail} />
+      <BreadcrumbTrail trail={props.trail} /*trail={props.trail}*/ />
       <BackButton to=".." />
 
       <div>
         <Button
+          className={classes.newButton}
           variant='contained'
           component={Link}
-          to='/services/org.ga4gh.localdrs.a/drs/objects/new'
+          to={`${props.baseURL}/new`}
           color='primary'
           size='large'
         >
@@ -102,7 +60,26 @@ const DrsObjectIndex = (props) => {
               <TableCell align="left" />
             </TableRow>
           </TableHead>
-          <DrsIndexRows drsObjectsList={props.drsObjectsList}/>
+          <TableBody>
+            {props.drsObjectsList.map(drsObject => {
+              return (
+                <TableRow key={drsObject.id}>
+                  <TableCell align="left">{drsObject.id}</TableCell>
+                  <TableCell align="left">{drsObject.name}</TableCell>
+                  <TableCell align="left">
+                    <Button
+                      variant="outlined"
+                      color='secondary'
+                      component={Link}
+                      to={`${props.baseURL}/${drsObject.id}`}
+                    >
+                      View
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              )
+            })}
+          </TableBody>
         </Table>
       </TableContainer>
     </PageContainer>
