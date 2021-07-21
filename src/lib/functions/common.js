@@ -5,7 +5,12 @@ const dateToISOString = date => {
     return date.toISOString().substr(0, 19) + "Z";
 }
 
+const capitalize = string => {
+    return string.charAt(0) .toUpperCase() + string.slice(1);
+}
+
 export {
     scrollToTop,
-    dateToISOString
+    dateToISOString,
+    capitalize
 }

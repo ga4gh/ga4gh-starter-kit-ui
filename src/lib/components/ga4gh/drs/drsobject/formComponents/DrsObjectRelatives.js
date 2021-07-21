@@ -93,7 +93,7 @@ const DrsObjectRelatives = props => {
                                             <Button
                                                 variant='contained'
                                                 component={Link}
-                                                to={`/drs/${relative.id}`}
+                                                to={`./${relative.id}`}
                                                 onClick={scrollToTop}
                                                 color='primary'
                                             >

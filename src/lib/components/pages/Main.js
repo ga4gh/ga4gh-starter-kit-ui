@@ -74,7 +74,6 @@ const Main = () => {
                                     trail.push({to: `/services/${service.id}/${service.serviceType}/${model.path}`, label: model.path});
                                     return (
                                         <Route
-                                            exact
                                             path={`/services/${service.id}/${service.serviceType}/${model.path}`}
                                         >
                                             {model.componentFunction(service, trail)};
