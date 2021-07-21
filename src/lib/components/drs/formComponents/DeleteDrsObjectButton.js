@@ -13,6 +13,7 @@ import {
     useHistory
 } from 'react-router-dom';
 import DrsApiCaller from '../utils/DrsApiCaller';
+import { scrollToTop } from '../../../functions/common';
 
 const DeleteDrsObjectButton = props => {
     let history = useHistory();
@@ -31,6 +32,7 @@ const DeleteDrsObjectButton = props => {
                 setSuccessMessage(`DRS Object ${id} has been successfully deleted`);
                 retrieveDrsObjectsList();
                 history.push('/drs');
+                scrollToTop();
             }, 
             error => {
                 setError(error);

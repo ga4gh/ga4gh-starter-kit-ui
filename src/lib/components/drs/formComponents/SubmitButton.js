@@ -9,6 +9,7 @@ import {
 import SpaceDivider from '../../common/SpaceDivider';
 import FormViewType from '../../../model/common/FormViewType';
 import DrsApiCaller from '../utils/DrsApiCaller';
+import { scrollToTop } from '../../../functions/common';
 
 /*
     Used to make a POST or PUT requests to create or update a new DRS Object.
@@ -93,6 +94,7 @@ const SubmitButton = props => {
                     props.setSuccessMessage(`Successfully created DrsObject with id: '${responseData.id}'`);
                     props.retrieveDrsObjectsList();
                     history.push('/drs');
+                    scrollToTop();
                 },
                 props.setError
             );

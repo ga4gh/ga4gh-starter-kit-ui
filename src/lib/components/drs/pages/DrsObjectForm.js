@@ -35,6 +35,7 @@ import {
 } from '../formComponents';
 import SpaceDivider from '../../common/SpaceDivider';
 import FormViewType from '../../../model/common/FormViewType';
+import { scrollToTop } from '../../../functions/common';
 import DeleteDrsObjectButton from '../formComponents/DeleteDrsObjectButton';
 
 const DrsObjectForm = (props) => {
@@ -107,7 +108,8 @@ const DrsObjectForm = (props) => {
                     {
                         props.formViewType === FormViewType.EDIT 
                         ?   <DeleteDrsObjectButton {...p.delete} setError={setError}/>
-                        :   <Button variant='contained' component={Link} to='/drs' color='primary' size='large'>
+                        :   <Button variant='contained' color='primary' size='large'
+                            component={Link} to='/drs' onClick={scrollToTop}>
                                 <Typography variant='button'>DRS Index</Typography>
                             </Button>
                     }
@@ -118,13 +120,13 @@ const DrsObjectForm = (props) => {
                 <Grid item xs={2} align='right'>
                     {
                         props.formViewType === FormViewType.SHOW 
-                        ?   <Button variant='contained' component={Link} to={`/drs/${p.edit.id}/edit`} 
-                                color='primary' size='large' endIcon={<EditIcon/>}>
+                        ?   <Button variant='contained' color='primary' size='large' endIcon={<EditIcon/>}
+                            component={Link} to={`/drs/${p.edit.id}/edit`} onClick={scrollToTop}>
                                 <Typography variant='button'>Edit</Typography>
                             </Button> 
                         : props.formViewType === FormViewType.EDIT 
-                        ?   <Button variant='contained' component={Link} to={`/drs/${p.cancel.id}`} 
-                                color='primary' size='large'>
+                        ?   <Button variant='contained' color='primary' size='large'
+                            component={Link} to={`/drs/${p.cancel.id}`} onClick={scrollToTop}>
                                 <Typography variant='button'>Cancel</Typography>
                             </Button>  
                         : null

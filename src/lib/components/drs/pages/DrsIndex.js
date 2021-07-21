@@ -47,7 +47,13 @@ const DrsIndexRows = (props) => {
         </Button>
       </TableCell>
       <TableCell align="center">
-        <IconButton variant="contained" color='primary' component={Link} to={`/drs/${drsObject.id}/edit`}>
+        <IconButton 
+          variant="contained" 
+          color='primary' 
+          component={Link} 
+          to={`/drs/${drsObject.id}/edit`}
+          onClick={scrollToTop}
+        >
           <EditIcon/>
         </IconButton>
       </TableCell>
@@ -70,7 +76,14 @@ const DrsIndex = (props) => {
       <Container maxWidth="lg" >
         <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={2} align='left'>
-            <Button variant='contained' component={Link} to='/' color='primary' size='large'>
+            <Button 
+              variant='contained' 
+              component={Link} 
+              to='/' 
+              color='primary' 
+              size='large'
+              onClick={scrollToTop}
+            >
               <Typography variant='button'>Home</Typography>
             </Button>
           </Grid>
@@ -78,7 +91,14 @@ const DrsIndex = (props) => {
             <Typography variant="h2" gutterBottom>Welcome to DRS Starter Kit</Typography>
           </Grid>
           <Grid item xs={2} align='right'>
-            <Button variant='contained' component={Link} to='/drs/new' color='primary' size='large'>
+            <Button 
+              variant='contained' 
+              component={Link} 
+              to='/drs/new' 
+              color='primary' 
+              size='large'
+              onClick={scrollToTop}
+            >
               <Typography variant='button'>New DRS Object</Typography>
             </Button>
           </Grid>

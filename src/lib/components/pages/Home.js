@@ -8,6 +8,7 @@ import {
   Button, 
   Typography
  } from '@material-ui/core';
+ import { scrollToTop } from '../../functions/common';
 
 const Home = () => {
     return(
@@ -22,7 +23,7 @@ const Home = () => {
           <Typography variant="body1" gutterBottom>Click the buttons below to start using one of the GA4GH Starter Kits</Typography>
             <div>
               <nav>
-                <Button variant="contained" color="primary" size="large" component={Link} to='/drs'>
+                <Button variant="contained" color="primary" size="large" component={Link} to='/drs' onClick={scrollToTop}>
                   <Typography variant="button">DRS Starter Kit</Typography>
                 </Button>
               </nav>
