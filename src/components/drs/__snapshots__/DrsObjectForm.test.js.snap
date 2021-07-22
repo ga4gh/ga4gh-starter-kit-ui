@@ -1,0 +1,637 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpaceDivider /> 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-1"
+>
+  <hr
+    className="MuiDivider-root"
+  />
+</div>
+`;
+
+exports[`SHOW <AddPropertyButton /> 1`] = `null`;
+
+exports[`SHOW <Aliases /> should handle 0 aliases 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-2"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Aliases
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    A list of aliases that can be used to identify the DRS Object by additional names.
+  </p>
+  <br />
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Aliases /> should handle 1 alias 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-3"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Aliases
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    A list of aliases that can be used to identify the DRS Object by additional names.
+  </p>
+  <br />
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="alias0"
+                id="alias0-label"
+              >
+                Alias
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="alias0"
+                  name="alias"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="alias1"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-8"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Aliases /> should handle multiple aliases 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-9"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Aliases
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    A list of aliases that can be used to identify the DRS Object by additional names.
+  </p>
+  <br />
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="alias0"
+                id="alias0-label"
+              >
+                Alias
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="alias0"
+                  name="alias"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="alias1"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-10"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="alias1"
+                id="alias1-label"
+              >
+                Alias
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="alias1"
+                  name="alias"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="alias2"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-11"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="alias2"
+                id="alias2-label"
+              >
+                Alias
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="alias2"
+                  name="alias"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="alias3"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-12"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <BundleBlobRadio /> should handle blob selection 1`] = `null`;
+
+exports[`SHOW <BundleBlobRadio /> should handle bundle selection 1`] = `null`;
+
+exports[`SHOW <Checksums /> should handle blobs with all types disabled 1`] = `null`;
+
+exports[`SHOW <Checksums /> should handle blobs with all types enabled 1`] = `null`;
+
+exports[`SHOW <Checksums /> should handle blobs with some types disabled 1`] = `null`;
+
+exports[`SHOW <Checksums /> should handle bundles 1`] = `null`;
+
+exports[`SHOW <GenerateIdButton /> 1`] = `
+<div
+  align="right"
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      <span
+        className="MuiTypography-root MuiTypography-button"
+      >
+        Generate ID
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`SHOW <Id /> 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+  >
+    <div
+      className="MuiFormControl-root MuiFormControl-fullWidth"
+    >
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor="id"
+          id="id-label"
+        >
+          Id
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-describedby="id-helper-text"
+            aria-invalid={false}
+            autoFocus={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="id"
+            name="id"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            readOnly={true}
+            required={false}
+            type="text"
+            value=""
+          />
+        </div>
+        <p
+          className="MuiFormHelperText-root"
+          id="id-helper-text"
+        >
+          Unique identifier for this DRS Object (UUID recommended), cannot be modified later.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <MimeType /> should handle blobs 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+>
+  <div
+    className="MuiFormControl-root MuiFormControl-fullWidth"
+  >
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+        data-shrink={false}
+        htmlFor="mime_type"
+        id="mime_type-label"
+      >
+        MIME Type
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="mime_type-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiInput-input"
+          disabled={false}
+          id="mime_type"
+          name="mime_type"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={true}
+          required={false}
+          type="text"
+          value="test blob MIME Type"
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root"
+        id="mime_type-helper-text"
+      >
+        The media type of the DRS Object.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <MimeType /> should handle bundles 1`] = `null`;
+
+exports[`SHOW <RemovePropertyButton /> 1`] = `null`;
+
+exports[`SHOW <SimpleTextField /> 1`] = `
+<div
+  className="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink={true}
+      htmlFor="Snapshot Test"
+      id="Snapshot Test-label"
+    >
+      Snapshot Test
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-describedby="Snapshot Test-helper-text"
+        aria-invalid={false}
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="Snapshot Test"
+        name="Snapshot Test"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        readOnly={true}
+        required={false}
+        type="text"
+        value="snapshot_test"
+      />
+    </div>
+    <p
+      className="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="Snapshot Test-helper-text"
+    >
+      This is a description for a snapshot test.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Size /> should handle blobs 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+>
+  <div
+    className="MuiFormControl-root MuiFormControl-fullWidth"
+  >
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+        data-shrink={true}
+        htmlFor="size"
+        id="size-label"
+      >
+        Size
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="size-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiInput-input"
+          disabled={false}
+          id="size"
+          name="size"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={true}
+          required={false}
+          type="number"
+          value={1000}
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-filled"
+        id="size-helper-text"
+      >
+        The size (in bytes) of the DRS Object represented as an integer.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Size /> should handle bundles 1`] = `null`;
+
+exports[`SHOW <Size /> should handle empty size prop 1`] = `null`;
