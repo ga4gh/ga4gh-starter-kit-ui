@@ -35,6 +35,7 @@ const DrsObjectChildren = props => {
             unsetRelativeValidity={props.unsetChildValidity}
             removeRelative={props.removeChild}
             readOnly={props.readOnly}
+            formViewType={props.formViewType}
         />
     )
 }

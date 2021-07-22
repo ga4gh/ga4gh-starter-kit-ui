@@ -192,7 +192,7 @@ const DrsObjectForm = (props) => {
                     {p.isBundle.is_bundle
                         ?
                             vis(p.children.drs_object_children)
-                                ? <DrsObjectChildren {...p.children} />
+                                ? <DrsObjectChildren {...p.children} formViewType={props.formViewType} />
                                 : null 
                         :
                             vis(p.checksums.checksums)
@@ -201,7 +201,7 @@ const DrsObjectForm = (props) => {
                     }
 
                     {vis(p.parents.drs_object_parents)
-                        ? <DrsObjectParents {...p.parents} />
+                        ? <DrsObjectParents {...p.parents} formViewType={props.formViewType} />
                         : null
                     }
 

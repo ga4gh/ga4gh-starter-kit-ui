@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
     Typography,
     Button,
@@ -8,6 +8,7 @@ import {
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import Cancel from '@material-ui/icons/Cancel';
 import DrsApiCaller from '../utils/DrsApiCaller';
+import FormViewType from '../../../model/common/FormViewType';
 
 /*
     Used to verify if the ID entered for a parent or child DRS Object is valid.
@@ -41,6 +42,12 @@ const VerifyIdButton = props => {
             DrsApiCaller(requestConfig, handleValid, props.setRelativeInvalid);
         }
     }
+
+    useEffect (() => {
+        if(props.formViewType === FormViewType.EDIT && props.relative.id) {
+            callAndValidate(props.relative);
+        }
+    }, [])
 
     return (
         <div>

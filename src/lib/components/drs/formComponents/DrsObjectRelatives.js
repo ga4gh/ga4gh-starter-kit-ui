@@ -66,6 +66,7 @@ const DrsObjectRelatives = props => {
                                                                 retrieveDrsObject={props.retrieveDrsObject}
                                                                 customApiCallSuccessCallback={props.customApiCallSuccessCallback ? responseData => props.customApiCallSuccessCallback(index, responseData) : undefined}
                                                                 readOnly={props.readOnly}
+                                                                formViewType={props.formViewType}
                                                             />
                                                         </InputAdornment>
                                                 }
@@ -82,7 +83,7 @@ const DrsObjectRelatives = props => {
                             </Grid>
                             {props.readOnly
                                 ?
-                                    <Grid item xs={2}>
+                                    <Grid item xs={1}>
                                         <Tooltip
                                             title={`View DrsObject with id '${relative.id}'`}
                                         >

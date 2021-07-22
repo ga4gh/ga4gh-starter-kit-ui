@@ -227,9 +227,17 @@ const DrsMain = props => {
 
   const loadActiveDrsObjectBasedOnPath = location => {
     let re = new RegExp('/drs/(.+[^/edit])');
+    let edit = new RegExp('/drs/.+/edit$');
     let match = location.pathname.match(re);
+    let editMatch = location.pathname.match(edit);
     if (match) {
-      match[1] === 'new' ? activeDrsObjectFunctions.reset() : activeDrsObjectFunctions.retrieve(match[1]);
+      //match[1] === 'new' ? activeDrsObjectFunctions.reset() : activeDrsObjectFunctions.retrieve(match[1]);
+      if(match[1] === 'new') activeDrsObjectFunctions.reset();
+      else if(editMatch) {
+        activeDrsObjectFunctions.reset();
+        activeDrsObjectFunctions.retrieve(match[1]);
+      }
+      else activeDrsObjectFunctions.retrieve(match[1]);
     }
   }
 
