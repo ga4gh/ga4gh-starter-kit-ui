@@ -23,10 +23,29 @@ const Services = props => {
 
     const classes = servicesStyles();
 
+    console.log(props);
+    console.log(props.serviceInfoList);
+
     return (
         <PageContainer>
             <BreadcrumbTrail trail={props.trail} />
             <BackButton to='/home' />
+
+            <Typography align='left' variant="h5" gutterBottom>
+                Services
+            </Typography>
+
+            <Typography>
+                Registered Services: 0
+                <br />
+                Accessible Services: 0
+                <br />
+                Inaccessble Services: 0
+            </Typography>
+
+            <Typography align='left' variant="h6" gutterBottom>
+                Accessible Services
+            </Typography>
 
             <div>
                 <Grid container>
