@@ -10,6 +10,1440 @@ exports[`<SpaceDivider /> 1`] = `
 </div>
 `;
 
+exports[`SHOW <AccessPoints /> should handle blobs 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-16"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Access Points
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    A DRS Object may contain multiple access points for fetching the raw bytes. Multiple access points give the client options in choosing the best data source for their use case (e.g. based on geographic proximity to the data). All access points associated with a single DRS Object must have the same bytes.
+  </p>
+  <div
+    className="MuiFormGroup-root"
+  >
+    <br />
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+    >
+      Local File Access Points
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+    >
+      Local file access points represent local files available on the same filesystem where the DRS service is running. This can also include files co-located on Network Attached Storage (NAS), such as on a high-performance compute cluster (HPC).
+    </p>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="FileAccessObject0"
+              id="FileAccessObject0-label"
+            >
+              Path
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="FileAccessObject0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="FileAccessObject0"
+                name="path"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="path1"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Path
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="FileAccessObject0-helper-text"
+            >
+              The filesystem path to the local file storing DRS Object bytes
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="FileAccessObject1"
+              id="FileAccessObject1-label"
+            >
+              Path
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="FileAccessObject1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="FileAccessObject1"
+                name="path"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="path2"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Path
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="FileAccessObject1-helper-text"
+            >
+              The filesystem path to the local file storing DRS Object bytes
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="FileAccessObject2"
+              id="FileAccessObject2-label"
+            >
+              Path
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="FileAccessObject2-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="FileAccessObject2"
+                name="path"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="path3"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Path
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="FileAccessObject2-helper-text"
+            >
+              The filesystem path to the local file storing DRS Object bytes
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root"
+  >
+    <br />
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+    >
+      AWS S3 Access Points
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+    >
+      Represents objects stored in AWS S3 containing DRS Object bytes.
+    </p>
+    <div
+      className="MuiFormGroup-root MuiFormGroup-row"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="region0"
+                id="region0-label"
+              >
+                Region
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="region0-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="region0"
+                  name="region"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="region1"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Region
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="region0-helper-text"
+              >
+                Region where AWS S3 service is located.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="bucket0"
+                id="bucket0-label"
+              >
+                Bucket
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="bucket0-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="bucket0"
+                  name="bucket"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="bucket1"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Bucket
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="bucket0-helper-text"
+              >
+                AWS S3 bucket containing the DRS Object.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="key0"
+                id="key0-label"
+              >
+                Key
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="key0-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="key0"
+                  name="key"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="key1"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Key
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="key0-helper-text"
+              >
+                Path within the bucket to the S3 object storing DRS Object bytes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiFormGroup-root MuiFormGroup-row"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="region1"
+                id="region1-label"
+              >
+                Region
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="region1-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="region1"
+                  name="region"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="region2"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Region
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="region1-helper-text"
+              >
+                Region where AWS S3 service is located.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="bucket1"
+                id="bucket1-label"
+              >
+                Bucket
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="bucket1-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="bucket1"
+                  name="bucket"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="bucket2"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Bucket
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="bucket1-helper-text"
+              >
+                AWS S3 bucket containing the DRS Object.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="key1"
+                id="key1-label"
+              >
+                Key
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="key1-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="key1"
+                  name="key"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="key2"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Key
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="key1-helper-text"
+              >
+                Path within the bucket to the S3 object storing DRS Object bytes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiFormGroup-root MuiFormGroup-row"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="region2"
+                id="region2-label"
+              >
+                Region
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="region2-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="region2"
+                  name="region"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="region3"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Region
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="region2-helper-text"
+              >
+                Region where AWS S3 service is located.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="bucket2"
+                id="bucket2-label"
+              >
+                Bucket
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="bucket2-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="bucket2"
+                  name="bucket"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="bucket3"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Bucket
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="bucket2-helper-text"
+              >
+                AWS S3 bucket containing the DRS Object.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink={true}
+                htmlFor="key2"
+                id="key2-label"
+              >
+                Key
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="key2-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="key2"
+                  name="key"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="key3"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                  >
+                    <span>
+                      Key
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+                id="key2-helper-text"
+              >
+                Path within the bucket to the S3 object storing DRS Object bytes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <AccessPoints /> should handle blobs without any access objects 1`] = `null`;
+
+exports[`SHOW <AccessPoints /> should handle blobs without aws_s3_access_objects 1`] = `null`;
+
+exports[`SHOW <AccessPoints /> should handle blobs without file_access_objects 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-17"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Access Points
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    A DRS Object may contain multiple access points for fetching the raw bytes. Multiple access points give the client options in choosing the best data source for their use case (e.g. based on geographic proximity to the data). All access points associated with a single DRS Object must have the same bytes.
+  </p>
+  <div
+    className="MuiFormGroup-root"
+  >
+    <br />
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+    >
+      Local File Access Points
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+    >
+      Local file access points represent local files available on the same filesystem where the DRS service is running. This can also include files co-located on Network Attached Storage (NAS), such as on a high-performance compute cluster (HPC).
+    </p>
+  </div>
+  <div
+    className="MuiFormGroup-root"
+  >
+    <br />
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+    >
+      AWS S3 Access Points
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+    >
+      Represents objects stored in AWS S3 containing DRS Object bytes.
+    </p>
+    <div
+      className="MuiFormGroup-root MuiFormGroup-row"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="region0"
+                id="region0-label"
+              >
+                Region
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="region0-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="region0"
+                  name="region"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="region1"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Region
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="region0-helper-text"
+              >
+                Region where AWS S3 service is located.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="bucket0"
+                id="bucket0-label"
+              >
+                Bucket
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="bucket0-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="bucket0"
+                  name="bucket"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="bucket1"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Bucket
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="bucket0-helper-text"
+              >
+                AWS S3 bucket containing the DRS Object.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="key0"
+                id="key0-label"
+              >
+                Key
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="key0-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="key0"
+                  name="key"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="key1"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Key
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="key0-helper-text"
+              >
+                Path within the bucket to the S3 object storing DRS Object bytes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiFormGroup-root MuiFormGroup-row"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="region1"
+                id="region1-label"
+              >
+                Region
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="region1-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="region1"
+                  name="region"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="region2"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Region
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="region1-helper-text"
+              >
+                Region where AWS S3 service is located.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="bucket1"
+                id="bucket1-label"
+              >
+                Bucket
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="bucket1-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="bucket1"
+                  name="bucket"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="bucket2"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Bucket
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="bucket1-helper-text"
+              >
+                AWS S3 bucket containing the DRS Object.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="key1"
+                id="key1-label"
+              >
+                Key
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="key1-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="key1"
+                  name="key"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="key2"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Key
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="key1-helper-text"
+              >
+                Path within the bucket to the S3 object storing DRS Object bytes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiFormGroup-root MuiFormGroup-row"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="region2"
+                id="region2-label"
+              >
+                Region
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="region2-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="region2"
+                  name="region"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="region3"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Region
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="region2-helper-text"
+              >
+                Region where AWS S3 service is located.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="bucket2"
+                id="bucket2-label"
+              >
+                Bucket
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="bucket2-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="bucket2"
+                  name="bucket"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="bucket3"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Bucket
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="bucket2-helper-text"
+              >
+                AWS S3 bucket containing the DRS Object.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        >
+          <div
+            className="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            >
+              <label
+                className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink={false}
+                htmlFor="key2"
+                id="key2-label"
+              >
+                Key
+              </label>
+              <div
+                className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                onClick={[Function]}
+              >
+                <input
+                  aria-describedby="key2-helper-text"
+                  aria-invalid={false}
+                  autoFocus={false}
+                  className="MuiInputBase-input MuiOutlinedInput-input"
+                  disabled={false}
+                  id="key2"
+                  name="key"
+                  onAnimationStart={[Function]}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  required={false}
+                  type="text"
+                  value="key3"
+                />
+                <fieldset
+                  aria-hidden={true}
+                  className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    className="PrivateNotchedOutline-legendLabelled-6"
+                  >
+                    <span>
+                      Key
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                className="MuiFormHelperText-root MuiFormHelperText-contained"
+                id="key2-helper-text"
+              >
+                Path within the bucket to the S3 object storing DRS Object bytes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <AccessPoints /> should handle bundles 1`] = `null`;
+
 exports[`SHOW <AddPropertyButton /> 1`] = `null`;
 
 exports[`SHOW <Aliases /> should handle 0 aliases 1`] = `
@@ -376,17 +1810,1705 @@ exports[`SHOW <Aliases /> should handle multiple aliases 1`] = `
 </div>
 `;
 
+exports[`SHOW <AwsS3AccessObjects /> should handle 0 AWS S3 access objects 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <br />
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    AWS S3 Access Points
+  </p>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Represents objects stored in AWS S3 containing DRS Object bytes.
+  </p>
+</div>
+`;
+
+exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access objects 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <br />
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    AWS S3 Access Points
+  </p>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Represents objects stored in AWS S3 containing DRS Object bytes.
+  </p>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="region0"
+              id="region0-label"
+            >
+              Region
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="region0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="region0"
+                name="region"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="region1"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="region0-helper-text"
+            >
+              Region where AWS S3 service is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="bucket0"
+              id="bucket0-label"
+            >
+              Bucket
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="bucket0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="bucket0"
+                name="bucket"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="bucket1"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="bucket0-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="key0"
+              id="key0-label"
+            >
+              Key
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="key0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="key0"
+                name="key"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="key1"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="key0-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="region1"
+              id="region1-label"
+            >
+              Region
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="region1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="region1"
+                name="region"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="region2"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="region1-helper-text"
+            >
+              Region where AWS S3 service is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="bucket1"
+              id="bucket1-label"
+            >
+              Bucket
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="bucket1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="bucket1"
+                name="bucket"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="bucket2"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="bucket1-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="key1"
+              id="key1-label"
+            >
+              Key
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="key1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="key1"
+                name="key"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="key2"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="key1-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="region2"
+              id="region2-label"
+            >
+              Region
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="region2-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="region2"
+                name="region"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="region3"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="region2-helper-text"
+            >
+              Region where AWS S3 service is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="bucket2"
+              id="bucket2-label"
+            >
+              Bucket
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="bucket2-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="bucket2"
+                name="bucket"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="bucket3"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="bucket2-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="key2"
+              id="key2-label"
+            >
+              Key
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="key2-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="key2"
+                name="key"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value="key3"
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="key2-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`SHOW <BundleBlobRadio /> should handle blob selection 1`] = `null`;
 
 exports[`SHOW <BundleBlobRadio /> should handle bundle selection 1`] = `null`;
 
-exports[`SHOW <Checksums /> should handle blobs with all types disabled 1`] = `null`;
+exports[`SHOW <Checksums /> should handle blobs with all types disabled 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-14"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <br />
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType0"
+              id="ChecksumType0-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType0-label ChecksumType0"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType0"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                md5
+              </div>
+              <input
+                aria-describedby="ChecksumType0-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="md5"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType0-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumValue0"
+              id="ChecksumValue0-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue0"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="checksum"
+                value={123}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumValue0-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType1"
+              id="ChecksumType1-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType1-label ChecksumType1"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType1"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                sha1
+              </div>
+              <input
+                aria-describedby="ChecksumType1-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha1"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType1-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumValue1"
+              id="ChecksumValue1-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue1"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="checksum"
+                value={456}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumValue1-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType2"
+              id="ChecksumType2-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType2-label ChecksumType2"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType2"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                sha256
+              </div>
+              <input
+                aria-describedby="ChecksumType2-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha256"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType2-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumValue2"
+              id="ChecksumValue2-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue2-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue2"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="checksum"
+                value={789}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumValue2-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
-exports[`SHOW <Checksums /> should handle blobs with all types enabled 1`] = `null`;
+exports[`SHOW <Checksums /> should handle blobs with all types enabled 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-13"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <br />
+</div>
+`;
 
-exports[`SHOW <Checksums /> should handle blobs with some types disabled 1`] = `null`;
+exports[`SHOW <Checksums /> should handle blobs with some types disabled 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-15"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <br />
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType0"
+              id="ChecksumType0-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType0-label ChecksumType0"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType0"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                md5
+              </div>
+              <input
+                aria-describedby="ChecksumType0-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="md5"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType0-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue0"
+              id="ChecksumValue0-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue0"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="checksum"
+                value={123}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue0-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType1"
+              id="ChecksumType1-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType1-label ChecksumType1"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType1"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                sha256
+              </div>
+              <input
+                aria-describedby="ChecksumType1-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha256"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType1-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue1"
+              id="ChecksumValue1-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue1"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="checksum"
+                value={789}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-6"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue1-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`SHOW <Checksums /> should handle bundles 1`] = `null`;
+
+exports[`SHOW <DateTimeField /> should handle any date and time 1`] = `
+<div
+  className="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    format="yyyy-MM-dd HH:mm:ss OOOO"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    readOnly={true}
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink={true}
+      htmlFor="Date-Time Snapshot Test"
+      id="Date-Time Snapshot Test-label"
+    >
+      Date-Time Snapshot Test
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-describedby="Date-Time Snapshot Test-helper-text"
+        aria-invalid={false}
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="Date-Time Snapshot Test"
+        name="Date-Time Snapshot Test"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        readOnly={true}
+        required={false}
+        type="text"
+        value="2021-07-22 09:00:00 GMT-04:00"
+      />
+    </div>
+    <p
+      className="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="Date-Time Snapshot Test-helper-text"
+    >
+      This is a date-time field description for a snapshot test.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SHOW <FileAccessObjects /> should handle 0 file access objects 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <br />
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    Local File Access Points
+  </p>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Local file access points represent local files available on the same filesystem where the DRS service is running. This can also include files co-located on Network Attached Storage (NAS), such as on a high-performance compute cluster (HPC).
+  </p>
+</div>
+`;
+
+exports[`SHOW <FileAccessObjects /> should handle multiple file access objects 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <br />
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    Local File Access Points
+  </p>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Local file access points represent local files available on the same filesystem where the DRS service is running. This can also include files co-located on Network Attached Storage (NAS), such as on a high-performance compute cluster (HPC).
+  </p>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        className="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink={true}
+            htmlFor="FileAccessObject0"
+            id="FileAccessObject0-label"
+          >
+            Path
+          </label>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-describedby="FileAccessObject0-helper-text"
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              disabled={false}
+              id="FileAccessObject0"
+              name="path"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              readOnly={true}
+              required={false}
+              type="text"
+              value="path1"
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject0-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        className="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink={true}
+            htmlFor="FileAccessObject1"
+            id="FileAccessObject1-label"
+          >
+            Path
+          </label>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-describedby="FileAccessObject1-helper-text"
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              disabled={false}
+              id="FileAccessObject1"
+              name="path"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              readOnly={true}
+              required={false}
+              type="text"
+              value="path2"
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject1-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        className="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink={true}
+            htmlFor="FileAccessObject2"
+            id="FileAccessObject2-label"
+          >
+            Path
+          </label>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-describedby="FileAccessObject2-helper-text"
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              disabled={false}
+              id="FileAccessObject2"
+              name="path"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              readOnly={true}
+              required={false}
+              type="text"
+              value="path3"
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                className="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject2-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`SHOW <GenerateIdButton /> 1`] = `
 <div
@@ -424,7 +3546,7 @@ exports[`SHOW <GenerateIdButton /> 1`] = `
 </div>
 `;
 
-exports[`SHOW <Id /> 1`] = `
+exports[`SHOW <Id /> should handle empty id field 1`] = `
 <div
   className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
 >
@@ -469,6 +3591,61 @@ exports[`SHOW <Id /> 1`] = `
         </div>
         <p
           className="MuiFormHelperText-root"
+          id="id-helper-text"
+        >
+          Unique identifier for this DRS Object (UUID recommended), cannot be modified later.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Id /> should handle populated id field 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+  >
+    <div
+      className="MuiFormControl-root MuiFormControl-fullWidth"
+    >
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          data-shrink={true}
+          htmlFor="id"
+          id="id-label"
+        >
+          Id
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-describedby="id-helper-text"
+            aria-invalid={false}
+            autoFocus={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="id"
+            name="id"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            readOnly={true}
+            required={false}
+            type="text"
+            value="1234567890"
+          />
+        </div>
+        <p
+          className="MuiFormHelperText-root MuiFormHelperText-filled"
           id="id-helper-text"
         >
           Unique identifier for this DRS Object (UUID recommended), cannot be modified later.
@@ -542,8 +3719,8 @@ exports[`SHOW <SimpleTextField /> 1`] = `
     className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-      data-shrink={true}
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink={false}
       htmlFor="Snapshot Test"
       id="Snapshot Test-label"
     >
@@ -572,7 +3749,7 @@ exports[`SHOW <SimpleTextField /> 1`] = `
       />
     </div>
     <p
-      className="MuiFormHelperText-root MuiFormHelperText-filled"
+      className="MuiFormHelperText-root"
       id="Snapshot Test-helper-text"
     >
       This is a description for a snapshot test.

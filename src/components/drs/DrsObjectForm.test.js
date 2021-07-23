@@ -69,8 +69,14 @@ test('SHOW <GenerateIdButton />', () => {
     expect(generateIdButton).toMatchSnapshot();
 });
 
-test('SHOW <Id />', () => {
+test('SHOW <Id /> should handle empty id field', () => {
     const id = renderer.create(<Id readOnlyId={true} activeDrsObject={{id: ''}} />)
+    .toJSON();
+    expect(id).toMatchSnapshot();
+});
+
+test('SHOW <Id /> should handle populated id field', () => {
+    const id = renderer.create(<Id readOnlyId={true} activeDrsObject={{id: '1234567890'}} />)
     .toJSON();
     expect(id).toMatchSnapshot();
 });
@@ -87,7 +93,17 @@ test('SHOW <SimpleTextField />', () => {
     expect(simpleTextField).toMatchSnapshot();
 });
 
-//DateTimeField
+//will need to use mock functions to test different timezones, morning, evening, current time, etc.
+test('SHOW <DateTimeField /> should handle any date and time', () => {
+    const dateTimeField = renderer.create(<DateTimeField 
+        readOnlyForm={true}
+        value='2021-07-22T13:00:00Z'
+        propertyName='Date-Time Snapshot Test'
+        label='Date-Time Snapshot Test'
+        description='This is a date-time field description for a snapshot test.' />)
+    .toJSON();
+    expect(dateTimeField).toMatchSnapshot();
+})
 
 test('SHOW <MimeType /> should handle blobs', () => {
     const mimeType = renderer
@@ -172,16 +188,11 @@ test('SHOW <Checksums /> should handle bundles', () => {
     readOnlyForm={true} 
     isBundle={true}
     checksumTypes={{
-        md5: {
-        disabled: false
-        },
-        sha1: {
-            disabled: false
-        },
-        sha256: {
-            disabled: false
-        }
-    }} />)
+        md5: {disabled: false},
+        sha1: {disabled: false},
+        sha256: {disabled: false}
+    }}
+    checksums={[]} />)
     .toJSON();
     expect(checksums).toMatchSnapshot();
 });
@@ -192,16 +203,11 @@ test('SHOW <Checksums /> should handle blobs with all types enabled', () => {
     readOnlyForm={true} 
     isBundle={false}
     checksumTypes={{
-        md5: {
-            disabled: false
-        },
-        sha1: {
-            disabled: false
-        },
-        sha256: {
-            disabled: false
-        }
-    }} />)
+        md5: {disabled: false},
+        sha1: {disabled: false},
+        sha256: {disabled: false}
+    }}
+    checksums={[]} />)
     .toJSON();
     expect(checksums).toMatchSnapshot();
 });
@@ -212,16 +218,15 @@ test('SHOW <Checksums /> should handle blobs with all types disabled', () => {
     readOnlyForm={true} 
     isBundle={false}
     checksumTypes={{
-        md5: {
-            disabled: true
-        },
-        sha1: {
-            disabled: true
-        },
-        sha256: {
-            disabled: true
-        }
-    }} />)
+        md5: {disabled: true},
+        sha1: {disabled: true},
+        sha256: {disabled: true}
+    }}
+    checksums={[
+        {checksum: 123, type: 'md5'}, 
+        {checksum: 456, type: 'sha1'},
+        {checksum: 789, type: 'sha256'}
+    ]} />)
     .toJSON();
     expect(checksums).toMatchSnapshot();
 });
@@ -232,47 +237,209 @@ test('SHOW <Checksums /> should handle blobs with some types disabled', () => {
     readOnlyForm={true} 
     isBundle={false}
     checksumTypes={{
-        md5: {
-            disabled: true
-        },
-        sha1: {
-            disabled: false
-        },
-        sha256: {
-            disabled: true
-        }
-    }} />)
+        md5: {disabled: true},
+        sha1: {disabled: false},
+        sha256: {disabled: true}
+    }}
+    checksums={[
+        {checksum: 123, type: 'md5'},
+        {checksum: 789, type: 'sha256'}
+    ]} />)
     .toJSON();
     expect(checksums).toMatchSnapshot();
 });
 
-//VerifyIdButton
-
-//RelatedDrsObjectButton
-
-/* test('SHOW <RelatedDrsObject /> should handle blobs with children', () => {
+//Need to test this component with verification functionality
+/* test('SHOW <RelatedDrsObject /> should handle bundles with children', () => {
     const relatedDrsObjects = renderer
-    .create(<RelatedDrsObject />)
+    .create(<RelatedDrsObject
+        readOnlyForm={true}
+        relatedDrsObjects={[
+            {id: 'child_drs_1'}, 
+            {id: 'child_drs_2'}, 
+            {id: 'child_drs_3'}
+        ]}
+        relationship='drs_object_children'
+        isBundle={true}
+        sectionDescription='This is a description for a snapshot test.'
+        objectName='related drs object snapshot test'
+        header='Snapshot Test Header'/>)
     .toJSON();
     expect(relatedDrsObjects).toMatchSnapshot();
 }); */
 
-//AccessPoints
+test('SHOW <AccessPoints /> should handle bundles', () => {
+    const accessPoints = renderer
+    .create(<AccessPoints
+        readOnlyForm={true}
+        isBundle={true}
+        activeDrsObject={{
+            file_access_objects: [
+                {path: 'path1'}, 
+                {path: 'path2'}, 
+                {path: 'path3'}
+            ],
+            aws_s3_access_objects: [
+                {
+                    region: 'region1',
+                    bucket: 'bucket1', 
+                    key: 'key1'
+                }, 
+                {
+                    region: 'region2',
+                    bucket: 'bucket2', 
+                    key: 'key2'
+                }, 
+                {
+                    region: 'region3',
+                    bucket: 'bucket3', 
+                    key: 'key3'
+                }
+            ]
+        }} />)
+    .toJSON();
+    expect(accessPoints).toMatchSnapshot();
+});
 
-/* test('FileAccessObjectsSnapshot', () => {
+test('SHOW <AccessPoints /> should handle blobs', () => {
+    const accessPoints = renderer
+    .create(<AccessPoints
+        readOnlyForm={true}
+        isBundle={false}
+        activeDrsObject={{
+            file_access_objects: [
+                {path: 'path1'}, 
+                {path: 'path2'}, 
+                {path: 'path3'}
+            ],
+            aws_s3_access_objects: [
+                {
+                    region: 'region1',
+                    bucket: 'bucket1', 
+                    key: 'key1'
+                }, 
+                {
+                    region: 'region2',
+                    bucket: 'bucket2', 
+                    key: 'key2'
+                }, 
+                {
+                    region: 'region3',
+                    bucket: 'bucket3', 
+                    key: 'key3'
+                }
+            ]
+        }} />)
+    .toJSON();
+    expect(accessPoints).toMatchSnapshot();
+});
+
+test('SHOW <AccessPoints /> should handle blobs without file_access_objects', () => {
+    const accessPoints = renderer
+    .create(<AccessPoints
+        readOnlyForm={true}
+        isBundle={false}
+        activeDrsObject={{
+            file_access_objects: [],
+            aws_s3_access_objects: [
+                {
+                    region: 'region1',
+                    bucket: 'bucket1', 
+                    key: 'key1'
+                }, 
+                {
+                    region: 'region2',
+                    bucket: 'bucket2', 
+                    key: 'key2'
+                }, 
+                {
+                    region: 'region3',
+                    bucket: 'bucket3', 
+                    key: 'key3'
+                }
+            ]
+        }} />)
+    .toJSON();
+    expect(accessPoints).toMatchSnapshot();
+});
+
+test('SHOW <AccessPoints /> should handle blobs without aws_s3_access_objects', () => {
+    const accessPoints = renderer
+    .create(<AccessPoints
+        readOnlyForm={true}
+        isBundle={true}
+        activeDrsObject={{
+            file_access_objects: [
+                {path: 'path1'}, 
+                {path: 'path2'}, 
+                {path: 'path3'}
+            ],
+            aws_s3_access_objects: []
+        }} />)
+    .toJSON();
+    expect(accessPoints).toMatchSnapshot();
+});
+
+test('SHOW <AccessPoints /> should handle blobs without any access objects', () => {
+    const accessPoints = renderer
+    .create(<AccessPoints
+        readOnlyForm={true}
+        isBundle={true}
+        activeDrsObject={{
+            file_access_objects: [],
+            aws_s3_access_objects: []
+        }} />)
+    .toJSON();
+    expect(accessPoints).toMatchSnapshot();
+});
+
+test('SHOW <FileAccessObjects /> should handle 0 file access objects', () => {
     const fileAccessObjects = renderer
-    .create(<FileAccessObjects />)
+    .create(<FileAccessObjects readOnlyForm={true} fileAccessObjects={[]} />)
     .toJSON();
     expect(fileAccessObjects).toMatchSnapshot();
 });
 
-test('AwsS3AccessObjectsSnapshot', () => {
+test('SHOW <FileAccessObjects /> should handle multiple file access objects', () => {
+    const fileAccessObjects = renderer
+    .create(<FileAccessObjects
+         readOnlyForm={true}
+         fileAccessObjects={[
+            {path: 'path1'}, 
+            {path: 'path2'}, 
+            {path: 'path3'}
+        ]}
+         />)
+    .toJSON();
+    expect(fileAccessObjects).toMatchSnapshot();
+});
+
+test('SHOW <AwsS3AccessObjects /> should handle 0 AWS S3 access objects', () => {
     const awsS3AccessObjects = renderer
-    .create(<AwsS3AccessObjects />)
+    .create(<AwsS3AccessObjects readOnlyForm awsS3AccessObjects={[]}/>)
     .toJSON();
     expect(awsS3AccessObjects).toMatchSnapshot();
-}); */
+});
 
-//SubmitButton
-
-//DrsObjectForm
+test('SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access objects', () => {
+    const awsS3AccessObjects = renderer
+    .create(<AwsS3AccessObjects readOnlyForm awsS3AccessObjects={[
+        {
+            region: 'region1',
+            bucket: 'bucket1', 
+            key: 'key1'
+        }, 
+        {
+            region: 'region2',
+            bucket: 'bucket2', 
+            key: 'key2'
+        }, 
+        {
+            region: 'region3',
+            bucket: 'bucket3', 
+            key: 'key3'
+        }
+    ]}/>)
+    .toJSON();
+    expect(awsS3AccessObjects).toMatchSnapshot();
+});
