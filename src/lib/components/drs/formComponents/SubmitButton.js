@@ -31,6 +31,34 @@ const SubmitButton = props => {
                 return [false, `'id' parameter must be set`];
             }
 
+            // validate aliases
+            props.activeDrsObject.aliases.forEach((alias, index) => {
+                if (!alias) {
+                    return [isValid, message] = [false, `Invalid 'Alias' at position: ${index}`];
+                }
+            })
+
+            // validate checksums
+            props.activeDrsObject.checksums.forEach((checksum, index) => {
+                if (!checksum.type || !checksum.checksum) {
+                    return [isValid, message] = [false, `Invalid 'Checksum' at position ${index}`];
+                }
+            })
+
+            //validate file access objects
+            props.activeDrsObject.file_access_objects.forEach((fileAccessObject, index) => {
+                if (!fileAccessObject.path) {
+                    return [isValid, message] = [false, `Invalid 'Local File Access Point' at position: ${index}`];
+                }
+            })
+
+            //validate AWS S3 access objects
+            props.activeDrsObject.aws_s3_access_objects.forEach((awsS3AccessObject, index) => {
+                if (!awsS3AccessObject.region || !awsS3AccessObject.bucket || !awsS3AccessObject.key) {
+                    return [isValid, message] = [false, `Invalid 'AWS S3 Access Point' at position ${index}`];
+                }
+            })
+
             // validate children and parents arrays
             const validateRelativesArray = (relatives, name) => {
                 relatives.forEach((relative, index) => {
