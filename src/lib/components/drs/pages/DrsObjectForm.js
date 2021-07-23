@@ -11,6 +11,7 @@ import {
     Snackbar
 } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
+import EditIcon from '@material-ui/icons/Edit';
 import {
     Link
 } from "react-router-dom";
@@ -34,12 +35,14 @@ import {
 } from '../formComponents';
 import SpaceDivider from '../../common/SpaceDivider';
 import FormViewType from '../../../model/common/FormViewType';
+import { scrollToTop } from '../../../functions/common';
+import DeleteDrsObjectButton from '../formComponents/DeleteDrsObjectButton';
 
 const DrsObjectForm = (props) => {
     const [error, setError] = useState(null);
 
     const applyReadOnly = () => {
-        let nonEditableOnEditForm = ['id', 'isBundle'];
+        let nonEditableOnEditForm = new Set(['id', 'isBundle']);
         let p = {};
         Object.keys(props.groupedFormProps).forEach(key => {
             switch (props.formViewType) {
@@ -50,7 +53,9 @@ const DrsObjectForm = (props) => {
                     p[key] = {...props.groupedFormProps[key], readOnly:false};
                     break;
                 case FormViewType.EDIT:
-                    // TODO HANDLE EDIT
+                    nonEditableOnEditForm.has(key) 
+                    ? p[key] = {...props.groupedFormProps[key], readOnly: true}
+                    : p[key] = {...props.groupedFormProps[key], readOnly:false};
                     break;
             }
         })
@@ -100,14 +105,36 @@ const DrsObjectForm = (props) => {
 
             <Grid container justify='space-between' alignItems='center'>
                 <Grid item xs={2} align='left'>
-                    <Button variant='contained' component={Link} to='/drs' color='primary' size='large'>
-                        <Typography variant='button'>DRS Index</Typography>
-                    </Button>
+                    {
+                        props.formViewType === FormViewType.EDIT 
+                        ?   <DeleteDrsObjectButton {...p.delete} setError={setError}/>
+                        :   <Button variant='contained' color='primary' size='large'
+                            component={Link} to='/drs' onClick={scrollToTop}>
+                                <Typography variant='button'>DRS Index</Typography>
+                            </Button>
+                    }
                 </Grid>
                 <Grid item xs={8}>
                     <Typography align='center' variant="h3" gutterBottom>{props.title}</Typography>
                 </Grid>
-                <Grid item xs={2} />
+                <Grid item xs={2} align='right'>
+                    {
+                        props.formViewType === FormViewType.SHOW 
+                        ?   <Button variant='contained' color='primary' size='large' endIcon={<EditIcon/>}
+                            component={Link} to={`/drs/${p.id.id}/edit`} onClick={scrollToTop}>
+                                <Typography variant='button'>Edit</Typography>
+                            </Button> 
+                        : null
+                    }
+                    {
+                        props.formViewType === FormViewType.EDIT 
+                        ?   <Button variant='contained' color='primary' size='large'
+                            component={Link} to={`/drs/${p.id.id}`} onClick={scrollToTop}>
+                                <Typography variant='button'>Cancel</Typography>
+                            </Button>  
+                        : null
+                    }
+                </Grid>
             </Grid>
             <Box pb={4}>
                 <form>
@@ -168,7 +195,7 @@ const DrsObjectForm = (props) => {
                     {p.isBundle.is_bundle
                         ?
                             vis(p.children.drs_object_children)
-                                ? <DrsObjectChildren {...p.children} />
+                                ? <DrsObjectChildren {...p.children} formViewType={props.formViewType} />
                                 : null 
                         :
                             vis(p.checksums.checksums)
@@ -177,7 +204,7 @@ const DrsObjectForm = (props) => {
                     }
 
                     {vis(p.parents.drs_object_parents)
-                        ? <DrsObjectParents {...p.parents} />
+                        ? <DrsObjectParents {...p.parents} formViewType={props.formViewType} />
                         : null
                     }
 
@@ -211,7 +238,7 @@ const DrsObjectForm = (props) => {
                             
                     }
 
-                    {props.formViewType === FormViewType.NEW
+                    {props.formViewType === FormViewType.NEW || props.formViewType === FormViewType.EDIT
                         ? <SubmitButton {...p.submit} formViewType={props.formViewType} setError={setError} />
                         : null
                     }

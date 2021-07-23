@@ -14,9 +14,9 @@ import RemoveItemButton from '../../common/RemoveItemButton';
 /*
     Displayed for blob-type objects and can be added and removed. The Type
     property is selected using a dropdown, however each type can only be
-    selected once. If a type is selected, that option is disabled for each of
-    the other checksum instances. A maximum of 3 checksum objects can be added
-    before the AddPropertyButton becomes disabled, since there are 3 type
+    selected once. If a type is selected, that option is hidden for each of
+    the following checksum instances. A maximum of 3 checksum objects can 
+    be added before the AddPropertyButton is hidden since there are 3 type
     options. The Checksum value field is updated through free-text entry.
 */
 const Checksums = props => {
@@ -116,7 +116,7 @@ const Checksums = props => {
             })} 
             <AddItemButton
                 objectName='checksum'
-                display={props.checksums.length < 3}
+                display={props.checksums.length < 3 && !props.readOnly}
                 disabled={!(props.checksums.length < 3)}
                 handleClick={props.addChecksum}
             />

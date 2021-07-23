@@ -38,6 +38,7 @@ const DrsObjectParents = props => {
             customApiCallSuccessCallback={assertParentIsBundleThenSetValid}
             removeRelative={props.removeParent}
             readOnly={props.readOnly}
+            formViewType={props.formViewType}
         />
     )
 }
