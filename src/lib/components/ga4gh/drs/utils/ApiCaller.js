@@ -6,6 +6,10 @@ const ApiCaller = (requestConfig, handleResponseData, handleError) => {
     handleResponseData(response.data);
   })
   .catch(error => {
+    console.log('caught the error');
+    console.log(error);
+    console.log(handleError);
+    console.log("***");
     handleError(error)
   })
 }
