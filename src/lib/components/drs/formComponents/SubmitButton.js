@@ -87,11 +87,24 @@ const SubmitButton = props => {
             return requestConfig;
         }
 
+        const determineSuccessMessage = id => {
+            let successMessage = '';
+            switch (props.formViewType) {
+                case FormViewType.NEW:
+                    successMessage = `Successfully created DrsObject with id: '${id}'`;
+                break;
+                case FormViewType.EDIT: 
+                    successMessage = `Successfully updated DrsObject with id: '${id}'`;
+                break;
+            }
+            return successMessage;
+        }
+
         const executeApiCall = requestConfig => {
             DrsApiCaller(
                 requestConfig,
                 responseData => {
-                    props.setSuccessMessage(`Successfully created DrsObject with id: '${responseData.id}'`);
+                    props.setSuccessMessage(determineSuccessMessage(responseData.id));
                     props.retrieveDrsObjectsList();
                     history.push('/drs');
                     scrollToTop();

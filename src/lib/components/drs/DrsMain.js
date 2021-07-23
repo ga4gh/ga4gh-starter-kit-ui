@@ -216,8 +216,6 @@ const DrsMain = props => {
     fileAccessObjects: _.pick(formProps, ['file_access_objects', 'addFileAccessObject', 'setFileAccessObjectPath', 'removeFileAccessObject']),
     awsS3AccessObjects: _.pick(formProps, ['aws_s3_access_objects', 'addAwsS3AccessObject', 'setAwsS3AccessObjectRegion', 'setAwsS3AccessObjectBucket', 'setAwsS3AccessObjectKey', 'removeAwsS3AccessObject']),
     submit: {activeDrsObject: activeDrsObject, setSuccessMessage: setSuccessMessage, ..._.pick(formProps, ['retrieveDrsObjectsList'])}, 
-    edit: _.pick(formProps, ['id']), 
-    cancel: _.pick(formProps, ['id']),
     delete: {setSuccessMessage: setSuccessMessage, ..._.pick(formProps, ['id', 'retrieveDrsObjectsList'])}
   }
 
@@ -226,14 +224,16 @@ const DrsMain = props => {
    * ################################################## */
 
   const loadActiveDrsObjectBasedOnPath = location => {
-    let re = new RegExp('/drs/(.+[^/edit])');
+    let re = new RegExp('/drs/([^/]+)');
     let edit = new RegExp('/drs/.+/edit$');
     let match = location.pathname.match(re);
     let editMatch = location.pathname.match(edit);
     if (match) {
+      console.log(match);
       //match[1] === 'new' ? activeDrsObjectFunctions.reset() : activeDrsObjectFunctions.retrieve(match[1]);
       if(match[1] === 'new') activeDrsObjectFunctions.reset();
       else if(editMatch) {
+        console.log(editMatch);
         activeDrsObjectFunctions.reset();
         activeDrsObjectFunctions.retrieve(match[1]);
       }

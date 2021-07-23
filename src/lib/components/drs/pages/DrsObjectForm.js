@@ -42,7 +42,7 @@ const DrsObjectForm = (props) => {
     const [error, setError] = useState(null);
 
     const applyReadOnly = () => {
-        let nonEditableOnEditForm = ['id', 'isBundle'];
+        let nonEditableOnEditForm = new Set(['id', 'isBundle']);
         let p = {};
         Object.keys(props.groupedFormProps).forEach(key => {
             switch (props.formViewType) {
@@ -53,7 +53,7 @@ const DrsObjectForm = (props) => {
                     p[key] = {...props.groupedFormProps[key], readOnly:false};
                     break;
                 case FormViewType.EDIT:
-                    nonEditableOnEditForm.some(element => element === key)
+                    nonEditableOnEditForm.has(key) 
                     ? p[key] = {...props.groupedFormProps[key], readOnly: true}
                     : p[key] = {...props.groupedFormProps[key], readOnly:false};
                     break;
@@ -121,12 +121,15 @@ const DrsObjectForm = (props) => {
                     {
                         props.formViewType === FormViewType.SHOW 
                         ?   <Button variant='contained' color='primary' size='large' endIcon={<EditIcon/>}
-                            component={Link} to={`/drs/${p.edit.id}/edit`} onClick={scrollToTop}>
+                            component={Link} to={`/drs/${p.id.id}/edit`} onClick={scrollToTop}>
                                 <Typography variant='button'>Edit</Typography>
                             </Button> 
-                        : props.formViewType === FormViewType.EDIT 
+                        : null
+                    }
+                    {
+                        props.formViewType === FormViewType.EDIT 
                         ?   <Button variant='contained' color='primary' size='large'
-                            component={Link} to={`/drs/${p.cancel.id}`} onClick={scrollToTop}>
+                            component={Link} to={`/drs/${p.id.id}`} onClick={scrollToTop}>
                                 <Typography variant='button'>Cancel</Typography>
                             </Button>  
                         : null
