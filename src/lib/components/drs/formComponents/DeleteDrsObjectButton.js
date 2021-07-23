@@ -29,7 +29,7 @@ const DeleteDrsObjectButton = props => {
         DrsApiCaller(
             requestConfig, 
             responseData => {
-                setSuccessMessage(`DRS Object ${id} has been successfully deleted`);
+                setSuccessMessage(`DRS Object '${id}' has been successfully deleted`);
                 retrieveDrsObjectsList();
                 history.push('/drs');
                 scrollToTop();
