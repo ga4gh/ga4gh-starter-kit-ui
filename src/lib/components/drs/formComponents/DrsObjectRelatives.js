@@ -59,6 +59,7 @@ const DrsObjectRelatives = props => {
                                                         <InputAdornment position='end'>
                                                             <VerifyIdButton
                                                                 activeDrsObject={props.activeDrsObject}
+                                                                activeDrsObjectId={props.activeDrsObjectId}
                                                                 relative={relative}
                                                                 setRelativeName={(name) => props.setRelativeName(index, name)}
                                                                 setRelativeValid={() => props.setRelativeValid(index)}

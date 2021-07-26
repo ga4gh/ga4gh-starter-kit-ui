@@ -24,6 +24,7 @@ const DrsObjectChildren = props => {
                     </Typography>
                 </div>
             }
+            activeDrsObjectId={props.id}
             relationship="children"
             objectName="child"
             relatives={props.drs_object_children}

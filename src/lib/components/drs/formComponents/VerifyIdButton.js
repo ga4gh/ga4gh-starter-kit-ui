@@ -32,7 +32,7 @@ const VerifyIdButton = props => {
     const handleValid = props.customApiCallSuccessCallback ? props.customApiCallSuccessCallback : defaultHandleValid;
 
     const callAndValidate = relative => {
-        if (relative.id === '') {
+        if (relative.id === '' || relative.id === props.activeDrsObjectId) {
             props.setRelativeInvalid();
         } else {
             let requestConfig = {
