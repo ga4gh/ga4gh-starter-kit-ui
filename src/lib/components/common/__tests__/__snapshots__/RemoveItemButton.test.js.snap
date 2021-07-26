@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <RemoveItemButton /> 1`] = `<div />`;
+
+exports[`SHOW <RemoveItemButton /> 1`] = `<div />`;
