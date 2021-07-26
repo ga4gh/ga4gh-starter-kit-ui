@@ -28,7 +28,7 @@ const SubmitButton = props => {
 
             // validate Id
             if (props.activeDrsObject.id === '' || props.activeDrsObject.id === null) {
-                return [false, `'id' parameter must be set`];
+                return [false, `'Id' parameter must be set`];
             }
 
             // validate aliases
@@ -38,26 +38,28 @@ const SubmitButton = props => {
                 }
             })
 
-            // validate checksums
-            props.activeDrsObject.checksums.forEach((checksum, index) => {
-                if (!checksum.type || !checksum.checksum) {
-                    return [isValid, message] = [false, `Invalid 'Checksum' at position ${index}`];
-                }
-            })
+            if(!props.activeDrsObject.is_bundle) {
+                // validate checksums
+                props.activeDrsObject.checksums.forEach((checksum, index) => {
+                    if (!checksum.type || !checksum.checksum) {
+                        return [isValid, message] = [false, `Invalid 'Checksum' at position ${index}`];
+                    }
+                })
 
-            //validate file access objects
-            props.activeDrsObject.file_access_objects.forEach((fileAccessObject, index) => {
-                if (!fileAccessObject.path) {
-                    return [isValid, message] = [false, `Invalid 'Local File Access Point' at position: ${index}`];
-                }
-            })
+                //validate file access objects
+                props.activeDrsObject.file_access_objects.forEach((fileAccessObject, index) => {
+                    if (!fileAccessObject.path) {
+                        return [isValid, message] = [false, `Invalid 'Local File Access Point' at position: ${index}`];
+                    }
+                })
 
-            //validate AWS S3 access objects
-            props.activeDrsObject.aws_s3_access_objects.forEach((awsS3AccessObject, index) => {
-                if (!awsS3AccessObject.region || !awsS3AccessObject.bucket || !awsS3AccessObject.key) {
-                    return [isValid, message] = [false, `Invalid 'AWS S3 Access Point' at position ${index}`];
-                }
-            })
+                //  validate AWS S3 access objects
+                props.activeDrsObject.aws_s3_access_objects.forEach((awsS3AccessObject, index) => {
+                    if (!awsS3AccessObject.region || !awsS3AccessObject.bucket || !awsS3AccessObject.key) {
+                        return [isValid, message] = [false, `Invalid 'AWS S3 Access Point' at position ${index}`];
+                    }
+                })    
+            }
 
             // validate children and parents arrays
             const validateRelativesArray = (relatives, name) => {
@@ -69,9 +71,11 @@ const SubmitButton = props => {
                 })
             }
 
-            validateRelativesArray(props.activeDrsObject.drs_object_children, 'child');
-            if (!isValid) {
-                return [isValid, message];
+            if(props.activeDrsObject.is_bundle) {
+                validateRelativesArray(props.activeDrsObject.drs_object_children, 'child');
+                if (!isValid) {
+                    return [isValid, message];
+                }    
             }
 
             validateRelativesArray(props.activeDrsObject.drs_object_parents, 'parent');
