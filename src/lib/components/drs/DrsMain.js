@@ -276,10 +276,12 @@ const DrsMain = props => {
       }
     })
     setDisplayChecksumTypes(transientDisplayChecksumTypes);
+    console.log(transientDisplayChecksumTypes);
 
     if (unsetChecksumTypeEncountered) {
       setActiveDrsObject(transientActiveDrsObject);
     }
+    console.log(transientActiveDrsObject);
   }, [activeDrsObject]);
 
   /* ##################################################

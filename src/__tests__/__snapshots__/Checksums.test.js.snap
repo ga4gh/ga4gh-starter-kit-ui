@@ -1,0 +1,1955 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <Checksums /> should handle all types selected 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-9"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType0"
+              id="ChecksumType0-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType0-label ChecksumType0"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType0"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                md5
+              </div>
+              <input
+                aria-describedby="ChecksumType0-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="md5"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType0-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue0"
+              id="ChecksumValue0-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue0"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={false}
+                required={false}
+                type="text"
+                value={123}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue0-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            title="Remove this checksum."
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType1"
+              id="ChecksumType1-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType1-label ChecksumType1"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType1"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                sha1
+              </div>
+              <input
+                aria-describedby="ChecksumType1-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha1"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType1-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue1"
+              id="ChecksumValue1-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue1"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={false}
+                required={false}
+                type="text"
+                value={456}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue1-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            title="Remove this checksum."
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType2"
+              id="ChecksumType2-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType2-label ChecksumType2"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType2"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                sha256
+              </div>
+              <input
+                aria-describedby="ChecksumType2-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha256"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType2-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue2"
+              id="ChecksumValue2-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue2-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue2"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={false}
+                required={false}
+                type="text"
+                value={789}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue2-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            title="Remove this checksum."
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`NEW and EDIT <Checksums /> should handle no types selected 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-8"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <div>
+    <div
+      className="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <button
+          aria-describedby={null}
+          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          title="Add checksum"
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+              />
+            </svg>
+          </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT <Checksums /> should handle some types selected 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-10"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType0"
+              id="ChecksumType0-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType0-label ChecksumType0"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType0"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                md5
+              </div>
+              <input
+                aria-describedby="ChecksumType0-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="md5"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType0-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue0"
+              id="ChecksumValue0-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue0"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={false}
+                required={false}
+                type="text"
+                value={123}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue0-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            title="Remove this checksum."
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType1"
+              id="ChecksumType1-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType1-label ChecksumType1"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType1"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                sha256
+              </div>
+              <input
+                aria-describedby="ChecksumType1-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha256"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType1-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue1"
+              id="ChecksumValue1-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue1"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={false}
+                required={false}
+                type="text"
+                value={789}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue1-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            title="Remove this checksum."
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <button
+          aria-describedby={null}
+          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          title="Add checksum"
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+              />
+            </svg>
+          </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Checksums /> should handle all types selected 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-2"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType0"
+              id="ChecksumType0-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType0-label ChecksumType0"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType0"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                md5
+              </div>
+              <input
+                aria-describedby="ChecksumType0-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="md5"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType0-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumValue0"
+              id="ChecksumValue0-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue0"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value={123}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumValue0-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType1"
+              id="ChecksumType1-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType1-label ChecksumType1"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType1"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                sha1
+              </div>
+              <input
+                aria-describedby="ChecksumType1-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha1"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType1-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumValue1"
+              id="ChecksumValue1-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue1"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value={456}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumValue1-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType2"
+              id="ChecksumType2-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType2-label ChecksumType2"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType2"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                sha256
+              </div>
+              <input
+                aria-describedby="ChecksumType2-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha256"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType2-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumValue2"
+              id="ChecksumValue2-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue2-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue2"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value={789}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumValue2-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`SHOW <Checksums /> should handle no types selected 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-1"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <div />
+</div>
+`;
+
+exports[`SHOW <Checksums /> should handle some types disabled 1`] = `
+<div
+  className="MuiFormGroup-root"
+>
+  <div
+    className="MuiBox-root MuiBox-root-7"
+  >
+    <hr
+      className="MuiDivider-root"
+    />
+  </div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Checksums
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Each single-blob DRS Object must report one or more checksums, recording the digest algorithm and value of the DRS Object bytes. The following list displays the recorded digest algorithms and corresponding values for this DRS Object.
+  </p>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType0"
+              id="ChecksumType0-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType0-label ChecksumType0"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType0"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                md5
+              </div>
+              <input
+                aria-describedby="ChecksumType0-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="md5"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType0-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue0"
+              id="ChecksumValue0-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue0-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue0"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value={123}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue0-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    className="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            align="left"
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink={true}
+              htmlFor="ChecksumType1"
+              id="ChecksumType1-label"
+            >
+              Type
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-labelledby="ChecksumType1-label ChecksumType1"
+                className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+                id="ChecksumType1"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={null}
+                role="button"
+                tabIndex={0}
+              >
+                sha256
+              </div>
+              <input
+                aria-describedby="ChecksumType1-helper-text"
+                aria-hidden={true}
+                autoFocus={false}
+                className="MuiSelect-nativeInput"
+                name="type"
+                onAnimationStart={[Function]}
+                onChange={[Function]}
+                required={false}
+                tabIndex={-1}
+                value="sha256"
+              />
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
+                >
+                  <span>
+                    Type
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="ChecksumType1-helper-text"
+            >
+              Hashing algorithm used to generate the checksum.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink={false}
+              htmlFor="ChecksumValue1"
+              id="ChecksumValue1-label"
+            >
+              Checksum
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="ChecksumValue1-helper-text"
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input"
+                disabled={false}
+                id="ChecksumValue1"
+                name="checksum"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                required={false}
+                type="text"
+                value={789}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="PrivateNotchedOutline-legendLabelled-5"
+                >
+                  <span>
+                    Checksum
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="ChecksumValue1-helper-text"
+            >
+              Checksum digest value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div />
+</div>
+`;

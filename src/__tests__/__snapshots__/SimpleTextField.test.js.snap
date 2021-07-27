@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <SimpleTextField /> handles empty field 1`] = `
+<div
+  className="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink={false}
+      htmlFor="SnapshotTestSimpleTextField"
+      id="SnapshotTestSimpleTextField-label"
+    >
+      Snapshot Test
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-describedby="SnapshotTestSimpleTextField-helper-text"
+        aria-invalid={false}
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="SnapshotTestSimpleTextField"
+        name="Snapshot Test"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        readOnly={false}
+        required={false}
+        type="text"
+        value="Snapshot test simple text field value."
+      />
+    </div>
+    <p
+      className="MuiFormHelperText-root"
+      id="SnapshotTestSimpleTextField-helper-text"
+    >
+      This is a description for a snapshot test.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT <SimpleTextField /> handles populated field 1`] = `
+<div
+  className="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink={true}
+      htmlFor="SnapshotTestSimpleTextField"
+      id="SnapshotTestSimpleTextField-label"
+    >
+      Snapshot Test
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-describedby="SnapshotTestSimpleTextField-helper-text"
+        aria-invalid={false}
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="SnapshotTestSimpleTextField"
+        name="Snapshot Test"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        readOnly={false}
+        required={false}
+        type="text"
+        value="Snapshot test simple text field value."
+      />
+    </div>
+    <p
+      className="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="SnapshotTestSimpleTextField-helper-text"
+    >
+      This is a description for a snapshot test.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SHOW <SimpleTextField /> handles empty field 1`] = `
+<div
+  className="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink={false}
+      htmlFor="SnapshotTestSimpleTextField"
+      id="SnapshotTestSimpleTextField-label"
+    >
+      Snapshot Test
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-describedby="SnapshotTestSimpleTextField-helper-text"
+        aria-invalid={false}
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="SnapshotTestSimpleTextField"
+        name="Snapshot Test"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        readOnly={true}
+        required={false}
+        type="text"
+        value="Snapshot test simple text field value."
+      />
+    </div>
+    <p
+      className="MuiFormHelperText-root"
+      id="SnapshotTestSimpleTextField-helper-text"
+    >
+      This is a description for a snapshot test.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SHOW <SimpleTextField /> handles populated field 1`] = `
+<div
+  className="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink={true}
+      htmlFor="SnapshotTestSimpleTextField"
+      id="SnapshotTestSimpleTextField-label"
+    >
+      Snapshot Test
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-describedby="SnapshotTestSimpleTextField-helper-text"
+        aria-invalid={false}
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="SnapshotTestSimpleTextField"
+        name="Snapshot Test"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        readOnly={true}
+        required={false}
+        type="text"
+        value="Snapshot test simple text field value."
+      />
+    </div>
+    <p
+      className="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="SnapshotTestSimpleTextField-helper-text"
+    >
+      This is a description for a snapshot test.
+    </p>
+  </div>
+</div>
+`;
