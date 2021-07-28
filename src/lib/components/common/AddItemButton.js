@@ -18,10 +18,12 @@ const AddItemButton = props => {
                 ?
                     <Grid container>
                         <Grid item>
-                            <Tooltip title={`Add ${props.objectName}`}>
-                                <IconButton color='primary' onClick={props.handleClick} disabled={props.disabled}>
-                                    <AddCircle/>
-                                </IconButton>   
+                            <Tooltip title={`Add ${props.objectName}.`}>
+                                <span>
+                                    <IconButton aria-label={`add-item-button`} color='primary' onClick={props.handleClick} disabled={props.disabled}>
+                                        <AddCircle/>
+                                    </IconButton>       
+                                </span>
                             </Tooltip>    
                         </Grid>
                     </Grid>

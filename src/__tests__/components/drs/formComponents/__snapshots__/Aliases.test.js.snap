@@ -1,0 +1,599 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT should handle multiple aliases 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <div
+    class="MuiBox-root MuiBox-root-10"
+  >
+    <hr
+      class="MuiDivider-root"
+    />
+  </div>
+  <h6
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Aliases
+  </h6>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    A list of aliases that can be used to identify the DRS Object by additional names.
+  </p>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            class="MuiFormControl-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink="true"
+                for="alias-0"
+                id="alias-0-label"
+              >
+                Alias
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="alias-0"
+                  name="alias"
+                  type="text"
+                  value="alias1"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-13 PrivateNotchedOutline-legendNotched-14"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-15"
+          >
+            <div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+              >
+                <button
+                  aria-label="remove-item-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                  tabindex="0"
+                  title="Remove this alias."
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            class="MuiFormControl-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink="true"
+                for="alias-1"
+                id="alias-1-label"
+              >
+                Alias
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="alias-1"
+                  name="alias"
+                  type="text"
+                  value="alias2"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-13 PrivateNotchedOutline-legendNotched-14"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-16"
+          >
+            <div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+              >
+                <button
+                  aria-label="remove-item-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                  tabindex="0"
+                  title="Remove this alias."
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            class="MuiFormControl-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink="true"
+                for="alias-2"
+                id="alias-2-label"
+              >
+                Alias
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="alias-2"
+                  name="alias"
+                  type="text"
+                  value="alias3"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-13 PrivateNotchedOutline-legendNotched-14"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-17"
+          >
+            <div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+              >
+                <button
+                  aria-label="remove-item-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                  tabindex="0"
+                  title="Remove this alias."
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div>
+          <div
+            class="MuiGrid-root MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item"
+            >
+              <span
+                class=""
+                title="Add alias."
+              >
+                <button
+                  aria-label="add-item-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT should handle zero aliases 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <div
+    class="MuiBox-root MuiBox-root-9"
+  >
+    <hr
+      class="MuiDivider-root"
+    />
+  </div>
+  <h6
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Aliases
+  </h6>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    A list of aliases that can be used to identify the DRS Object by additional names.
+  </p>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div>
+          <div
+            class="MuiGrid-root MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item"
+            >
+              <span
+                class=""
+                title="Add alias."
+              >
+                <button
+                  aria-label="add-item-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW should handle multiple aliases 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <div
+    class="MuiBox-root MuiBox-root-1"
+  >
+    <hr
+      class="MuiDivider-root"
+    />
+  </div>
+  <h6
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+  >
+    Aliases
+  </h6>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    A list of aliases that can be used to identify the DRS Object by additional names.
+  </p>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            class="MuiFormControl-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink="true"
+                for="alias-0"
+                id="alias-0-label"
+              >
+                Alias
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="alias-0"
+                  name="alias"
+                  readonly=""
+                  type="text"
+                  value="alias1"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-6"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            class="MuiFormControl-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink="true"
+                for="alias-1"
+                id="alias-1-label"
+              >
+                Alias
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="alias-1"
+                  name="alias"
+                  readonly=""
+                  type="text"
+                  value="alias2"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-7"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            class="MuiFormControl-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                data-shrink="true"
+                for="alias-2"
+                id="alias-2-label"
+              >
+                Alias
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="alias-2"
+                  name="alias"
+                  readonly=""
+                  type="text"
+                  value="alias3"
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-8"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div />
+      </div>
+    </div>
+  </div>
+</div>
+`;

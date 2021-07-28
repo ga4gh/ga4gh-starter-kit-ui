@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default route and navigation to /drs are rendered correctly 1`] = `
+<div>
+  <div
+    align="center"
+  >
+    <meta
+      content="minimum-scale=1, initial-scale=1, width=device-width"
+      name="viewport"
+    />
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <h1
+        class="MuiTypography-root MuiTypography-h1 MuiTypography-gutterBottom"
+      >
+        Welcome to the GA4GH Starter Kit
+      </h1>
+      <h3
+        class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+      >
+        Get Started
+      </h3>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        Click the buttons below to start using one of the GA4GH Starter Kits
+      </p>
+      <div>
+        <nav>
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+            href="/drs"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-button"
+              >
+                DRS Starter Kit
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+`;

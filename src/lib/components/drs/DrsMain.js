@@ -1,4 +1,3 @@
-import '@fontsource/roboto';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import {
@@ -276,12 +275,10 @@ const DrsMain = props => {
       }
     })
     setDisplayChecksumTypes(transientDisplayChecksumTypes);
-    console.log(transientDisplayChecksumTypes);
 
     if (unsetChecksumTypeEncountered) {
       setActiveDrsObject(transientActiveDrsObject);
     }
-    console.log(transientActiveDrsObject);
   }, [activeDrsObject]);
 
   /* ##################################################

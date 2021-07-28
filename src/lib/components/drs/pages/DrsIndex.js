@@ -1,4 +1,3 @@
-import '@fontsource/roboto';
 import React, { useEffect } from 'react';
 import { 
   Typography, 
@@ -74,7 +73,7 @@ const DrsIndex = (props) => {
           content="minimum-scale=1, initial-scale=1, width=device-width"
       />
       <Container maxWidth="lg" >
-        <Grid container justifyContent='space-between' alignItems='center'>
+        <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={2} align='left'>
             <Button 
               variant='contained' 

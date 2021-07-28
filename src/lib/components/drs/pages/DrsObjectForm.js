@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '@fontsource/roboto';
 import {
     Container,
     Typography,
