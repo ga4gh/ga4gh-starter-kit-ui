@@ -12,7 +12,8 @@ beforeEach(() => {
     populatedListOfAwsS3AccessObjects = [
         {region: 'region1', bucket: 'bucket1', key: 'key1'}, 
         {region: 'region2', bucket: 'bucket2', key: 'key2'}, 
-        {region: 'region3', bucket: 'bucket3', key: 'key3'}
+        {region: 'region3', bucket: 'bucket3', key: 'key3'}, 
+        {region: '', bucket: '', key: ''}
     ];
 });
 
