@@ -5,8 +5,12 @@ import {
     Card,
     CardContent,
     CardActions,
-    Grid
+    Grid,
+    Tooltip
 } from '@material-ui/core';
+import {
+    Help
+} from '@material-ui/icons';
 import { 
     Link
 } from 'react-router-dom';
@@ -44,6 +48,11 @@ const Services = props => {
                 <div>
                     <Typography align='left' variant="h6" gutterBottom>
                         Valid Services
+                        <Tooltip 
+                            title="Starter kit services described in the config that appear to be working correctly."
+                        >
+                            <Help color="primary" fontSize="small" />
+                        </Tooltip>
                     </Typography>
                     <Grid container>
                         {props.validServices.map(e => {
@@ -65,6 +74,8 @@ const Services = props => {
                                             </Typography>
                                             <Typography variant="body2" component="p">
                                                 {`ID: ${serviceInfo.id}`}
+                                                <br />
+                                                {`Name: ${serviceInfo.name}`}
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
@@ -92,15 +103,31 @@ const Services = props => {
                 <div>
                     <Typography align='left' variant="h6" gutterBottom>
                         Invalid Services
+                        <Tooltip 
+                            title="Entries in the config describing Starter Kit services that cannot be reached. They may be unreachable at the provided URL(s), or the service type is incorrect."
+                        >
+                            <Help color="primary" fontSize="small" />
+                        </Tooltip>
                     </Typography>
                     <Grid container>
                         {props.invalidServices.map(e => {
+                            const config = e.serviceConfig
                             const message = e.message
                             return (
                                 <Grid item>
                                     <Card className={classes.cardRoot}>
                                         <CardContent>
-                                            ERROR
+                                            <Typography className={classes.cardTitle}>
+                                                Invalid Service
+                                                <br />
+                                                {`serviceType: ${config.serviceType}`}
+                                                <br />
+                                                {`publicURL: ${config.publicURL}`}
+                                                <br />
+                                                {`adminURL: ${config.adminURL}`}
+                                                <br />
+                                                {`Error: ${message}`}
+                                            </Typography>
                                         </CardContent>
                                     </Card>
                                 </Grid>

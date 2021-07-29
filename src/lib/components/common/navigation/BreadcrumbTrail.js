@@ -1,5 +1,8 @@
 import React from 'react';
-import { Breadcrumbs } from '@material-ui/core';
+import {
+    Breadcrumbs,
+    Typography
+} from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import breadcrumbTrailStyles from '../../../styles/common/navigation/breadcrumbTrailStyles';
 
@@ -9,7 +12,19 @@ const BreadcrumbTrail = props => {
         <Breadcrumbs className={classes.root}>
             {props.trail.map(trailItem => {
                 return (
-                    <Link color='inherit' to={trailItem.to}>{trailItem.label}</Link>
+                    <span>
+                        {trailItem.noLink
+                        ?
+                            <Typography>
+                                {trailItem.label}
+                            </Typography>
+                        :
+                            <Link className={classes.link}
+                                color='inherit'
+                                to={trailItem.to}>{trailItem.label}
+                            </Link>
+                        }
+                    </span>
                 )
             })}
         </Breadcrumbs>
