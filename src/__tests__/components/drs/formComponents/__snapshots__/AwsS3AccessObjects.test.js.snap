@@ -2,61 +2,42 @@
 
 exports[`NEW and EDIT <AwsS3AccessObjects /> should handle 0 AWS S3 access objects 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <br />
   <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
   >
     AWS S3 Access Points
   </p>
   <p
-    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
   >
     Represents objects stored in AWS S3 containing DRS Object bytes.
   </p>
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
+          class=""
           title="Add AWS S3 access point."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -66,7 +47,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle 0 AWS S3 access objec
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -78,69 +59,60 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle 0 AWS S3 access objec
 
 exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 access objects 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <br />
   <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
   >
     AWS S3 Access Points
   </p>
   <p
-    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
   >
     Represents objects stored in AWS S3 containing DRS Object bytes.
   </p>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-region-0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-0"
               id="AwsS3AccessObject-region-0-label"
             >
               Region
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-region-0-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-region-0"
                 name="region"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="region1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Region
@@ -149,7 +121,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-region-0-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -158,49 +130,40 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-bucket-0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-0"
               id="AwsS3AccessObject-bucket-0-label"
             >
               Bucket
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-bucket-0-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-bucket-0"
                 name="bucket"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="bucket1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Bucket
@@ -209,7 +172,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-bucket-0-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -218,49 +181,40 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-key-0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-0"
               id="AwsS3AccessObject-key-0-label"
             >
               Key
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-key-0-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-key-0"
                 name="key"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="key1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Key
@@ -269,7 +223,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-key-0-helper-text"
             >
               Path within the bucket to the S3 object storing DRS Object bytes.
@@ -279,36 +233,21 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            tabindex="0"
             title="Remove this AWS S3 access point."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -318,7 +257,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -326,55 +265,46 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-region-1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-1"
               id="AwsS3AccessObject-region-1-label"
             >
               Region
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-region-1-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-region-1"
                 name="region"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="region2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Region
@@ -383,7 +313,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-region-1-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -392,49 +322,40 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-bucket-1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-1"
               id="AwsS3AccessObject-bucket-1-label"
             >
               Bucket
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-bucket-1-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-bucket-1"
                 name="bucket"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="bucket2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Bucket
@@ -443,7 +364,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-bucket-1-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -452,49 +373,40 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-key-1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-1"
               id="AwsS3AccessObject-key-1-label"
             >
               Key
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-key-1-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-key-1"
                 name="key"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="key2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Key
@@ -503,7 +415,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-key-1-helper-text"
             >
               Path within the bucket to the S3 object storing DRS Object bytes.
@@ -513,36 +425,21 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            tabindex="0"
             title="Remove this AWS S3 access point."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -552,7 +449,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -560,55 +457,46 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-region-2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-2"
               id="AwsS3AccessObject-region-2-label"
             >
               Region
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-region-2-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-region-2"
                 name="region"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="region3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Region
@@ -617,7 +505,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-region-2-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -626,49 +514,40 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-bucket-2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-2"
               id="AwsS3AccessObject-bucket-2-label"
             >
               Bucket
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-bucket-2-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-bucket-2"
                 name="bucket"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="bucket3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Bucket
@@ -677,7 +556,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-bucket-2-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -686,49 +565,40 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="AwsS3AccessObject-key-2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-2"
               id="AwsS3AccessObject-key-2-label"
             >
               Key
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-key-2-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-key-2"
                 name="key"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
                 type="text"
                 value="key3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Key
@@ -737,7 +607,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-key-2-helper-text"
             >
               Path within the bucket to the S3 object storing DRS Object bytes.
@@ -747,36 +617,21 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            tabindex="0"
             title="Remove this AWS S3 access point."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -786,7 +641,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -795,46 +650,27 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
   </div>
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
+          class=""
           title="Add AWS S3 access point."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -844,7 +680,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -854,90 +690,63 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
 </div>
 `;
 
-exports[`SHOW <AwsS3AccessObjects /> should handle 0 AWS S3 access objects 1`] = `
-<div
-  className="MuiFormGroup-root"
->
-  <br />
-  <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
-  >
-    AWS S3 Access Points
-  </p>
-  <p
-    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
-  >
-    Represents objects stored in AWS S3 containing DRS Object bytes.
-  </p>
-  <div />
-</div>
-`;
-
 exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access objects 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <br />
   <p
-    className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
   >
     AWS S3 Access Points
   </p>
   <p
-    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
   >
     Represents objects stored in AWS S3 containing DRS Object bytes.
   </p>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-region-0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-0"
               id="AwsS3AccessObject-region-0-label"
             >
               Region
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-region-0-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-region-0"
                 name="region"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="region1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Region
@@ -946,7 +755,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-region-0-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -955,49 +764,41 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-bucket-0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-0"
               id="AwsS3AccessObject-bucket-0-label"
             >
               Bucket
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-bucket-0-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-bucket-0"
                 name="bucket"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="bucket1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Bucket
@@ -1006,7 +807,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-bucket-0-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -1015,49 +816,41 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-key-0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-0"
               id="AwsS3AccessObject-key-0-label"
             >
               Key
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-key-0-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-key-0"
                 name="key"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="key1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Key
@@ -1066,7 +859,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-key-0-helper-text"
             >
               Path within the bucket to the S3 object storing DRS Object bytes.
@@ -1078,55 +871,47 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-region-1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-1"
               id="AwsS3AccessObject-region-1-label"
             >
               Region
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-region-1-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-region-1"
                 name="region"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="region2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Region
@@ -1135,7 +920,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-region-1-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -1144,49 +929,41 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-bucket-1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-1"
               id="AwsS3AccessObject-bucket-1-label"
             >
               Bucket
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-bucket-1-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-bucket-1"
                 name="bucket"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="bucket2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Bucket
@@ -1195,7 +972,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-bucket-1-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -1204,49 +981,41 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-key-1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-1"
               id="AwsS3AccessObject-key-1-label"
             >
               Key
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-key-1-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-key-1"
                 name="key"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="key2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Key
@@ -1255,7 +1024,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-key-1-helper-text"
             >
               Path within the bucket to the S3 object storing DRS Object bytes.
@@ -1267,55 +1036,47 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-region-2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-2"
               id="AwsS3AccessObject-region-2-label"
             >
               Region
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-region-2-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-region-2"
                 name="region"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="region3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Region
@@ -1324,7 +1085,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-region-2-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -1333,49 +1094,41 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-bucket-2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-2"
               id="AwsS3AccessObject-bucket-2-label"
             >
               Bucket
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-bucket-2-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-bucket-2"
                 name="bucket"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="bucket3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Bucket
@@ -1384,7 +1137,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-bucket-2-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -1393,49 +1146,41 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink={true}
-              htmlFor="AwsS3AccessObject-key-2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-2"
               id="AwsS3AccessObject-key-2-label"
             >
               Key
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
                 aria-describedby="AwsS3AccessObject-key-2-helper-text"
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="AwsS3AccessObject-key-2"
                 name="key"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                readonly=""
                 type="text"
                 value="key3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Key
@@ -1444,7 +1189,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              className="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-key-2-helper-text"
             >
               Path within the bucket to the S3 object storing DRS Object bytes.
