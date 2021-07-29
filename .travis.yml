@@ -7,6 +7,3 @@ cache:
 script:
   - npm run build
   - npm test
-branches: 
-  only: 
-    -test
