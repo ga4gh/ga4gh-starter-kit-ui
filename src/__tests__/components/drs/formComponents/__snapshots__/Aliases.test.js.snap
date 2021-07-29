@@ -5,7 +5,7 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
   class="MuiFormGroup-root"
 >
   <div
-    class="MuiBox-root MuiBox-root-10"
+    class="MuiBox-root MuiBox-root-11"
   >
     <hr
       class="MuiDivider-root"
@@ -60,10 +60,10 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
                 />
                 <fieldset
                   aria-hidden="true"
-                  class="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
+                  class="PrivateNotchedOutline-root-12 MuiOutlinedInput-notchedOutline"
                 >
                   <legend
-                    class="PrivateNotchedOutline-legendLabelled-13 PrivateNotchedOutline-legendNotched-14"
+                    class="PrivateNotchedOutline-legendLabelled-14 PrivateNotchedOutline-legendNotched-15"
                   >
                     <span>
                       Alias
@@ -74,7 +74,7 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
             </div>
           </div>
           <div
-            class="MuiBox-root MuiBox-root-15"
+            class="MuiBox-root MuiBox-root-16"
           >
             <div>
               <div
@@ -143,10 +143,10 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
                 />
                 <fieldset
                   aria-hidden="true"
-                  class="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
+                  class="PrivateNotchedOutline-root-12 MuiOutlinedInput-notchedOutline"
                 >
                   <legend
-                    class="PrivateNotchedOutline-legendLabelled-13 PrivateNotchedOutline-legendNotched-14"
+                    class="PrivateNotchedOutline-legendLabelled-14 PrivateNotchedOutline-legendNotched-15"
                   >
                     <span>
                       Alias
@@ -157,7 +157,7 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
             </div>
           </div>
           <div
-            class="MuiBox-root MuiBox-root-16"
+            class="MuiBox-root MuiBox-root-17"
           >
             <div>
               <div
@@ -226,10 +226,10 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
                 />
                 <fieldset
                   aria-hidden="true"
-                  class="PrivateNotchedOutline-root-11 MuiOutlinedInput-notchedOutline"
+                  class="PrivateNotchedOutline-root-12 MuiOutlinedInput-notchedOutline"
                 >
                   <legend
-                    class="PrivateNotchedOutline-legendLabelled-13 PrivateNotchedOutline-legendNotched-14"
+                    class="PrivateNotchedOutline-legendLabelled-14 PrivateNotchedOutline-legendNotched-15"
                   >
                     <span>
                       Alias
@@ -240,7 +240,90 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
             </div>
           </div>
           <div
-            class="MuiBox-root MuiBox-root-17"
+            class="MuiBox-root MuiBox-root-18"
+          >
+            <div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+              >
+                <button
+                  aria-label="remove-item-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                  tabindex="0"
+                  title="Remove this alias."
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            class="MuiFormControl-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink="false"
+                for="alias-3"
+                id="alias-3-label"
+              >
+                Alias
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="alias-3"
+                  name="alias"
+                  type="text"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-12 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-14"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-19"
           >
             <div>
               <div
@@ -329,7 +412,7 @@ exports[`NEW and EDIT should handle zero aliases 1`] = `
   class="MuiFormGroup-root"
 >
   <div
-    class="MuiBox-root MuiBox-root-9"
+    class="MuiBox-root MuiBox-root-10"
   >
     <hr
       class="MuiDivider-root"
@@ -583,6 +666,60 @@ exports[`SHOW should handle multiple aliases 1`] = `
           </div>
           <div
             class="MuiBox-root MuiBox-root-8"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiFormGroup-root MuiFormGroup-row"
+        >
+          <div
+            class="MuiFormControl-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                data-shrink="false"
+                for="alias-3"
+                id="alias-3-label"
+              >
+                Alias
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input"
+                  id="alias-3"
+                  name="alias"
+                  readonly=""
+                  type="text"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legendLabelled-4"
+                  >
+                    <span>
+                      Alias
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-9"
           >
             <div />
           </div>
