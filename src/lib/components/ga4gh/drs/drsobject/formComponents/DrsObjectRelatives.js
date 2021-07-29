@@ -71,6 +71,7 @@ const DrsObjectRelatives = props => {
                                                                 customApiCallSuccessCallback={props.customApiCallSuccessCallback ? responseData => props.customApiCallSuccessCallback(index, responseData) : undefined}
                                                                 readOnly={props.readOnly}
                                                                 formViewType={props.formViewType}
+                                                                adminURL={props.adminURL}
                                                             />
                                                         </InputAdornment>
                                                 }

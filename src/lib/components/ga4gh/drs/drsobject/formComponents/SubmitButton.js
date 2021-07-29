@@ -8,8 +8,8 @@ import {
 } from 'react-router-dom';
 import { SpaceDivider } from '../../../../common/layout';
 import FormViewType from '../../../../../model/common/FormViewType';
-import DrsApiCaller from '../../utils/DrsApiCaller';
 import { scrollToTop } from '../../../functions/common';
+import ApiCaller from '../../../../../utils/ApiCaller';
 
 /*
     Used to make a POST or PUT requests to create or update a new DRS Object.
@@ -104,7 +104,7 @@ const SubmitButton = props => {
             switch (props.formViewType) {
                 case FormViewType.NEW:
                     requestConfig = {
-                        url: 'http://localhost:8080/admin/ga4gh/drs/v1/objects',
+                        url: `${props.adminURL}/admin/ga4gh/drs/v1/objects`,
                         method: 'POST'
                     }
                     break;
@@ -133,12 +133,12 @@ const SubmitButton = props => {
         }
 
         const executeApiCall = requestConfig => {
-            DrsApiCaller(
+            ApiCaller(
                 requestConfig,
                 responseData => {
                     props.setSuccessMessage(determineSuccessMessage(responseData.id));
                     props.retrieveDrsObjectsList();
-                    history.push('/drs');
+                    history.push(props.baseURL);
                     scrollToTop();
                 },
                 props.setError

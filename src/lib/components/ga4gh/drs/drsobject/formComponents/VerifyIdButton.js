@@ -8,8 +8,7 @@ import {
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import Cancel from '@material-ui/icons/Cancel';
 import FormViewType from '../../../model/common/FormViewType';
-import axios from 'axios';
-import DrsApiCaller from '../../utils/DrsApiCaller';
+import ApiCaller from '../../../../../utils/ApiCaller';
 
 /*
     Used to verify if the ID entered for a parent or child DRS Object is valid.
@@ -26,6 +25,7 @@ import DrsApiCaller from '../../utils/DrsApiCaller';
     without making the GET request.
 */
 const VerifyIdButton = props => {
+
     const defaultHandleValid = responseData => {
         props.setRelativeValid();
         props.setRelativeName(responseData.name);
@@ -37,10 +37,10 @@ const VerifyIdButton = props => {
             props.setRelativeInvalid();
         } else {
             let requestConfig = {
-                url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${relative.id}`,
+                url: `${props.adminURL}/admin/ga4gh/drs/v1/objects/${relative.id}`,
                 method: 'GET'
             }
-            DrsApiCaller(requestConfig, handleValid, props.setRelativeInvalid);
+            ApiCaller(requestConfig, handleValid, props.setRelativeInvalid);
         }
     }
 

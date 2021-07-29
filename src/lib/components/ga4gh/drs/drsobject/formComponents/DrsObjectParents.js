@@ -40,6 +40,7 @@ const DrsObjectParents = props => {
             removeRelative={props.removeParent}
             readOnly={props.readOnly}
             formViewType={props.formViewType}
+            adminURL={props.adminURL}
         />
     )
 }

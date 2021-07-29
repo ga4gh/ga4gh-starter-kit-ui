@@ -17,14 +17,10 @@ import {
  } from '../common/navigation';
 import servicesStyles from '../../styles/pages/servicesStyles';
 import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
-import hardCodedServiceConfigs from '../../temp/hardcodedServiceConfigs';
 
 const Services = props => {
 
     const classes = servicesStyles();
-
-    console.log(props);
-    console.log(props.serviceInfoList);
 
     return (
         <PageContainer>
@@ -36,56 +32,84 @@ const Services = props => {
             </Typography>
 
             <Typography>
-                Registered Services: 0
+                Registered Services: {props.validServices.length + props.invalidServices.length}
                 <br />
-                Accessible Services: 0
+                Valid Services: {props.validServices.length}
                 <br />
-                Inaccessble Services: 0
+                Invalid Services: {props.invalidServices.length}
             </Typography>
 
-            <Typography align='left' variant="h6" gutterBottom>
-                Accessible Services
-            </Typography>
+            {props.validServices.length > 0
+            ?
+                <div>
+                    <Typography align='left' variant="h6" gutterBottom>
+                        Valid Services
+                    </Typography>
+                    <Grid container>
+                        {props.validServices.map(e => {
+                            const serviceInfo = e.serviceInfo
+                            return (
+                                <Grid item>
+                                    <Card className={classes.cardRoot}>
+                                        <CardContent>
+                                            <Typography className={classes.cardTitle}>
+                                                GA4GH Starter Kit Service
+                                            </Typography>
+                                            <Typography variant="h5" component="h2">
+                                                {ga4ghApiTypes[serviceInfo.type.artifact].name}
+                                                {
+                                                    ga4ghApiTypes[serviceInfo.type.artifact].abbreviation
+                                                    ? ` (${ga4ghApiTypes[serviceInfo.type.artifact].abbreviation})`
+                                                    : null
+                                                }
+                                            </Typography>
+                                            <Typography variant="body2" component="p">
+                                                {`ID: ${serviceInfo.id}`}
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Button
+                                                variant="outlined"
+                                                color="primary"
+                                                size="small"
+                                                component={Link}
+                                                to={`/services/${serviceInfo.id}`}
+                                            >
+                                                View
+                                            </Button>
+                                        </CardActions>
+                                    </Card>
+                                </Grid>
+                            )
+                        })}
+                    </Grid>
+                </div>
+            : null
+            }
 
-            <div>
-                <Grid container>
-                    {hardCodedServiceConfigs.map(serviceConfig => {
-                        return (
-                            <Grid item>
-                                <Card className={classes.cardRoot}>
-                                    <CardContent>
-                                        <Typography className={classes.cardTitle}>
-                                            GA4GH Starter Kit Service
-                                        </Typography>
-                                        <Typography variant="h5" component="h2">
-                                            {ga4ghApiTypes[serviceConfig.serviceType].name}
-                                            {
-                                                ga4ghApiTypes[serviceConfig.serviceType].abbreviation
-                                                ? ` (${ga4ghApiTypes[serviceConfig.serviceType].abbreviation})`
-                                                : null
-                                            }
-                                        </Typography>
-                                        <Typography variant="body2" component="p">
-                                            {`ID: ${serviceConfig.id}`}
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button
-                                            variant="outlined"
-                                            color="primary"
-                                            size="small"
-                                            component={Link}
-                                            to={`/services/${serviceConfig.id}`}
-                                        >
-                                            View
-                                        </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        )
-                    })}
-                </Grid>
-            </div>
+            {props.invalidServices.length > 0
+            ?
+                <div>
+                    <Typography align='left' variant="h6" gutterBottom>
+                        Invalid Services
+                    </Typography>
+                    <Grid container>
+                        {props.invalidServices.map(e => {
+                            const message = e.message
+                            return (
+                                <Grid item>
+                                    <Card className={classes.cardRoot}>
+                                        <CardContent>
+                                            ERROR
+                                        </CardContent>
+                                    </Card>
+                                </Grid>
+                            )
+                        })}
+                    </Grid>
+                </div>
+            : null
+            }
         </PageContainer>
     )
 }
