@@ -96,7 +96,7 @@ const Main = () => {
                                 {apiType.models.map(model => {
                                     let trail = [...servicesTrail];
                                     trail.push({to: `/services/${serviceInfo.id}`, label: serviceInfo.id})
-                                    trail.push({to: `/services/${serviceInfo.id}/${config.serviceType}`, label: config.serviceType});
+                                    trail.push({noLink: true, label: config.serviceType});
                                     trail.push({to: `/services/${serviceInfo.id}/${config.serviceType}/${model.path}`, label: model.path});
                                     return (
                                         <Route
