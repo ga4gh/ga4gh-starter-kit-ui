@@ -10,14 +10,14 @@ import { Snackbar } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import DrsObjectIndex from './pages/DrsObjectIndex';
 import DrsObjectForm from './pages/DrsObjectForm';
-import DrsApiCaller from '../utils/DrsApiCaller';
+import ApiCaller from '../../../../utils/ApiCaller';
 import _ from 'lodash';
 import FormViewType from '../../../../model/common/FormViewType';
 import { dateToISOString } from '../../../../functions/common';
 
 const DrsObjectMain = props => {
 
-  let baseURL = `/services/${props.service.id}/drs/objects`;
+  let baseURL = `/services/${props.serviceInfo.id}/drs/objects`;
 
   const emptyDrsObject = () => {
     let dateString = dateToISOString(new Date());
@@ -65,20 +65,20 @@ const DrsObjectMain = props => {
 
   const retrieveDrsObjectsList = async () => {
     let requestConfig = {
-      url: 'http://localhost:8080/admin/ga4gh/drs/v1/objects',
+      url: `${props.serviceConfig.adminURL}/admin/ga4gh/drs/v1/objects`,
       method: 'GET',
       cancelToken: axios.CancelToken.source().token
     }
-    DrsApiCaller(requestConfig, setDrsObjectsList, console.log);
+    ApiCaller(requestConfig, setDrsObjectsList, console.log);
   }
 
   const retrieveDrsObjectAndMerge = async (id) => {
     let requestConfig = {
-      url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${id}`,
+      url: `${props.serviceConfig.adminURL}/admin/ga4gh/drs/v1/objects/${id}`,
       method: 'GET',
       cancelToken: axios.CancelToken.source().token
     }
-    DrsApiCaller(
+    ApiCaller(
       requestConfig,
       responseDrsObject => {
         let blankDrsObject = emptyDrsObject();
@@ -213,11 +213,11 @@ const DrsObjectMain = props => {
     size: _.pick(formProps, ['size', 'setSize']),
     aliases: _.pick(formProps, ['aliases', 'addAlias', 'setAlias', 'removeAlias']),
     checksums: {..._.pick(formProps, ['checksums', 'addChecksum', 'setChecksumType', 'setChecksumChecksum', 'removeChecksum']), displayChecksumTypes: displayChecksumTypes},
-    children: _.pick(formProps, ['id', 'drs_object_children', 'addChild', 'setChildId', 'setChildName', 'setChildValid', 'setChildInvalid', 'unsetChildValidity', 'removeChild']),
-    parents: _.pick(formProps, ['id', 'drs_object_parents', 'addParent', 'setParentId', 'setParentName', 'setParentValid', 'setParentInvalid', 'unsetParentValidity', 'removeParent']),
+    children: {adminURL: props.serviceConfig.adminURL, ..._.pick(formProps, ['drs_object_children', 'addChild', 'setChildId', 'setChildName', 'setChildValid', 'setChildInvalid', 'unsetChildValidity', 'removeChild'])},
+    parents: {adminURL: props.serviceConfig.adminURL, ..._.pick(formProps, ['drs_object_parents', 'addParent', 'setParentId', 'setParentName', 'setParentValid', 'setParentInvalid', 'unsetParentValidity', 'removeParent'])},
     fileAccessObjects: _.pick(formProps, ['file_access_objects', 'addFileAccessObject', 'setFileAccessObjectPath', 'removeFileAccessObject']),
     awsS3AccessObjects: _.pick(formProps, ['aws_s3_access_objects', 'addAwsS3AccessObject', 'setAwsS3AccessObjectRegion', 'setAwsS3AccessObjectBucket', 'setAwsS3AccessObjectKey', 'removeAwsS3AccessObject']),
-    submit: {activeDrsObject: activeDrsObject, setSuccessMessage: setSuccessMessage, ..._.pick(formProps, ['retrieveDrsObjectsList'])}, 
+    submit: {activeDrsObject: activeDrsObject, setSuccessMessage: setSuccessMessage, adminURL: props.serviceConfig.adminURL, baseURL: baseURL, ..._.pick(formProps, ['retrieveDrsObjectsList'])},
     delete: {setSuccessMessage: setSuccessMessage, ..._.pick(formProps, ['id', 'retrieveDrsObjectsList'])}
   }
 
@@ -301,40 +301,6 @@ const DrsObjectMain = props => {
       </Snackbar>
 
       {/* all routes for DRS Object model: index, show, new, edit */}
-<<<<<<< HEAD
-      <Route exact path={baseURL}>
-        {console.log('loading INDEX')}
-        <DrsObjectIndex 
-          trail={trail}
-          baseURL={baseURL}
-          drsObjectsList={drsObjectsList}
-          setError={setError}
-        />
-      </Route>
-      <Route exact path={`${baseURL}/new`}>
-        {console.log('loading NEW')}
-        <DrsObjectForm
-          title={"Create New DrsObject"}
-          groupedFormProps={groupedFormProps}
-          formViewType={FormViewType.NEW}
-        />
-      </Route>
-      <Route exact path={`${baseURL}/:objectId`}>
-        {console.log('loading SHOW')}
-        <DrsObjectForm
-          title={`View DrsObject: ${activeDrsObject.id}`}
-          groupedFormProps={groupedFormProps}
-          formViewType={FormViewType.SHOW}
-        />
-      </Route>
-      <Route exact path={`${baseURL}/:objectId/edit`}>
-          <DrsObjectForm
-            title={`Edit DrsObject: ${activeDrsObject.id}`}
-            groupedFormProps={groupedFormProps}
-            formViewType={FormViewType.EDIT}
-          />
-      </Route>
-=======
       <Switch>
         <Route exact path={baseURL}>
           <DrsObjectIndex 
@@ -360,8 +326,14 @@ const DrsObjectMain = props => {
             formViewType={FormViewType.SHOW}
           />
         </Route>
+        <Route exact path={`${baseURL}/:objectId/edit`}>
+          <DrsObjectForm
+            title={`Edit DrsObject: ${activeDrsObject.id}`}
+            groupedFormProps={groupedFormProps}
+            formViewType={FormViewType.EDIT}
+          />
+        </Route>
       </Switch>
->>>>>>> 6cf2a46... better styling and handling of service details page, full render of ServiceInfo response
     </div>
   )
 }

@@ -22,29 +22,13 @@ import {
 import ServiceInfo from '../common/info/ServiceInfo';
 import serviceStyles from '../../styles/pages/serviceStyles';
 import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
-import ApiCaller from '../ga4gh/drs/utils/ApiCaller';
 
 const Service = props => {
     const classes = serviceStyles();
 
-    const apiType = ga4ghApiTypes[props.service.serviceType];
+    const apiType = ga4ghApiTypes[props.service.serviceConfig.serviceType];
     const trail = [...props.trail];
-    trail.push({to: `/services/${props.service.id}`, label: props.service.id});
-
-    const [serviceInfo, setServiceInfo] = useState(null);
-
-    const callAndUpdateServiceInfo = () => {
-        let url = `${props.service.publicUrl}${apiType.serviceInfoEndpoint}`;
-        let requestConfig = {
-            url: url,
-            method: 'GET'
-        }
-        ApiCaller(requestConfig, setServiceInfo, console.log);
-    }
-
-    useEffect(() => {
-        callAndUpdateServiceInfo();
-    }, [])
+    trail.push({to: `/services/${props.service.serviceInfo.id}`, label: props.service.serviceInfo.id});
 
     return (
         <PageContainer>
@@ -71,12 +55,11 @@ const Service = props => {
                                 <Help color="primary" fontSize="small" />
                             </Tooltip>
                         </Typography>
-                        {serviceInfo
-                            ? <ServiceInfo apiType={apiType} {...serviceInfo} />
+                        {props.service.serviceInfo
+                            ? <ServiceInfo apiType={apiType} {...props.service.serviceInfo} />
                             : null
                         }
-
-                    </Paper>                    
+                    </Paper>
                 </Grid>
 
                 <Grid item xs={6}>
@@ -102,7 +85,7 @@ const Service = props => {
                                             <TableCell align="center">
                                                 <Button
                                                     component={Link}
-                                                    to={`/services/${props.service.id}/${props.service.serviceType}/${model.path}`}
+                                                    to={`/services/${props.service.serviceInfo.id}/${props.service.serviceConfig.serviceType}/${model.path}`}
                                                     variant='outlined'
                                                     color='primary'>
                                                     {model.label}
@@ -120,7 +103,6 @@ const Service = props => {
                     </Paper>
                 </Grid>
             </Grid>
-
         </PageContainer>
     )
 }

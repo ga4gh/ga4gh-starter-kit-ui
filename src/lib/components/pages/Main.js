@@ -13,7 +13,7 @@ import Services from './Services';
 import Service from './Service';
 import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
 import hardCodedServiceConfigs from '../../temp/hardcodedServiceConfigs';
-import ApiCaller from '../ga4gh/drs/utils/ApiCaller';
+import syncApiCaller from '../../utils/syncApiCaller';
 
 const Main = () => {
     const useStyles = makeStyles((theme) => ({
@@ -28,45 +28,33 @@ const Main = () => {
     servicesTrail.push({to: '/services', label: 'services'})
 
     const [servicesConfig, setServicesConfig] = useState(hardCodedServiceConfigs);
-    const [serviceInfoList, setServiceInfoList] = useState({});
+    const [validServices, setValidServices] = useState([]);
+    const [invalidServices, setInvalidServices] = useState([]);
 
-    const fetchAllServiceInfo = async () => {
-        
-    }
+    useEffect(async () => {
+        let transientValidServices = [];
+        let transientInvalidServices = [];
 
-    const setServiceInfo = (index, serviceInfo) => {
-        console.log('****');
-        console.log(index);
-        console.log(serviceInfo);
-        console.log('****');
-        let transientServiceInfoList = {...serviceInfoList};
-        transientServiceInfoList[index] = serviceInfo;
-        console.log('about to make permanent');
-        console.log(transientServiceInfoList);
-        setServiceInfoList(transientServiceInfoList);
-    }
-
-    useEffect(() => {
-        servicesConfig.forEach((serviceConfig, index) => {
+        for (let i = 0; i < servicesConfig.length; i++) {
+            let serviceConfig = servicesConfig[i];
             let apiType = ga4ghApiTypes[serviceConfig.serviceType];
-            let url = `${serviceConfig.publicUrl}${apiType.serviceInfoEndpoint}`;
+            let url = `${serviceConfig.publicURL}${apiType.serviceInfoEndpoint}`;
             let requestConfig = {
                 url: url,
                 method: 'GET'
             }
-            ApiCaller(
-                requestConfig,
-                responseData => setServiceInfo(index, responseData),
-                error => setServiceInfo(index, 'noway!')
-            )
-        });
-        
-        // console.log('running effect to get service infos...');
-        // let transientServiceInfoList = [];
-        // console.log(servicesConfig);
-        // console.log(transientServiceInfoList);
-        // transientServiceInfoList[3] = '12345';
-        // console.log(transientServiceInfoList);
+            let [success, result] = await syncApiCaller(requestConfig);
+            let service = {serviceConfig: serviceConfig};
+            if (success) {
+                service.serviceInfo = result.data;
+                transientValidServices.push(service);
+            } else {
+                service.message = result.message;
+                transientInvalidServices.push(service);
+            }
+        }
+        setValidServices(transientValidServices);
+        setInvalidServices(transientInvalidServices);
     }, [])
 
     return (
@@ -85,18 +73,21 @@ const Main = () => {
                     <Route exact path='/services'>
                         <Services
                             trail={servicesTrail}
-                            serviceInfoList={serviceInfoList}
+                            validServices={validServices}
+                            invalidServices={invalidServices}
                             url='/services'
                         />
                     </Route>
 
-                    {/* for each service in the config: */}
-                    {servicesConfig.map(service => {
-                        let apiType = ga4ghApiTypes[service.serviceType];
+                    {/* for each valid service in the config: */}
+                    {validServices.map(service => {
+                        let config = service.serviceConfig;
+                        let serviceInfo = service.serviceInfo;
+                        let apiType = ga4ghApiTypes[config.serviceType];
                         return (
                             <div>
                                 {/* render the service summary */}
-                                <Route exact path={`/services/${service.id}`}>
+                                <Route exact path={`/services/${serviceInfo.id}`}>
                                     <Service
                                         service={service}
                                         trail={servicesTrail}
@@ -104,14 +95,14 @@ const Main = () => {
                                 </Route>
                                 {apiType.models.map(model => {
                                     let trail = [...servicesTrail];
-                                    trail.push({to: `/services/${service.id}`, label: service.id})
-                                    trail.push({to: `/services/${service.id}/${service.serviceType}`, label: service.serviceType});
-                                    trail.push({to: `/services/${service.id}/${service.serviceType}/${model.path}`, label: model.path});
+                                    trail.push({to: `/services/${serviceInfo.id}`, label: serviceInfo.id})
+                                    trail.push({to: `/services/${serviceInfo.id}/${config.serviceType}`, label: config.serviceType});
+                                    trail.push({to: `/services/${serviceInfo.id}/${config.serviceType}/${model.path}`, label: model.path});
                                     return (
                                         <Route
-                                            path={`/services/${service.id}/${service.serviceType}/${model.path}`}
+                                            path={`/services/${serviceInfo.id}/${config.serviceType}/${model.path}`}
                                         >
-                                            {model.componentFunction(service, trail)};
+                                            {model.componentFunction(config, serviceInfo, trail)};
                                         </Route>
                                     )
                                 })}
