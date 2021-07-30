@@ -2,43 +2,34 @@
 
 exports[`NEW and EDIT <Size /> should handle empty field 1`] = `
 <div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
+  class="MuiFormControl-root MuiFormControl-fullWidth"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-      data-shrink={false}
-      htmlFor="size"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink="false"
+      for="size"
       id="size-label"
     >
       Size
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
     >
       <input
         aria-describedby="size-helper-text"
-        aria-invalid={false}
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
         id="size"
         name="size"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        readOnly={false}
-        required={false}
         type="number"
         value=""
       />
     </div>
     <p
-      className="MuiFormHelperText-root"
+      class="MuiFormHelperText-root"
       id="size-helper-text"
     >
       The size (in bytes) of the DRS Object represented as an integer.
@@ -49,43 +40,34 @@ exports[`NEW and EDIT <Size /> should handle empty field 1`] = `
 
 exports[`NEW and EDIT <Size /> should handle populated field 1`] = `
 <div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
+  class="MuiFormControl-root MuiFormControl-fullWidth"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-      data-shrink={false}
-      htmlFor="size"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="size"
       id="size-label"
     >
       Size
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
     >
       <input
         aria-describedby="size-helper-text"
-        aria-invalid={false}
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
         id="size"
         name="size"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        readOnly={false}
-        required={false}
         type="number"
-        value={1000}
+        value="1000"
       />
     </div>
     <p
-      className="MuiFormHelperText-root"
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
       id="size-helper-text"
     >
       The size (in bytes) of the DRS Object represented as an integer.
@@ -94,92 +76,37 @@ exports[`NEW and EDIT <Size /> should handle populated field 1`] = `
 </div>
 `;
 
-exports[`SHOW <Size /> should handle empty field 1`] = `
+exports[`SHOW <Size /> should handle populated field 1`] = `
 <div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
+  class="MuiFormControl-root MuiFormControl-fullWidth"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-      data-shrink={false}
-      htmlFor="size"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="size"
       id="size-label"
     >
       Size
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
     >
       <input
         aria-describedby="size-helper-text"
-        aria-invalid={false}
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
         id="size"
         name="size"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        readOnly={true}
-        required={false}
+        readonly=""
         type="number"
-        value=""
+        value="1000"
       />
     </div>
     <p
-      className="MuiFormHelperText-root"
-      id="size-helper-text"
-    >
-      The size (in bytes) of the DRS Object represented as an integer.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`SHOW <Size /> should populated field 1`] = `
-<div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
->
-  <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-      data-shrink={true}
-      htmlFor="size"
-      id="size-label"
-    >
-      Size
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-describedby="size-helper-text"
-        aria-invalid={false}
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
-        id="size"
-        name="size"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        readOnly={true}
-        required={false}
-        type="number"
-        value={1000}
-      />
-    </div>
-    <p
-      className="MuiFormHelperText-root MuiFormHelperText-filled"
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
       id="size-helper-text"
     >
       The size (in bytes) of the DRS Object represented as an integer.

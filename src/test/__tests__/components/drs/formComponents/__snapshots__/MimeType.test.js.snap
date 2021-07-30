@@ -2,43 +2,34 @@
 
 exports[`NEW and EDIT <MimeType /> should handle empty field 1`] = `
 <div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
+  class="MuiFormControl-root MuiFormControl-fullWidth"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-      data-shrink={false}
-      htmlFor="mime_type"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink="false"
+      for="mime_type"
       id="mime_type-label"
     >
       MIME Type
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
     >
       <input
         aria-describedby="mime_type-helper-text"
-        aria-invalid={false}
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
         id="mime_type"
         name="mime_type"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        readOnly={false}
-        required={false}
         type="text"
         value=""
       />
     </div>
     <p
-      className="MuiFormHelperText-root"
+      class="MuiFormHelperText-root"
       id="mime_type-helper-text"
     >
       The media type of the DRS Object
@@ -49,90 +40,34 @@ exports[`NEW and EDIT <MimeType /> should handle empty field 1`] = `
 
 exports[`NEW and EDIT <MimeType /> should handle populated field 1`] = `
 <div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
+  class="MuiFormControl-root MuiFormControl-fullWidth"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-      data-shrink={false}
-      htmlFor="mime_type"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="mime_type"
       id="mime_type-label"
     >
       MIME Type
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
     >
       <input
         aria-describedby="mime_type-helper-text"
-        aria-invalid={false}
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
         id="mime_type"
         name="mime_type"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        readOnly={false}
-        required={false}
         type="text"
-        value="test MIME Type"
+        value="Test MIME Type"
       />
     </div>
     <p
-      className="MuiFormHelperText-root"
-      id="mime_type-helper-text"
-    >
-      The media type of the DRS Object
-    </p>
-  </div>
-</div>
-`;
-
-exports[`SHOW <MimeType /> should handle empty field 1`] = `
-<div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
->
-  <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-      data-shrink={false}
-      htmlFor="mime_type"
-      id="mime_type-label"
-    >
-      MIME Type
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-describedby="mime_type-helper-text"
-        aria-invalid={false}
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
-        id="mime_type"
-        name="mime_type"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        readOnly={true}
-        required={false}
-        type="text"
-        value=""
-      />
-    </div>
-    <p
-      className="MuiFormHelperText-root"
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
       id="mime_type-helper-text"
     >
       The media type of the DRS Object
@@ -143,43 +78,35 @@ exports[`SHOW <MimeType /> should handle empty field 1`] = `
 
 exports[`SHOW <MimeType /> should handle populated field 1`] = `
 <div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
+  class="MuiFormControl-root MuiFormControl-fullWidth"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-      data-shrink={true}
-      htmlFor="mime_type"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="mime_type"
       id="mime_type-label"
     >
       MIME Type
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
     >
       <input
         aria-describedby="mime_type-helper-text"
-        aria-invalid={false}
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
         id="mime_type"
         name="mime_type"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        readOnly={true}
-        required={false}
+        readonly=""
         type="text"
-        value="test MIME Type"
+        value="Test MIME Type"
       />
     </div>
     <p
-      className="MuiFormHelperText-root MuiFormHelperText-filled"
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
       id="mime_type-helper-text"
     >
       The media type of the DRS Object

@@ -2,10 +2,10 @@
 
 exports[`<SpaceDivider /> 1`] = `
 <div
-  className="MuiBox-root MuiBox-root-1"
+  class="MuiBox-root MuiBox-root-1"
 >
   <hr
-    className="MuiDivider-root"
+    class="MuiDivider-root"
   />
 </div>
 `;

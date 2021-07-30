@@ -18,6 +18,12 @@ beforeEach(() => {
     multipleAliases=['alias1', 'alias2', 'alias3', ''];
 });
 
+afterEach(() => {
+    mockAddObjectToList.mockClear();
+    mockRemoveListItem.mockClear();
+    mockUpdateListString.mockClear();
+})
+
 test('SHOW should handle multiple aliases', () => {
     let {container} = render(
         <Aliases readOnly={true} aliases={multipleAliases} 
@@ -66,7 +72,7 @@ test('NEW and EDIT should handle multiple aliases', () => {
     const addItemButton = screen.getByLabelText('add-item-button');
     expect(addItemButton).toBeInTheDocument();
     userEvent.click(addItemButton);
-    expect(mockAddObjectToList.mock.calls.length).toBe(2);
+    expect(mockAddObjectToList.mock.calls.length).toBe(1);
     //each alias field should display an alias value which can be edited
     let aliasFields = screen.getAllByRole('textbox');
     aliasFields.forEach((alias, index) => {
