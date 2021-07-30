@@ -12,8 +12,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import {
     useHistory
 } from 'react-router-dom';
-import DrsApiCaller from '../utils/DrsApiCaller';
-import { scrollToTop } from '../../../functions/common';
+import ApiCaller from '../../../../../utils/ApiCaller';
+import { scrollToTop } from '../../../../../functions/common';
 
 const DeleteDrsObjectButton = props => {
     let history = useHistory();
@@ -26,7 +26,7 @@ const DeleteDrsObjectButton = props => {
                 url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${id}`,
                 method: 'DELETE'
         }
-        DrsApiCaller(
+        ApiCaller(
             requestConfig, 
             responseData => {
                 setSuccessMessage(`DRS Object '${id}' has been successfully deleted`);

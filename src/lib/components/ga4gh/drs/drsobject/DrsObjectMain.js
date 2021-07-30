@@ -225,7 +225,7 @@ const DrsObjectMain = props => {
    * ################################################## */
 
   const loadActiveDrsObjectBasedOnPath = location => {
-    let re = new RegExp('/drs/([^/]+)/?([^/]*)');
+    let re = new RegExp('/drs/objects/([^/]+)/?([^/]*)');
     let match = location.pathname.match(re);
     if (match) {
       if(match[1] === 'new') activeDrsObjectFunctions.reset();
@@ -327,6 +327,7 @@ const DrsObjectMain = props => {
         </Route>
         <Route exact path={`${baseURL}/:objectId/edit`}>
           <DrsObjectForm
+            trail={props.trail}
             title={`Edit DrsObject: ${activeDrsObject.id}`}
             groupedFormProps={groupedFormProps}
             formViewType={FormViewType.EDIT}

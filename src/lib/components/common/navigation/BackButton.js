@@ -7,7 +7,7 @@ import {
     Link
 } from 'react-router-dom';
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
-import backButtonStyles from '../../../styles/common/button/backButtonStyles';
+import backButtonStyles from '../../../styles/common/navigation/backButtonStyles';
 
 const BackButton = props => {
     const classes = backButtonStyles();

@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import Cancel from '@material-ui/icons/Cancel';
-import FormViewType from '../../../model/common/FormViewType';
+import FormViewType from '../../../../../model/common/FormViewType';
 import ApiCaller from '../../../../../utils/ApiCaller';
 
 /*

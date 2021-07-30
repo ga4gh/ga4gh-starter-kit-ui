@@ -5,10 +5,14 @@ import {
     Grid,
     FormGroup,
     Box,
-    Snackbar
+    Snackbar,
+    Button
 } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import EditIcon from '@material-ui/icons/Edit';
+import {
+    Link
+} from 'react-router-dom';
 import {
     Aliases,
     AwsS3AccessObjects,
@@ -36,7 +40,7 @@ import {
     BackButton,
     BreadcrumbTrail
 } from '../../../../common/navigation';
-import { scrollToTop } from '../../../functions/common';
+import { scrollToTop } from '../../../../../functions/common';
 import DeleteDrsObjectButton from '../formComponents/DeleteDrsObjectButton';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -98,10 +102,15 @@ const DrsObjectForm = (props) => {
                 newTrail.push({to: '#', label: 'new'});
                 break;
             case FormViewType.EDIT:
-                newTrail.push({to: '/', label: 'baz'});
+                newTrail.push({to: '#', label: id});
+                newTrail.push({to: '#', label: 'edit'});
         }
         return newTrail;
     }
+
+    console.log('trail...');
+    console.log(props);
+    console.log(p);
 
     const trail = appendFormToTrail(props.trail, p.id.id);
 
@@ -127,16 +136,10 @@ const DrsObjectForm = (props) => {
                     {
                         props.formViewType === FormViewType.EDIT 
                         ?   <DeleteDrsObjectButton {...p.delete} setError={setError}/>
-                        :   <Button variant='contained' color='primary' size='large'
-                            component={Link} to='/drs' onClick={scrollToTop}
-                            aria-label='drs-index-button'>
-                                <Typography variant='button'>DRS Index</Typography>
-                            </Button>
+                        :   null
                     }
                 </Grid>
-                <Grid item xs={8}>
-                    <Typography align='center' variant="h3" gutterBottom>{props.title}</Typography>
-                </Grid>
+                
                 <Grid item xs={2} align='right'>
                     {
                         props.formViewType === FormViewType.SHOW 

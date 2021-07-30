@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import { SpaceDivider } from '../../../../common/layout';
 import FormViewType from '../../../../../model/common/FormViewType';
-import { scrollToTop } from '../../../functions/common';
+import { scrollToTop } from '../../../../../functions/common';
 import ApiCaller from '../../../../../utils/ApiCaller';
 
 /*
