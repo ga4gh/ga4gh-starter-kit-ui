@@ -20,7 +20,10 @@ import { scrollToTop } from '../../../../../functions/common';
 import { PageContainer } from '../../../../common/layout';
 import {
   BackButton,
-  BreadcrumbTrail
+  BreadcrumbTrail,
+  DeleteButton,
+  EditButton,
+  ViewButton
 } from '../../../../common/navigation';
 import drsObjectIndexStyles from '../../../../../styles/ga4gh/drs/drsobject/pages/drsObjectIndexStyles';
 
@@ -68,14 +71,9 @@ const DrsObjectIndex = (props) => {
                   <TableCell align="left">{drsObject.id}</TableCell>
                   <TableCell align="left">{drsObject.name}</TableCell>
                   <TableCell align="left">
-                    <Button
-                      variant="outlined"
-                      color='secondary'
-                      component={Link}
-                      to={`${props.baseURL}/${drsObject.id}`}
-                    >
-                      View
-                    </Button>
+                    <ViewButton to={`${props.baseURL}/${drsObject.id}`} />
+                    <EditButton to={`${props.baseURL}/${drsObject.id}/edit`} />
+                    <DeleteButton />
                   </TableCell>
                 </TableRow>
               )
