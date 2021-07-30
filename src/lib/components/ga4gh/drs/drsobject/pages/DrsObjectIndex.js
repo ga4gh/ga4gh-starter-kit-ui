@@ -72,7 +72,15 @@ const DrsObjectIndex = (props) => {
                   <TableCell align="left">
                     <ViewButton to={`${props.baseURL}/${drsObject.id}`} />
                     <EditButton to={`${props.baseURL}/${drsObject.id}/edit`} />
-                    <DeleteButton />
+                    <DeleteButton
+                      entityName="DRS Object"
+                      id={drsObject.id}
+                      deleteURL={`${props.adminURL}/admin/ga4gh/drs/v1/objects/${drsObject.id}`}
+                      redirect={props.baseURL}
+                      setSuccessMessageFunc={props.setSuccessMessage}
+                      setErrorFunc={props.setError}
+                      updateDataFunc={props.retrieveDrsObjectsList}
+                    />
                   </TableCell>
                 </TableRow>
               )

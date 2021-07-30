@@ -38,11 +38,12 @@ import {
 import FormViewType from '../../../../../model/common/FormViewType';
 import {
     BackButton,
-    BreadcrumbTrail
+    BreadcrumbTrail,
+    DeleteButton,
+    EditButton,
+    ViewButton
 } from '../../../../common/navigation';
 import { scrollToTop } from '../../../../../functions/common';
-import DeleteDrsObjectButton from '../formComponents/DeleteDrsObjectButton';
-import { makeStyles } from '@material-ui/core/styles';
 
 const DrsObjectForm = (props) => {
     const [error, setError] = useState(null);
@@ -108,10 +109,6 @@ const DrsObjectForm = (props) => {
         return newTrail;
     }
 
-    console.log('trail...');
-    console.log(props);
-    console.log(p);
-
     const trail = appendFormToTrail(props.trail, p.id.id);
 
     return (
@@ -131,36 +128,25 @@ const DrsObjectForm = (props) => {
 
             <Typography align='left' variant="h5" gutterBottom>{props.title}</Typography>
 
-            <Grid container justify='space-between' alignItems='center'>
-                <Grid item xs={2} align='left'>
-                    {
-                        props.formViewType === FormViewType.EDIT 
-                        ?   <DeleteDrsObjectButton {...p.delete} setError={setError}/>
-                        :   null
-                    }
-                </Grid>
-                
-                <Grid item xs={2} align='right'>
-                    {
-                        props.formViewType === FormViewType.SHOW 
-                        ?   <Button variant='contained' color='primary' size='large' endIcon={<EditIcon/>}
-                            component={Link} to={`/drs/${p.id.id}/edit`} onClick={scrollToTop}
-                            aria-label='edit-drs-object-button'>
-                                <Typography variant='button'>Edit</Typography>
-                            </Button> 
-                        : null
-                    }
-                    {
-                        props.formViewType === FormViewType.EDIT 
-                        ?   <Button variant='contained' color='primary' size='large'
-                            component={Link} to={`/drs/${p.id.id}`} onClick={scrollToTop}
-                            aria-label='cancel-editing-drs-object-button'>
-                                <Typography variant='button'>Cancel</Typography>
-                            </Button>  
-                        : null
-                    }
-                </Grid>
-            </Grid>
+            {/* View, Edit, and Delete buttons */}
+            {props.formViewType !== FormViewType.NEW
+            ?
+                <div>
+                    <ViewButton
+                        disabled={props.formViewType === FormViewType.SHOW}
+                        to={`${props.baseURL}/${p.id.id}`}
+                    />
+                    <EditButton
+                        disabled={props.formViewType === FormViewType.EDIT}
+                        to={`${props.baseURL}/${p.id.id}/edit`}
+                    />
+                    <DeleteButton
+                        {...p.delete}
+                        entityName="DRS Object"
+                    />
+                </div>
+            : null
+            }
 
             <Box pb={4}>
                 <form>

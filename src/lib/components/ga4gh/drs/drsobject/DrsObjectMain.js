@@ -217,7 +217,15 @@ const DrsObjectMain = props => {
     fileAccessObjects: _.pick(formProps, ['file_access_objects', 'addFileAccessObject', 'setFileAccessObjectPath', 'removeFileAccessObject']),
     awsS3AccessObjects: _.pick(formProps, ['aws_s3_access_objects', 'addAwsS3AccessObject', 'setAwsS3AccessObjectRegion', 'setAwsS3AccessObjectBucket', 'setAwsS3AccessObjectKey', 'removeAwsS3AccessObject']),
     submit: {activeDrsObject: activeDrsObject, setSuccessMessage: setSuccessMessage, adminURL: props.serviceConfig.adminURL, baseURL: baseURL, ..._.pick(formProps, ['retrieveDrsObjectsList'])},
-    delete: {setSuccessMessage: setSuccessMessage, ..._.pick(formProps, ['id', 'retrieveDrsObjectsList'])}
+    delete: {
+      entityName: 'DRS Object',
+      id: activeDrsObject.id,
+      deleteURL: `${props.serviceConfig.adminURL}/admin/ga4gh/drs/v1/objects/${activeDrsObject.id}`,
+      redirect: baseURL,
+      setSuccessMessageFunc: setSuccessMessage,
+      setErrorFunc: setError,
+      updateDataFunc: retrieveDrsObjectsList
+    }
   }
 
   /* ##################################################
@@ -306,12 +314,16 @@ const DrsObjectMain = props => {
             trail={props.trail}
             baseURL={baseURL}
             drsObjectsList={drsObjectsList}
+            adminURL={props.serviceConfig.adminURL}
+            setSuccessMessage={setSuccessMessage}
             setError={setError}
+            retrieveDrsObjectsList={retrieveDrsObjectsList}
           />
         </Route>
         <Route exact path={`${baseURL}/new`}>
           <DrsObjectForm
             trail={props.trail}
+            baseURL={baseURL}
             title={"Create New DrsObject"}
             groupedFormProps={groupedFormProps}
             formViewType={FormViewType.NEW}
@@ -320,6 +332,7 @@ const DrsObjectMain = props => {
         <Route exact path={`${baseURL}/:objectId`}>
           <DrsObjectForm
             trail={props.trail}
+            baseURL={baseURL}
             title={`View DrsObject: ${activeDrsObject.id}`}
             groupedFormProps={groupedFormProps}
             formViewType={FormViewType.SHOW}
@@ -328,6 +341,7 @@ const DrsObjectMain = props => {
         <Route exact path={`${baseURL}/:objectId/edit`}>
           <DrsObjectForm
             trail={props.trail}
+            baseURL={baseURL}
             title={`Edit DrsObject: ${activeDrsObject.id}`}
             groupedFormProps={groupedFormProps}
             formViewType={FormViewType.EDIT}
@@ -337,5 +351,5 @@ const DrsObjectMain = props => {
     </div>
   )
 }
-  
+
 export default DrsObjectMain;
