@@ -12,11 +12,9 @@
     "reactCleanBuild": "npm run reactClean && npm run reactBuild",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-
     "serverClean": "rm -rf dist",
     "serverBuild": "npx webpack-cli && chmod 744 ./dist/ga4gh-starter-kit-ui.js",
     "serverCleanBuild": "npm run serverClean && npm run serverBuild",
-
     "copyFrontEnd": "cp -r build dist/public",
     "allCleanBuild": "npm run reactCleanBuild && npm run serverCleanBuild && npm run copyFrontEnd",
     "serverStart": "cd dist && ./ga4gh-starter-kit-ui.js"
@@ -38,6 +36,7 @@
     "date-fns": "^2.22.1",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "moment-timezone": "^0.5.33",
     "path": "^0.12.7",

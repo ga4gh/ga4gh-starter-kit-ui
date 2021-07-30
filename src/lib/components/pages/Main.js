@@ -12,10 +12,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Services from './Services';
 import Service from './Service';
 import ga4ghApiTypes from '../../model/common/ga4ghApiTypes';
-import hardCodedServiceConfigs from '../../temp/hardcodedServiceConfigs';
+import defaults from '../../constants/defaults';
 import syncApiCaller from '../../utils/syncApiCaller';
+import ApiCaller from '../../utils/ApiCaller';
 
 const Main = () => {
+
     const useStyles = makeStyles((theme) => ({
         contentRoot: {
             minHeight: '100vh',
@@ -27,9 +29,18 @@ const Main = () => {
     const servicesTrail = [...homeTrail];
     servicesTrail.push({to: '/services', label: 'services'})
 
-    const [servicesConfig, setServicesConfig] = useState(hardCodedServiceConfigs);
+    const [servicesConfig, setServicesConfig] = useState([]);
     const [validServices, setValidServices] = useState([]);
     const [invalidServices, setInvalidServices] = useState([]);
+
+    useEffect(() => {
+        let requestConfig = {url: '/api/config/services', method: 'GET'};
+        ApiCaller(
+            requestConfig,
+            responseData => setServicesConfig(responseData),
+            () => setServicesConfig(defaults.services)
+        )
+    }, [])
 
     useEffect(async () => {
         let transientValidServices = [];
@@ -55,7 +66,7 @@ const Main = () => {
         }
         setValidServices(transientValidServices);
         setInvalidServices(transientInvalidServices);
-    }, [])
+    }, [servicesConfig])
 
     return (
         <div>
