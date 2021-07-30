@@ -17,7 +17,9 @@
     "serverCleanBuild": "npm run serverClean && npm run serverBuild",
     "copyFrontEnd": "cp -r build dist/public",
     "allCleanBuild": "npm run reactCleanBuild && npm run serverCleanBuild && npm run copyFrontEnd",
-    "serverStart": "cd dist && ./ga4gh-starter-kit-ui.js"
+    "serverStart": "cd dist && ./ga4gh-starter-kit-ui.js",
+    "dockerBuild": "docker build -t ga4gh/ga4gh-starter-kit-ui:$npm_package_version .",
+    "dockerPublish": "docker push ga4gh/ga4gh-starter-kit-ui:$npm_package_version"
   },
   "dependencies": {
     "@babel/cli": "^7.14.8",
