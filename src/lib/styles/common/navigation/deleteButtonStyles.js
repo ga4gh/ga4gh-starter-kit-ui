@@ -1,6 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const deleteButtonStyles = makeStyles((theme) => ({
+    div: {
+        display: 'inline-block'
+    },
     root: {
         marginLeft: 10,
         marginRight: 10,
