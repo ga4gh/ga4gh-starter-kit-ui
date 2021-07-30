@@ -10,6 +10,7 @@ exports[`<AddItemButton /> is disabled 1`] = `
     >
       <span
         class=""
+        data-testid="add-item-button-tooltip"
         title="Add AddItemButton test."
       >
         <button
@@ -50,6 +51,7 @@ exports[`<AddItemButton /> is displayed 1`] = `
     >
       <span
         class=""
+        data-testid="add-item-button-tooltip"
         title="Add test button."
       >
         <button

@@ -3,44 +3,47 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
+import {mockAddObjectToList} from '../../../resources/MockFunctions';
 import AddItemButton from '../../../../lib/components/common/AddItemButton';
 
-const mockHandleClick = jest.fn();
+afterEach(() => {
+    mockAddObjectToList.mockClear();
+})
 
 test('<AddItemButton /> is displayed', () => {
     let {container} = render(
         <AddItemButton display={true} objectName={'test button'} disabled={false}
-        handleClick={mockHandleClick} />
+        handleClick={mockAddObjectToList} />
     );
     expect(container.firstChild).toMatchSnapshot();
-    const addItemButton = screen.getByLabelText('add-item-button');
+    const addItemButton = screen.getByRole('button');
     expect(addItemButton).toBeInTheDocument();
     expect(screen.getByTitle('Add test button.')).toBeInTheDocument();
+    expect(screen.getByTestId('add-item-button-tooltip')).toBeInTheDocument();
     userEvent.hover(addItemButton);
-    //expect(screen.getByText('Add test button.')).toBeInTheDocument();
     userEvent.click(addItemButton);
+    expect(mockAddObjectToList.mock.calls.length).toBe(1);
     userEvent.unhover(addItemButton);
-    expect(screen.queryByText('Add Item Button')).not.toBeInTheDocument();
-    expect(mockHandleClick.mock.calls.length).toBe(1);
 });
 
 test('<AddItemButton /> is hidden', () => {
     let {container} = render(
         <AddItemButton display={false} objectName={'AddItemButton test'} disabled={false}
-        handleClick={mockHandleClick} />
+        handleClick={mockAddObjectToList} />
     );
     expect(container.firstChild).toMatchSnapshot();
-    expect(screen.queryByLabelText('add-item-button')).not.toBeInTheDocument();
-    expect(mockHandleClick.mock.calls.length).toBe(1);
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    expect(mockAddObjectToList.mock.calls.length).toBe(0);
 });
 
 test('<AddItemButton /> is disabled', () => {
     let {container} = render(
         <AddItemButton display={true} objectName={'AddItemButton test'} disabled={true}
-        handleClick={mockHandleClick} />
+        handleClick={mockAddObjectToList} />
     );
     expect(container.firstChild).toMatchSnapshot();
-    const addItemButton = screen.getByLabelText('add-item-button');
+    const addItemButton = screen.getByRole('button');
     expect(addItemButton).toBeInTheDocument();
-    expect(mockHandleClick.mock.calls.length).toBe(1);
+    expect(addItemButton).toBeDisabled();
+    expect(mockAddObjectToList.mock.calls.length).toBe(0);
 });

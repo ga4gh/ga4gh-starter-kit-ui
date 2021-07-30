@@ -86,6 +86,7 @@ exports[`NEW and EDIT <FileAccessObjects /> should handle multiple file access o
           aria-describedby={null}
           aria-label="remove-item-button"
           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+          data-testid="remove-item-button-tooltip"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -196,6 +197,7 @@ exports[`NEW and EDIT <FileAccessObjects /> should handle multiple file access o
           aria-describedby={null}
           aria-label="remove-item-button"
           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+          data-testid="remove-item-button-tooltip"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -306,6 +308,7 @@ exports[`NEW and EDIT <FileAccessObjects /> should handle multiple file access o
           aria-describedby={null}
           aria-label="remove-item-button"
           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+          data-testid="remove-item-button-tooltip"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -355,6 +358,7 @@ exports[`NEW and EDIT <FileAccessObjects /> should handle multiple file access o
         <span
           aria-describedby={null}
           className=""
+          data-testid="add-item-button-tooltip"
           onBlur={[Function]}
           onFocus={[Function]}
           onMouseLeave={[Function]}
@@ -431,6 +435,7 @@ exports[`NEW and EDIT <FileAccessObjects /> should handle zero file access objec
         <span
           aria-describedby={null}
           className=""
+          data-testid="add-item-button-tooltip"
           onBlur={[Function]}
           onFocus={[Function]}
           onMouseLeave={[Function]}

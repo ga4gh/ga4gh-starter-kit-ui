@@ -181,6 +181,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           <button
             aria-label="remove-item-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
             tabindex="0"
             title="Remove this AWS S3 access point."
             type="button"
@@ -373,6 +374,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           <button
             aria-label="remove-item-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
             tabindex="0"
             title="Remove this AWS S3 access point."
             type="button"
@@ -565,6 +567,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           <button
             aria-label="remove-item-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
             tabindex="0"
             title="Remove this AWS S3 access point."
             type="button"
@@ -757,6 +760,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           <button
             aria-label="remove-item-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
             tabindex="0"
             title="Remove this AWS S3 access point."
             type="button"
@@ -792,6 +796,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
       >
         <span
           class=""
+          data-testid="add-item-button-tooltip"
           title="Add AWS S3 access point."
         >
           <button
@@ -849,6 +854,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle zero AWS S3 access ob
       >
         <span
           class=""
+          data-testid="add-item-button-tooltip"
           title="Add AWS S3 access point."
         >
           <button

@@ -1,5 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NEW and EDIT <RemoveItemButton /> 1`] = `<div />`;
+exports[`<RemoveItemButton /> is displayed 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+  >
+    <button
+      aria-label="remove-item-button"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+      data-testid="remove-item-button-tooltip"
+      tabindex="0"
+      title="Remove this test button."
+      type="button"
+    >
+      <span
+        class="MuiIconButton-label"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+          />
+        </svg>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</div>
+`;
 
-exports[`SHOW <RemoveItemButton /> 1`] = `<div />`;
+exports[`<RemoveItemButton /> is hidden 1`] = `<div />`;

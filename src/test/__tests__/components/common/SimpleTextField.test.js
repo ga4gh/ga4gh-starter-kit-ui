@@ -24,8 +24,12 @@ test('SHOW <SimpleTextField /> handles populated field', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByLabelText(simpleTextFieldProps.label)).toBeInTheDocument();
-    expect(screen.getByRole('textbox')).toHaveValue('Snapshot test value.');
+    let simpleTextField = screen.getByRole('textbox');
+    expect(simpleTextField).toHaveValue('Snapshot test value.');
+    //typing does not result in the value being updated
+    userEvent.type(simpleTextField, 'testing text entry');
     expect(mockUpdateScalar.mock.calls.length).toBe(0);
+    expect(simpleTextField).toHaveAttribute('readonly');
 });
 
 test('NEW and EDIT <SimpleTextField /> handles populated field', () => {
@@ -39,6 +43,7 @@ test('NEW and EDIT <SimpleTextField /> handles populated field', () => {
     expect(simpleTextField).toHaveValue('Snapshot test value.');
     userEvent.type(simpleTextField, 'test value');
     expect(mockUpdateScalar).toHaveBeenCalled();
+    expect(simpleTextField).not.toHaveAttribute('readonly');
 }); 
 
 test('NEW and EDIT <SimpleTextField /> handles empty field', () => {
@@ -51,4 +56,5 @@ test('NEW and EDIT <SimpleTextField /> handles empty field', () => {
     expect(simpleTextField).toHaveValue('');
     userEvent.type(simpleTextField, 'test value');
     expect(mockUpdateScalar).toHaveBeenCalled();
+    expect(simpleTextField).not.toHaveAttribute('readonly');
 });
