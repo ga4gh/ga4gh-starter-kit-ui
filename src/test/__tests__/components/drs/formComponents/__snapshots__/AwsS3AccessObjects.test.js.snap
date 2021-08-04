@@ -224,8 +224,8 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink="true"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
               for="AwsS3AccessObject-region-1"
               id="AwsS3AccessObject-region-1-label"
             >
@@ -241,14 +241,14 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
                 id="AwsS3AccessObject-region-1"
                 name="region"
                 type="text"
-                value="region2"
+                value=""
               />
               <fieldset
                 aria-hidden="true"
                 class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                  class="PrivateNotchedOutline-legendLabelled-7"
                 >
                   <span>
                     Region
@@ -257,7 +257,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
               id="AwsS3AccessObject-region-1-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -468,8 +468,8 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink="true"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
               for="AwsS3AccessObject-bucket-2"
               id="AwsS3AccessObject-bucket-2-label"
             >
@@ -485,14 +485,14 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
                 id="AwsS3AccessObject-bucket-2"
                 name="bucket"
                 type="text"
-                value="bucket3"
+                value=""
               />
               <fieldset
                 aria-hidden="true"
                 class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                  class="PrivateNotchedOutline-legendLabelled-7"
                 >
                   <span>
                     Bucket
@@ -501,7 +501,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
               id="AwsS3AccessObject-bucket-2-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -610,8 +610,8 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink="false"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
               for="AwsS3AccessObject-region-3"
               id="AwsS3AccessObject-region-3-label"
             >
@@ -627,14 +627,14 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
                 id="AwsS3AccessObject-region-3"
                 name="region"
                 type="text"
-                value=""
+                value="region4"
               />
               <fieldset
                 aria-hidden="true"
                 class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-7"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Region
@@ -643,7 +643,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-region-3-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -661,8 +661,8 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink="false"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
               for="AwsS3AccessObject-bucket-3"
               id="AwsS3AccessObject-bucket-3-label"
             >
@@ -678,14 +678,14 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
                 id="AwsS3AccessObject-bucket-3"
                 name="bucket"
                 type="text"
-                value=""
+                value="bucket4"
               />
               <fieldset
                 aria-hidden="true"
                 class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-7"
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
                 >
                   <span>
                     Bucket
@@ -694,7 +694,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
               </fieldset>
             </div>
             <p
-              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-bucket-3-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -1084,8 +1084,8 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink="true"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
               for="AwsS3AccessObject-region-1"
               id="AwsS3AccessObject-region-1-label"
             >
@@ -1102,14 +1102,14 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
                 name="region"
                 readonly=""
                 type="text"
-                value="region2"
+                value=""
               />
               <fieldset
                 aria-hidden="true"
                 class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3"
                 >
                   <span>
                     Region
@@ -1118,7 +1118,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
               id="AwsS3AccessObject-region-1-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -1301,8 +1301,8 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-              data-shrink="true"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
               for="AwsS3AccessObject-bucket-2"
               id="AwsS3AccessObject-bucket-2-label"
             >
@@ -1319,14 +1319,14 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
                 name="bucket"
                 readonly=""
                 type="text"
-                value="bucket3"
+                value=""
               />
               <fieldset
                 aria-hidden="true"
                 class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                  class="PrivateNotchedOutline-legendLabelled-3"
                 >
                   <span>
                     Bucket
@@ -1335,7 +1335,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
               id="AwsS3AccessObject-bucket-2-helper-text"
             >
               AWS S3 bucket containing the DRS Object.
@@ -1414,8 +1414,8 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink="false"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
               for="AwsS3AccessObject-region-3"
               id="AwsS3AccessObject-region-3-label"
             >
@@ -1432,14 +1432,14 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
                 name="region"
                 readonly=""
                 type="text"
-                value=""
+                value="region4"
               />
               <fieldset
                 aria-hidden="true"
                 class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Region
@@ -1448,7 +1448,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-region-3-helper-text"
             >
               Region where AWS S3 bucket is located.
@@ -1466,8 +1466,8 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink="false"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
               for="AwsS3AccessObject-bucket-3"
               id="AwsS3AccessObject-bucket-3-label"
             >
@@ -1484,14 +1484,14 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
                 name="bucket"
                 readonly=""
                 type="text"
-                value=""
+                value="bucket4"
               />
               <fieldset
                 aria-hidden="true"
                 class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-3"
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
                 >
                   <span>
                     Bucket
@@ -1500,7 +1500,7 @@ exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access object
               </fieldset>
             </div>
             <p
-              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
               id="AwsS3AccessObject-bucket-3-helper-text"
             >
               AWS S3 bucket containing the DRS Object.

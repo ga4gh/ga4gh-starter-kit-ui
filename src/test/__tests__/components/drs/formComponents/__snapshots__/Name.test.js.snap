@@ -63,7 +63,7 @@ exports[`NEW and EDIT <Name /> should handle populated field 1`] = `
         id="name"
         name="name"
         type="text"
-        value="snapshot test"
+        value="test name"
       />
     </div>
     <p
@@ -102,7 +102,7 @@ exports[`SHOW <Name /> should handle populated field 1`] = `
         name="name"
         readonly=""
         type="text"
-        value="snapshot test"
+        value="test name"
       />
     </div>
     <p

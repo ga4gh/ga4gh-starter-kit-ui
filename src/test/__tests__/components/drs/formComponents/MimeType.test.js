@@ -6,19 +6,29 @@ import userEvent from '@testing-library/user-event';
 import {mockUpdateScalar} from '../../../../resources/MockFunctions';
 import MimeType from '../../../../../lib/components/drs/formComponents/MimeType';
 
+afterEach(() => {
+    mockUpdateScalar.mockClear();
+})
+
 test('SHOW <MimeType /> should handle populated field', () => {
     let {container} = render(
         <MimeType readOnly={true} mime_type='Test MIME Type' setMimeType={mockUpdateScalar} />
     );
     expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByLabelText('MIME Type')).toBeInTheDocument();
-    expect(screen.getByRole('textbox')).toHaveValue('Test MIME Type');
+    let mimeTypeField = screen.getByRole('textbox');
+    expect(mimeTypeField).toHaveValue('Test MIME Type');
+
+    // MIME type field is read only and cannot be edited
+    expect(mimeTypeField).toHaveAttribute('readonly');
+    userEvent.type(mimeTypeField, 'test value');
     expect(mockUpdateScalar.mock.calls.length).toBe(0);
 });
 
 test('NEW and EDIT <MimeType /> should handle empty field', () => {
     let {container} = render(
-        <MimeType readOnly={false} mime_type='' setMimeType={mockUpdateScalar} />);
+        <MimeType readOnly={false} mime_type='' setMimeType={mockUpdateScalar} />
+    );
     expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByLabelText('MIME Type')).toBeInTheDocument();
     let mimeTypeField = screen.getByRole('textbox');
@@ -29,7 +39,8 @@ test('NEW and EDIT <MimeType /> should handle empty field', () => {
 
 test('NEW and EDIT <MimeType /> should handle populated field', () => {
     let {container} = render(
-        <MimeType readOnly={false} mime_type='Test MIME Type' setMimeType={mockUpdateScalar} />);
+        <MimeType readOnly={false} mime_type='Test MIME Type' setMimeType={mockUpdateScalar} />
+    );
     expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByLabelText('MIME Type')).toBeInTheDocument();
     let mimeTypeField = screen.getByRole('textbox');

@@ -6,13 +6,22 @@ import userEvent from '@testing-library/user-event';
 import {mockUpdateScalar} from '../../../../resources/MockFunctions';
 import Version from '../../../../../lib/components/drs/formComponents/Version';
 
+afterEach(() => {
+    mockUpdateScalar.mockClear();
+})
+
 test('SHOW <Version /> should handle populated field', () => {
     let {container} = render(
         <Version readOnly={true} version='1.0.0' setVersion={mockUpdateScalar} />
     );
     expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByLabelText('Version')).toBeInTheDocument();
-    expect(screen.getByRole('textbox')).toHaveValue('1.0.0');
+    let versionField = screen.getByRole('textbox');
+    expect(versionField).toHaveValue('1.0.0');
+
+    // version field is read only and cannot be edited
+    expect(versionField).toHaveAttribute('readonly');
+    userEvent.type(versionField, 'test value');
     expect(mockUpdateScalar.mock.calls.length).toBe(0);
 });
 

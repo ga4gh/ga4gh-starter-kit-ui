@@ -63,7 +63,7 @@ exports[`NEW and EDIT <Description /> should handle populated description 1`] = 
         id="description"
         name="description"
         type="text"
-        value="Snapshot test description."
+        value="This is a description."
       />
     </div>
     <p
@@ -102,7 +102,7 @@ exports[`SHOW <Description /> should handle populated description 1`] = `
         name="description"
         readonly=""
         type="text"
-        value="Snapshot test description."
+        value="This is a description."
       />
     </div>
     <p

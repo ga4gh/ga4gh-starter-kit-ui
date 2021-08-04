@@ -15,7 +15,7 @@ beforeEach(() => {
         helperText: 'This is a description for a snapshot test.', 
         changeFunction: mockUpdateScalar
     }    
-})
+});
 
 test('SHOW <SimpleTextField /> handles populated field', () => {
     let {container} = render(
