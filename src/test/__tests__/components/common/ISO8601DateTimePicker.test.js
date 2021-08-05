@@ -1,26 +1,65 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import userEvent from '@testing-library/user-event';
+import {mockUpdateScalar} from '../../../resources/MockFunctions';
 import ISO8601DateTimePicker from '../../../../lib/components/common/ISO8601DateTimePicker';
 
-//will need to use mock functions to test different timezones, morning, evening, current time, etc.
-test('SHOW <ISO8601DateTimePicker /> should handle any date and time', () => {
-    const iso8601DateTimePicker = renderer.create(<ISO8601DateTimePicker 
-        readOnly={true}
-        value='2021-07-22T13:00:00Z'
-        propertyName='Date-Time Snapshot Test'
-        label='Date-Time Snapshot Test'
-        description='This is a date-time field description for a snapshot test.' />)
-    .toJSON();
-    //expect(iso8601DateTimePicker).toMatchSnapshot();
-})
+let dateTimePickerProps = null;
 
-test('NEW and EDIT <ISO8601DateTimePicker /> should handle any date and time', () => {
-    const iso8601DateTimePicker = renderer.create(<ISO8601DateTimePicker 
-        readOnly={false}
-        value='2021-07-22T13:00:00Z'
-        propertyName='Date-Time Snapshot Test'
-        label='Date-Time Snapshot Test'
-        description='This is a date-time field description for a snapshot test.' />)
-    .toJSON();
-    //expect(iso8601DateTimePicker).toMatchSnapshot();
-})
+beforeEach(() => {
+    dateTimePickerProps = {
+        id: 'test_date_time_picker',
+        label: 'Test Date Time Picker',
+        name: 'test_date_time_picker',
+        helperText: 'This is a description of a date time picker.',
+        setFunction: mockUpdateScalar
+    }
+});
+
+afterEach(() => {
+    mockUpdateScalar.mockClear();
+});
+
+test('SHOW <ISO8601DateTimePicker /> should handle any date and time in EDT timezone', () => {
+    let {container} = render(
+        <ISO8601DateTimePicker readOnly={true} value='2021-07-22T13:00:00Z' {...dateTimePickerProps} />
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    let dateTimeField = screen.getByRole('textbox');
+    expect(dateTimeField).toBeInTheDocument();
+    expect(screen.getByLabelText(dateTimePickerProps.label)).toBeInTheDocument();
+    expect(screen.getByText(dateTimePickerProps.helperText)).toBeInTheDocument();
+    expect(dateTimeField).toHaveValue('2021-07-22 09:00:00 GMT-04:00');
+    expect(dateTimeField).toHaveAttribute('readonly');
+    userEvent.click(dateTimeField);
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+});
+
+test('NEW and EDIT <ISO8601DateTimePicker /> should handle any date and time in EDT timezone', () => {
+    let {container} = render(
+        <ISO8601DateTimePicker readOnly={false} value='2021-07-22T13:00:00Z' {...dateTimePickerProps} />
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    let dateTimeField = screen.getByRole('textbox');
+    expect(dateTimeField).toBeInTheDocument();
+    expect(screen.getByLabelText(dateTimePickerProps.label)).toBeInTheDocument();
+    expect(screen.getByText(dateTimePickerProps.helperText)).toBeInTheDocument();
+    expect(dateTimeField).toHaveValue('2021-07-22 09:00:00 GMT-04:00');
+    expect(dateTimeField).toHaveAttribute('readonly');
+    userEvent.click(dateTimeField);
+    let dateTimePicker = screen.getAllByRole('dialog')[0];
+    expect(dateTimePicker).toBeInTheDocument();
+    expect(dateTimePicker).toBeVisible();
+
+    // date selection via date time picker
+    userEvent.click(screen.getByRole('button', {name: '17'}));
+    userEvent.click(screen.getByText('OK'));
+    expect(mockUpdateScalar).toHaveBeenCalledWith('2021-07-17T13:00:00Z');
+    mockUpdateScalar.mockClear();
+
+    //verify that value cannot be updated by typing
+    userEvent.type(dateTimeField, 'test date time value');
+    expect(mockUpdateScalar).not.toHaveBeenCalled();
+});

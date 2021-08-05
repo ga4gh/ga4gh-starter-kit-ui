@@ -210,4 +210,4 @@ test('NEW and EDIT <Checksums /> should handle Checksum value editing', () => {
     userEvent.type(checksumInput[0], 'new checksum value');
     // callback function should pass the index as its first argument
     expect(mockUpdateListObjectProperty.mock.calls[0][0]).toBe(0);
-})
+});
