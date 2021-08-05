@@ -46,7 +46,7 @@ test('SHOW should handle multiple aliases', () => {
         expect(alias).toHaveAttribute('readonly');
         userEvent.type(alias, 'test alias');
         expect(mockUpdateListString.mock.calls.length).toBe(0);
-    })
+    });
 });
 
 test('NEW and EDIT should handle zero aliases', () => {
@@ -106,5 +106,5 @@ test('NEW and EDIT should handle multiple aliases', () => {
         expect(mockRemoveListItem.mock.calls[index][0]).toBe(index);
         expect(mockRemoveListItem.mock.results[index].value).toBe(index);
     });
-    expect(mockRemoveListItem.mock.calls.length).toBe(removeItemButtons.length);
+    expect(mockRemoveListItem.mock.calls.length).toBe(multipleAliases.length);
 });
