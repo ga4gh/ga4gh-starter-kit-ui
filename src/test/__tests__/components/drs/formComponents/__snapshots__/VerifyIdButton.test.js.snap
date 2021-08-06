@@ -3,6 +3,7 @@
 exports[`<VerifyIdButton/> should handle invalid relatives 1`] = `
 <div>
   <button
+    aria-label="verify-id"
     className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
     disabled={false}
     onBlur={[Function]}
@@ -90,6 +91,7 @@ exports[`<VerifyIdButton/> should handle invalid relatives 1`] = `
 exports[`<VerifyIdButton/> should handle undefined relatives 1`] = `
 <div>
   <button
+    aria-label="verify-id"
     className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
     disabled={false}
     onBlur={[Function]}
@@ -134,6 +136,7 @@ exports[`<VerifyIdButton/> should handle undefined relatives 1`] = `
 exports[`<VerifyIdButton/> should handle valid relatives 1`] = `
 <div>
   <button
+    aria-label="verify-id"
     className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
     disabled={false}
     onBlur={[Function]}

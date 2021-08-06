@@ -1,116 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
+exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-12"
+    class="MuiBox-root MuiBox-root-13"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
-    Bundle Parents
+    Related DRS Objects
   </h6>
-  This is a description for snapshot testing.
+  This is a description for testing.
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_parents0"
-              id="ID_drs_object_parents0-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object0"
+              id="ID_related_drs_object0-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
-                id="ID_drs_object_parents0"
-                name="ID123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object0"
+                name="id1"
                 type="text"
-                value="ID123"
+                value="id1"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -122,48 +94,40 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_parents0"
-              id="Name_drs_object_parents0-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object0"
+              id="Name_related_drs_object0-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_parents0"
-                name="name123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object0"
+                name="name1"
+                readonly=""
                 type="text"
-                value="name123"
+                value="name1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -176,37 +140,22 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            title="Remove this parent."
+            tabindex="0"
+            title="Remove this relative."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -216,7 +165,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -224,99 +173,71 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_parents1"
-              id="ID_drs_object_parents1-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object1"
+              id="ID_related_drs_object1-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
-                id="ID_drs_object_parents1"
-                name="ID456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object1"
+                name="id2"
                 type="text"
-                value="ID456"
+                value="id2"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -328,48 +249,40 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_parents1"
-              id="Name_drs_object_parents1-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object1"
+              id="Name_related_drs_object1-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_parents1"
-                name="name456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object1"
+                name="name2"
+                readonly=""
                 type="text"
-                value="name456"
+                value="name2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -382,37 +295,22 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            title="Remove this parent."
+            tabindex="0"
+            title="Remove this relative."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -422,7 +320,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -430,99 +328,71 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_parents2"
-              id="ID_drs_object_parents2-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object2"
+              id="ID_related_drs_object2-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
-                id="ID_drs_object_parents2"
-                name="ID789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object2"
+                name="id3"
                 type="text"
-                value="ID789"
+                value="id3"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -534,48 +404,40 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_parents2"
-              id="Name_drs_object_parents2-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object2"
+              id="Name_related_drs_object2-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_parents2"
-                name="name789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object2"
+                name="name3"
+                readonly=""
                 type="text"
-                value="name789"
+                value="name3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -588,37 +450,22 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            title="Remove this parent."
+            tabindex="0"
+            title="Remove this relative."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -628,7 +475,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -637,47 +484,28 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
+          class=""
           data-testid="add-item-button-tooltip"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          title="Add parent."
+          title="Add relative."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -687,7 +515,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -697,196 +525,89 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple parents 1`] = `
 </div>
 `;
 
-exports[`EDIT <DrsObjectRelatives/> should handle zero parents 1`] = `
+exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 2`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-11"
+    class="MuiBox-root MuiBox-root-13"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
-    Bundle Parents
+    Related DRS Objects
   </h6>
-  This is a description for snapshot testing.
-  <div>
-    <div
-      className="MuiGrid-root MuiGrid-container"
-    >
-      <div
-        className="MuiGrid-root MuiGrid-item"
-      >
-        <span
-          aria-describedby={null}
-          className=""
-          data-testid="add-item-button-tooltip"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          title="Add parent."
-        >
-          <button
-            aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <span
-              className="MuiIconButton-label"
-            >
-              <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
-                />
-              </svg>
-            </span>
-            <span
-              className="MuiTouchRipple-root"
-            />
-          </button>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
-<div
-  className="MuiFormGroup-root"
->
+  This is a description for testing.
   <div
-    className="MuiBox-root MuiBox-root-8"
-  >
-    <hr
-      className="MuiDivider-root"
-    />
-  </div>
-  <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
-  >
-    Bundle Children
-  </h6>
-  This is a description for snapshot testing.
-  <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_children0"
-              id="ID_drs_object_children0-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object0"
+              id="ID_related_drs_object0-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
-                id="ID_drs_object_children0"
-                name="ID123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object0"
+                name="id1"
                 type="text"
-                value="ID123"
+                value="id1"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -898,48 +619,40 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_children0"
-              id="Name_drs_object_children0-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object0"
+              id="Name_related_drs_object0-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_children0"
-                name="name123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object0"
+                name="name1"
+                readonly=""
                 type="text"
-                value="name123"
+                value="name1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -952,37 +665,22 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            title="Remove this child."
+            tabindex="0"
+            title="Remove this relative."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -992,7 +690,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -1000,99 +698,71 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_children1"
-              id="ID_drs_object_children1-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object1"
+              id="ID_related_drs_object1-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
-                id="ID_drs_object_children1"
-                name="ID456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object1"
+                name="id2"
                 type="text"
-                value="ID456"
+                value="id2"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -1104,48 +774,40 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_children1"
-              id="Name_drs_object_children1-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object1"
+              id="Name_related_drs_object1-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_children1"
-                name="name456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object1"
+                name="name2"
+                readonly=""
                 type="text"
-                value="name456"
+                value="name2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -1158,37 +820,22 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            title="Remove this child."
+            tabindex="0"
+            title="Remove this relative."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1198,7 +845,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -1206,99 +853,71 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_children2"
-              id="ID_drs_object_children2-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object2"
+              id="ID_related_drs_object2-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
-                id="ID_drs_object_children2"
-                name="ID789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object2"
+                name="id3"
                 type="text"
-                value="ID789"
+                value="id3"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -1310,48 +929,40 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_children2"
-              id="Name_drs_object_children2-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object2"
+              id="Name_related_drs_object2-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_children2"
-                name="name789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object2"
+                name="name3"
+                readonly=""
                 type="text"
-                value="name789"
+                value="name3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -1364,37 +975,22 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
-            title="Remove this child."
+            tabindex="0"
+            title="Remove this relative."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1404,7 +1000,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -1413,47 +1009,28 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
+          class=""
           data-testid="add-item-button-tooltip"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          title="Add child."
+          title="Add relative."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1463,7 +1040,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -1473,66 +1050,47 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple children 1`] = `
 </div>
 `;
 
-exports[`NEW <DrsObjectRelatives/> should handle zero children 1`] = `
+exports[`EDIT <DrsObjectRelatives/> should handle zero relatives 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-7"
+    class="MuiBox-root MuiBox-root-12"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
-    Bundle Children
+    Related DRS Objects
   </h6>
-  This is a description for snapshot testing.
+  This is a description for testing.
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
+          class=""
           data-testid="add-item-button-tooltip"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          title="Add child."
+          title="Add relative."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1542,7 +1100,7 @@ exports[`NEW <DrsObjectRelatives/> should handle zero children 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -1552,72 +1110,89 @@ exports[`NEW <DrsObjectRelatives/> should handle zero children 1`] = `
 </div>
 `;
 
-exports[`SHOW <DrsObjectRelatives/> should handle multiple children 1`] = `
+exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-2"
+    class="MuiBox-root MuiBox-root-7"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
-    Bundle Children
+    Related DRS Objects
   </h6>
-  This is a description for snapshot testing.
+  This is a description for testing.
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_children0"
-              id="ID_drs_object_children0-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object0"
+              id="ID_related_drs_object0-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="ID_drs_object_children0"
-                name="ID123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object0"
+                name="id1"
                 type="text"
-                value="ID123"
+                value="id1"
               />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+              >
+                <div>
+                  <button
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-button"
+                        title="Submit this ID for verification."
+                      >
+                        Verify ID
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -1629,48 +1204,39 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple children 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_children0"
-              id="Name_drs_object_children0-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="Name_related_drs_object0"
+              id="Name_related_drs_object0-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_children0"
-                name="name123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object0"
+                readonly=""
                 type="text"
-                value="name123"
+                value=""
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10"
                 >
                   <span>
                     Name
@@ -1681,97 +1247,106 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple children 1`] = `
           </div>
         </div>
       </div>
-      <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
-      >
-        <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/ID123"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="button"
-          tabIndex={0}
-          title="View DrsObject with id 'ID123'"
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
-          <span
-            className="MuiButton-label"
+          <button
+            aria-label="remove-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this relative."
+            type="button"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiIconButton-label"
             >
-              View
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
             </span>
-          </span>
-          <span
-            className="MuiTouchRipple-root"
-          />
-        </a>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </div>
-      <div />
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_children1"
-              id="ID_drs_object_children1-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object1"
+              id="ID_related_drs_object1-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="ID_drs_object_children1"
-                name="ID456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object1"
+                name="id2"
                 type="text"
-                value="ID456"
+                value="id2"
               />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+              >
+                <div>
+                  <button
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-button"
+                        title="Submit this ID for verification."
+                      >
+                        Verify ID
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -1783,48 +1358,39 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple children 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_children1"
-              id="Name_drs_object_children1-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="Name_related_drs_object1"
+              id="Name_related_drs_object1-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_children1"
-                name="name456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object1"
+                readonly=""
                 type="text"
-                value="name456"
+                value=""
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10"
                 >
                   <span>
                     Name
@@ -1835,97 +1401,106 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple children 1`] = `
           </div>
         </div>
       </div>
-      <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
-      >
-        <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/ID456"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="button"
-          tabIndex={0}
-          title="View DrsObject with id 'ID456'"
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
-          <span
-            className="MuiButton-label"
+          <button
+            aria-label="remove-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this relative."
+            type="button"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiIconButton-label"
             >
-              View
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
             </span>
-          </span>
-          <span
-            className="MuiTouchRipple-root"
-          />
-        </a>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </div>
-      <div />
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_children2"
-              id="ID_drs_object_children2-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object2"
+              id="ID_related_drs_object2-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="ID_drs_object_children2"
-                name="ID789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object2"
+                name="id3"
                 type="text"
-                value="ID789"
+                value="id3"
               />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+              >
+                <div>
+                  <button
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-button"
+                        title="Submit this ID for verification."
+                      >
+                        Verify ID
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -1937,48 +1512,39 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple children 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_children2"
-              id="Name_drs_object_children2-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="Name_related_drs_object2"
+              id="Name_related_drs_object2-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_children2"
-                name="name789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object2"
+                readonly=""
                 type="text"
-                value="name789"
+                value=""
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10"
                 >
                   <span>
                     Name
@@ -1989,118 +1555,166 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple children 1`] = `
           </div>
         </div>
       </div>
-      <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
-      >
-        <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/ID789"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="button"
-          tabIndex={0}
-          title="View DrsObject with id 'ID789'"
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
-          <span
-            className="MuiButton-label"
+          <button
+            aria-label="remove-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this relative."
+            type="button"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiIconButton-label"
             >
-              View
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
             </span>
-          </span>
-          <span
-            className="MuiTouchRipple-root"
-          />
-        </a>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </div>
-      <div />
     </div>
   </div>
-  <div />
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <span
+          class=""
+          data-testid="add-item-button-tooltip"
+          title="Add relative."
+        >
+          <button
+            aria-label="add-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
-exports[`SHOW <DrsObjectRelatives/> should handle multiple parents 1`] = `
+exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 2`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-10"
+    class="MuiBox-root MuiBox-root-7"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
-    Bundle Parents
+    Related DRS Objects
   </h6>
-  This is a description for snapshot testing.
+  This is a description for testing.
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_parents0"
-              id="ID_drs_object_parents0-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object0"
+              id="ID_related_drs_object0-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="ID_drs_object_parents0"
-                name="ID123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object0"
+                name="id1"
                 type="text"
-                value="ID123"
+                value="id1"
               />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+              >
+                <div>
+                  <button
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-button"
+                        title="Submit this ID for verification."
+                      >
+                        Verify ID
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -2112,48 +1726,39 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple parents 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_parents0"
-              id="Name_drs_object_parents0-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="Name_related_drs_object0"
+              id="Name_related_drs_object0-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_parents0"
-                name="name123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object0"
+                readonly=""
                 type="text"
-                value="name123"
+                value=""
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10"
                 >
                   <span>
                     Name
@@ -2164,97 +1769,106 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple parents 1`] = `
           </div>
         </div>
       </div>
-      <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
-      >
-        <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/ID123"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="button"
-          tabIndex={0}
-          title="View DrsObject with id 'ID123'"
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
-          <span
-            className="MuiButton-label"
+          <button
+            aria-label="remove-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this relative."
+            type="button"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiIconButton-label"
             >
-              View
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
             </span>
-          </span>
-          <span
-            className="MuiTouchRipple-root"
-          />
-        </a>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </div>
-      <div />
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_parents1"
-              id="ID_drs_object_parents1-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object1"
+              id="ID_related_drs_object1-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="ID_drs_object_parents1"
-                name="ID456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object1"
+                name="id2"
                 type="text"
-                value="ID456"
+                value="id2"
               />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+              >
+                <div>
+                  <button
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-button"
+                        title="Submit this ID for verification."
+                      >
+                        Verify ID
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -2266,48 +1880,39 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple parents 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_parents1"
-              id="Name_drs_object_parents1-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="Name_related_drs_object1"
+              id="Name_related_drs_object1-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_parents1"
-                name="name456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object1"
+                readonly=""
                 type="text"
-                value="name456"
+                value=""
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10"
                 >
                   <span>
                     Name
@@ -2318,97 +1923,106 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple parents 1`] = `
           </div>
         </div>
       </div>
-      <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
-      >
-        <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/ID456"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="button"
-          tabIndex={0}
-          title="View DrsObject with id 'ID456'"
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
-          <span
-            className="MuiButton-label"
+          <button
+            aria-label="remove-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this relative."
+            type="button"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiIconButton-label"
             >
-              View
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
             </span>
-          </span>
-          <span
-            className="MuiTouchRipple-root"
-          />
-        </a>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </div>
-      <div />
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_drs_object_parents2"
-              id="ID_drs_object_parents2-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object2"
+              id="ID_related_drs_object2-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="ID_drs_object_parents2"
-                name="ID789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                id="ID_related_drs_object2"
+                name="id3"
                 type="text"
-                value="ID789"
+                value="id3"
               />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+              >
+                <div>
+                  <button
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-button"
+                        title="Submit this ID for verification."
+                      >
+                        Verify ID
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -2420,48 +2034,39 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple parents 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_drs_object_parents2"
-              id="Name_drs_object_parents2-label"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="Name_related_drs_object2"
+              id="Name_related_drs_object2-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
-                id="Name_drs_object_parents2"
-                name="name789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object2"
+                readonly=""
                 type="text"
-                value="name789"
+                value=""
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10"
                 >
                   <span>
                     Name
@@ -2472,90 +2077,535 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple parents 1`] = `
           </div>
         </div>
       </div>
-      <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
-      >
-        <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/ID789"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role="button"
-          tabIndex={0}
-          title="View DrsObject with id 'ID789'"
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
-          <span
-            className="MuiButton-label"
+          <button
+            aria-label="remove-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this relative."
+            type="button"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiIconButton-label"
             >
-              View
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
             </span>
-          </span>
-          <span
-            className="MuiTouchRipple-root"
-          />
-        </a>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </div>
-      <div />
     </div>
   </div>
-  <div />
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <span
+          class=""
+          data-testid="add-item-button-tooltip"
+          title="Add relative."
+        >
+          <button
+            aria-label="add-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
-exports[`SHOW <DrsObjectRelatives/> should handle zero children 1`] = `
+exports[`NEW <DrsObjectRelatives/> should handle zero relatives 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-1"
+    class="MuiBox-root MuiBox-root-6"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
-    Bundle Children
+    Related DRS Objects
   </h6>
-  This is a description for snapshot testing.
-  <div />
+  This is a description for testing.
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <span
+          class=""
+          data-testid="add-item-button-tooltip"
+          title="Add relative."
+        >
+          <button
+            aria-label="add-item-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
-exports[`SHOW <DrsObjectRelatives/> should handle zero parents 1`] = `
+exports[`SHOW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-9"
+    class="MuiBox-root MuiBox-root-1"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
-    Bundle Parents
+    Related DRS Objects
   </h6>
-  This is a description for snapshot testing.
+  This is a description for testing.
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object0"
+              id="ID_related_drs_object0-label"
+            >
+              Id
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="ID_related_drs_object0"
+                name="id1"
+                readonly=""
+                type="text"
+                value="id1"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                >
+                  <span>
+                    Id
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object0"
+              id="Name_related_drs_object0-label"
+            >
+              Name
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object0"
+                name="name1"
+                readonly=""
+                type="text"
+                value="name1"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                >
+                  <span>
+                    Name
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+      >
+        <a
+          aria-disabled="false"
+          aria-label="view-relative"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          href="/drs/id1"
+          role="button"
+          tabindex="0"
+          title="View DrsObject with id 'id1'"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-button"
+            >
+              View
+            </span>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object1"
+              id="ID_related_drs_object1-label"
+            >
+              Id
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="ID_related_drs_object1"
+                name="id2"
+                readonly=""
+                type="text"
+                value="id2"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                >
+                  <span>
+                    Id
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object1"
+              id="Name_related_drs_object1-label"
+            >
+              Name
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object1"
+                name="name2"
+                readonly=""
+                type="text"
+                value="name2"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                >
+                  <span>
+                    Name
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+      >
+        <a
+          aria-disabled="false"
+          aria-label="view-relative"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          href="/drs/id2"
+          role="button"
+          tabindex="0"
+          title="View DrsObject with id 'id2'"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-button"
+            >
+              View
+            </span>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_related_drs_object2"
+              id="ID_related_drs_object2-label"
+            >
+              Id
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="ID_related_drs_object2"
+                name="id3"
+                readonly=""
+                type="text"
+                value="id3"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                >
+                  <span>
+                    Id
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_related_drs_object2"
+              id="Name_related_drs_object2-label"
+            >
+              Name
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="Name_related_drs_object2"
+                name="name3"
+                readonly=""
+                type="text"
+                value="name3"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
+                >
+                  <span>
+                    Name
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+      >
+        <a
+          aria-disabled="false"
+          aria-label="view-relative"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          href="/drs/id3"
+          role="button"
+          tabindex="0"
+          title="View DrsObject with id 'id3'"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-button"
+            >
+              View
+            </span>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+      <div />
+    </div>
+  </div>
   <div />
 </div>
 `;

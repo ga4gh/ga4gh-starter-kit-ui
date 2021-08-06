@@ -9,11 +9,13 @@ const mockRemoveListItem = jest.fn(index => {return index});
 const mockUpdateScalar = jest.fn(newValue => {return});
 const mockUpdateListString = jest.fn((index, newValue) => {return index});
 const mockUpdateListObjectProperty = jest.fn((index, newValue) => {return index});
+const mockResetListObjectProperty = jest.fn(index => {return index});
 
 export {
     mockAddObjectToList, 
     mockRemoveListItem, 
     mockUpdateScalar, 
     mockUpdateListString, 
-    mockUpdateListObjectProperty
+    mockUpdateListObjectProperty, 
+    mockResetListObjectProperty
 };

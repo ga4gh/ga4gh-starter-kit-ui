@@ -1,98 +1,201 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import {queryByRole, render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import userEvent from '@testing-library/user-event';
 import DrsObjectChildren from '../../../../../lib/components/drs/formComponents/DrsObjectChildren';
-import { unmountComponentAtNode } from "react-dom";
 import { MemoryRouter } from 'react-router';
+import {
+    mockAddObjectToList, 
+    mockRemoveListItem, 
+    mockUpdateListObjectProperty,
+    mockResetListObjectProperty
+} from '../../../../resources/MockFunctions';
 
-let container = null;
-let zeroDrsObjectChildren = null;
-let multipleDrsObjectChildren = null;
+let zeroChildren = null;
+let multipleChildren = null;
+let childrenProps = null;
+let showForm = null;
+let newForm = null;
+let editForm = null;
+let sectionDescriptions = [
+    'This DRS Object is currently acting as a DRS Bundle. Bundles contain references to multiple Child objects (single-blob DRS Objects and/or DRS Bundles), enabling multiple DRS Objects to be logically grouped in a nested structure. Only DRS Bundles may have children, single-blob DRS Objects do not have children.',
+    'The following listing displays all children for the current DRS Bundle.'
+]
+
 beforeEach(() => {
-    container = document.createElement("div");
-    document.body.appendChild(container);
-    zeroDrsObjectChildren=[];
-    multipleDrsObjectChildren=[
-        {id: '123'},
-        {id: '456'},
-        {id: '789'}
-    ]
+    zeroChildren={drs_object_children: []};
+    multipleChildren={
+        drs_object_children: [
+            {id: 'id1', name: 'name1'},
+            {id: 'id2', name: 'name2'},
+            {id: 'id3', name: 'name3'}
+        ]
+    };
+    childrenProps = {
+        id: '1234567890',
+        addChild: mockAddObjectToList,
+        setChildId: mockUpdateListObjectProperty,
+        setChildName: mockUpdateListObjectProperty,
+        setChildValid: mockResetListObjectProperty,
+        setChildInvalid: mockResetListObjectProperty,
+        unsetChildValidity: mockResetListObjectProperty,
+        removeChild: mockRemoveListItem
+    };
+    showForm = {readOnly: true, formViewType: 'SHOW'};
+    newForm = {readOnly: false, formViewType: 'NEW'};
+    editForm = {readOnly: false, formViewType: 'EDIT'};  
 });
 
 afterEach(() => {
-    unmountComponentAtNode(container);
-    container.remove();
-    container = null;
+    mockAddObjectToList.mockClear(); 
+    mockRemoveListItem.mockClear(); 
+    mockUpdateListObjectProperty.mockClear(); 
+    mockResetListObjectProperty.mockClear();
 });
 
-
-test('SHOW <DrsObjectChildren /> should handle zero child objects', () => {
-    const drsObjectChildren = renderer
-    .create(
-        <MemoryRouter>
-            <DrsObjectChildren readOnly={true} formViewType='SHOW'
-            drs_object_children={zeroDrsObjectChildren} />            
-        </MemoryRouter>
-    )
-    .toJSON();
-    expect(drsObjectChildren).toMatchSnapshot();
-});
 
 test('SHOW <DrsObjectChildren /> should handle multiple child objects', () => {
-    const drsObjectChildren = renderer
-    .create(
+    let {container} = render(
         <MemoryRouter>
-            <DrsObjectChildren readOnly={true} formViewType='SHOW'
-            drs_object_children={multipleDrsObjectChildren} />    
+            <DrsObjectChildren {...showForm} {...multipleChildren} {...childrenProps} />    
         </MemoryRouter>
-    )
-    .toJSON();
-    expect(drsObjectChildren).toMatchSnapshot();
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole('heading', {level: 6})).toHaveTextContent('Bundle Children');
+    expect(screen.getByText(sectionDescriptions[0])).toBeInTheDocument();
+    expect(screen.getByText(sectionDescriptions[1])).toBeInTheDocument();
+
+    // add and remove item buttons should not be displayed
+    expect(screen.queryByLabelText('add-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+
+    let idFields = screen.getAllByLabelText('Id');
+    let nameFields = screen.getAllByLabelText('Name');
+    let viewButtons = screen.getAllByLabelText('view-relative');
+    
+    // ID fields, name fields, and "View" buttons should be displayed for each child DRS Object
+    multipleChildren.drs_object_children.forEach((childObject, index) => {
+        expect(idFields[index]).toHaveValue(childObject.id);
+        expect(idFields[index]).toHaveAttribute('readonly');
+        expect(nameFields[index]).toHaveValue(childObject.name)
+        expect(nameFields[index]).toHaveAttribute('readonly');
+        expect(viewButtons[index]).toBeInTheDocument();
+    });
 });
 
 test('NEW <DrsObjectChildren /> should handle zero child objects', () => {
-    const drsObjectChildren = renderer
-    .create(
+    let {container} = render(
         <MemoryRouter>
-            <DrsObjectChildren readOnly={false} formViewType='NEW'
-            drs_object_children={zeroDrsObjectChildren} />
+            <DrsObjectChildren {...newForm} {...zeroChildren} {...childrenProps} />
         </MemoryRouter>
-    )
-    .toJSON();
-    expect(drsObjectChildren).toMatchSnapshot();
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole('heading', {level: 6})).toHaveTextContent('Bundle Children');
+    expect(screen.getByText(sectionDescriptions[0])).toBeInTheDocument();
+    expect(screen.getByText(sectionDescriptions[1])).toBeInTheDocument();
+
+    // clickable add button should be displayed
+    let addRelativeButton = screen.getByLabelText('add-item-button');
+    expect(addRelativeButton).toBeInTheDocument();
+    userEvent.click(addRelativeButton);
+    expect(mockAddObjectToList.mock.calls.length).toBe(1); 
+
+    // ID fields, name fields, remove buttons, "View" buttons, and "Verify ID" buttons should not be displayed
+    expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('verify-id')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('view-relative')).not.toBeInTheDocument();
 });
 
 test('NEW <DrsObjectChildren /> should handle multiple child objects', () => {
-    const drsObjectChildren = renderer
-    .create(
+    let {container} = render(
         <MemoryRouter>
-            <DrsObjectChildren readOnly={false} formViewType='NEW'
-            drs_object_children={multipleDrsObjectChildren} />   
+            <DrsObjectChildren {...newForm} {...multipleChildren} {...childrenProps} />   
         </MemoryRouter>
-    )
-    .toJSON();
-    expect(drsObjectChildren).toMatchSnapshot();
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole('heading', {level: 6})).toHaveTextContent('Bundle Children');
+    expect(screen.getByText(sectionDescriptions[0])).toBeInTheDocument();
+    expect(screen.getByText(sectionDescriptions[1])).toBeInTheDocument();
+
+    // clickable add button should be displayed
+    let addRelativeButton = screen.getByLabelText('add-item-button');
+    expect(addRelativeButton).toBeInTheDocument();
+    userEvent.click(addRelativeButton);
+    expect(mockAddObjectToList.mock.calls.length).toBe(1); 
+
+    let idFields = screen.getAllByLabelText('Id');
+    let nameFields = screen.getAllByLabelText('Name');
+    let removeRelativeButtons = screen.getAllByLabelText('remove-item-button');
+    let verifyIdButtons = screen.getAllByLabelText('verify-id');
+    // ID fields, name fields, remove buttons, and "Verify ID" buttons should be 
+    // displayed for each child object
+    multipleChildren.drs_object_children.forEach((childObject, index) => {
+        expect(idFields[index]).toHaveValue(childObject.id);
+        expect(nameFields[index]).toHaveValue(childObject.name);
+        expect(removeRelativeButtons[index]).toBeInTheDocument();
+        expect(verifyIdButtons[index]).toBeInTheDocument();
+    });
+
+    // "View" buttons should not be displayed
+    expect(screen.queryByLabelText('view-relative')).not.toBeInTheDocument();
 });
 
 test('EDIT <DrsObjectChildren /> should handle zero child objects', () => {
-    const drsObjectChildren = renderer
-    .create(
+    let {container} = render(
         <MemoryRouter>
-            <DrsObjectChildren readOnly={false} formViewType='EDIT'
-            drs_object_children={zeroDrsObjectChildren} />   
+            <DrsObjectChildren {...editForm} {...zeroChildren} {...childrenProps} />   
         </MemoryRouter>
-    )
-    .toJSON();
-    expect(drsObjectChildren).toMatchSnapshot();
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole('heading', {level: 6})).toHaveTextContent('Bundle Children');
+    expect(screen.getByText(sectionDescriptions[0])).toBeInTheDocument();
+    expect(screen.getByText(sectionDescriptions[1])).toBeInTheDocument();
+
+    // clickable add button should be displayed
+    let addRelativeButton = screen.getByLabelText('add-item-button');
+    expect(addRelativeButton).toBeInTheDocument();
+    userEvent.click(addRelativeButton);
+    expect(mockAddObjectToList.mock.calls.length).toBe(1); 
+
+    // ID fields, name fields, remove buttons, "View" buttons, and "Verify ID" buttons should not be displayed
+    expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('verify-id')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('view-relative')).not.toBeInTheDocument();
 });
 
 test('EDIT <DrsObjectChildren /> should handle multiple child objects', () => {
-    const drsObjectChildren = renderer
-    .create(
+    let {container} = render(
         <MemoryRouter>
-            <DrsObjectChildren readOnly={false} formViewType='EDIT'
-            drs_object_children={multipleDrsObjectChildren} />    
+            <DrsObjectChildren {...editForm} {...multipleChildren} {...childrenProps} />    
         </MemoryRouter>
-        )
-    .toJSON();
-    expect(drsObjectChildren).toMatchSnapshot();
+        );
+    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole('heading', {level: 6})).toHaveTextContent('Bundle Children');
+    expect(screen.getByText(sectionDescriptions[0])).toBeInTheDocument();
+    expect(screen.getByText(sectionDescriptions[1])).toBeInTheDocument();
+
+    // clickable add button should be displayed
+    let addRelativeButton = screen.getByLabelText('add-item-button');
+    expect(addRelativeButton).toBeInTheDocument();
+    userEvent.click(addRelativeButton);
+    expect(mockAddObjectToList.mock.calls.length).toBe(1); 
+
+    let idFields = screen.getAllByLabelText('Id');
+    let nameFields = screen.getAllByLabelText('Name');
+    let removeRelativeButtons = screen.getAllByLabelText('remove-item-button');
+    let verifyIdButtons = screen.getAllByLabelText('verify-id');
+    // ID fields, name fields, remove buttons, and "Verify ID" buttons should be 
+    // displayed for each child object
+    multipleChildren.drs_object_children.forEach((childObject, index) => {
+        expect(idFields[index]).toHaveValue(childObject.id);
+        expect(nameFields[index]).toHaveValue(childObject.name);
+        expect(removeRelativeButtons[index]).toBeInTheDocument();
+        expect(verifyIdButtons[index]).toBeInTheDocument();
+    });
+
+    // "View" buttons should not be displayed
+    expect(screen.queryByLabelText('view-relative')).not.toBeInTheDocument();
 });

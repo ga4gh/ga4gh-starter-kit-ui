@@ -2,126 +2,98 @@
 
 exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-10"
+    class="MuiBox-root MuiBox-root-13"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
     Bundle Children
   </h6>
   <div>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       This DRS Object is currently acting as a DRS Bundle. Bundles contain references to multiple Child objects (single-blob DRS Objects and/or DRS Bundles), enabling multiple DRS Objects to be logically grouped in a nested structure. Only DRS Bundles may have children, single-blob DRS Objects do not have children.
     </p>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       The following listing displays all children for the current DRS Bundle.
     </p>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children0"
               id="ID_children0-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
                 id="ID_children0"
-                name="123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                name="id1"
                 type="text"
-                value="123"
+                value="id1"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -133,46 +105,40 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children0"
               id="Name_children0-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children0"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name1"
+                readonly=""
                 type="text"
+                value="name1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -185,37 +151,22 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            tabindex="0"
             title="Remove this child."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -225,7 +176,7 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -233,99 +184,71 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children1"
               id="ID_children1-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
                 id="ID_children1"
-                name="456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                name="id2"
                 type="text"
-                value="456"
+                value="id2"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -337,46 +260,40 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children1"
               id="Name_children1-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children1"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name2"
+                readonly=""
                 type="text"
+                value="name2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -389,37 +306,22 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            tabindex="0"
             title="Remove this child."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -429,7 +331,7 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -437,99 +339,71 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children2"
               id="ID_children2-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
                 id="ID_children2"
-                name="789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                name="id3"
                 type="text"
-                value="789"
+                value="id3"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Id
@@ -541,46 +415,40 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children2"
               id="Name_children2-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children2"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name3"
+                readonly=""
                 type="text"
+                value="name3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-14 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-16 PrivateNotchedOutline-legendNotched-17"
                 >
                   <span>
                     Name
@@ -593,37 +461,22 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            tabindex="0"
             title="Remove this child."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -633,7 +486,7 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -642,47 +495,28 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
+          class=""
           data-testid="add-item-button-tooltip"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
           title="Add child."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -692,7 +526,7 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -704,75 +538,56 @@ exports[`EDIT <DrsObjectChildren /> should handle multiple child objects 1`] = `
 
 exports[`EDIT <DrsObjectChildren /> should handle zero child objects 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-9"
+    class="MuiBox-root MuiBox-root-12"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
     Bundle Children
   </h6>
   <div>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       This DRS Object is currently acting as a DRS Bundle. Bundles contain references to multiple Child objects (single-blob DRS Objects and/or DRS Bundles), enabling multiple DRS Objects to be logically grouped in a nested structure. Only DRS Bundles may have children, single-blob DRS Objects do not have children.
     </p>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       The following listing displays all children for the current DRS Bundle.
     </p>
   </div>
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
+          class=""
           data-testid="add-item-button-tooltip"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
           title="Add child."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -782,7 +597,7 @@ exports[`EDIT <DrsObjectChildren /> should handle zero child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -794,126 +609,98 @@ exports[`EDIT <DrsObjectChildren /> should handle zero child objects 1`] = `
 
 exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-8"
+    class="MuiBox-root MuiBox-root-7"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
     Bundle Children
   </h6>
   <div>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       This DRS Object is currently acting as a DRS Bundle. Bundles contain references to multiple Child objects (single-blob DRS Objects and/or DRS Bundles), enabling multiple DRS Objects to be logically grouped in a nested structure. Only DRS Bundles may have children, single-blob DRS Objects do not have children.
     </p>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       The following listing displays all children for the current DRS Bundle.
     </p>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children0"
               id="ID_children0-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
                 id="ID_children0"
-                name="123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                name="id1"
                 type="text"
-                value="123"
+                value="id1"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -925,46 +712,40 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children0"
               id="Name_children0-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children0"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name1"
+                readonly=""
                 type="text"
+                value="name1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Name
@@ -977,37 +758,22 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            tabindex="0"
             title="Remove this child."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1017,7 +783,7 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -1025,99 +791,71 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children1"
               id="ID_children1-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
                 id="ID_children1"
-                name="456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                name="id2"
                 type="text"
-                value="456"
+                value="id2"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -1129,46 +867,40 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children1"
               id="Name_children1-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children1"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name2"
+                readonly=""
                 type="text"
+                value="name2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Name
@@ -1181,37 +913,22 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            tabindex="0"
             title="Remove this child."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1221,7 +938,7 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -1229,99 +946,71 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children2"
               id="ID_children2-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
                 id="ID_children2"
-                name="789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={false}
-                required={false}
+                name="id3"
                 type="text"
-                value="789"
+                value="id3"
               />
               <div
-                className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
               >
                 <div>
                   <button
-                    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onDragLeave={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    onTouchMove={[Function]}
-                    onTouchStart={[Function]}
-                    tabIndex={0}
+                    aria-label="verify-id"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                    tabindex="0"
                     type="button"
                   >
                     <span
-                      className="MuiButton-label"
+                      class="MuiButton-label"
                     >
                       <span
-                        aria-describedby={null}
-                        className="MuiTypography-root MuiTypography-button"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseLeave={[Function]}
-                        onMouseOver={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
+                        class="MuiTypography-root MuiTypography-button"
                         title="Submit this ID for verification."
                       >
                         Verify ID
                       </span>
                     </span>
                     <span
-                      className="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Id
@@ -1333,46 +1022,40 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children2"
               id="Name_children2-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children2"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name3"
+                readonly=""
                 type="text"
+                value="name3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-10 PrivateNotchedOutline-legendNotched-11"
                 >
                   <span>
                     Name
@@ -1385,37 +1068,22 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
       </div>
       <div>
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-describedby={null}
             aria-label="remove-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            tabindex="0"
             title="Remove this child."
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1425,7 +1093,7 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -1434,47 +1102,28 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
   </div>
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
+          class=""
           data-testid="add-item-button-tooltip"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
           title="Add child."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1484,7 +1133,7 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -1496,75 +1145,56 @@ exports[`NEW <DrsObjectChildren /> should handle multiple child objects 1`] = `
 
 exports[`NEW <DrsObjectChildren /> should handle zero child objects 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-7"
+    class="MuiBox-root MuiBox-root-6"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
     Bundle Children
   </h6>
   <div>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       This DRS Object is currently acting as a DRS Bundle. Bundles contain references to multiple Child objects (single-blob DRS Objects and/or DRS Bundles), enabling multiple DRS Objects to be logically grouped in a nested structure. Only DRS Bundles may have children, single-blob DRS Objects do not have children.
     </p>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       The following listing displays all children for the current DRS Bundle.
     </p>
   </div>
   <div>
     <div
-      className="MuiGrid-root MuiGrid-container"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        className="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item"
       >
         <span
-          aria-describedby={null}
-          className=""
+          class=""
           data-testid="add-item-button-tooltip"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
           title="Add child."
         >
           <button
             aria-label="add-item-button"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-            disabled={false}
-            onBlur={[Function]}
-            onDragLeave={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex={0}
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
             type="button"
           >
             <span
-              className="MuiIconButton-label"
+              class="MuiIconButton-label"
             >
               <svg
-                aria-hidden={true}
-                className="MuiSvgIcon-root"
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1574,7 +1204,7 @@ exports[`NEW <DrsObjectChildren /> should handle zero child objects 1`] = `
               </svg>
             </span>
             <span
-              className="MuiTouchRipple-root"
+              class="MuiTouchRipple-root"
             />
           </button>
         </span>
@@ -1586,81 +1216,73 @@ exports[`NEW <DrsObjectChildren /> should handle zero child objects 1`] = `
 
 exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
 <div
-  className="MuiFormGroup-root"
+  class="MuiFormGroup-root"
 >
   <div
-    className="MuiBox-root MuiBox-root-2"
+    class="MuiBox-root MuiBox-root-1"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
   >
     Bundle Children
   </h6>
   <div>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       This DRS Object is currently acting as a DRS Bundle. Bundles contain references to multiple Child objects (single-blob DRS Objects and/or DRS Bundles), enabling multiple DRS Objects to be logically grouped in a nested structure. Only DRS Bundles may have children, single-blob DRS Objects do not have children.
     </p>
     <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
     >
       The following listing displays all children for the current DRS Bundle.
     </p>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children0"
               id="ID_children0-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="ID_children0"
-                name="123"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="id1"
+                readonly=""
                 type="text"
-                value="123"
+                value="id1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
                 >
                   <span>
                     Id
@@ -1672,46 +1294,40 @@ exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children0"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children0"
               id="Name_children0-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children0"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name1"
+                readonly=""
                 type="text"
+                value="name1"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
                 >
                   <span>
                     Name
@@ -1723,41 +1339,28 @@ exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
       >
         <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/123"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
+          aria-disabled="false"
+          aria-label="view-relative"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          href="/drs/id1"
           role="button"
-          tabIndex={0}
-          title="View DrsObject with id '123'"
+          tabindex="0"
+          title="View DrsObject with id 'id1'"
         >
           <span
-            className="MuiButton-label"
+            class="MuiButton-label"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiTypography-root MuiTypography-button"
             >
               View
             </span>
           </span>
           <span
-            className="MuiTouchRipple-root"
+            class="MuiTouchRipple-root"
           />
         </a>
       </div>
@@ -1765,54 +1368,46 @@ exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children1"
               id="ID_children1-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="ID_children1"
-                name="456"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="id2"
+                readonly=""
                 type="text"
-                value="456"
+                value="id2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
                 >
                   <span>
                     Id
@@ -1824,46 +1419,40 @@ exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children1"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children1"
               id="Name_children1-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children1"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name2"
+                readonly=""
                 type="text"
+                value="name2"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
                 >
                   <span>
                     Name
@@ -1875,41 +1464,28 @@ exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
       >
         <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/456"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
+          aria-disabled="false"
+          aria-label="view-relative"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          href="/drs/id2"
           role="button"
-          tabIndex={0}
-          title="View DrsObject with id '456'"
+          tabindex="0"
+          title="View DrsObject with id 'id2'"
         >
           <span
-            className="MuiButton-label"
+            class="MuiButton-label"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiTypography-root MuiTypography-button"
             >
               View
             </span>
           </span>
           <span
-            className="MuiTouchRipple-root"
+            class="MuiTouchRipple-root"
           />
         </a>
       </div>
@@ -1917,54 +1493,46 @@ exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormGroup-root MuiFormGroup-row"
+    class="MuiFormGroup-root MuiFormGroup-row"
   >
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="ID_children2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="ID_children2"
               id="ID_children2-label"
             >
               Id
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="ID_children2"
-                name="789"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="id3"
+                readonly=""
                 type="text"
-                value="789"
+                value="id3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
                 >
                   <span>
                     Id
@@ -1976,46 +1544,40 @@ exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
       >
         <div
-          className="MuiFormControl-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
-            className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-              data-shrink={false}
-              htmlFor="Name_children2"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="Name_children2"
               id="Name_children2-label"
             >
               Name
             </label>
             <div
-              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
-              onClick={[Function]}
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
             >
               <input
-                aria-invalid={false}
-                autoFocus={false}
-                className="MuiInputBase-input MuiOutlinedInput-input"
-                disabled={false}
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
                 id="Name_children2"
-                onAnimationStart={[Function]}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                required={false}
+                name="name3"
+                readonly=""
                 type="text"
+                value="name3"
               />
               <fieldset
-                aria-hidden={true}
-                className="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  className="PrivateNotchedOutline-legendLabelled-5"
+                  class="PrivateNotchedOutline-legendLabelled-4 PrivateNotchedOutline-legendNotched-5"
                 >
                   <span>
                     Name
@@ -2027,78 +1589,33 @@ exports[`SHOW <DrsObjectChildren /> should handle multiple child objects 1`] = `
         </div>
       </div>
       <div
-        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
       >
         <a
-          aria-describedby={null}
-          aria-disabled={false}
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-          href="/drs/789"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
+          aria-disabled="false"
+          aria-label="view-relative"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          href="/drs/id3"
           role="button"
-          tabIndex={0}
-          title="View DrsObject with id '789'"
+          tabindex="0"
+          title="View DrsObject with id 'id3'"
         >
           <span
-            className="MuiButton-label"
+            class="MuiButton-label"
           >
             <span
-              className="MuiTypography-root MuiTypography-button"
+              class="MuiTypography-root MuiTypography-button"
             >
               View
             </span>
           </span>
           <span
-            className="MuiTouchRipple-root"
+            class="MuiTouchRipple-root"
           />
         </a>
       </div>
       <div />
     </div>
-  </div>
-  <div />
-</div>
-`;
-
-exports[`SHOW <DrsObjectChildren /> should handle zero child objects 1`] = `
-<div
-  className="MuiFormGroup-root"
->
-  <div
-    className="MuiBox-root MuiBox-root-1"
-  >
-    <hr
-      className="MuiDivider-root"
-    />
-  </div>
-  <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
-  >
-    Bundle Children
-  </h6>
-  <div>
-    <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
-    >
-      This DRS Object is currently acting as a DRS Bundle. Bundles contain references to multiple Child objects (single-blob DRS Objects and/or DRS Bundles), enabling multiple DRS Objects to be logically grouped in a nested structure. Only DRS Bundles may have children, single-blob DRS Objects do not have children.
-    </p>
-    <p
-      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
-    >
-      The following listing displays all children for the current DRS Bundle.
-    </p>
   </div>
   <div />
 </div>

@@ -32,7 +32,7 @@ const DrsObjectRelatives = props => {
             {props.sectionDescription}
             {props.relatives.map((relative, index) => {
                 return (
-                    <FormGroup key={`props.relationship-${index}`} row>
+                    <FormGroup key={`${props.relationship}-${index}`} row>
                         <Grid container alignItems='center' spacing={4}>
                             <Grid item xs> 
                                 <FormControl fullWidth>
@@ -89,6 +89,7 @@ const DrsObjectRelatives = props => {
                                             title={`View DrsObject with id '${relative.id}'`}
                                         >
                                             <Button
+                                                aria-label='view-relative'
                                                 variant='contained'
                                                 component={Link}
                                                 to={`/drs/${relative.id}`}

@@ -195,10 +195,8 @@ test('NEW and EDIT <Checksums /> should display data correctly with all types se
 test('NEW and EDIT <Checksums /> should handle Type option selection', () => {
     render(<Checksums readOnly={false} {...allTypesSelected} {...checksumMockFunctions} />);
     let typeInput = screen.getAllByLabelText('Type');
-    screen.debug(typeInput);
     userEvent.click(typeInput[0]);
     let firstTypeSelector = screen.getByRole('listbox');
-    screen.debug(firstTypeSelector);
     userEvent.click(getByRole(firstTypeSelector, 'option', {name: 'sha256'}));
     // callback function should be called with the correct arguments
     expect(mockUpdateListObjectProperty).toHaveBeenCalledWith(0, 'sha256');
