@@ -47,8 +47,8 @@ test('SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access objects',
     expect(screen.getByText('Represents objects stored in AWS S3 containing DRS Object bytes.')).toBeInTheDocument();
 
     // add and remove buttons should not be displayed, callback functions should not be called
-    expect(screen.queryByLabelText('add-item-button')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('add-AWS S3 access point-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-AWS S3 access point-button')).not.toBeInTheDocument();
     expect(mockAddObjectToList.mock.calls.length).toBe(0);
     expect(mockRemoveListItem.mock.calls.length).toBe(0);
     expect(mockUpdateListObjectProperty.mock.calls.length).toBe(0);
@@ -87,13 +87,13 @@ test('NEW and EDIT <AwsS3AccessObjects /> should handle zero AWS S3 access objec
     expect(screen.getByText('Represents objects stored in AWS S3 containing DRS Object bytes.')).toBeInTheDocument();
 
     // clickable add item button should be displayed
-    const addItemButton = screen.getByLabelText('add-item-button');
+    const addItemButton = screen.getByLabelText('add-AWS S3 access point-button');
     expect(addItemButton).toBeInTheDocument();
     userEvent.click(addItemButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1);
 
     // remove item buttons and parameter text fields should not be displayed
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-AWS S3 access point-button')).not.toBeInTheDocument();
     expect(mockRemoveListItem.mock.calls.length).toBe(0);
     expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
     expect(mockUpdateListObjectProperty.mock.calls.length).toBe(0);
@@ -109,7 +109,7 @@ test('NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 access o
     expect(screen.getByText('Represents objects stored in AWS S3 containing DRS Object bytes.')).toBeInTheDocument();
 
     // clickable add item button should be displayed
-    const addItemButton = screen.getByLabelText('add-item-button');
+    const addItemButton = screen.getByLabelText('add-AWS S3 access point-button');
     expect(addItemButton).toBeInTheDocument();
     userEvent.click(addItemButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1);
@@ -148,7 +148,7 @@ test('NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 access o
     expect(mockUpdateListObjectProperty.mock.calls.length).toBe(0);
     
     //each AwsS3AccessObject instance should display a remove item button
-    const removeItemButtons = screen.getAllByLabelText('remove-item-button');
+    const removeItemButtons = screen.getAllByLabelText('remove-AWS S3 access point-button');
     removeItemButtons.forEach((removeItemButton, index) => {
         expect(removeItemButton).toBeInTheDocument();
         userEvent.click(removeItemButton);

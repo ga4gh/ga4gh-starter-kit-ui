@@ -81,7 +81,7 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
               >
                 <button
-                  aria-label="remove-item-button"
+                  aria-label="remove-alias-button"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
                   data-testid="remove-item-button-tooltip"
                   tabindex="0"
@@ -165,7 +165,7 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
               >
                 <button
-                  aria-label="remove-item-button"
+                  aria-label="remove-alias-button"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
                   data-testid="remove-item-button-tooltip"
                   tabindex="0"
@@ -249,7 +249,7 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
               >
                 <button
-                  aria-label="remove-item-button"
+                  aria-label="remove-alias-button"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
                   data-testid="remove-item-button-tooltip"
                   tabindex="0"
@@ -333,7 +333,7 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
               >
                 <button
-                  aria-label="remove-item-button"
+                  aria-label="remove-alias-button"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
                   data-testid="remove-item-button-tooltip"
                   tabindex="0"
@@ -379,7 +379,7 @@ exports[`NEW and EDIT should handle multiple aliases 1`] = `
                 title="Add alias."
               >
                 <button
-                  aria-label="add-item-button"
+                  aria-label="add-alias-button"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
                   tabindex="0"
                   type="button"
@@ -455,7 +455,7 @@ exports[`NEW and EDIT should handle zero aliases 1`] = `
                 title="Add alias."
               >
                 <button
-                  aria-label="add-item-button"
+                  aria-label="add-alias-button"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
                   tabindex="0"
                   type="button"

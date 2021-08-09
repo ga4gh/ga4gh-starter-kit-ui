@@ -69,8 +69,8 @@ test('SHOW <DrsObjectRelatives/> should handle multiple relatives', () => {
     expect(screen.getByText(relativeProps.sectionDescription)).toBeInTheDocument();
 
     // add and remove buttons should not be displayed and callback functions should not be called
-    expect(screen.queryByLabelText('add-item-button')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('add-relative-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-relative-button')).not.toBeInTheDocument();
     expect(mockRemoveListItem.mock.calls.length).toBe(0);
     expect(mockAddObjectToList.mock.calls.length).toBe(0);
 
@@ -111,14 +111,14 @@ test('NEW <DrsObjectRelatives/> should handle zero relatives', () => {
     expect(screen.getByText(relativeProps.sectionDescription)).toBeInTheDocument();
 
     // clickable add button should be displayed
-    let addRelativeButton = screen.getByLabelText('add-item-button');
+    let addRelativeButton = screen.getByLabelText('add-relative-button');
     expect(addRelativeButton).toBeInTheDocument();
     userEvent.click(addRelativeButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1); 
 
     // ID fields, name fields, remove buttons, "View" buttons, and "Verify ID" buttons should not be displayed
     expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-relative-button')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('verify-id')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('view-relative')).not.toBeInTheDocument();
 });
@@ -135,14 +135,14 @@ test('NEW <DrsObjectRelatives/> should handle multiple relatives', () => {
     expect(screen.getByText(relativeProps.sectionDescription)).toBeInTheDocument();
 
     // clickable add button should be displayed
-    let addRelativeButton = screen.getByLabelText('add-item-button');
+    let addRelativeButton = screen.getByLabelText('add-relative-button');
     expect(addRelativeButton).toBeInTheDocument();
     userEvent.click(addRelativeButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1); 
 
     let idFields = screen.getAllByLabelText('Id');
     let nameFields = screen.getAllByLabelText('Name');
-    let removeRelativeButtons = screen.getAllByLabelText('remove-item-button');
+    let removeRelativeButtons = screen.getAllByLabelText('remove-relative-button');
     let verifyIdButtons = screen.getAllByLabelText('verify-id');
 
     multipleNewRelatives.relatives.forEach((relative, index) => {
@@ -181,14 +181,14 @@ test('EDIT <DrsObjectRelatives/> should handle zero relatives', () => {
     expect(screen.getByText(relativeProps.sectionDescription)).toBeInTheDocument();
 
     // clickable add button should be displayed
-    let addRelativeButton = screen.getByLabelText('add-item-button');
+    let addRelativeButton = screen.getByLabelText('add-relative-button');
     expect(addRelativeButton).toBeInTheDocument();
     userEvent.click(addRelativeButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1); 
 
     // ID fields, name fields, remove buttons, "View" buttons, and "Verify ID" buttons should not be displayed
     expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-relative-button')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('verify-id')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('view-relative')).not.toBeInTheDocument();
 });
@@ -205,14 +205,14 @@ test('EDIT <DrsObjectRelatives/> should handle multiple relatives', () => {
     expect(screen.getByText(relativeProps.sectionDescription)).toBeInTheDocument();
 
     // clickable add button should be displayed
-    let addRelativeButton = screen.getByLabelText('add-item-button');
+    let addRelativeButton = screen.getByLabelText('add-relative-button');
     expect(addRelativeButton).toBeInTheDocument();
     userEvent.click(addRelativeButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1); 
 
     let idFields = screen.getAllByLabelText('Id');
     let nameFields = screen.getAllByLabelText('Name');
-    let removeRelativeButtons = screen.getAllByLabelText('remove-item-button');
+    let removeRelativeButtons = screen.getAllByLabelText('remove-relative-button');
     let verifyIdButtons = screen.getAllByLabelText('verify-id');
 
     multipleRelatives.relatives.forEach((relative, index) => {

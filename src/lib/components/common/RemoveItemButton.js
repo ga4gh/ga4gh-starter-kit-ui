@@ -20,7 +20,7 @@ const RemoveItemButton = (props) => {
                 ?
                     <Grid item xs={1}>
                         <Tooltip title={`Remove this ${props.objectName}.`} data-testid='remove-item-button-tooltip'>
-                            <IconButton aria-label={`remove-item-button`} color='secondary' onClick={props.handleClick}>
+                            <IconButton aria-label={`remove-${props.objectName}-button`} color='secondary' onClick={props.handleClick}>
                                 <RemoveCircle/>
                             </IconButton>
                         </Tooltip>

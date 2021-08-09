@@ -46,8 +46,8 @@ test('SHOW <FileAccessObjects /> should handle multiple file access objects', ()
     expect(screen.getByText(sectionDescription)).toBeInTheDocument();
 
     // add and remove buttons should not be displayed and callback functions should not be called
-    expect(screen.queryByLabelText('add-item-button')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('add-local file access point-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-local file access point-button')).not.toBeInTheDocument();
     expect(mockAddObjectToList.mock.calls.length).toBe(0);
     expect(mockRemoveListItem.mock.calls.length).toBe(0);
     expect(mockUpdateListObjectProperty.mock.calls.length).toBe(0);
@@ -71,13 +71,13 @@ test('NEW and EDIT <FileAccessObjects /> should handle zero file access objects'
     expect(screen.getByText(sectionDescription)).toBeInTheDocument();
 
     // one clickable add item button should be displayed
-    const addItemButton = screen.getByLabelText('add-item-button');
+    const addItemButton = screen.getByLabelText('add-local file access point-button');
     expect(addItemButton).toBeInTheDocument();
     userEvent.click(addItemButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1);
 
     // remove item buttons should not be displayed
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-local file access point-button')).not.toBeInTheDocument();
     expect(mockRemoveListItem.mock.calls.length).toBe(0);
 
     // path fields should not be displayed
@@ -95,7 +95,7 @@ test('NEW and EDIT <FileAccessObjects /> should handle multiple file access obje
     expect(screen.getByText(sectionDescription)).toBeInTheDocument();
 
     // one clickable add item button should be displayed 
-    const addItemButton = screen.getByLabelText('add-item-button');
+    const addItemButton = screen.getByLabelText('add-local file access point-button');
     expect(addItemButton).toBeInTheDocument();
     userEvent.click(addItemButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1);
@@ -110,7 +110,7 @@ test('NEW and EDIT <FileAccessObjects /> should handle multiple file access obje
     expect(mockUpdateListObjectProperty.mock.results[0].value).toBe(3);
 
     // each path field should display a remove item button which can be clicked
-    const removeItemButtons = screen.getAllByLabelText('remove-item-button');
+    const removeItemButtons = screen.getAllByLabelText('remove-local file access point-button');
     removeItemButtons.forEach((removeItemButton, index) => {
         expect(removeItemButton).toBeInTheDocument();
         userEvent.click(removeItemButton);

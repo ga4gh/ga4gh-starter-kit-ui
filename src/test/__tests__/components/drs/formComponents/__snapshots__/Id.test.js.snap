@@ -48,6 +48,7 @@ exports[`NEW <Id /> should handle empty id field 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
   >
     <button
+      aria-label="generate-id-button"
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
       tabindex="0"
       type="button"
@@ -117,6 +118,7 @@ exports[`NEW <Id /> should handle populated id field 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
   >
     <button
+      aria-label="generate-id-button"
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
       tabindex="0"
       type="button"

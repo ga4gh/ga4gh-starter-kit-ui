@@ -1,78 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<VerifyIdButton/> should handle invalid relatives 1`] = `
+exports[`<VerifyIdButton/> handles empty relative IDs 1`] = `
 <div>
   <button
     aria-label="verify-id"
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+    tabindex="0"
     type="button"
   >
     <span
-      className="MuiButton-label"
+      class="MuiButton-label"
     >
       <span
-        aria-describedby={null}
-        className="MuiTypography-root MuiTypography-button"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
+        class="MuiTypography-root MuiTypography-button"
         title="Submit this ID for verification."
       >
         Verify ID
       </span>
     </span>
     <span
-      className="MuiTouchRipple-root"
+      class="MuiTouchRipple-root"
     />
   </button>
+</div>
+`;
+
+exports[`<VerifyIdButton/> handles relative IDs that match the active DRS Object ID 1`] = `
+<div>
   <button
-    className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
-    disabled={false}
-    onBlur={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
+    aria-label="verify-id"
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+    tabindex="0"
     type="button"
   >
     <span
-      className="MuiIconButton-label"
+      class="MuiButton-label"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-button"
+        title="Submit this ID for verification."
+      >
+        Verify ID
+      </span>
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`<VerifyIdButton/> should display invalid relatives 1`] = `
+<div>
+  <button
+    aria-label="verify-id"
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-button"
+        title="Submit this ID for verification."
+      >
+        Verify ID
+      </span>
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiIconButton-label"
     >
       <svg
-        aria-describedby={null}
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
         focusable="false"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
         title="This is an invalid ID. Please enter a valid ID before proceeding."
         viewBox="0 0 24 24"
       >
@@ -82,130 +93,46 @@ exports[`<VerifyIdButton/> should handle invalid relatives 1`] = `
       </svg>
     </span>
     <span
-      className="MuiTouchRipple-root"
+      class="MuiTouchRipple-root"
     />
   </button>
 </div>
 `;
 
-exports[`<VerifyIdButton/> should handle undefined relatives 1`] = `
+exports[`<VerifyIdButton/> should display valid relatives 1`] = `
 <div>
   <button
     aria-label="verify-id"
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+    tabindex="0"
     type="button"
   >
     <span
-      className="MuiButton-label"
+      class="MuiButton-label"
     >
       <span
-        aria-describedby={null}
-        className="MuiTypography-root MuiTypography-button"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
+        class="MuiTypography-root MuiTypography-button"
         title="Submit this ID for verification."
       >
         Verify ID
       </span>
     </span>
     <span
-      className="MuiTouchRipple-root"
-    />
-  </button>
-</div>
-`;
-
-exports[`<VerifyIdButton/> should handle valid relatives 1`] = `
-<div>
-  <button
-    aria-label="verify-id"
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiButton-label"
-    >
-      <span
-        aria-describedby={null}
-        className="MuiTypography-root MuiTypography-button"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
-        title="Submit this ID for verification."
-      >
-        Verify ID
-      </span>
-    </span>
-    <span
-      className="MuiTouchRipple-root"
+      class="MuiTouchRipple-root"
     />
   </button>
   <button
-    className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
-    disabled={false}
-    onBlur={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+    tabindex="0"
     type="button"
   >
     <span
-      className="MuiIconButton-label"
+      class="MuiIconButton-label"
     >
       <svg
-        aria-describedby={null}
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
         focusable="false"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
         title="This is a valid ID."
         viewBox="0 0 24 24"
       >
@@ -215,7 +142,57 @@ exports[`<VerifyIdButton/> should handle valid relatives 1`] = `
       </svg>
     </span>
     <span
-      className="MuiTouchRipple-root"
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`EDIT <VerifyIdButton/> automatically validates relatives with undefined validity 1`] = `
+<div>
+  <button
+    aria-label="verify-id"
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-button"
+        title="Submit this ID for verification."
+      >
+        Verify ID
+      </span>
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`NEW <VerifyIdButton/> does not automatically validate relatives with undefined validity 1`] = `
+<div>
+  <button
+    aria-label="verify-id"
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-button"
+        title="Submit this ID for verification."
+      >
+        Verify ID
+      </span>
+    </span>
+    <span
+      class="MuiTouchRipple-root"
     />
   </button>
 </div>

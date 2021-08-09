@@ -154,7 +154,7 @@ exports[`NEW and EDIT <Checksums /> should display data correctly with all types
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-checksum-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -316,7 +316,7 @@ exports[`NEW and EDIT <Checksums /> should display data correctly with all types
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-checksum-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -478,7 +478,7 @@ exports[`NEW and EDIT <Checksums /> should display data correctly with all types
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-checksum-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -545,7 +545,7 @@ exports[`NEW and EDIT <Checksums /> should handle no checksum instances 1`] = `
           title="Add checksum."
         >
           <button
-            aria-label="add-item-button"
+            aria-label="add-checksum-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
             tabindex="0"
             type="button"
@@ -731,7 +731,7 @@ exports[`NEW and EDIT <Checksums /> should handle no types selected 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-checksum-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -773,7 +773,7 @@ exports[`NEW and EDIT <Checksums /> should handle no types selected 1`] = `
           title="Add checksum."
         >
           <button
-            aria-label="add-item-button"
+            aria-label="add-checksum-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
             tabindex="0"
             type="button"

@@ -32,6 +32,6 @@ test('<RemoveItemButton /> is hidden', () => {
         handleClick={mockRemoveListItem} />
     );
     expect(container.firstChild).toMatchSnapshot();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-test button-button')).not.toBeInTheDocument();
     expect(mockRemoveListItem.mock.calls.length).toBe(0);
 });

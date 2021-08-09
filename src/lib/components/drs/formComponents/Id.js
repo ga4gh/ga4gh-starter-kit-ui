@@ -32,6 +32,7 @@ const Id = props => {
                 : (
                     <Grid item xs={2} align='right'>
                         <Button variant='contained' color='primary' 
+                        aria-label='generate-id-button'
                         onClick={() =>  props.setId(uuidv4())}>
                             <Typography variant='button'>Generate ID</Typography>
                         </Button>

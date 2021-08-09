@@ -179,7 +179,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-AWS S3 access point-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -372,7 +372,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-AWS S3 access point-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -565,7 +565,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-AWS S3 access point-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -758,7 +758,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-AWS S3 access point-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -800,7 +800,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 acces
           title="Add AWS S3 access point."
         >
           <button
-            aria-label="add-item-button"
+            aria-label="add-AWS S3 access point-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
             tabindex="0"
             type="button"
@@ -858,7 +858,7 @@ exports[`NEW and EDIT <AwsS3AccessObjects /> should handle zero AWS S3 access ob
           title="Add AWS S3 access point."
         >
           <button
-            aria-label="add-item-button"
+            aria-label="add-AWS S3 access point-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
             tabindex="0"
             type="button"

@@ -149,7 +149,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -304,7 +304,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -459,7 +459,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -501,7 +501,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           title="Add parent."
         >
           <button
-            aria-label="add-item-button"
+            aria-label="add-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
             tabindex="0"
             type="button"
@@ -567,7 +567,7 @@ exports[`EDIT <DrsObjectParents /> should handle zero parent objects 1`] = `
           title="Add parent."
         >
           <button
-            aria-label="add-item-button"
+            aria-label="add-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
             tabindex="0"
             type="button"
@@ -746,7 +746,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -901,7 +901,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -1056,7 +1056,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
         >
           <button
-            aria-label="remove-item-button"
+            aria-label="remove-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
             data-testid="remove-item-button-tooltip"
             tabindex="0"
@@ -1098,7 +1098,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           title="Add parent."
         >
           <button
-            aria-label="add-item-button"
+            aria-label="add-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
             tabindex="0"
             type="button"
@@ -1164,7 +1164,7 @@ exports[`NEW <DrsObjectParents /> should handle zero parent objects 1`] = `
           title="Add parent."
         >
           <button
-            aria-label="add-item-button"
+            aria-label="add-parent-button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
             tabindex="0"
             type="button"

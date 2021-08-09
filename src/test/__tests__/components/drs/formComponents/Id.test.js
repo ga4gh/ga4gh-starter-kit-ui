@@ -14,9 +14,13 @@ test('SHOW and EDIT <Id /> should handle populated id field', () => {
     let {container} = render(<Id readOnly={true} id='1234567890' setId={mockUpdateScalar} />);
     expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByLabelText('Id')).toBeInTheDocument();
-    expect(screen.getByRole('textbox')).toHaveValue('1234567890');
-    expect(mockUpdateScalar.mock.calls.length).toBe(0);
+    let idField = screen.getByRole('textbox');
+    expect(idField).toHaveValue('1234567890');
+    // id field is not editable and "Generate UUID" button is not displayed
     expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    expect(idField).toHaveAttribute('readOnly');
+    userEvent.type(idField, 'new test value');
+    expect(mockUpdateScalar.mock.calls.length).toBe(0);
 });
 
 test('NEW <Id /> should handle empty id field', () => {
@@ -25,13 +29,14 @@ test('NEW <Id /> should handle empty id field', () => {
     expect(screen.getByLabelText('Id')).toBeInTheDocument();
     let idField = screen.getByRole('textbox');
     expect(idField).toHaveValue('');
+    // id field is editable and can be populated using "Generate UUID" button
+    userEvent.type(idField, 'abc123');
+    expect(mockUpdateScalar).toHaveBeenCalled();
+    mockUpdateScalar.mockClear();
     let generateIdButton = screen.getByRole('button');
     expect(generateIdButton).toBeInTheDocument();
     userEvent.click(generateIdButton);
     expect(mockUpdateScalar.mock.calls.length).toBe(1);
-    mockUpdateScalar.mockClear();
-    userEvent.type(idField, 'abc123');
-    expect(mockUpdateScalar).toHaveBeenCalled();
 });
 
 test('NEW <Id /> should handle populated id field', () => {
@@ -40,11 +45,12 @@ test('NEW <Id /> should handle populated id field', () => {
     expect(screen.getByLabelText('Id')).toBeInTheDocument();
     let idField = screen.getByRole('textbox');
     expect(idField).toHaveValue('1234567890');
+    // id field is editable and can be populated using "Generate UUID" button
+    userEvent.type(idField, 'abc123');
+    expect(mockUpdateScalar).toHaveBeenCalled();
+    mockUpdateScalar.mockClear();
     let generateIdButton = screen.getByRole('button');
     expect(generateIdButton).toBeInTheDocument();
     userEvent.click(generateIdButton);
     expect(mockUpdateScalar.mock.calls.length).toBe(1);
-    mockUpdateScalar.mockClear();
-    userEvent.type(idField, 'abc123');
-    expect(mockUpdateScalar).toHaveBeenCalled();
 });

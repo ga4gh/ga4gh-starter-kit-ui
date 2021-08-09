@@ -34,8 +34,8 @@ test('SHOW should handle multiple aliases', () => {
     expect(screen.getByText('A list of aliases that can be used to identify the DRS Object by additional names.')).toBeInTheDocument();
 
     // add and remove buttons should not be displayed and callback functions should not be called
-    expect(screen.queryByLabelText('add-item-button')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('add-alias-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-alias-button')).not.toBeInTheDocument();
     expect(mockAddObjectToList.mock.calls.length).toBe(0);
     expect(mockRemoveListItem.mock.calls.length).toBe(0);
     expect(mockUpdateListString.mock.calls.length).toBe(0);
@@ -59,13 +59,13 @@ test('NEW and EDIT should handle zero aliases', () => {
     expect(screen.getByText('A list of aliases that can be used to identify the DRS Object by additional names.')).toBeInTheDocument();
 
     // one clickable add item button should be displayed
-    const addItemButton = screen.getByLabelText('add-item-button');
+    const addItemButton = screen.getByLabelText('add-alias-button');
     expect(addItemButton).toBeInTheDocument();
     userEvent.click(addItemButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1);
 
     // remove item button should not be displayed
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-alias-button')).not.toBeInTheDocument();
     expect(mockRemoveListItem.mock.calls.length).toBe(0);
 
     // alias fields should not be displayed
@@ -83,7 +83,7 @@ test('NEW and EDIT should handle multiple aliases', () => {
     expect(screen.getByText('A list of aliases that can be used to identify the DRS Object by additional names.')).toBeInTheDocument();
 
     // one clickable add item button should be displayed 
-    const addItemButton = screen.getByLabelText('add-item-button');
+    const addItemButton = screen.getByLabelText('add-alias-button');
     expect(addItemButton).toBeInTheDocument();
     userEvent.click(addItemButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1);
@@ -98,7 +98,7 @@ test('NEW and EDIT should handle multiple aliases', () => {
     expect(mockUpdateListString.mock.results[0].value).toBe(3);
 
     // each alias field should display a remove item button which can be clicked
-    const removeItemButtons = screen.getAllByLabelText('remove-item-button');
+    const removeItemButtons = screen.getAllByLabelText('remove-alias-button');
     removeItemButtons.forEach((removeItemButton, index) => {
         expect(removeItemButton).toBeInTheDocument();
         userEvent.click(removeItemButton);

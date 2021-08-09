@@ -62,8 +62,8 @@ test('SHOW <DrsObjectParents /> should handle multiple parent objects', () => {
     expect(screen.getByText(sectionDescription)).toBeInTheDocument();
 
     // add and remove item buttons should not be displayed
-    expect(screen.queryByLabelText('add-item-button')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('add-parent-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-parent-button')).not.toBeInTheDocument();
 
     let idFields = screen.getAllByLabelText('Id');
     let nameFields = screen.getAllByLabelText('Name');
@@ -90,14 +90,14 @@ test('NEW <DrsObjectParents /> should handle zero parent objects', () => {
     expect(screen.getByText(sectionDescription)).toBeInTheDocument();
 
     // clickable add button should be displayed
-    let addRelativeButton = screen.getByLabelText('add-item-button');
+    let addRelativeButton = screen.getByLabelText('add-parent-button');
     expect(addRelativeButton).toBeInTheDocument();
     userEvent.click(addRelativeButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1); 
 
     // ID fields, name fields, remove buttons, "View" buttons, and "Verify ID" buttons should not be displayed
     expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-parent-button')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('verify-id')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('view-relative')).not.toBeInTheDocument();
 });
@@ -113,14 +113,14 @@ test('NEW <DrsObjectParents /> should handle multiple parent objects', () => {
     expect(screen.getByText(sectionDescription)).toBeInTheDocument();
 
     // clickable add button should be displayed
-    let addRelativeButton = screen.getByLabelText('add-item-button');
+    let addRelativeButton = screen.getByLabelText('add-parent-button');
     expect(addRelativeButton).toBeInTheDocument();
     userEvent.click(addRelativeButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1); 
 
     let idFields = screen.getAllByLabelText('Id');
     let nameFields = screen.getAllByLabelText('Name');
-    let removeRelativeButtons = screen.getAllByLabelText('remove-item-button');
+    let removeRelativeButtons = screen.getAllByLabelText('remove-parent-button');
     let verifyIdButtons = screen.getAllByLabelText('verify-id');
     // ID fields, name fields, remove buttons, and "Verify ID" buttons should be 
     // displayed for each child object
@@ -148,14 +148,14 @@ test('EDIT <DrsObjectParents /> should handle zero parent objects', () => {
     expect(screen.getByText(sectionDescription)).toBeInTheDocument();
 
     // clickable add button should be displayed
-    let addRelativeButton = screen.getByLabelText('add-item-button');
+    let addRelativeButton = screen.getByLabelText('add-parent-button');
     expect(addRelativeButton).toBeInTheDocument();
     userEvent.click(addRelativeButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1); 
 
     // ID fields, name fields, remove buttons, "View" buttons, and "Verify ID" buttons should not be displayed
     expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-parent-button')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('verify-id')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('view-relative')).not.toBeInTheDocument();
 });
@@ -171,14 +171,14 @@ test('EDIT <DrsObjectParents /> should handle multiple parent objects', () => {
     expect(screen.getByText(sectionDescription)).toBeInTheDocument();
 
     // clickable add button should be displayed
-    let addRelativeButton = screen.getByLabelText('add-item-button');
+    let addRelativeButton = screen.getByLabelText('add-parent-button');
     expect(addRelativeButton).toBeInTheDocument();
     userEvent.click(addRelativeButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1); 
 
     let idFields = screen.getAllByLabelText('Id');
     let nameFields = screen.getAllByLabelText('Name');
-    let removeRelativeButtons = screen.getAllByLabelText('remove-item-button');
+    let removeRelativeButtons = screen.getAllByLabelText('remove-parent-button');
     let verifyIdButtons = screen.getAllByLabelText('verify-id');
     // ID fields, name fields, remove buttons, and "Verify ID" buttons should be 
     // displayed for each child object

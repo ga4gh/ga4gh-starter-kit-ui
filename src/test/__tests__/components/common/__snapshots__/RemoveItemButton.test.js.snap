@@ -6,7 +6,7 @@ exports[`<RemoveItemButton /> is displayed 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
   >
     <button
-      aria-label="remove-item-button"
+      aria-label="remove-test button-button"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
       data-testid="remove-item-button-tooltip"
       tabindex="0"

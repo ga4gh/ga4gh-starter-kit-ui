@@ -53,8 +53,8 @@ test('SHOW <Checksums /> should handle all types selected', () => {
     expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByRole('heading', {level: 6})).toHaveTextContent('Checksums');
     expect(screen.getByText(checksumsSectionDescription)).toBeInTheDocument();
-    expect(screen.queryByLabelText('add-item-button')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('add-checksum-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-checksum-button')).not.toBeInTheDocument();
     let typeInput = screen.getAllByLabelText('Type');
     expect(typeInput.length).toBe(3);
     let checksumInput = screen.getAllByLabelText('Checksum');
@@ -81,9 +81,9 @@ test('NEW and EDIT <Checksums /> should handle no checksum instances', () => {
     expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByRole('heading', {level: 6})).toHaveTextContent('Checksums');
     expect(screen.getByText(checksumsSectionDescription)).toBeInTheDocument();
-    let addChecksumButton = screen.getByLabelText('add-item-button');
+    let addChecksumButton = screen.getByLabelText('add-checksum-button');
     expect(addChecksumButton).toBeInTheDocument();
-    expect(screen.queryByLabelText('remove-item-button')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('remove-checksum-button')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('Type')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('Checksum')).not.toBeInTheDocument();
     userEvent.click(addChecksumButton);
@@ -97,12 +97,12 @@ test('NEW and EDIT <Checksums /> should handle no types selected', () => {
     expect(screen.getByText(checksumsSectionDescription)).toBeInTheDocument();
 
     // clickable add item button should be displayed
-    let addChecksumButton = screen.getByLabelText('add-item-button');
+    let addChecksumButton = screen.getByLabelText('add-checksum-button');
     expect(addChecksumButton).toBeInTheDocument();
 
     // checksum object should have a clickable remove item button which passes 
     // the correct index to the callback function
-    let removeChecksumButton = screen.getByLabelText('remove-item-button');
+    let removeChecksumButton = screen.getByLabelText('remove-checksum-button');
     expect(removeChecksumButton).toBeInTheDocument();
     userEvent.click(removeChecksumButton);
     expect(mockRemoveListItem.mock.calls[0][0]).toBe(0);
@@ -140,12 +140,12 @@ test('NEW and EDIT <Checksums /> should display data correctly with all types se
     expect(screen.getByText(checksumsSectionDescription)).toBeInTheDocument();
 
     // since there are three checksum objects, the add item button should be hidden
-    let addChecksumButton = screen.queryByLabelText('add-item-button');
+    let addChecksumButton = screen.queryByLabelText('add-checksum-button');
     expect(addChecksumButton).not.toBeInTheDocument();
 
     // each checksum object should have a clickable remove item button which passes 
     // the correct index to the callback function
-    let removeChecksumButtons = screen.getAllByLabelText('remove-item-button');
+    let removeChecksumButtons = screen.getAllByLabelText('remove-checksum-button');
     expect(removeChecksumButtons.length).toBe(3);
     removeChecksumButtons.forEach((removeChecksumButton, index) => {
         expect(removeChecksumButton).toBeInTheDocument();

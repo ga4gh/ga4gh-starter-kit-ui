@@ -14,7 +14,7 @@ exports[`<AddItemButton /> is disabled 1`] = `
         title="Add AddItemButton test."
       >
         <button
-          aria-label="add-item-button"
+          aria-label="add-AddItemButton test-button"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary Mui-disabled Mui-disabled"
           disabled=""
           tabindex="-1"
@@ -55,7 +55,7 @@ exports[`<AddItemButton /> is displayed 1`] = `
         title="Add test button."
       >
         <button
-          aria-label="add-item-button"
+          aria-label="add-test button-button"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
           tabindex="0"
           type="button"
