@@ -11,6 +11,10 @@ import {
     mockUpdateListObjectProperty,
     mockResetListObjectProperty
 } from '../../../../resources/MockFunctions';
+import{
+    mockBundleDrsObject, 
+    mockBlobDrsObject
+} from '../../../../resources/MockData';
 
 let zeroParents = null;
 let multipleParents = null;

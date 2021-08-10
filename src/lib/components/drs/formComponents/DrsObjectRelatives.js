@@ -41,6 +41,7 @@ const DrsObjectRelatives = props => {
                                         variant='outlined'
                                         id={`ID_${props.relationship}${index}`} 
                                         label='Id'
+                                        aria-label={`ID_${props.relationship}${index}`}
                                         name={relative.id}
                                         value={relative.id}
                                         margin='normal'
@@ -79,6 +80,7 @@ const DrsObjectRelatives = props => {
                                 <FormControl fullWidth>
                                     <TextField variant='outlined' fullWidth id={`Name_${props.relationship}${index}`} 
                                     label='Name' margin='normal' name={relative.name} type='text' 
+                                    aria-label={`Name_${props.relationship}${index}`}
                                     value={relative.name} InputProps={{readOnly: true}}/>                            
                                 </FormControl>
                             </Grid>

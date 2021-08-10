@@ -36,6 +36,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -106,6 +107,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -191,6 +193,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -261,6 +264,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -346,6 +350,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -416,6 +421,7 @@ exports[`EDIT <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -633,6 +639,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -703,6 +710,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -788,6 +796,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -858,6 +867,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -943,6 +953,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1013,6 +1024,7 @@ exports[`NEW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1230,6 +1242,7 @@ exports[`SHOW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1275,6 +1288,7 @@ exports[`SHOW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1355,6 +1369,7 @@ exports[`SHOW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1400,6 +1415,7 @@ exports[`SHOW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1480,6 +1496,7 @@ exports[`SHOW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_parents2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1525,6 +1542,7 @@ exports[`SHOW <DrsObjectParents /> should handle multiple parent objects 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_parents2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label

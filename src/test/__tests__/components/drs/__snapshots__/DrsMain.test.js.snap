@@ -1,0 +1,2017 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DrsMain default Index render 1`] = `
+<div>
+  <div
+    align="center"
+  >
+    <meta
+      content="minimum-scale=1, initial-scale=1, width=device-width"
+      name="viewport"
+    />
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      >
+        <div
+          align="left"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+            href="/"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-button"
+              >
+                Home
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+        >
+          <h2
+            class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom"
+          >
+            Welcome to DRS Starter Kit
+          </h2>
+        </div>
+        <div
+          align="right"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+            href="/drs/new"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-button"
+              >
+                New DRS Object
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <div
+        class="MuiTableContainer-root"
+      >
+        <table
+          class="MuiTable-root"
+        >
+          <thead
+            class="MuiTableHead-root"
+          >
+            <tr
+              class="MuiTableRow-root MuiTableRow-head"
+            >
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+                scope="col"
+              >
+                <h5
+                  class="MuiTypography-root MuiTypography-h5"
+                >
+                  DRS Object ID
+                </h5>
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft"
+                scope="col"
+              >
+                <h5
+                  class="MuiTypography-root MuiTypography-h5"
+                >
+                  Name
+                </h5>
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+                scope="col"
+              >
+                <h5
+                  class="MuiTypography-root MuiTypography-h5"
+                >
+                  View Details
+                </h5>
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+                scope="col"
+              >
+                <h5
+                  class="MuiTypography-root MuiTypography-h5"
+                >
+                  Edit
+                </h5>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="MuiTableBody-root"
+          >
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  b8cd0667-2c33-4c9f-967b-161b905932c9
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.test.dataset
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/b8cd0667-2c33-4c9f-967b-161b905932c9"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/b8cd0667-2c33-4c9f-967b-161b905932c9/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  a1dd4ae2-8d26-43b0-a199-342b64c7dff6
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.cao.family
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/a1dd4ae2-8d26-43b0-a199-342b64c7dff6"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/a1dd4ae2-8d26-43b0-a199-342b64c7dff6/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  1a570e4e-2489-4218-9333-f65549495872
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.cao.1
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/1a570e4e-2489-4218-9333-f65549495872"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/1a570e4e-2489-4218-9333-f65549495872/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  4d83ba3f-a476-4c7c-868f-3d1fcf77fe29
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.cao.2
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/4d83ba3f-a476-4c7c-868f-3d1fcf77fe29"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/4d83ba3f-a476-4c7c-868f-3d1fcf77fe29/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  924901d5-6d31-4c33-b443-7931eadfac4b
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.cao.3
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/924901d5-6d31-4c33-b443-7931eadfac4b"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/924901d5-6d31-4c33-b443-7931eadfac4b/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  0f8abce3-e161-4bdf-981f-86257d505d69
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.cao.4
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/0f8abce3-e161-4bdf-981f-86257d505d69"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/0f8abce3-e161-4bdf-981f-86257d505d69/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  c69a3d6c-4a28-4b7c-b215-0782f8d62429
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.lalani.family
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/c69a3d6c-4a28-4b7c-b215-0782f8d62429"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/c69a3d6c-4a28-4b7c-b215-0782f8d62429/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  456e9ee0-5b60-4f38-82b5-83ba5d338038
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.lalani.1
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/456e9ee0-5b60-4f38-82b5-83ba5d338038"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/456e9ee0-5b60-4f38-82b5-83ba5d338038/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  1af6b862-7fc8-411a-86c5-d8e280e5b77a
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.lalani.2
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/1af6b862-7fc8-411a-86c5-d8e280e5b77a"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/1af6b862-7fc8-411a-86c5-d8e280e5b77a/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  c37b37fd-0450-432d-b6aa-9ffdece35ad0
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.lalani.4
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/c37b37fd-0450-432d-b6aa-9ffdece35ad0"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/c37b37fd-0450-432d-b6aa-9ffdece35ad0/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  0bb9d297-2710-48f6-ab4d-80d5eb0c9eaa
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.lalani.5
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/0bb9d297-2710-48f6-ab4d-80d5eb0c9eaa"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/0bb9d297-2710-48f6-ab4d-80d5eb0c9eaa/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  a3bb76d7-76ae-414b-81f7-97e663b02206
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.lalani.6
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/a3bb76d7-76ae-414b-81f7-97e663b02206"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/a3bb76d7-76ae-414b-81f7-97e663b02206/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  1af5cdcf-898c-4dbc-944e-1ac95e82c0ea
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.mundhofir.family
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/1af5cdcf-898c-4dbc-944e-1ac95e82c0ea"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/1af5cdcf-898c-4dbc-944e-1ac95e82c0ea/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  2506f0e1-29e4-4132-9b37-f7452dc8a89b
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.mundhofir.1
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/2506f0e1-29e4-4132-9b37-f7452dc8a89b"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/2506f0e1-29e4-4132-9b37-f7452dc8a89b/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  c00c264a-8f17-471f-8ded-1a1f10e965ac
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.mundhofir.2
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/c00c264a-8f17-471f-8ded-1a1f10e965ac"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/c00c264a-8f17-471f-8ded-1a1f10e965ac/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  355a74bd-6571-4d4a-8602-a9989936717f
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.zhang.family
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/355a74bd-6571-4d4a-8602-a9989936717f"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/355a74bd-6571-4d4a-8602-a9989936717f/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  697907bf-d5bd-433e-aac2-1747f1faf366
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.zhang.2009.proband
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/697907bf-d5bd-433e-aac2-1747f1faf366"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/697907bf-d5bd-433e-aac2-1747f1faf366/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  3a45fab2-f350-445d-a137-4b1f946bf184
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.zhang.2011.2
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/3a45fab2-f350-445d-a137-4b1f946bf184"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/3a45fab2-f350-445d-a137-4b1f946bf184/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  ac53ca59-46f3-4f61-b1e7-bb75a49bfbfe
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.zhang.2016.1
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/ac53ca59-46f3-4f61-b1e7-bb75a49bfbfe"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/ac53ca59-46f3-4f61-b1e7-bb75a49bfbfe/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  1275f896-4c8f-47e1-99a1-873a6b2ef5fb
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.zhang.2017.1
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/1275f896-4c8f-47e1-99a1-873a6b2ef5fb"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/1275f896-4c8f-47e1-99a1-873a6b2ef5fb/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  8f40acc0-0c54-45c5-8c85-a6f5fb32a1a7
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.zhang.2017.2
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/8f40acc0-0c54-45c5-8c85-a6f5fb32a1a7"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/8f40acc0-0c54-45c5-8c85-a6f5fb32a1a7/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  41898242-62a9-4129-9a2c-5a4e8f5f0afb
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.zhang.2017.3
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/41898242-62a9-4129-9a2c-5a4e8f5f0afb"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/41898242-62a9-4129-9a2c-5a4e8f5f0afb/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  6b994f18-6189-4233-bb83-139686490d68
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  phenopackets.zhang.2017.4
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/6b994f18-6189-4233-bb83-139686490d68"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/6b994f18-6189-4233-bb83-139686490d68/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  a29cddfc-dfb1-460d-b541-96c053642a43
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  New DRS Object Bundle
+                </p>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="view-details-button"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+                  href="/drs/a29cddfc-dfb1-460d-b541-96c053642a43"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-button"
+                    >
+                      View Details
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+              >
+                <a
+                  aria-disabled="false"
+                  aria-label="edit-button"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                  href="/drs/a29cddfc-dfb1-460d-b541-96c053642a43/edit"
+                  role="button"
+                  tabindex="0"
+                  variant="contained"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;

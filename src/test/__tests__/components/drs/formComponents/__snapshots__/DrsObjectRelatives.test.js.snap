@@ -30,6 +30,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -100,6 +101,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -185,6 +187,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -255,6 +258,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -340,6 +344,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -410,6 +415,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -555,6 +561,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -625,6 +632,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -710,6 +718,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -780,6 +789,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -865,6 +875,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -935,6 +946,7 @@ exports[`EDIT <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1140,6 +1152,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1210,6 +1223,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1294,6 +1308,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1364,6 +1379,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1448,6 +1464,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1518,6 +1535,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1662,6 +1680,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1732,6 +1751,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1816,6 +1836,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1886,6 +1907,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -1970,6 +1992,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -2040,6 +2063,7 @@ exports[`NEW <DrsObjectRelatives/> should handle multiple relatives 2`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -2244,6 +2268,7 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -2289,6 +2314,7 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object0"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -2369,6 +2395,7 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -2414,6 +2441,7 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object1"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -2494,6 +2522,7 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="ID_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label
@@ -2539,6 +2568,7 @@ exports[`SHOW <DrsObjectRelatives/> should handle multiple relatives 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth"
         >
           <div
+            aria-label="Name_related_drs_object2"
             class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           >
             <label

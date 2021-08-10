@@ -13,7 +13,6 @@ import {
     mockResetListObjectProperty
 } from '../../../../resources/MockFunctions';
 import {
-    mockDrsObjectsList,
     mockBundleDrsObject, 
     mockBlobDrsObject
 } from '../../../../resources/MockData';

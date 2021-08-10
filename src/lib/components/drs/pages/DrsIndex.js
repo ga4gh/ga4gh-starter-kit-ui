@@ -33,6 +33,7 @@ const DrsIndexRows = (props) => {
       </TableCell>
       <TableCell align="right">
         <Button
+          aria-label={`view-details-button`}
           variant="contained"
           color='default'
           component={Link}
@@ -44,6 +45,7 @@ const DrsIndexRows = (props) => {
       </TableCell>
       <TableCell align="center">
         <IconButton 
+          aria-label={`edit-button`}
           variant="contained" 
           color='primary' 
           component={Link} 

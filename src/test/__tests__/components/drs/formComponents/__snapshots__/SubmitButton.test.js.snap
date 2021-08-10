@@ -1,39 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SubmitButton/> 1`] = `
+exports[`<SubmitButton/> can handle submitting a valid blob 1`] = `
 <div
-  className="MuiFormControl-root MuiFormControl-fullWidth"
+  class="MuiFormControl-root MuiFormControl-fullWidth"
 >
   <div
-    className="MuiBox-root MuiBox-root-1"
+    class="MuiBox-root MuiBox-root-1"
   >
     <hr
-      className="MuiDivider-root"
+      class="MuiDivider-root"
     />
   </div>
   <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+    tabindex="0"
     type="button"
   >
     <span
-      className="MuiButton-label"
+      class="MuiButton-label"
     >
       Submit
     </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`<SubmitButton/> can handle submitting a valid bundle 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiBox-root MuiBox-root-2"
+  >
+    <hr
+      class="MuiDivider-root"
+    />
+  </div>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      Submit
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
   </button>
 </div>
 `;

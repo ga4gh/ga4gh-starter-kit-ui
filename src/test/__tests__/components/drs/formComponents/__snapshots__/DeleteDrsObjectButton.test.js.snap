@@ -1,39 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DeleteDrsObjectButton /> 1`] = `
+exports[`<DeleteDrsObjectButton /> can delete DRS Object successfully 1`] = `
 <div>
   <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeLarge MuiButton-sizeLarge"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+    tabindex="0"
     type="button"
   >
     <span
-      className="MuiButton-label"
+      class="MuiButton-label"
     >
       <span
-        className="MuiTypography-root MuiTypography-button"
+        class="MuiTypography-root MuiTypography-button"
       >
         Delete
       </span>
       <span
-        className="MuiButton-endIcon MuiButton-iconSizeLarge"
+        class="MuiButton-endIcon MuiButton-iconSizeLarge"
       >
         <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root"
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
           focusable="false"
           viewBox="0 0 24 24"
         >
@@ -43,6 +30,9 @@ exports[`<DeleteDrsObjectButton /> 1`] = `
         </svg>
       </span>
     </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
   </button>
 </div>
 `;
