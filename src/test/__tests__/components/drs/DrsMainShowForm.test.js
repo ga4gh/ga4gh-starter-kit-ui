@@ -20,7 +20,6 @@ test('DrsMain SHOW form render', async () => {
         </MemoryRouter>
     );
     await(waitFor(() => expect(screen.getByText('View DrsObject: 1a570e4e-2489-4218-9333-f65549495872')).toBeInTheDocument()));
-    expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByLabelText('drs-index-button')).toBeInTheDocument();
     expect(screen.queryByLabelText('delete-drs-object-button')).not.toBeInTheDocument();
     expect(screen.getByLabelText('edit-drs-object-button')).toBeInTheDocument();
