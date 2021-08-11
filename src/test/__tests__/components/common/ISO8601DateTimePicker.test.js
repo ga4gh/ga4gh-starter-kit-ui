@@ -30,7 +30,7 @@ test('SHOW <ISO8601DateTimePicker /> should handle any date and time in EDT time
     expect(dateTimeField).toBeInTheDocument();
     expect(screen.getByLabelText(dateTimePickerProps.label)).toBeInTheDocument();
     expect(screen.getByText(dateTimePickerProps.helperText)).toBeInTheDocument();
-    expect(dateTimeField).toHaveValue('2021-07-22 13:00:00 GMT-00:00');
+    expect(dateTimeField).toHaveValue('2021-07-22 13:00:00 GMT+00:00');
     expect(dateTimeField).toHaveAttribute('readonly');
     userEvent.click(dateTimeField);
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
@@ -44,7 +44,7 @@ test('NEW and EDIT <ISO8601DateTimePicker /> should handle any date and time in 
     expect(dateTimeField).toBeInTheDocument();
     expect(screen.getByLabelText(dateTimePickerProps.label)).toBeInTheDocument();
     expect(screen.getByText(dateTimePickerProps.helperText)).toBeInTheDocument();
-    expect(dateTimeField).toHaveValue('2021-07-22 13:00:00 GMT-00:00');
+    expect(dateTimeField).toHaveValue('2021-07-22 13:00:00 GMT+00:00');
     expect(dateTimeField).toHaveAttribute('readonly');
     userEvent.click(dateTimeField);
     let dateTimePicker = screen.getAllByRole('dialog')[0];

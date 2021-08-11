@@ -17,7 +17,7 @@ test('SHOW <CreatedTime /> ', () => {
     expect(dateTimeField).toBeInTheDocument();
     expect(screen.getByLabelText('Created Time')).toBeInTheDocument();
     expect(screen.getByText('Timestamp of DRS Object creation in ISO 8601 format.')).toBeInTheDocument();
-    // expect(dateTimeField).toHaveValue('2021-07-22 09:00:00 GMT-04:00');
+    expect(dateTimeField).toHaveValue('2021-07-22 13:00:00 GMT+00:00');
     expect(dateTimeField).toHaveAttribute('readonly');
     userEvent.click(dateTimeField);
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
@@ -30,7 +30,7 @@ test('NEW and EDIT <CreatedTime />', () => {
     expect(dateTimeField).toBeInTheDocument();
     expect(screen.getByLabelText('Created Time')).toBeInTheDocument();
     expect(screen.getByText('Timestamp of DRS Object creation in ISO 8601 format.')).toBeInTheDocument();
-    //expect(dateTimeField).toHaveValue('2021-07-22 09:00:00 GMT-04:00');
+    expect(dateTimeField).toHaveValue('2021-07-22 13:00:00 GMT+00:00');
     expect(dateTimeField).toHaveAttribute('readonly');
     userEvent.click(dateTimeField);
     expect(screen.getAllByRole('dialog')[0]).toBeInTheDocument();
