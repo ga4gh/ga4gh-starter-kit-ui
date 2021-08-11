@@ -232,7 +232,7 @@ const mockValidTestBlob = {
     ]
 }
 
-const mockValidTestBundle= {
+const mockValidTestBundle = {
     "id": "a29cddfc-dfb1-460d-b541-96c053642a43",
     "description": "This is a new DRS Object for testing",
     "created_time": "2021-08-10T18:56:00Z",
@@ -271,10 +271,27 @@ const mockValidTestBundle= {
     ]
 }
 
+const mockEditableTestBlob = {
+    "id": "0f49a385-87af-40b5-8738-3217c3002c31",
+    "created_time": "2021-08-11T12:18:00Z",
+    "updated_time": "2021-08-11T12:18:00Z",
+    "is_bundle": false
+}
+
+const mockEditableTestBundle = {
+    "id": "3fbc053c-087a-4ad1-b265-ba034520039f",
+    "description": "This is a DRS Object for editing",
+    "created_time": "2021-08-11T12:18:00Z",
+    "updated_time": "2021-08-11T12:18:00Z",
+    "is_bundle": true
+}
+
 export {
     mockDrsObjectsList,
     mockBundleDrsObject,
     mockBlobDrsObject, 
     mockValidTestBlob, 
-    mockValidTestBundle
+    mockValidTestBundle, 
+    mockEditableTestBlob, 
+    mockEditableTestBundle
 };

@@ -20,7 +20,6 @@ test('<RemoveItemButton /> is displayed', () => {
     expect(removeItemButton).toBeInTheDocument();
     expect(screen.getByTitle('Remove this test button.')).toBeInTheDocument();
     expect(screen.getByTestId('remove-item-button-tooltip')).toBeInTheDocument();
-    userEvent.hover(removeItemButton);
     userEvent.click(removeItemButton);
     expect(mockRemoveListItem.mock.calls.length).toBe(1);
     userEvent.unhover(removeItemButton);

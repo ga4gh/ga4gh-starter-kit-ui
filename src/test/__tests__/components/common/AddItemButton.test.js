@@ -20,7 +20,6 @@ test('<AddItemButton /> is displayed', () => {
     expect(addItemButton).toBeInTheDocument();
     expect(screen.getByTitle('Add test button.')).toBeInTheDocument();
     expect(screen.getByTestId('add-item-button-tooltip')).toBeInTheDocument();
-    userEvent.hover(addItemButton);
     userEvent.click(addItemButton);
     expect(mockAddObjectToList.mock.calls.length).toBe(1);
     userEvent.unhover(addItemButton);

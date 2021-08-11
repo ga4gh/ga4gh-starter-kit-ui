@@ -19,17 +19,3 @@ test('default route and navigation to /drs are rendered correctly', () => {
     userEvent.click(screen.getByRole('button'));
     expect(screen.getByRole('heading', {level: 2})).toHaveTextContent('Welcome to DRS Starter Kit');
 });
-
-/* test('DRS route is rendered correctly', () => {
-    const history = createMemoryHistory();
-    history.push('/drs');
-    console.log(history);
-    let {container} = render(
-        <MemoryRouter initialEntries={['/drs']} >
-            <App />
-        </MemoryRouter>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-    screen.debug();
-    expect(screen.getByRole('heading', {level: 2})).toHaveTextContent('Welcome to DRS Starter Kit');
-}) */

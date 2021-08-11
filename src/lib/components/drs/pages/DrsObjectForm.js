@@ -108,7 +108,8 @@ const DrsObjectForm = (props) => {
                         props.formViewType === FormViewType.EDIT 
                         ?   <DeleteDrsObjectButton {...p.delete} setError={setError}/>
                         :   <Button variant='contained' color='primary' size='large'
-                            component={Link} to='/drs' onClick={scrollToTop}>
+                            component={Link} to='/drs' onClick={scrollToTop}
+                            aria-label='drs-index-button'>
                                 <Typography variant='button'>DRS Index</Typography>
                             </Button>
                     }
@@ -120,7 +121,8 @@ const DrsObjectForm = (props) => {
                     {
                         props.formViewType === FormViewType.SHOW 
                         ?   <Button variant='contained' color='primary' size='large' endIcon={<EditIcon/>}
-                            component={Link} to={`/drs/${p.id.id}/edit`} onClick={scrollToTop}>
+                            component={Link} to={`/drs/${p.id.id}/edit`} onClick={scrollToTop}
+                            aria-label='edit-drs-object-button'>
                                 <Typography variant='button'>Edit</Typography>
                             </Button> 
                         : null
@@ -128,7 +130,8 @@ const DrsObjectForm = (props) => {
                     {
                         props.formViewType === FormViewType.EDIT 
                         ?   <Button variant='contained' color='primary' size='large'
-                            component={Link} to={`/drs/${p.id.id}`} onClick={scrollToTop}>
+                            component={Link} to={`/drs/${p.id.id}`} onClick={scrollToTop}
+                            aria-label='cancel-editing-drs-object-button'>
                                 <Typography variant='button'>Cancel</Typography>
                             </Button>  
                         : null

@@ -43,7 +43,7 @@ const DeleteDrsObjectButton = props => {
 
     return (
         <div>
-            <Button variant='contained' color='secondary' size='large' 
+            <Button variant='contained' color='secondary' size='large' aria-label='delete-drs-object-button'
                 endIcon={<DeleteIcon/>} onClick={() => setConfirmationDialogIsOpen(true)}>
                 <Typography variant='button'>Delete</Typography>
             </Button> 

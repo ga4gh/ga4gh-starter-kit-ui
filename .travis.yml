@@ -4,6 +4,10 @@ node_js:
 cache:
   directories:
     - node_modules
+services: 
+  - docker
+before_install: 
+  - docker run --rm --name ga4gh-drs-test -p 4500:4500 -p 8080:8080 -v `pwd`/src/test/resources/config:/config ga4gh/ga4gh-starter-kit-drs:0.1.8 java -jar ga4gh-starter-kit-drs.jar -c /config/config.yml
 script:
   - npm run build
   - npm test

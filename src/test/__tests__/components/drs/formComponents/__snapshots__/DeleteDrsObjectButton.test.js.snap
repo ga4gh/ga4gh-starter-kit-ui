@@ -3,6 +3,7 @@
 exports[`<DeleteDrsObjectButton /> can delete DRS Object successfully 1`] = `
 <div>
   <button
+    aria-label="delete-drs-object-button"
     class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeLarge MuiButton-sizeLarge"
     tabindex="0"
     type="button"
