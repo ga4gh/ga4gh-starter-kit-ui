@@ -1,0 +1,1602 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DrsMain EDIT form render 1`] = `
+<div>
+  <div>
+    <meta
+      content="minimum-scale=1, initial-scale=1, width=device-width"
+      name="viewport"
+    />
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+      >
+        <div
+          align="left"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <div>
+            <button
+              aria-label="delete-drs-object-button"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-button"
+                >
+                  Delete
+                </span>
+                <span
+                  class="MuiButton-endIcon MuiButton-iconSizeLarge"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom MuiTypography-alignCenter"
+          >
+            Edit DrsObject: a1dd4ae2-8d26-43b0-a199-342b64c7dff6
+          </h3>
+        </div>
+        <div
+          align="right"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="cancel-editing-drs-object-button"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+            href="/drs/a1dd4ae2-8d26-43b0-a199-342b64c7dff6"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-button"
+              >
+                Cancel
+              </span>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-1"
+      >
+        <form>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                    data-shrink="true"
+                    for="id"
+                    id="id-label"
+                  >
+                    Id
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                  >
+                    <input
+                      aria-describedby="id-helper-text"
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input"
+                      id="id"
+                      name="id"
+                      readonly=""
+                      type="text"
+                      value="a1dd4ae2-8d26-43b0-a199-342b64c7dff6"
+                    />
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-filled"
+                    id="id-helper-text"
+                  >
+                    Unique identifier for this DRS Object (UUID recommended), cannot be modified later.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                data-shrink="true"
+                for="name"
+                id="name-label"
+              >
+                Name
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-describedby="name-helper-text"
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  id="name"
+                  name="name"
+                  type="text"
+                  value="phenopackets.cao.family"
+                />
+              </div>
+              <p
+                class="MuiFormHelperText-root MuiFormHelperText-filled"
+                id="name-helper-text"
+              >
+                Short, descriptive name for this DRS Object.
+              </p>
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                data-shrink="true"
+                for="description"
+                id="description-label"
+              >
+                Description
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              >
+                <input
+                  aria-describedby="description-helper-text"
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input"
+                  id="description"
+                  name="description"
+                  type="text"
+                  value="Synthetic Phenopacket dataset: Cao family"
+                />
+              </div>
+              <p
+                class="MuiFormHelperText-root MuiFormHelperText-filled"
+                id="description-helper-text"
+              >
+                Longer description of this DRS Object.
+              </p>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth"
+              >
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+                    format="yyyy-MM-dd HH:mm:ss OOOO"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                      data-shrink="true"
+                      for="created_time"
+                      id="created_time-label"
+                    >
+                      Created Time
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                    >
+                      <input
+                        aria-describedby="created_time-helper-text"
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input"
+                        id="created_time"
+                        name="created_time"
+                        readonly=""
+                        type="text"
+                        value="2021-03-12 15:00:00 GMT-05:00"
+                      />
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root MuiFormHelperText-filled"
+                      id="created_time-helper-text"
+                    >
+                      Timestamp of DRS Object creation in ISO 8601 format.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth"
+              >
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+                    format="yyyy-MM-dd HH:mm:ss OOOO"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                      data-shrink="true"
+                      for="updated_time"
+                      id="updated_time-label"
+                    >
+                      Updated Time
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                    >
+                      <input
+                        aria-describedby="updated_time-helper-text"
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input"
+                        id="updated_time"
+                        name="updated_time"
+                        readonly=""
+                        type="text"
+                        value="2021-03-13 07:30:45 GMT-05:00"
+                      />
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root MuiFormHelperText-filled"
+                      id="updated_time-helper-text"
+                    >
+                      Timestamp of when the DRS Object was most recently updated in ISO 8601 format.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth"
+              >
+                <div
+                  class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                    data-shrink="true"
+                    for="version"
+                    id="version-label"
+                  >
+                    Version
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                  >
+                    <input
+                      aria-describedby="version-helper-text"
+                      aria-invalid="false"
+                      class="MuiInputBase-input MuiInput-input"
+                      id="version"
+                      name="version"
+                      type="text"
+                      value="1.0.0"
+                    />
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-filled"
+                    id="version-helper-text"
+                  >
+                    Current version of the DRS Object, it should be updated each time the DRS Object is modified.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+            >
+              Is this DRS Object a bundle or a blob?
+            </h6>
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+            >
+              Bundles contain references to Child Drs Objects, while Blobs act as single DRS Objects and do not have any children.
+            </p>
+            <div
+              class="MuiFormGroup-root"
+              role="radiogroup"
+            >
+              <label
+                class="MuiFormControlLabel-root Mui-disabled"
+              >
+                <span
+                  aria-disabled="true"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-disabled-4 Mui-disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled"
+                  tabindex="-1"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input-5"
+                      disabled=""
+                      name="drs_object_type"
+                      type="radio"
+                      value="false"
+                    />
+                    <div
+                      class="PrivateRadioButtonIcon-root-6"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                        />
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root PrivateRadioButtonIcon-layer-7"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                </span>
+                <span
+                  class="MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1"
+                >
+                  Blob
+                </span>
+              </label>
+              <label
+                class="MuiFormControlLabel-root Mui-disabled"
+              >
+                <span
+                  aria-disabled="true"
+                  class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-checked-3 Mui-checked PrivateSwitchBase-disabled-4 Mui-disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled"
+                  tabindex="-1"
+                >
+                  <span
+                    class="MuiIconButton-label"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input-5"
+                      disabled=""
+                      name="drs_object_type"
+                      type="radio"
+                      value="true"
+                    />
+                    <div
+                      class="PrivateRadioButtonIcon-root-6 PrivateRadioButtonIcon-checked-8"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                        />
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root PrivateRadioButtonIcon-layer-7"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                </span>
+                <span
+                  class="MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1"
+                >
+                  Bundle
+                </span>
+              </label>
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root"
+          >
+            <div
+              class="MuiBox-root MuiBox-root-9"
+            >
+              <hr
+                class="MuiDivider-root"
+              />
+            </div>
+            <h6
+              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+            >
+              Aliases
+            </h6>
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+            >
+              A list of aliases that can be used to identify the DRS Object by additional names.
+            </p>
+            <div
+              class="MuiFormGroup-root MuiFormGroup-row"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <div>
+                    <div
+                      class="MuiGrid-root MuiGrid-container"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item"
+                      >
+                        <span
+                          class=""
+                          data-testid="add-item-button-tooltip"
+                          title="Add alias."
+                        >
+                          <button
+                            aria-label="add-alias-button"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <span
+                              class="MuiIconButton-label"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                                />
+                              </svg>
+                            </span>
+                            <span
+                              class="MuiTouchRipple-root"
+                            />
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root"
+          >
+            <div
+              class="MuiBox-root MuiBox-root-14"
+            >
+              <hr
+                class="MuiDivider-root"
+              />
+            </div>
+            <h6
+              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+            >
+              Bundle Children
+            </h6>
+            <div>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+              >
+                This DRS Object is currently acting as a DRS Bundle. Bundles contain references to multiple Child objects (single-blob DRS Objects and/or DRS Bundles), enabling multiple DRS Objects to be logically grouped in a nested structure. Only DRS Bundles may have children, single-blob DRS Objects do not have children.
+              </p>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+              >
+                The following listing displays all children for the current DRS Bundle.
+              </p>
+            </div>
+            <div
+              class="MuiFormGroup-root MuiFormGroup-row"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="ID_children0"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="ID_children0"
+                        id="ID_children0-label"
+                      >
+                        Id
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                          id="ID_children0"
+                          name="0f8abce3-e161-4bdf-981f-86257d505d69"
+                          type="text"
+                          value="0f8abce3-e161-4bdf-981f-86257d505d69"
+                        />
+                        <div
+                          class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                        >
+                          <div>
+                            <button
+                              aria-label="verify-id"
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiButton-label"
+                              >
+                                <span
+                                  class="MuiTypography-root MuiTypography-button"
+                                  title="Submit this ID for verification."
+                                >
+                                  Verify ID
+                                </span>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiIconButton-label"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root"
+                                  focusable="false"
+                                  title="This is a valid ID."
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Id
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="Name_children0"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="Name_children0"
+                        id="Name_children0-label"
+                      >
+                        Name
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input"
+                          id="Name_children0"
+                          name="phenopackets.cao.4"
+                          readonly=""
+                          type="text"
+                          value="phenopackets.cao.4"
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Name
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+                  >
+                    <button
+                      aria-label="remove-child-button"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                      data-testid="remove-item-button-tooltip"
+                      tabindex="0"
+                      title="Remove this child."
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiFormGroup-root MuiFormGroup-row"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="ID_children1"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="ID_children1"
+                        id="ID_children1-label"
+                      >
+                        Id
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                          id="ID_children1"
+                          name="1a570e4e-2489-4218-9333-f65549495872"
+                          type="text"
+                          value="1a570e4e-2489-4218-9333-f65549495872"
+                        />
+                        <div
+                          class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                        >
+                          <div>
+                            <button
+                              aria-label="verify-id"
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiButton-label"
+                              >
+                                <span
+                                  class="MuiTypography-root MuiTypography-button"
+                                  title="Submit this ID for verification."
+                                >
+                                  Verify ID
+                                </span>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiIconButton-label"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root"
+                                  focusable="false"
+                                  title="This is a valid ID."
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Id
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="Name_children1"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="Name_children1"
+                        id="Name_children1-label"
+                      >
+                        Name
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input"
+                          id="Name_children1"
+                          name="phenopackets.cao.1"
+                          readonly=""
+                          type="text"
+                          value="phenopackets.cao.1"
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Name
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+                  >
+                    <button
+                      aria-label="remove-child-button"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                      data-testid="remove-item-button-tooltip"
+                      tabindex="0"
+                      title="Remove this child."
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiFormGroup-root MuiFormGroup-row"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="ID_children2"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="ID_children2"
+                        id="ID_children2-label"
+                      >
+                        Id
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                          id="ID_children2"
+                          name="4d83ba3f-a476-4c7c-868f-3d1fcf77fe29"
+                          type="text"
+                          value="4d83ba3f-a476-4c7c-868f-3d1fcf77fe29"
+                        />
+                        <div
+                          class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                        >
+                          <div>
+                            <button
+                              aria-label="verify-id"
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiButton-label"
+                              >
+                                <span
+                                  class="MuiTypography-root MuiTypography-button"
+                                  title="Submit this ID for verification."
+                                >
+                                  Verify ID
+                                </span>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiIconButton-label"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root"
+                                  focusable="false"
+                                  title="This is a valid ID."
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Id
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="Name_children2"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="Name_children2"
+                        id="Name_children2-label"
+                      >
+                        Name
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input"
+                          id="Name_children2"
+                          name="phenopackets.cao.2"
+                          readonly=""
+                          type="text"
+                          value="phenopackets.cao.2"
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Name
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+                  >
+                    <button
+                      aria-label="remove-child-button"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                      data-testid="remove-item-button-tooltip"
+                      tabindex="0"
+                      title="Remove this child."
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiFormGroup-root MuiFormGroup-row"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="ID_children3"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="ID_children3"
+                        id="ID_children3-label"
+                      >
+                        Id
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                          id="ID_children3"
+                          name="924901d5-6d31-4c33-b443-7931eadfac4b"
+                          type="text"
+                          value="924901d5-6d31-4c33-b443-7931eadfac4b"
+                        />
+                        <div
+                          class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                        >
+                          <div>
+                            <button
+                              aria-label="verify-id"
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiButton-label"
+                              >
+                                <span
+                                  class="MuiTypography-root MuiTypography-button"
+                                  title="Submit this ID for verification."
+                                >
+                                  Verify ID
+                                </span>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiIconButton-label"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root"
+                                  focusable="false"
+                                  title="This is a valid ID."
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Id
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="Name_children3"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="Name_children3"
+                        id="Name_children3-label"
+                      >
+                        Name
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input"
+                          id="Name_children3"
+                          name="phenopackets.cao.3"
+                          readonly=""
+                          type="text"
+                          value="phenopackets.cao.3"
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Name
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+                  >
+                    <button
+                      aria-label="remove-child-button"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                      data-testid="remove-item-button-tooltip"
+                      tabindex="0"
+                      title="Remove this child."
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <span
+                    class=""
+                    data-testid="add-item-button-tooltip"
+                    title="Add child."
+                  >
+                    <button
+                      aria-label="add-child-button"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root"
+          >
+            <div
+              class="MuiBox-root MuiBox-root-11"
+            >
+              <hr
+                class="MuiDivider-root"
+              />
+            </div>
+            <h6
+              class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft"
+            >
+              Parent Bundles
+            </h6>
+            <div>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+              >
+                The following listing displays all "Parent" DRS Bundles, that is, all bundles that contain the current DRS Object as one of its Children.
+              </p>
+            </div>
+            <div
+              class="MuiFormGroup-root MuiFormGroup-row"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="ID_parents0"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="ID_parents0"
+                        id="ID_parents0-label"
+                      >
+                        Id
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                          id="ID_parents0"
+                          name="b8cd0667-2c33-4c9f-967b-161b905932c9"
+                          type="text"
+                          value="b8cd0667-2c33-4c9f-967b-161b905932c9"
+                        />
+                        <div
+                          class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                        >
+                          <div>
+                            <button
+                              aria-label="verify-id"
+                              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiButton-label"
+                              >
+                                <span
+                                  class="MuiTypography-root MuiTypography-button"
+                                  title="Submit this ID for verification."
+                                >
+                                  Verify ID
+                                </span>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                            <button
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span
+                                class="MuiIconButton-label"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root"
+                                  focusable="false"
+                                  title="This is a valid ID."
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="MuiTouchRipple-root"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Id
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth"
+                  >
+                    <div
+                      aria-label="Name_parents0"
+                      class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+                        data-shrink="true"
+                        for="Name_parents0"
+                        id="Name_parents0-label"
+                      >
+                        Name
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="MuiInputBase-input MuiOutlinedInput-input"
+                          id="Name_parents0"
+                          name="phenopackets.test.dataset"
+                          readonly=""
+                          type="text"
+                          value="phenopackets.test.dataset"
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="PrivateNotchedOutline-root-15 MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="PrivateNotchedOutline-legendLabelled-17 PrivateNotchedOutline-legendNotched-18"
+                          >
+                            <span>
+                              Name
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+                  >
+                    <button
+                      aria-label="remove-parent-button"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+                      data-testid="remove-item-button-tooltip"
+                      tabindex="0"
+                      title="Remove this parent."
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <span
+                    class=""
+                    data-testid="add-item-button-tooltip"
+                    title="Add parent."
+                  >
+                    <button
+                      aria-label="add-parent-button"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth"
+          >
+            <div
+              class="MuiBox-root MuiBox-root-13"
+            >
+              <hr
+                class="MuiDivider-root"
+              />
+            </div>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Submit
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
