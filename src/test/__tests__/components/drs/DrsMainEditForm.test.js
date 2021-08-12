@@ -101,24 +101,24 @@ test('DrsMain EDIT form render', async () => {
 
     // created time can be updated
     let createdTime = screen.getByRole('textbox', {name: 'Created Time'});
-    expect(createdTime).toHaveValue('2021-03-12 15:00:00 GMT-05:00');
+    expect(createdTime).toHaveValue('2021-03-12 20:00:00 GMT+00:00');
     userEvent.click(createdTime);
     let dateTimeDialogCreated = screen.getAllByRole('dialog')[0];
     expect(dateTimeDialogCreated).toBeInTheDocument();
     userEvent.click(getByRole(dateTimeDialogCreated, 'button', {name: '7'}));
     userEvent.click(getByText(dateTimeDialogCreated, 'OK'));
-    expect(createdTime).toHaveValue('2021-03-07 15:00:00 GMT-05:00');
+    expect(createdTime).toHaveValue('2021-03-07 20:00:00 GMT+00:00');
     userEvent.click(getByText(dateTimeDialogCreated, 'Cancel'));
 
     // updated time can be updated
     let updatedTime = screen.getByLabelText('Updated Time');
-    expect(updatedTime).toHaveValue('2021-03-13 07:30:45 GMT-05:00');
+    expect(updatedTime).toHaveValue('2021-03-13 12:30:45 GMT+00:00');
     userEvent.click(updatedTime);
     let dateTimeDialogUpdated = screen.getAllByRole('dialog')[0];
     expect(dateTimeDialogUpdated).toBeInTheDocument();
     userEvent.click(getByRole(dateTimeDialogUpdated, 'button', {name: '17'}));
     userEvent.click(getByText(dateTimeDialogUpdated, 'OK'));
-    expect(updatedTime).toHaveValue('2021-03-17 07:30:00 GMT-04:00');
+    expect(updatedTime).toHaveValue('2021-03-17 12:30:00 GMT+00:00');
     userEvent.click(getByText(dateTimeDialogUpdated, 'Cancel'));
 
     // attempt to submit successfully
