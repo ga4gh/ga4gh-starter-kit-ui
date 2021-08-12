@@ -1,0 +1,9 @@
+drs:
+  serverProps:
+    adminApiPort: 8080
+    adminApiCorsAllowedOrigins:
+      - '*'
+    adminApiCorsAllowedHeaders: 
+      - '*'
+  databaseProps:
+    poolSize: 8

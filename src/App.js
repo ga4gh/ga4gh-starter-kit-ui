@@ -1,5 +1,3 @@
-import './App.css';
-import '@fontsource/roboto';
 import React from 'react';
 import {
   BrowserRouter as Router,

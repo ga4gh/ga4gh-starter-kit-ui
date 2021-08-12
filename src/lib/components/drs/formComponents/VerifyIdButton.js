@@ -9,6 +9,7 @@ import CheckCircle from '@material-ui/icons/CheckCircle';
 import Cancel from '@material-ui/icons/Cancel';
 import DrsApiCaller from '../utils/DrsApiCaller';
 import FormViewType from '../../../model/common/FormViewType';
+import axios from 'axios';
 
 /*
     Used to verify if the ID entered for a parent or child DRS Object is valid.
@@ -52,6 +53,7 @@ const VerifyIdButton = props => {
     return (
         <div>
             <Button
+                aria-label='verify-id'
                 color='primary'
                 disabled={props.readOnly}
                 variant='contained'

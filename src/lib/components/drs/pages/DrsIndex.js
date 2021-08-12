@@ -1,5 +1,4 @@
-import '@fontsource/roboto';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { 
   Typography, 
   Container, 
@@ -13,10 +12,7 @@ import {
   Grid, 
   IconButton
 } from '@material-ui/core';
-import {
-  Link, 
-  useLocation
-} from "react-router-dom";
+import {Link} from "react-router-dom";
 import { scrollToTop } from '../../../functions/common';
 import EditIcon from '@material-ui/icons/Edit';
 
@@ -37,6 +33,7 @@ const DrsIndexRows = (props) => {
       </TableCell>
       <TableCell align="right">
         <Button
+          aria-label={`view-details-button`}
           variant="contained"
           color='default'
           component={Link}
@@ -48,6 +45,7 @@ const DrsIndexRows = (props) => {
       </TableCell>
       <TableCell align="center">
         <IconButton 
+          aria-label={`edit-button`}
           variant="contained" 
           color='primary' 
           component={Link} 

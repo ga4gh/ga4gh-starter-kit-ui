@@ -1,0 +1,712 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <FileAccessObjects /> should handle multiple file access objects 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <br />
+  <p
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    Local File Access Points
+  </p>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Local file access points represent local files available on the same filesystem where the DRS service is running. This can also include files co-located on Network Attached Storage (NAS), such as on a high-performance compute cluster (HPC).
+  </p>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink="true"
+            for="FileAccessObject-path-0"
+            id="FileAccessObject-path-0-label"
+          >
+            Path
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-describedby="FileAccessObject-path-0-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              id="FileAccessObject-path-0"
+              name="path"
+              type="text"
+              value="path1"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject-path-0-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+      >
+        <button
+          aria-label="remove-local file access point-button"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+          data-testid="remove-item-button-tooltip"
+          tabindex="0"
+          title="Remove this local file access point."
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink="true"
+            for="FileAccessObject-path-1"
+            id="FileAccessObject-path-1-label"
+          >
+            Path
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-describedby="FileAccessObject-path-1-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              id="FileAccessObject-path-1"
+              name="path"
+              type="text"
+              value="path2"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject-path-1-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+      >
+        <button
+          aria-label="remove-local file access point-button"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+          data-testid="remove-item-button-tooltip"
+          tabindex="0"
+          title="Remove this local file access point."
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink="true"
+            for="FileAccessObject-path-2"
+            id="FileAccessObject-path-2-label"
+          >
+            Path
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-describedby="FileAccessObject-path-2-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              id="FileAccessObject-path-2"
+              name="path"
+              type="text"
+              value="path3"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject-path-2-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+      >
+        <button
+          aria-label="remove-local file access point-button"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+          data-testid="remove-item-button-tooltip"
+          tabindex="0"
+          title="Remove this local file access point."
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+            data-shrink="false"
+            for="FileAccessObject-path-3"
+            id="FileAccessObject-path-3-label"
+          >
+            Path
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-describedby="FileAccessObject-path-3-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              id="FileAccessObject-path-3"
+              name="path"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="PrivateNotchedOutline-legendLabelled-7"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-contained"
+            id="FileAccessObject-path-3-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+      >
+        <button
+          aria-label="remove-local file access point-button"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+          data-testid="remove-item-button-tooltip"
+          tabindex="0"
+          title="Remove this local file access point."
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <span
+          class=""
+          data-testid="add-item-button-tooltip"
+          title="Add local file access point."
+        >
+          <button
+            aria-label="add-local file access point-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT <FileAccessObjects /> should handle zero file access objects 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <br />
+  <p
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    Local File Access Points
+  </p>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Local file access points represent local files available on the same filesystem where the DRS service is running. This can also include files co-located on Network Attached Storage (NAS), such as on a high-performance compute cluster (HPC).
+  </p>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <span
+          class=""
+          data-testid="add-item-button-tooltip"
+          title="Add local file access point."
+        >
+          <button
+            aria-label="add-local file access point-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <FileAccessObjects /> should handle multiple file access objects 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <br />
+  <p
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    Local File Access Points
+  </p>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Local file access points represent local files available on the same filesystem where the DRS service is running. This can also include files co-located on Network Attached Storage (NAS), such as on a high-performance compute cluster (HPC).
+  </p>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink="true"
+            for="FileAccessObject-path-0"
+            id="FileAccessObject-path-0-label"
+          >
+            Path
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-describedby="FileAccessObject-path-0-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              id="FileAccessObject-path-0"
+              name="path"
+              readonly=""
+              type="text"
+              value="path1"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject-path-0-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+    <div />
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink="true"
+            for="FileAccessObject-path-1"
+            id="FileAccessObject-path-1-label"
+          >
+            Path
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-describedby="FileAccessObject-path-1-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              id="FileAccessObject-path-1"
+              name="path"
+              readonly=""
+              type="text"
+              value="path2"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject-path-1-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+    <div />
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+            data-shrink="true"
+            for="FileAccessObject-path-2"
+            id="FileAccessObject-path-2-label"
+          >
+            Path
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-describedby="FileAccessObject-path-2-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              id="FileAccessObject-path-2"
+              name="path"
+              readonly=""
+              type="text"
+              value="path3"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+            id="FileAccessObject-path-2-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+    <div />
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+            data-shrink="false"
+            for="FileAccessObject-path-3"
+            id="FileAccessObject-path-3-label"
+          >
+            Path
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+          >
+            <input
+              aria-describedby="FileAccessObject-path-3-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input"
+              id="FileAccessObject-path-3"
+              name="path"
+              readonly=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="PrivateNotchedOutline-legendLabelled-3"
+              >
+                <span>
+                  Path
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-contained"
+            id="FileAccessObject-path-3-helper-text"
+          >
+            The filesystem path to the local file storing DRS Object bytes
+          </p>
+        </div>
+      </div>
+    </div>
+    <div />
+  </div>
+  <div />
+</div>
+`;
