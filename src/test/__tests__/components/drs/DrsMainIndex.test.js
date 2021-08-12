@@ -10,13 +10,15 @@ import userEvent from '@testing-library/user-event';
 import DrsMain from '../../../../lib/components/drs/DrsMain';
 import {MemoryRouter} from 'react-router-dom';
 
+jest.setTimeout(60000);
+
 test('DrsMain default Index render', async () => {
     let {container} = render(
         <MemoryRouter initialEntries={["/drs"]}>
             <DrsMain />
         </MemoryRouter>
     );
-    await(waitFor(() => expect(screen.getByText('Welcome to DRS Starter Kit')).toBeInTheDocument()));
+    await(waitFor(() => expect(screen.getByText('Welcome to DRS Starter Kit')).toBeInTheDocument(), {timeout: 20000}));
     expect(container.firstChild).toMatchSnapshot();
 
     // verify that correct text and buttons are displayed

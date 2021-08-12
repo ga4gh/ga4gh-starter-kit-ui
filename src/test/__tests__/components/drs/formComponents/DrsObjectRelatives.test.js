@@ -200,7 +200,6 @@ test('EDIT <DrsObjectRelatives/> should handle multiple relatives', () => {
         </MemoryRouter>
     );
     expect(container.firstChild).toMatchSnapshot();
-    expect(container.firstChild).toMatchSnapshot();
     expect(screen.getByRole('heading', {level: 6})).toHaveTextContent(relativeProps.header);
     expect(screen.getByText(relativeProps.sectionDescription)).toBeInTheDocument();
 

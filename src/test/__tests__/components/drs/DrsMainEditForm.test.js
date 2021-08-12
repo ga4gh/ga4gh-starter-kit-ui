@@ -17,13 +17,15 @@ import {
 } from '../../../resources/MockData';
 import {MemoryRouter} from 'react-router-dom';
 
+jest.setTimeout(60000);
+
 test('DrsMain EDIT form render', async () => {
     let {container} = render( 
         <MemoryRouter initialEntries={[`/drs/a1dd4ae2-8d26-43b0-a199-342b64c7dff6/edit`]}> 
             <DrsMain />
         </MemoryRouter>
     );
-    /* await(waitFor(() => {
+    await(waitFor(() => {
         mockBundleDrsObject.drs_object_children.forEach((child, index) => {
             let id = screen.getByLabelText(`ID_children${index}`);
             expect(getByTitle(id, 'This is a valid ID.')).toBeInTheDocument();
@@ -32,7 +34,7 @@ test('DrsMain EDIT form render', async () => {
             let id = screen.getByLabelText(`ID_parents${index}`);
             expect(getByTitle(id, 'This is a valid ID.')).toBeInTheDocument();
         });
-    })); */
+    }, {timeout: 60000}));
 
     // verify that correct text and buttons are displayed
     expect(screen.queryByLabelText('drs-index-button')).not.toBeInTheDocument();
@@ -42,7 +44,7 @@ test('DrsMain EDIT form render', async () => {
     let submitButton = screen.getByRole('button', {name: 'Submit'});
     expect(submitButton).toBeInTheDocument();
 
-    /* // id field cannot be updated
+    // id field cannot be updated
     let id = screen.getAllByRole('textbox', {name: 'Id', exact: true})[0];
     expect(id).toHaveValue('a1dd4ae2-8d26-43b0-a199-342b64c7dff6');
     userEvent.type(id, 'abc123');
@@ -121,5 +123,5 @@ test('DrsMain EDIT form render', async () => {
 
     // attempt to submit successfully
     userEvent.click(submitButton);
-    expect(screen.queryByRole('alert')).not.toBeInTheDocument(); */
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
 });
