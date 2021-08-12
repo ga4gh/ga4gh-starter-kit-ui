@@ -286,6 +286,41 @@ const mockEditableTestBundle = {
     "is_bundle": true
 }
 
+const mockDrsServiceInfo = {
+    id: "org.ga4gh.starterkit.drs",
+    name: "GA4GH Starter Kit DRS Service",
+    description: "An open source, community-driven implementation of the GA4GH Data Repository Service (DRS) API specification.",
+    contactUrl: "mailto:info@ga4gh.org",
+    documentationUrl: "https://github.com/ga4gh/ga4gh-starter-kit-drs",
+    createdAt: "2020-01-15T12:00:00Z",
+    updatedAt: "2020-01-15T12:00:00Z",
+    environment: "test",
+    version: "0.1.0",
+    type: {
+        group: "org.ga4gh",
+        artifact: "drs",
+        version: "1.1.0"
+    },
+    organization: {
+        name: "Global Alliance for Genomics and Health",
+        url: "https://ga4gh.org"
+    }
+}
+
+const mockDrsServiceConfig = {
+    serviceType: 'drs',
+    publicURL: 'http://localhost:4500',
+    adminURL: 'http://localhost:8080'
+}
+
+const mockDrsObjectMainTrail = [
+    {to: "/home", label: "starter-kit"},
+    {to: "/services", label: "services"},
+    {to: "/services/org.ga4gh.starterkit.drs", label: "org.ga4gh.starterkit.drs"},
+    {noLink: true, label: "drs"},
+    {to: "/services/org.ga4gh.starterkit.drs/drs/objects", label: "objects"}
+]
+
 export {
     mockDrsObjectsList,
     mockBundleDrsObject,
@@ -293,5 +328,8 @@ export {
     mockValidTestBlob, 
     mockValidTestBundle, 
     mockEditableTestBlob, 
-    mockEditableTestBundle
+    mockEditableTestBundle,
+    mockDrsServiceInfo,
+    mockDrsServiceConfig,
+    mockDrsObjectMainTrail
 };

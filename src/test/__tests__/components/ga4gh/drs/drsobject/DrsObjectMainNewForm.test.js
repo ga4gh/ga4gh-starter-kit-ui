@@ -12,28 +12,35 @@ import {
 } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import DrsMain from '../../../../lib/components/drs/DrsMain';
+import DrsObjectMain from '../../../../../../lib/components/ga4gh/drs/drsobject/DrsObjectMain';
 import {
     mockBlobDrsObject,
-    mockBundleDrsObject
-} from '../../../resources/MockData';
+    mockBundleDrsObject,
+    mockDrsServiceInfo,
+    mockDrsServiceConfig,
+    mockDrsObjectMainTrail
+} from '../../../../../resources/MockData';
 import {MemoryRouter} from 'react-router-dom';
 
 jest.setTimeout(60000);
 
-test('DrsMain render NEW form and submit blob', async () => {
+test('DrsObjectMain render NEW form and submit blob', async () => {
     let {container} = render(
-        <MemoryRouter initialEntries={["/drs/new"]}>
-            <DrsMain />
+        <MemoryRouter initialEntries={[`/services/org.ga4gh.starterkit.drs/drs/objects/new`]}>
+            <DrsObjectMain
+                trail={mockDrsObjectMainTrail}
+                serviceInfo={mockDrsServiceInfo}
+                serviceConfig={mockDrsServiceConfig}
+            />
         </MemoryRouter>
     );
 
     // verify that correct text and buttons are displayed
-    expect(screen.getByRole('heading', {level: 3})).toHaveTextContent('Create New DrsObject');
-    expect(screen.getByLabelText('drs-index-button')).toBeInTheDocument();
-    expect(screen.queryByLabelText('delete-drs-object-button')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('edit-drs-object-button')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('cancel-editing-drs-object-button')).not.toBeInTheDocument();
+    expect(screen.getByRole('heading', {level: 5})).toHaveTextContent('Create New DrsObject');
+    expect(screen.getByLabelText('back-button')).toBeInTheDocument();
+    // expect(screen.getByLabelText('view-button')).not.toBeInTheDocument();
+    // expect(screen.getByLabelText('edit-button')).not.toBeInTheDocument();
+    // expect(screen.getByLabelText('delete-button')).not.toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Submit'})).toBeInTheDocument();
 
     // id field can be updated
@@ -252,10 +259,14 @@ test('DrsMain render NEW form and submit blob', async () => {
     expect(screen.queryByRole('alert')).not.toBeVisible();
 });
 
-test('DrsMain render NEW form and submit bundle', async () => {
+test('DrsObjectMain render NEW form and submit bundle', async () => {
     let {container} = render(
-        <MemoryRouter initialEntries={["/drs/new"]}>
-            <DrsMain />
+        <MemoryRouter initialEntries={[`/services/org.ga4gh.starterkit.drs/drs/objects/new`]}>
+            <DrsObjectMain
+                trail={mockDrsObjectMainTrail}
+                serviceInfo={mockDrsServiceInfo}
+                serviceConfig={mockDrsServiceConfig}
+            />
         </MemoryRouter>
     );
 

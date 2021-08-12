@@ -10,19 +10,19 @@ import {
 } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import DrsMain from '../../../../lib/components/drs/DrsMain';
+import DrsObjectMain from '../../../../../../lib/components/ga4gh/drs/drsobject/DrsObjectMain';
 import {
     mockBlobDrsObject,
     mockBundleDrsObject
-} from '../../../resources/MockData';
+} from '../../../../../resources/MockData';
 import {MemoryRouter} from 'react-router-dom';
 
 jest.setTimeout(60000);
 
-test('DrsMain EDIT form render', async () => {
+test('DrsObjectMain EDIT form render', async () => {
     let {container} = render( 
         <MemoryRouter initialEntries={[`/drs/a1dd4ae2-8d26-43b0-a199-342b64c7dff6/edit`]}> 
-            <DrsMain />
+            <DrsObjectMain />
         </MemoryRouter>
     );
     await(waitFor(() => {

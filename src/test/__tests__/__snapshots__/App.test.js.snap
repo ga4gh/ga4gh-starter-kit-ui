@@ -1,57 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`default route and navigation to /drs are rendered correctly 1`] = `
-<div>
+<main
+  class="MuiGrid-root makeStyles-root-1 MuiGrid-container"
+>
   <div
-    align="center"
+    class="MuiGrid-root makeStyles-image-2 MuiGrid-item MuiGrid-grid-sm-4 MuiGrid-grid-md-7"
+  />
+  <div
+    class="MuiPaper-root MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-5 MuiPaper-elevation6"
   >
-    <meta
-      content="minimum-scale=1, initial-scale=1, width=device-width"
-      name="viewport"
-    />
     <div
-      class="MuiContainer-root MuiContainer-maxWidthLg"
+      class="makeStyles-paper-3"
     >
-      <h1
-        class="MuiTypography-root MuiTypography-h1 MuiTypography-gutterBottom"
+      <div
+        class="MuiAvatar-root MuiAvatar-circle makeStyles-avatar-4 MuiAvatar-colorDefault"
       >
-        Welcome to the GA4GH Starter Kit
-      </h1>
-      <h3
-        class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
-      >
-        Get Started
-      </h3>
-      <p
-        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-      >
-        Click the buttons below to start using one of the GA4GH Starter Kits
-      </p>
-      <div>
-        <nav>
-          <a
-            aria-disabled="false"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
-            href="/drs"
-            role="button"
-            tabindex="0"
-          >
-            <span
-              class="MuiButton-label"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-button"
-              >
-                DRS Starter Kit
-              </span>
-            </span>
-            <span
-              class="MuiTouchRipple-root"
-            />
-          </a>
-        </nav>
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+          />
+        </svg>
       </div>
+      <h1
+        class="MuiTypography-root MuiTypography-h5"
+      >
+        GA4GH Starter Kit
+      </h1>
+      <form
+        class="makeStyles-form-5"
+        novalidate=""
+      >
+        <a
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-submit-6 MuiButton-containedPrimary MuiButton-fullWidth"
+          href="/home"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Enter
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+        <div
+          class="MuiBox-root MuiBox-root-7"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
+          >
+            Copyright © Global Alliance for Genomics and Health 
+            2021
+            .
+          </p>
+        </div>
+      </form>
     </div>
   </div>
-</div>
+</main>
 `;

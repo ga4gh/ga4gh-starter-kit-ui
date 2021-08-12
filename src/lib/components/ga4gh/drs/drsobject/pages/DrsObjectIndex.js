@@ -66,7 +66,7 @@ const DrsObjectIndex = (props) => {
           <TableBody>
             {props.drsObjectsList.map(drsObject => {
               return (
-                <TableRow key={drsObject.id}>
+                <TableRow aria-label={drsObject.id} key={drsObject.id}>
                   <TableCell align="left">{drsObject.id}</TableCell>
                   <TableCell align="left">{drsObject.name}</TableCell>
                   <TableCell align="left">

@@ -3,20 +3,21 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import SubmitButton from '../../../../../lib/components/drs/formComponents/SubmitButton';
+import SubmitButton from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/SubmitButton';
 import {
     mockValidTestBlob, 
     mockValidTestBundle
-} from '../../../../resources/MockData';
+} from '../../../../../../resources/MockData';
 import {
     setSuccessMessage, 
     retrieveDrsObjectsList, 
     setError
-} from '../../../../resources/MockFunctions';
+} from '../../../../../../resources/MockFunctions';
+import ApiCaller from '../../../../../../../lib/utils/ApiCaller';
 
-jest.mock('../../../../../lib/components/drs/utils/DrsApiCaller');
-import DrsApiCaller from '../../../../../lib/components/drs/utils/DrsApiCaller';
-DrsApiCaller.mockImplementation(() => {
+jest.mock('../../../../../../../lib/utils/ApiCaller');
+
+ApiCaller.mockImplementation(() => {
     setSuccessMessage(`Successfully submitted DrsObject with id: '${mockValidTestBlob.id}'`);
     retrieveDrsObjectsList();
 });
