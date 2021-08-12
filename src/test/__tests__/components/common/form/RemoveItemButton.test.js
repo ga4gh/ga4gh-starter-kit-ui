@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import {mockRemoveListItem} from '../../../resources/MockFunctions';
-import RemoveItemButton from '../../../../lib/components/common/RemoveItemButton';
+import {mockRemoveListItem} from '../../../../resources/MockFunctions';
+import RemoveItemButton from '../../../../../lib/components/common/form/RemoveItemButton';
 
 afterEach(() => {
     mockRemoveListItem.mockClear();

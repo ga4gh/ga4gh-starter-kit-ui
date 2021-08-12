@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import SimpleTextField from '../../../../lib/components/common/SimpleTextField';
-import {mockUpdateScalar} from '../../../resources/MockFunctions';
+import SimpleTextField from '../../../../../lib/components/common/form/SimpleTextField';
+import {mockUpdateScalar} from '../../../../resources/MockFunctions';
 
 let simpleTextFieldProps = null;
 beforeEach(() => {

@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import {mockUpdateScalar} from '../../../resources/MockFunctions';
-import ISO8601DateTimePicker from '../../../../lib/components/common/ISO8601DateTimePicker';
+import {mockUpdateScalar} from '../../../../resources/MockFunctions';
+import ISO8601DateTimePicker from '../../../../../lib/components/common/form/ISO8601DateTimePicker';
 
 let dateTimePickerProps = null;
 

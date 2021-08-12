@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import {mockAddObjectToList} from '../../../resources/MockFunctions';
-import AddItemButton from '../../../../lib/components/common/AddItemButton';
+import {mockAddObjectToList} from '../../../../resources/MockFunctions';
+import AddItemButton from '../../../../../lib/components/common/form/AddItemButton';
 
 afterEach(() => {
     mockAddObjectToList.mockClear();
