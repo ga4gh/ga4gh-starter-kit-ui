@@ -3,12 +3,12 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import Aliases from '../../../../../lib/components/drs/formComponents/Aliases';
+import Aliases from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/Aliases';
 import {
     mockAddObjectToList, 
     mockRemoveListItem,
     mockUpdateListString
-} from '../../../../resources/MockFunctions';
+} from '../../../../../../resources/MockFunctions';
 
 let zeroAliases = null;
 let multipleAliases = null;

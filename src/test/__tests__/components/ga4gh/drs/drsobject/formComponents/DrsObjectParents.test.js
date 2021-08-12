@@ -3,18 +3,14 @@ import renderer from 'react-test-renderer';
 import {queryByRole, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import DrsObjectParents from '../../../../../lib/components/drs/formComponents/DrsObjectParents';
+import DrsObjectParents from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/DrsObjectParents';
 import { MemoryRouter } from 'react-router';
 import {
     mockAddObjectToList, 
     mockRemoveListItem, 
     mockUpdateListObjectProperty,
     mockResetListObjectProperty
-} from '../../../../resources/MockFunctions';
-import{
-    mockBundleDrsObject, 
-    mockBlobDrsObject
-} from '../../../../resources/MockData';
+} from '../../../../../../resources/MockFunctions';
 
 let zeroParents = null;
 let multipleParents = null;

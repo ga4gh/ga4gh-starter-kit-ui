@@ -3,12 +3,12 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import AwsS3AccessObjects from '../../../../../lib/components/drs/formComponents/AwsS3AccessObjects';
+import AwsS3AccessObjects from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/AwsS3AccessObjects';
 import {
     mockAddObjectToList, 
     mockRemoveListItem,
     mockUpdateListObjectProperty
-} from '../../../../resources/MockFunctions';
+} from '../../../../../../resources/MockFunctions';
 
 let emptyListOfAwsS3AccessObjects = null;
 let populatedListOfAwsS3AccessObjects = null;

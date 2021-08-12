@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import {mockUpdateScalar} from '../../../../resources/MockFunctions';
-import BundleBlobRadio from '../../../../../lib/components/drs/formComponents/BundleBlobRadio';
+import {mockUpdateScalar} from '../../../../../../resources/MockFunctions';
+import BundleBlobRadio from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/BundleBlobRadio';
 
 let bundleBlobRadioSectionDescription = 'Bundles contain references to Child Drs Objects, while Blobs act as single DRS Objects and do not have any children.';
 

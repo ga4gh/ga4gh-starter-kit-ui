@@ -7,15 +7,15 @@ import {
 } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import DrsMain from '../../../../lib/components/drs/DrsMain';
+import DrsObjectMain from '../../../../../../lib/components/ga4gh/drs/drsobject/DrsObjectMain';
 import {MemoryRouter} from 'react-router-dom';
 
 jest.setTimeout(60000);
 
-test('DrsMain default Index render', async () => {
+test('DrsObjectMain default Index render', async () => {
     let {container} = render(
         <MemoryRouter initialEntries={["/drs"]}>
-            <DrsMain />
+            <DrsObjectMain />
         </MemoryRouter>
     );
     await(waitFor(() => expect(screen.getByText('Welcome to DRS Starter Kit')).toBeInTheDocument(), {timeout: 20000}));

@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import VerifyIdButton from '../../../../../lib/components/drs/formComponents/VerifyIdButton';
+import VerifyIdButton from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/VerifyIdButton';
 import {
     mockAddObjectToList, 
     mockRemoveListItem, 
@@ -11,13 +11,12 @@ import {
     mockUpdateListString, 
     mockUpdateListObjectProperty, 
     mockResetListObjectProperty
-} from '../../../../resources/MockFunctions';
+} from '../../../../../../resources/MockFunctions';
 import {
     mockBundleDrsObject, 
     mockBlobDrsObject
-} from '../../../../resources/MockData';
+} from '../../../../../../resources/MockData';
 import axios from 'axios';
-import DrsApiCaller from '../../../../../lib/components/drs/utils/DrsApiCaller';
 
 jest.mock('axios');
 

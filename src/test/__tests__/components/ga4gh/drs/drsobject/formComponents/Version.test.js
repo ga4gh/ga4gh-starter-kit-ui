@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import {mockUpdateScalar} from '../../../../resources/MockFunctions';
-import Version from '../../../../../lib/components/drs/formComponents/Version';
+import {mockUpdateScalar} from '../../../../../../resources/MockFunctions';
+import Version from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/Version';
 
 afterEach(() => {
     mockUpdateScalar.mockClear();

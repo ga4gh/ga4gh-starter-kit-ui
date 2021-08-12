@@ -5,7 +5,7 @@ import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
 import {
     mockDrsObjectsList
-} from '../../../../resources/MockData';
+} from '../../../../../../resources/MockData';
 import DrsIndex from '../../../../../lib/components/drs/pages/DrsIndex';
 import { MemoryRouter } from 'react-router';
 

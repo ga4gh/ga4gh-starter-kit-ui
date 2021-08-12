@@ -3,12 +3,12 @@ import renderer from 'react-test-renderer';
 import {getByRole, queryByRole, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import Checksums from '../../../../../lib/components/drs/formComponents/Checksums';
+import Checksums from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/Checksums';
 import {
     mockAddObjectToList, 
     mockRemoveListItem,
     mockUpdateListObjectProperty
-} from '../../../../resources/MockFunctions';
+} from '../../../../../../resources/MockFunctions';
 
 let noChecksumInstances = null;
 let allTypesSelected = null;

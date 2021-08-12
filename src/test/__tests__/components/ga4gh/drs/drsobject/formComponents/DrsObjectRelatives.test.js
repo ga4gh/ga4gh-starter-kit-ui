@@ -3,14 +3,14 @@ import renderer from 'react-test-renderer';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-import DrsObjectRelatives from '../../../../../lib/components/drs/formComponents/DrsObjectRelatives';
+import DrsObjectRelatives from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/DrsObjectRelatives';
 import {MemoryRouter} from 'react-router-dom';
 import {
     mockAddObjectToList, 
     mockRemoveListItem, 
     mockUpdateListObjectProperty,
     mockResetListObjectProperty
-} from '../../../../resources/MockFunctions';
+} from '../../../../../../resources/MockFunctions';
 
 let zeroRelatives = null;
 let multipleNewRelatives = null;

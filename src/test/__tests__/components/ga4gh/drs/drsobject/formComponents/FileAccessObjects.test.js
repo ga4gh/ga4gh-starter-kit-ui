@@ -7,8 +7,8 @@ import {
     mockAddObjectToList, 
     mockRemoveListItem,
     mockUpdateListObjectProperty
-} from '../../../../resources/MockFunctions';
-import FileAccessObjects from '../../../../../lib/components/drs/formComponents/FileAccessObjects';
+} from '../../../../../../resources/MockFunctions';
+import FileAccessObjects from '../../../../../../../lib/components/ga4gh/drs/drsobject/formComponents/FileAccessObjects';
 
 let zeroFileAccessObjects = null;
 let multipleFileAccessObjects = null;
