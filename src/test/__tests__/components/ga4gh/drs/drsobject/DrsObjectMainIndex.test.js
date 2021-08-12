@@ -9,16 +9,25 @@ import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
 import DrsObjectMain from '../../../../../../lib/components/ga4gh/drs/drsobject/DrsObjectMain';
 import {MemoryRouter} from 'react-router-dom';
+import {
+    mockDrsServiceInfo,
+    mockDrsServiceConfig,
+    mockDrsObjectMainTrail
+} from '../../../../../resources/MockData';
 
 jest.setTimeout(60000);
 
 test('DrsObjectMain default Index render', async () => {
     let {container} = render(
-        <MemoryRouter initialEntries={["/drs"]}>
-            <DrsObjectMain />
+        <MemoryRouter initialEntries={["/services/org.ga4gh.starterkit.drs/drs/objects"]}>
+            <DrsObjectMain
+                trail={mockDrsObjectMainTrail}
+                serviceInfo={mockDrsServiceInfo}
+                serviceConfig={mockDrsServiceConfig}
+            />
         </MemoryRouter>
     );
-    await(waitFor(() => expect(screen.getByText('Welcome to DRS Starter Kit')).toBeInTheDocument(), {timeout: 20000}));
+    await(waitFor(() => null, {timeout: 20000}));
     expect(container.firstChild).toMatchSnapshot();
 
     // verify that correct text and buttons are displayed

@@ -321,6 +321,10 @@ const mockDrsObjectMainTrail = [
     {to: "/services/org.ga4gh.starterkit.drs/drs/objects", label: "objects"}
 ]
 
+const mockHomepageTrail = [
+    {to: "/home", label: "starter-kit"}
+]
+
 export {
     mockDrsObjectsList,
     mockBundleDrsObject,
@@ -331,5 +335,6 @@ export {
     mockEditableTestBundle,
     mockDrsServiceInfo,
     mockDrsServiceConfig,
-    mockDrsObjectMainTrail
+    mockDrsObjectMainTrail,
+    mockHomepageTrail
 };
