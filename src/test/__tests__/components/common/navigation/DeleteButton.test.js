@@ -4,14 +4,16 @@ import {getByRole, getByText, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
 import {mockValidTestBlob} from '../../../../resources/MockData';
-import DeleteDrsObjectButton from '../../../../../lib/components/drs/formComponents/DeleteDrsObjectButton';import {
+import DeleteButton from '../../../../../lib/components/common/navigation/DeleteButton';
+import {
     setSuccessMessage, 
     retrieveDrsObjectsList, 
     setError
 } from '../../../../resources/MockFunctions';
+import ApiCaller from '../../../../../lib/utils/ApiCaller';
 
-jest.mock('../../../../../lib/components/drs/utils/DrsApiCaller');
-import DrsApiCaller from '../../../../../lib/components/drs/utils/DrsApiCaller';
+jest.mock('../../../../../lib/utils/ApiCaller');
+
 
 let deleteMockFunctions = null;
 
@@ -29,20 +31,26 @@ afterEach(() => {
     setError.mockClear();
 })
 
-test('<DeleteDrsObjectButton /> can delete DRS Object successfully', () => {
-    DrsApiCaller.mockImplementation(() => {
+test('<DeleteButton /> can delete DRS Object successfully', () => {
+    ApiCaller.mockImplementation(() => {
         setSuccessMessage(`DRS Object '${mockValidTestBlob.id}' has been successfully deleted`);
         retrieveDrsObjectsList();
     });
     
-    let {container} = render(<DeleteDrsObjectButton id={mockValidTestBlob.id} {...deleteMockFunctions}/> );
+    let {container} = render(
+        <DeleteButton
+            entityName='DRS Object'
+            id={mockValidTestBlob.id}
+            {...deleteMockFunctions}
+        />
+    );
     expect(container.firstChild).toMatchSnapshot();
     let deleteButton = screen.getByRole('button');
     expect(deleteButton).toBeInTheDocument();
     userEvent.click(deleteButton);
     let confirmationDialog = screen.getByRole('dialog');
     expect(confirmationDialog).toBeVisible();
-    expect(getByText(confirmationDialog, 'Are you sure you want to delete the DRS Object?')).toBeInTheDocument();
+    expect(getByText(confirmationDialog, 'Are you sure you want to delete this DRS Object?')).toBeInTheDocument();
     expect(getByText(confirmationDialog, 'Deleting this DRS Object will permanently remove it from the database.')).toBeInTheDocument();
     expect(getByRole(confirmationDialog, 'button', {name: 'Cancel'})).toBeInTheDocument();
     expect(getByRole(confirmationDialog, 'button', {name: 'Delete'})).toBeInTheDocument();
@@ -59,12 +67,12 @@ test('<DeleteDrsObjectButton /> can delete DRS Object successfully', () => {
     expect(setError).not.toHaveBeenCalled();
 });
 
-test('<DeleteDrsObjectButton /> can handle errors', () => {
-    DrsApiCaller.mockImplementation(() => {
+test('<DeleteButton /> can handle errors', () => {
+    ApiCaller.mockImplementation(() => {
         setError('Error: DRS object was not deleted successfully')
     });
     
-    let {container} = render(<DeleteDrsObjectButton id={mockValidTestBlob.id} {...deleteMockFunctions}/> );
+    let {container} = render(<DeleteButton id={mockValidTestBlob.id} {...deleteMockFunctions}/> );
     let deleteButton = screen.getByRole('button');
     userEvent.click(deleteButton);
     let confirmationDialog = screen.getByRole('dialog');
