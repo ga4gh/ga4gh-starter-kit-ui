@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <MimeType /> should handle empty field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink="false"
+      for="mime_type"
+      id="mime_type-label"
+    >
+      MIME Type
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="mime_type-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="mime_type"
+        name="mime_type"
+        type="text"
+        value=""
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root"
+      id="mime_type-helper-text"
+    >
+      The media type of the DRS Object
+    </p>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT <MimeType /> should handle populated field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="mime_type"
+      id="mime_type-label"
+    >
+      MIME Type
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="mime_type-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="mime_type"
+        name="mime_type"
+        type="text"
+        value="Test MIME Type"
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="mime_type-helper-text"
+    >
+      The media type of the DRS Object
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SHOW <MimeType /> should handle populated field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="mime_type"
+      id="mime_type-label"
+    >
+      MIME Type
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="mime_type-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="mime_type"
+        name="mime_type"
+        readonly=""
+        type="text"
+        value="Test MIME Type"
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="mime_type-helper-text"
+    >
+      The media type of the DRS Object
+    </p>
+  </div>
+</div>
+`;

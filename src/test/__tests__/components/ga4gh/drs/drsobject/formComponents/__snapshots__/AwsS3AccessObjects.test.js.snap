@@ -1,0 +1,1568 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <AwsS3AccessObjects /> should handle multiple AWS S3 access objects 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <br />
+  <p
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    AWS S3 Access Points
+  </p>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Represents objects stored in AWS S3 containing DRS Object bytes.
+  </p>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-0"
+              id="AwsS3AccessObject-region-0-label"
+            >
+              Region
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-region-0-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-region-0"
+                name="region"
+                type="text"
+                value="region1"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-region-0-helper-text"
+            >
+              Region where AWS S3 bucket is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-0"
+              id="AwsS3AccessObject-bucket-0-label"
+            >
+              Bucket
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-bucket-0-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-bucket-0"
+                name="bucket"
+                type="text"
+                value="bucket1"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-bucket-0-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-0"
+              id="AwsS3AccessObject-key-0-label"
+            >
+              Key
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-key-0-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-key-0"
+                name="key"
+                type="text"
+                value="key1"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-key-0-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-label="remove-AWS S3 access point-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this AWS S3 access point."
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="AwsS3AccessObject-region-1"
+              id="AwsS3AccessObject-region-1-label"
+            >
+              Region
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-region-1-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-region-1"
+                name="region"
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="AwsS3AccessObject-region-1-helper-text"
+            >
+              Region where AWS S3 bucket is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-1"
+              id="AwsS3AccessObject-bucket-1-label"
+            >
+              Bucket
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-bucket-1-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-bucket-1"
+                name="bucket"
+                type="text"
+                value="bucket2"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-bucket-1-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-1"
+              id="AwsS3AccessObject-key-1-label"
+            >
+              Key
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-key-1-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-key-1"
+                name="key"
+                type="text"
+                value="key2"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-key-1-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-label="remove-AWS S3 access point-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this AWS S3 access point."
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-2"
+              id="AwsS3AccessObject-region-2-label"
+            >
+              Region
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-region-2-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-region-2"
+                name="region"
+                type="text"
+                value="region3"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-region-2-helper-text"
+            >
+              Region where AWS S3 bucket is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="AwsS3AccessObject-bucket-2"
+              id="AwsS3AccessObject-bucket-2-label"
+            >
+              Bucket
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-bucket-2-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-bucket-2"
+                name="bucket"
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="AwsS3AccessObject-bucket-2-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-2"
+              id="AwsS3AccessObject-key-2-label"
+            >
+              Key
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-key-2-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-key-2"
+                name="key"
+                type="text"
+                value="key3"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-key-2-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-label="remove-AWS S3 access point-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this AWS S3 access point."
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-3"
+              id="AwsS3AccessObject-region-3-label"
+            >
+              Region
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-region-3-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-region-3"
+                name="region"
+                type="text"
+                value="region4"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-region-3-helper-text"
+            >
+              Region where AWS S3 bucket is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-3"
+              id="AwsS3AccessObject-bucket-3-label"
+            >
+              Bucket
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-bucket-3-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-bucket-3"
+                name="bucket"
+                type="text"
+                value="bucket4"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7 PrivateNotchedOutline-legendNotched-8"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-bucket-3-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="AwsS3AccessObject-key-3"
+              id="AwsS3AccessObject-key-3-label"
+            >
+              Key
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-key-3-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-key-3"
+                name="key"
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-7"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="AwsS3AccessObject-key-3-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
+        >
+          <button
+            aria-label="remove-AWS S3 access point-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+            data-testid="remove-item-button-tooltip"
+            tabindex="0"
+            title="Remove this AWS S3 access point."
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <span
+          class=""
+          data-testid="add-item-button-tooltip"
+          title="Add AWS S3 access point."
+        >
+          <button
+            aria-label="add-AWS S3 access point-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT <AwsS3AccessObjects /> should handle zero AWS S3 access objects 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <br />
+  <p
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    AWS S3 Access Points
+  </p>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Represents objects stored in AWS S3 containing DRS Object bytes.
+  </p>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <span
+          class=""
+          data-testid="add-item-button-tooltip"
+          title="Add AWS S3 access point."
+        >
+          <button
+            aria-label="add-AWS S3 access point-button"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SHOW <AwsS3AccessObjects /> should handle multiple AWS S3 access objects 1`] = `
+<div
+  class="MuiFormGroup-root"
+>
+  <br />
+  <p
+    class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft"
+  >
+    AWS S3 Access Points
+  </p>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignLeft"
+  >
+    Represents objects stored in AWS S3 containing DRS Object bytes.
+  </p>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-0"
+              id="AwsS3AccessObject-region-0-label"
+            >
+              Region
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-region-0-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-region-0"
+                name="region"
+                readonly=""
+                type="text"
+                value="region1"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-region-0-helper-text"
+            >
+              Region where AWS S3 bucket is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-0"
+              id="AwsS3AccessObject-bucket-0-label"
+            >
+              Bucket
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-bucket-0-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-bucket-0"
+                name="bucket"
+                readonly=""
+                type="text"
+                value="bucket1"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-bucket-0-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-0"
+              id="AwsS3AccessObject-key-0-label"
+            >
+              Key
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-key-0-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-key-0"
+                name="key"
+                readonly=""
+                type="text"
+                value="key1"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-key-0-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="AwsS3AccessObject-region-1"
+              id="AwsS3AccessObject-region-1-label"
+            >
+              Region
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-region-1-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-region-1"
+                name="region"
+                readonly=""
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="AwsS3AccessObject-region-1-helper-text"
+            >
+              Region where AWS S3 bucket is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-1"
+              id="AwsS3AccessObject-bucket-1-label"
+            >
+              Bucket
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-bucket-1-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-bucket-1"
+                name="bucket"
+                readonly=""
+                type="text"
+                value="bucket2"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-bucket-1-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-1"
+              id="AwsS3AccessObject-key-1-label"
+            >
+              Key
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-key-1-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-key-1"
+                name="key"
+                readonly=""
+                type="text"
+                value="key2"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-key-1-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-2"
+              id="AwsS3AccessObject-region-2-label"
+            >
+              Region
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-region-2-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-region-2"
+                name="region"
+                readonly=""
+                type="text"
+                value="region3"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-region-2-helper-text"
+            >
+              Region where AWS S3 bucket is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="AwsS3AccessObject-bucket-2"
+              id="AwsS3AccessObject-bucket-2-label"
+            >
+              Bucket
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-bucket-2-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-bucket-2"
+                name="bucket"
+                readonly=""
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="AwsS3AccessObject-bucket-2-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-key-2"
+              id="AwsS3AccessObject-key-2-label"
+            >
+              Key
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-key-2-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-key-2"
+                name="key"
+                readonly=""
+                type="text"
+                value="key3"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-key-2-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    class="MuiFormGroup-root MuiFormGroup-row"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-region-3"
+              id="AwsS3AccessObject-region-3-label"
+            >
+              Region
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-region-3-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-region-3"
+                name="region"
+                readonly=""
+                type="text"
+                value="region4"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Region
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-region-3-helper-text"
+            >
+              Region where AWS S3 bucket is located.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="AwsS3AccessObject-bucket-3"
+              id="AwsS3AccessObject-bucket-3-label"
+            >
+              Bucket
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-bucket-3-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-bucket-3"
+                name="bucket"
+                readonly=""
+                type="text"
+                value="bucket4"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                >
+                  <span>
+                    Bucket
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="AwsS3AccessObject-bucket-3-helper-text"
+            >
+              AWS S3 bucket containing the DRS Object.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+              for="AwsS3AccessObject-key-3"
+              id="AwsS3AccessObject-key-3-label"
+            >
+              Key
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="AwsS3AccessObject-key-3-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="AwsS3AccessObject-key-3"
+                name="key"
+                readonly=""
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-3"
+                >
+                  <span>
+                    Key
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained"
+              id="AwsS3AccessObject-key-3-helper-text"
+            >
+              Path within the bucket to the S3 object storing DRS Object bytes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+  <div />
+</div>
+`;

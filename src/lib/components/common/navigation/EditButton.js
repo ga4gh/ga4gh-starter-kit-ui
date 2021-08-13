@@ -15,6 +15,7 @@ const EditButton = props => {
             disabled={props.disabled}
             component={Link}
             to={props.to}
+            aria-label="edit-button"
         >
             Edit
             <Edit />

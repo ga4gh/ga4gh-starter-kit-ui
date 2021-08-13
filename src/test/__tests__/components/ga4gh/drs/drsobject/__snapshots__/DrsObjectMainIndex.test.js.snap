@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DrsObjectMain default Index render 1`] = `
+<div>
+  <div
+    class="MuiContainer-root makeStyles-root-2 MuiContainer-maxWidthLg"
+  >
+    <nav
+      class="MuiTypography-root MuiBreadcrumbs-root makeStyles-root-3 MuiTypography-body1 MuiTypography-colorTextSecondary"
+    >
+      <ol
+        class="MuiBreadcrumbs-ol"
+      >
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <span>
+            <a
+              class="makeStyles-link-4"
+              color="inherit"
+              href="/home"
+            >
+              starter-kit
+            </a>
+          </span>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <span>
+            <a
+              class="makeStyles-link-4"
+              color="inherit"
+              href="/services"
+            >
+              services
+            </a>
+          </span>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <span>
+            <a
+              class="makeStyles-link-4"
+              color="inherit"
+              href="/services/org.ga4gh.starterkit.drs"
+            >
+              org.ga4gh.starterkit.drs
+            </a>
+          </span>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <span>
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              drs
+            </p>
+          </span>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <span>
+            <a
+              class="makeStyles-link-4"
+              color="inherit"
+              href="/services/org.ga4gh.starterkit.drs/drs/objects"
+            >
+              objects
+            </a>
+          </span>
+        </li>
+      </ol>
+    </nav>
+    <a
+      aria-disabled="false"
+      aria-label="back-button"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-5 MuiButton-textPrimary"
+      href="/services/org.ga4gh.starterkit.drs/"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
+          />
+        </svg>
+        <p
+          class="MuiTypography-root MuiTypography-body1"
+        >
+          back
+        </p>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+    <div>
+      <a
+        aria-disabled="false"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-newButton-1 MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+        href="/services/org.ga4gh.starterkit.drs/drs/objects/new"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-button"
+          >
+            New DRS Object
+          </span>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </a>
+    </div>
+    <div
+      class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <table
+        class="MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall"
+              scope="col"
+            >
+              DRS Object ID
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall"
+              scope="col"
+            >
+              Name
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall"
+              scope="col"
+            />
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        />
+      </table>
+    </div>
+  </div>
+</div>
+`;

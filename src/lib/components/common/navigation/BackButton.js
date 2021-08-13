@@ -18,6 +18,7 @@ const BackButton = props => {
             component={Link}
             to={props.to}
             color='primary'
+            aria-label="back-button"
         >
             <ArrowBackIos />
             <Typography>back</Typography>
