@@ -1,6 +1,6 @@
 {
   "name": "ga4gh-starter-kit-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Modular UI for the GA4GH Starter Kit",
   "main": "index.js",
   "author": "",

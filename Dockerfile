@@ -12,7 +12,6 @@ COPY src src
 COPY package-lock.json package-lock.json
 COPY package.json package.json
 COPY webpack.config.js webpack.config.js
-COPY yarn.lock yarn.lock
 
 RUN npm install
 RUN npm run allCleanBuild
