@@ -2,7 +2,7 @@
 
 exports[`NEW <Id /> should handle empty id field 1`] = `
 <div
-  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
 >
   <div
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
@@ -72,7 +72,7 @@ exports[`NEW <Id /> should handle empty id field 1`] = `
 
 exports[`NEW <Id /> should handle populated id field 1`] = `
 <div
-  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
 >
   <div
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
@@ -142,7 +142,7 @@ exports[`NEW <Id /> should handle populated id field 1`] = `
 
 exports[`SHOW and EDIT <Id /> should handle populated id field 1`] = `
 <div
-  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
 >
   <div
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
