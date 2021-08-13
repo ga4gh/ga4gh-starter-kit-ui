@@ -1,4 +1,5 @@
 import React from 'react';
+import 'babel-polyfill';
 import renderer from 'react-test-renderer';
 import {
     render, 
