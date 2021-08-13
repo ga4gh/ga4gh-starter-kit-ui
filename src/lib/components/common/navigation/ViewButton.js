@@ -16,6 +16,7 @@ const ViewButton = props => {
             disabled={props.disabled}
             component={Link}
             to={props.to}
+            aria-label="view-button"
         >
             View
             <Visibility />

@@ -42,6 +42,7 @@ const DeleteButton = props => {
                 className={classes.root}
                 variant="outlined"
                 onClick={() => setConfirmationDialogIsOpen(true)}
+                aria-label="delete-button"
             >
                 Delete
                 <Delete />

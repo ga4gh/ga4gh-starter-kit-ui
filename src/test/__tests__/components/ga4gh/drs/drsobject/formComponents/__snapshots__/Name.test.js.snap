@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <Name /> should handle empty field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink="false"
+      for="name"
+      id="name-label"
+    >
+      Name
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="name-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="name"
+        name="name"
+        type="text"
+        value=""
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root"
+      id="name-helper-text"
+    >
+      Short, descriptive name for this DRS Object.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT <Name /> should handle populated field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="name"
+      id="name-label"
+    >
+      Name
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="name-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="name"
+        name="name"
+        type="text"
+        value="test name"
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="name-helper-text"
+    >
+      Short, descriptive name for this DRS Object.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Name /> should handle populated field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="name"
+      id="name-label"
+    >
+      Name
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="name-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="name"
+        name="name"
+        readonly=""
+        type="text"
+        value="test name"
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="name-helper-text"
+    >
+      Short, descriptive name for this DRS Object.
+    </p>
+  </div>
+</div>
+`;

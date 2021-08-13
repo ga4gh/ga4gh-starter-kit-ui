@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubmitButton/> can handle submitting a valid blob 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiBox-root MuiBox-root-1"
+  >
+    <hr
+      class="MuiDivider-root"
+    />
+  </div>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      Submit
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`<SubmitButton/> can handle submitting a valid bundle 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiBox-root MuiBox-root-2"
+  >
+    <hr
+      class="MuiDivider-root"
+    />
+  </div>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      Submit
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;

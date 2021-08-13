@@ -34,7 +34,7 @@ const DrsObjectRelatives = props => {
             {props.sectionDescription}
             {props.relatives.map((relative, index) => {
                 return (
-                    <FormGroup key={`props.relationship-${index}`} row>
+                    <FormGroup key={`${props.relationship}-${index}`} row>
                         <Grid container alignItems='center' spacing={4}>
                             <Grid item xs> 
                                 <FormControl fullWidth>
@@ -43,6 +43,7 @@ const DrsObjectRelatives = props => {
                                         variant='outlined'
                                         id={`ID_${props.relationship}${index}`} 
                                         label='Id'
+                                        aria-label={`ID_${props.relationship}${index}`}
                                         name={relative.id}
                                         value={relative.id}
                                         margin='normal'
@@ -82,6 +83,7 @@ const DrsObjectRelatives = props => {
                                 <FormControl fullWidth>
                                     <TextField variant='outlined' fullWidth id={`Name_${props.relationship}${index}`} 
                                     label='Name' margin='normal' name={relative.name} type='text' 
+                                    aria-label={`Name_${props.relationship}${index}`}
                                     value={relative.name} InputProps={{readOnly: true}}/>                            
                                 </FormControl>
                             </Grid>
@@ -92,6 +94,7 @@ const DrsObjectRelatives = props => {
                                             title={`View DrsObject with id '${relative.id}'`}
                                         >
                                             <Button
+                                                aria-label='view-relative'
                                                 variant='contained'
                                                 component={Link}
                                                 to={`./${relative.id}`}

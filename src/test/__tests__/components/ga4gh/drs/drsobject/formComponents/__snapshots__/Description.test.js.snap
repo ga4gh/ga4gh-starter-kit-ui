@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <Description /> should handle empty description 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink="false"
+      for="description"
+      id="description-label"
+    >
+      Description
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="description-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="description"
+        name="description"
+        type="text"
+        value=""
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root"
+      id="description-helper-text"
+    >
+      Longer description of this DRS Object.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT <Description /> should handle populated description 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="description"
+      id="description-label"
+    >
+      Description
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="description-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="description"
+        name="description"
+        type="text"
+        value="This is a description."
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="description-helper-text"
+    >
+      Longer description of this DRS Object.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Description /> should handle populated description 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="description"
+      id="description-label"
+    >
+      Description
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="description-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="description"
+        name="description"
+        readonly=""
+        type="text"
+        value="This is a description."
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="description-helper-text"
+    >
+      Longer description of this DRS Object.
+    </p>
+  </div>
+</div>
+`;

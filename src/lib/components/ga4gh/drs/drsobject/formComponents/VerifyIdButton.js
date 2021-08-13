@@ -53,6 +53,7 @@ const VerifyIdButton = props => {
     return (
         <div>
             <Button
+                aria-label='verify-id'
                 color='primary'
                 disabled={props.readOnly}
                 variant='contained'
