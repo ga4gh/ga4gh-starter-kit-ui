@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW <Id /> should handle empty id field 1`] = `
+<div
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+          for="id"
+          id="id-label"
+        >
+          Id
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-describedby="id-helper-text"
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            id="id"
+            name="id"
+            type="text"
+            value=""
+          />
+        </div>
+        <p
+          class="MuiFormHelperText-root"
+          id="id-helper-text"
+        >
+          Unique identifier for this DRS Object (UUID recommended), cannot be modified later.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    align="right"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+  >
+    <button
+      aria-label="generate-id-button"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-button"
+        >
+          Generate ID
+        </span>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`NEW <Id /> should handle populated id field 1`] = `
+<div
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          data-shrink="true"
+          for="id"
+          id="id-label"
+        >
+          Id
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-describedby="id-helper-text"
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            id="id"
+            name="id"
+            type="text"
+            value="1234567890"
+          />
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-filled"
+          id="id-helper-text"
+        >
+          Unique identifier for this DRS Object (UUID recommended), cannot be modified later.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    align="right"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+  >
+    <button
+      aria-label="generate-id-button"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-button"
+        >
+          Generate ID
+        </span>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SHOW and EDIT <Id /> should handle populated id field 1`] = `
+<div
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"
+>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          data-shrink="true"
+          for="id"
+          id="id-label"
+        >
+          Id
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-describedby="id-helper-text"
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            id="id"
+            name="id"
+            readonly=""
+            type="text"
+            value="1234567890"
+          />
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-filled"
+          id="id-helper-text"
+        >
+          Unique identifier for this DRS Object (UUID recommended), cannot be modified later.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

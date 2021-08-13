@@ -1,37 +1,96 @@
 {
   "name": "ga4gh-starter-kit-ui",
-  "version": "1.0.0",
-  "description": "User interface for GA4GH starter kit microservices",
-  "main": "app.js",
-  "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ga4gh/ga4gh-starter-kit-ui.git"
-  },
+  "version": "0.2.0",
+  "description": "Modular UI for the GA4GH Starter Kit",
+  "main": "index.js",
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ga4gh/ga4gh-starter-kit-ui/issues"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "reactClean": "rm -rf build",
+    "reactBuild": "react-scripts build",
+    "reactCleanBuild": "npm run reactClean && npm run reactBuild",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "serverClean": "rm -rf dist",
+    "serverBuild": "npx webpack-cli && chmod 744 ./dist/ga4gh-starter-kit-ui.js",
+    "serverCleanBuild": "npm run serverClean && npm run serverBuild",
+    "copyFrontEnd": "cp -r build dist/public",
+    "allCleanBuild": "npm run reactCleanBuild && npm run serverCleanBuild && npm run copyFrontEnd",
+    "serverStart": "cd dist && ./ga4gh-starter-kit-ui.js",
+    "dockerBuild": "docker build -t ga4gh/ga4gh-starter-kit-ui:$npm_package_version .",
+    "dockerPublish": "docker push ga4gh/ga4gh-starter-kit-ui:$npm_package_version"
   },
-  "homepage": "https://github.com/ga4gh/ga4gh-starter-kit-ui#readme",
   "dependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@date-io/date-fns": "^1.3.13",
+    "@fontsource/roboto": "^4.3.0",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@material-ui/pickers": "^3.3.10",
+    "@testing-library/jest-dom": "^5.14.1",
     "axios": "^0.21.1",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "form-data": "^4.0.0",
-    "graceful-fs": "4.2.6",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1",
-    "node-yaml-config": "0.0.6",
-    "semantic-ui": "^2.4.2"
+    "date-fns": "^2.22.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "moment-timezone": "^0.5.33",
+    "path": "^0.12.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "ts-node": "^10.1.0",
+    "typescript": "^3.2.1",
+    "reactstrap": "^8.9.0",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.12.1",
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "babel-jest": "^26.6.3",
+    "babel-polyfill": "^6.26.0",
+    "jest": "^26.6.0",
+    "react-test-renderer": "^17.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.7.2"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ]
   }
 }

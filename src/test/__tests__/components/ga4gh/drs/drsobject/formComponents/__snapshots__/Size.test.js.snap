@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEW and EDIT <Size /> should handle empty field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      data-shrink="false"
+      for="size"
+      id="size-label"
+    >
+      Size
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="size-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="size"
+        name="size"
+        type="number"
+        value=""
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root"
+      id="size-helper-text"
+    >
+      The size (in bytes) of the DRS Object represented as an integer.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`NEW and EDIT <Size /> should handle populated field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="size"
+      id="size-label"
+    >
+      Size
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="size-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="size"
+        name="size"
+        type="number"
+        value="1000"
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="size-helper-text"
+    >
+      The size (in bytes) of the DRS Object represented as an integer.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SHOW <Size /> should handle populated field 1`] = `
+<div
+  class="MuiFormControl-root MuiFormControl-fullWidth"
+>
+  <div
+    class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="size"
+      id="size-label"
+    >
+      Size
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <input
+        aria-describedby="size-helper-text"
+        aria-invalid="false"
+        class="MuiInputBase-input MuiInput-input"
+        id="size"
+        name="size"
+        readonly=""
+        type="number"
+        value="1000"
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root MuiFormHelperText-filled"
+      id="size-helper-text"
+    >
+      The size (in bytes) of the DRS Object represented as an integer.
+    </p>
+  </div>
+</div>
+`;
