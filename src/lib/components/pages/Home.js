@@ -3,33 +3,29 @@ import {
   Link
 } from "react-router-dom";
 import { 
-  Container, 
   Button, 
   Typography
  } from '@material-ui/core';
- import { scrollToTop } from '../../functions/common';
+import { PageContainer } from '../common/layout';
+import { BreadcrumbTrail }  from '../common/navigation';
 
-const Home = () => {
+const Home = props => {
+
     return(
-      <div align="center">
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-        <Container maxWidth="lg">
-          <Typography variant="h1" gutterBottom>Welcome to the GA4GH Starter Kit</Typography>
-          <Typography variant="h3" gutterBottom>Get Started</Typography>
-          <Typography variant="body1" gutterBottom>Click the buttons below to start using one of the GA4GH Starter Kits</Typography>
-            <div>
-              <nav>
-                <Button variant="contained" color="primary" size="large" component={Link} to='/drs' onClick={scrollToTop}>
-                  <Typography variant="button">DRS Starter Kit</Typography>
-                </Button>
-              </nav>
-            </div>
-        </Container>
-      </div>
-    );
-  }
+        <PageContainer>
+            <BreadcrumbTrail trail={props.trail} />
 
-  export default Home;
+            <Typography variant="h1" gutterBottom>Welcome to the GA4GH Starter Kit</Typography>
+            <Button
+                variant="outlined"
+                color="secondary"
+            >
+                <Link to='/services'>
+                    <Typography variant="button">Get Started</Typography>
+                </Link>
+            </Button>
+        </PageContainer>
+    );
+}
+
+export default Home;

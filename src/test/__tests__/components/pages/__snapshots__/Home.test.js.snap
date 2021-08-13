@@ -2,54 +2,55 @@
 
 exports[`the correct Home page elements are displayed 1`] = `
 <div
-  align="center"
+  class="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthLg"
 >
-  <meta
-    content="minimum-scale=1, initial-scale=1, width=device-width"
-    name="viewport"
-  />
-  <div
-    class="MuiContainer-root MuiContainer-maxWidthLg"
+  <nav
+    class="MuiTypography-root MuiBreadcrumbs-root makeStyles-root-2 MuiTypography-body1 MuiTypography-colorTextSecondary"
   >
-    <h1
-      class="MuiTypography-root MuiTypography-h1 MuiTypography-gutterBottom"
+    <ol
+      class="MuiBreadcrumbs-ol"
     >
-      Welcome to the GA4GH Starter Kit
-    </h1>
-    <h3
-      class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
-    >
-      Get Started
-    </h3>
-    <p
-      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    >
-      Click the buttons below to start using one of the GA4GH Starter Kits
-    </p>
-    <div>
-      <nav>
-        <a
-          aria-disabled="false"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
-          href="/drs"
-          role="button"
-          tabindex="0"
-        >
-          <span
-            class="MuiButton-label"
+      <li
+        class="MuiBreadcrumbs-li"
+      >
+        <span>
+          <a
+            class="makeStyles-link-3"
+            color="inherit"
+            href="/home"
           >
-            <span
-              class="MuiTypography-root MuiTypography-button"
-            >
-              DRS Starter Kit
-            </span>
-          </span>
-          <span
-            class="MuiTouchRipple-root"
-          />
-        </a>
-      </nav>
-    </div>
-  </div>
+            starter-kit
+          </a>
+        </span>
+      </li>
+    </ol>
+  </nav>
+  <h1
+    class="MuiTypography-root MuiTypography-h1 MuiTypography-gutterBottom"
+  >
+    Welcome to the GA4GH Starter Kit
+  </h1>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      <a
+        href="/services"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-button"
+        >
+          Get Started
+        </span>
+      </a>
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
 </div>
 `;
