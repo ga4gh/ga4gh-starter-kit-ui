@@ -110,7 +110,7 @@ const SubmitButton = props => {
                     break;
                 case FormViewType.EDIT:
                     requestConfig = {
-                        url: `${props.adminURL}/admin/ga4gh/drs/v1/objects/${props.activeDrsObject.id}`,
+                        url: `http://localhost:8080/admin/ga4gh/drs/v1/objects/${props.activeDrsObject.id}`,
                         method: 'PUT'
                     }
                     break
