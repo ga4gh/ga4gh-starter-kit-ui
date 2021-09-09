@@ -4,7 +4,7 @@ const defaults = {
         {
             serviceType: 'drs',
             publicURL: 'http://localhost:4500',
-            adminURL: 'http://localhost:8080'
+            adminURL: 'http://localhost:4501'
         }        
     ]
 };
