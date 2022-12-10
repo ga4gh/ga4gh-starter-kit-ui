@@ -35,7 +35,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "axios": "^0.21.1",
     "date-fns": "^2.22.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fs": "0.0.1-security",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
